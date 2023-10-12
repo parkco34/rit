@@ -1,0 +1,10 @@
+hello friend
+12345
+3.14159
+[1, 2, 3, 4, 5]
+{"key1": "value1", "key2": 2}
+int
+key1
+key3
+index_out_of_range
+non_existing_file.txt
