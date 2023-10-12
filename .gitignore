@@ -37,6 +37,7 @@ ENV/
 env.bak/
 ENV.bak/
 *.bak
+Pip*
 
 # VS Code #
 ###########
