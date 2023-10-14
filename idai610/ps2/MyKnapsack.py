@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 from textwrap import dedent
 
 seed = 1470
-print(f"Random seed used: {seed}")
+print(f"\t\t...\t...\t...Random seed used: {seed}...\t...\t...")
 np.random.seed(seed)
 
 
@@ -189,32 +189,61 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
 
     def plot_selection(self, avg_fitness_data, the_fittest_data, roulette=True):
         """
-        Plots and compares the two different selection methods
+        Plots and compares the two different selection methods,
+        displaying average, most fit and active genes
+        ------------------------------------------------------
+        INPUT:
+            avg_fitness_data: (list of floats)
+            the_fittest_data: (list of tuples)
+            roulette: (bool) True by default, depending on which Selection
+            method you choose to use
+
+        OUTPUT:
+            Plots graphs: (None)
 
         """
-        plt.figure()
+        plt.figure(figsize=(12, 6))  # Set the figure size
 
-        plt.subplot(2, 1, 1)
-        plt.plot(avg_fitness_data)
+        # Plot for Average Fitness Data
+        plt.subplot(3, 1, 1)
+        plt.plot(avg_fitness_data, marker='o', linestyle='-')
+        plt.xlabel('Generation')
+        plt.ylabel('Average Fitness')
+        plt.grid(True)
 
         if roulette:
             plt.title("Average Fitness per Generation: Roulette")
-
         else:
             plt.title("Average Fitness per Generation: Tournament")
 
-        plt.subplot(2, 1, 2)
-        fittest_fit, active_genes = zip(*the_fittest_data)
-        plt.plot(fittest_fit, label="The Fittest")
-        plt.plot(active_genes, label="Active Genes")
+        # Plot for The Fittest Data
+        plt.subplot(3, 1, 2)
+        fittest, active_genes = zip(*the_fittest_data)
+        plt.plot(fittest, label="The Fittest", marker='x', linestyle='-')
+        plt.xlabel('Generation')
+        plt.ylabel('Fitness')
         plt.legend()
+        plt.grid(True)
 
-        # Roulette vs Tournament
+        # Title based on the selection method
         if roulette:
             plt.title("The Fittest per Generation: Roulette")
-
         else:
             plt.title("The Fittest per Generation: Tournament")
+
+        # Plot for Active Genes Data
+        plt.subplot(3, 1, 3)
+        plt.plot(active_genes, label="Active Genes", marker='s', linestyle='--')
+        plt.xlabel('Generation')
+        plt.ylabel('Active Genes')
+        plt.legend()
+        plt.grid(True)
+
+        # Title based on the selection method
+        if roulette:
+            plt.title("Active Genes per Generation: Roulette")
+        else:
+            plt.title("Active Genes per Generation: Tournament")
 
         plt.tight_layout()
         plt.show()
@@ -245,10 +274,10 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
             max_chromosome, max_fitness, active_genes: (tuple: (np.ndarray),
             (np.int64), (np.int64))
         """
-        fitness_values = [self.fitness_func(chromosome) for chromosome in
+        fittest_values = [self.fitness_func(chromosome) for chromosome in
                           population]
-        max_fitness = max(fitness_values)
-        max_index = fitness_values.index(max_fitness)
+        max_fitness = max(fittest_values)
+        max_index = fittest_values.index(max_fitness)
         active_genes = sum(population[max_index])
 
         return population[max_index], max_fitness, active_genes
@@ -261,7 +290,7 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
 
         best_solution = None
         best_fitness = 0
-        best_generation = 0
+        best_generation = self.generation
 
         # For each generation, run genetic algorithm
         for gen in range(self.stop):
@@ -282,20 +311,19 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
             # Update population
             new_population.extend(mutants)
 
-            breakpoint()
 # ================================ Selection performance comparison ================================
-            avg_fitness = self.average_fitness(self.population)
-            fittest_idx, fittest_fit, active_genes = self.the_fittest(
+            avg_fitness = self.average_fitness(self.population) # (float)
+            fittest_chromosome, most_fit, active_genes = self.the_fittest(
                 self.population
             )
 
-            avg_fitness_data.append(avg_fitness)
-            the_fittest_data.append((fittest_fit, active_genes))
+            avg_fitness_data.append(avg_fitness) # List of floats
+            the_fittest_data.append((most_fit, active_genes)) # List of Tuples
 
             # Update best solution
-            if fittest_fit > best_fitness:
-                best_solution = fittest_idx
-                best_fitness = fittest_fit
+            if most_fit > best_fitness:
+                best_solution = fittest_chromosome
+                best_fitness = most_fit
                 best_generation = gen
 
             # New population
@@ -304,13 +332,19 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
         # Plotting
         self.plot_selection(avg_fitness_data, the_fittest_data, roulette)
         # Output results to console
-        print(f"Best solution overall: {best_solution}")
-        print(f"Best solution overall: {best_solution}")
-        print(f"Best fitness overall: {best_fitness}")
+        if roulette:
+            print(f"++++++++++++++++ ROULETTE++++++++++++++++++++++++++++++++")
+            print(f"Best fitness overall: {best_fitness}")
+            print(f"Best solution overall: {best_solution}")
+            print(f"In generation: {best_generation}\n\n")
+            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
-        print(f"In generation: {best_generation}")
-        print(f"Best fitness overall: {best_fitness}")
-        print(f"In generation: {best_generation}")
+        else:
+            print(f"++++++++++++++++ TOURNAMENT ++++++++++++++++++++++++++++++++")
+            print(f"Best fitness overall: {best_fitness}")
+            print(f"Best solution overall: {best_solution}")
+            print(f"In generation: {best_generation}\n\n")
+            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 # ================================ Selection performance comparison ================================
 
 
