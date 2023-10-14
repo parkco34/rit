@@ -9,14 +9,14 @@ print(f"Random seed used: {seed}")
 np.random.seed(seed)
 
 
-class MySack(object):
+class MyKnapsack(object):
     """
     Genetic Algorithm for the 0-1 Knapsack problem
     """
     def __init__(self, config_file):
-        (self.population, 
-        self.capacity, 
-        self.weight_value, 
+        (self.population,
+        self.capacity,
+        self.weight_value,
         self.generation,
         self.stop) = self.get_initial_population(config_file)
 
@@ -25,7 +25,7 @@ class MySack(object):
         Generates initial population for generation 0
         ----------------------------------------------
         INPUT:
-            configuration file: (str) 
+            configuration file: (str)
 
         OUTPUT:
             g: (int) current generation
@@ -50,7 +50,7 @@ class MySack(object):
         S = [tuple(map(int, line.strip().split())) for line in lines[4:]]
         # Initialize empty population
         population = np.random.randint(2, size=(pop_size, n))
-        
+
         g = 0 # initial generation
         return population, W, S, g, stop
 
@@ -87,7 +87,7 @@ class MySack(object):
         -----------------------------------------------------------
 
         OUTPUT:
-            two parents: (tuple) the two chromosomes for the two most fit parents           
+            two parents: (tuple) the two chromosomes for the two most fit parents
         """
         list_of_fitness = [self.fitness_func(chromosome) for chromosome in
                            initial_population] # Not sorted, if it matters
@@ -97,7 +97,7 @@ class MySack(object):
         for fitness in list_of_fitness:
             # If total_weight is over the weight limit, select two random
             # parents, without weights
-            
+
             if total == 0:
                 return random.choices(initial_population, k=2)
 
@@ -128,7 +128,7 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
             )
         fit_vals = [self.fitness_func(chromosome) for chromosome in competitors]
         # Sort in descending order
-        sorted_indices = np.argsort(fit_vals)[::-1] 
+        sorted_indices = np.argsort(fit_vals)[::-1]
         # Select most fit parents
         parent1 = competitors[sorted_indices[0]]
         parent2 = competitors[sorted_indices[1]]
@@ -190,9 +190,6 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
     def plot_selection(self, avg_fitness_data, the_fittest_data, roulette=True):
         """
         Plots and compares the two different selection methods
-        INPUT:
-            avg_fitness_data: 
-            the_fittest_data:
 
         """
         plt.figure()
@@ -207,9 +204,7 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
             plt.title("Average Fitness per Generation: Tournament")
 
         plt.subplot(2, 1, 2)
-        # ?? Can't remember what I was doing
         fittest_fit, active_genes = zip(*the_fittest_data)
-        
         plt.plot(fittest_fit, label="The Fittest")
         plt.plot(active_genes, label="Active Genes")
         plt.legend()
@@ -227,6 +222,7 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
     def average_fitness(self, population):
         """
         Calculates average fitness for a population
+        --------------------------------------------------------
         INPUT:
             population:  (np.ndarray)
 
@@ -235,59 +231,34 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
         """
         total_fitness = sum([self.fitness_func(chromosome) for chromosome in
                              population])
-        
+
         return total_fitness / len(population)
 
     def the_fittest(self, population):
         """
         Determines the fittest individual for a given population
+        --------------------------------------------------------
         INPUT:
-            population: np.ndarrayL
+            population: (np.ndarray)
 
         OUTPUT:
-
+            max_chromosome, max_fitness, active_genes: (tuple: (np.ndarray),
+            (np.int64), (np.int64))
         """
         fitness_values = [self.fitness_func(chromosome) for chromosome in
                           population]
         max_fitness = max(fitness_values)
         max_index = fitness_values.index(max_fitness)
+        active_genes = sum(population[max_index])
 
-        return population[max_index], max_fitness, sum(population[max_index])
-
-    def fitness_plot(self, fitness_score):
-        """
-        Plots the fitnesses of
-        ------------------------------------------------
-        INPUTS:
-            fitness_score: (int) 
-
-        OUTPUTS:
-            None
-        """
-        # create figure
-        plt.figure(figsize=(12, 6))
-
-        # first subplot
-        plt.subplot(1, 2, 1) # 1 row, 2 columns, 1st plot
-        sns.lineplot(x=range(len(fitness_score)), y=fitness_score)
-        plt.title(dedent(
-        f"""fitness score for config_{config} file: roulette selection"""
-        ))
-        plt.xlabel("generation")
-
-        # show plot
-        plt.tight_layout()
-        plt.show()
-
-        # sleep for a ew seconds
-        sleep(3)
+        return population[max_index], max_fitness, active_genes
 
     def run_genetic(self, roulette=True):
         pop_size = len(self.population)
         # Initialized average fitness data and fittest individual data
         avg_fitness_data = []
         the_fittest_data = []
-        
+
         best_solution = None
         best_fitness = 0
         best_generation = 0
@@ -311,12 +282,13 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
             # Update population
             new_population.extend(mutants)
 
+            breakpoint()
 # ================================ Selection performance comparison ================================
             avg_fitness = self.average_fitness(self.population)
             fittest_idx, fittest_fit, active_genes = self.the_fittest(
                 self.population
             )
-            
+
             avg_fitness_data.append(avg_fitness)
             the_fittest_data.append((fittest_fit, active_genes))
 
@@ -340,14 +312,16 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
         print(f"Best fitness overall: {best_fitness}")
         print(f"In generation: {best_generation}")
 # ================================ Selection performance comparison ================================
- 
+
 
 if __name__ == "__main__":
 
     for i in range(1,3):
-        sack = MySack(f"config_{i}.txt")
+        sack = MyKnapsack(f"config_{i}.txt")
         sack.run_genetic()
         sack.run_genetic(False)
+
+
 
 
 
