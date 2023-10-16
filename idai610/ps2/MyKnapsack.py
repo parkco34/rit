@@ -131,28 +131,6 @@ class MyKnapsack(object):
             "Alternative Fitness Function"
         )
 
-#    def compare_fitness(self):
-#        """
-#        Compares the two fitness functions by running the genetic algorithm
-#        twice and plotting the results.
-#        """
-#        # Data for original fitness function
-#        avg_fitness_data_original = []
-#        the_fittest_data_original = []
-#
-#        # Data for alternative fitness function
-#        avg_fitness_data_alt = []
-#        the_fittest_data_alt = []
-#
-#        # Run the genetic algorithm with the original fitness function
-#        self.run_genetic(roulette=True, collect_data=(avg_fitness_data_original, the_fittest_data_original), alt=False)
-#        # Run the genetic algorithm with the alternative fitness function
-#        self.run_genetic(roulette=True, collect_data=(avg_fitness_data_alt, the_fittest_data_alt), alt=True)
-#
-#        # Plotting
-#        self.fitness_plot(avg_fitness_data_original, the_fittest_data_original, "Original Fitness Function")
-#        self.fitness_plot(avg_fitness_data_alt, the_fittest_data_alt, "Alternative Fitness Function")
-
     def roulette_selection(self, initial_population):
         """
         Roulette Wheel Selection
@@ -495,12 +473,12 @@ if __name__ == "__main__":
 
     for i in range(1,3):
         sack = MyKnapsack(f"config_{i}.txt")
+        # Compare both fitness functions
+        sack.compare_fitness()
         sack.run_genetic()
         sack.run_genetic(roulette=False)
         # Question 2:
         sack.run_genetic(selection_only=True)
         sack.run_genetic(roulette=False, selection_only=True)
-        # Compare both fitness functions
-        sack.compare_fitness()
 
 

@@ -3,7 +3,6 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 from textwrap import dedent
-from time import sleep
 
 seed = 1470
 print(f"\t\t...\t...\t...Random seed used: {seed}...\t...\t...")
@@ -146,7 +145,7 @@ class Knapsack(object):
         try:
             competitors = random.sample(list(initial_population), 2)
 
-        except Except as e:
+        except Exception as e:
             print(f"Something went wrong: {e}")
 
         fit_vals = [self.fitness_func(chromosome) for chromosome in competitors]
@@ -313,6 +312,16 @@ class Knapsack(object):
         else:
             plt.title(f"" + r"$\bf{"+ f"{title}" + r"}$" + "\nAverage Fitness per Generation: Tournament")
 
+        # Prevents empty list from being passed through
+        if the_fittest_data is not None:
+            fittest, active_genes = zip(*the_fittest_data)
+
+        else:
+            print("Warning: the_fittest_data is None")
+            # Handle the case when the_fittest_data is None, maybe set fittest and active_genes to empty lists
+            fittest = []
+            active_genes = []
+
         # Plot for The Fittest Data
         plt.subplot(3, 1, 2)
         fittest, active_genes = zip(*the_fittest_data)
@@ -369,17 +378,69 @@ class Knapsack(object):
 
         return False
 
-    def integrate_crossover_mutation(self):
+    def integrate_crossover_mutation(self, population, stopping_criteria):
         """
-        Running trials with each selection operator, reporting reulsts on
+        Running trials with each selection operator, reporting results on
         crossover and mutation.
-            - Include comparitive results for my implemented stopping criteria.
+            - Include comparative results for my implemented stopping criteria.
         --> Use plots method
         ---------------------------------------------------------
+        INPUT:
+            population: (np.ndarray)
+            stopping_criteria: (int)
         """
-        pass
+        # Initialize data storage for plots
+        avg_fit_data_roulette = []
+        avg_fit_data_tournament = []
 
-    def explore_pop_sizes(self):
+        # Run trials with Roulette selection
+        for gen in range(stopping_criteria):
+            parents_roulette = self.selection(population)
+            children_roulette = self.crossover(parents_roulette)
+            mutants_roulette = [self.mutation(kid) for kid in children_roulette]
+
+            # Replace least fit individuals
+            sorted_indices = np.argsort([self.fitness_func(ind) for ind in population])
+            population[sorted_indices[:len(mutants_roulette)]] = mutants_roulette
+
+            # Collect data for plotting
+            avg_fitness_roulette = self.average_fitness(population)
+            avg_fit_data_roulette.append(avg_fitness_roulette)
+
+        # Reset population for next trial
+        population = self.population
+
+        # Run trials with Tournament selection
+        for gen in range(stopping_criteria):
+            parents_tournament = self.selection(population, roulette=False)
+            children_tournament = self.crossover(parents_tournament)
+            mutants_tournament = [self.mutation(kid) for kid in children_tournament]
+
+            # Replace least fit individuals
+            sorted_indices = np.argsort([self.fitness_func(ind) for ind in population])
+            population[sorted_indices[:len(mutants_tournament)]] = mutants_tournament
+
+            # Collect data for plotting
+            avg_fitness_tournament = self.average_fitness(population)
+            avg_fit_data_tournament.append(avg_fitness_tournament)
+
+        # Use your existing plot method to visualize the results
+        self.fitness_plot(avg_fit_data_roulette, None, None, None, True)
+        self.fitness_plot(avg_fit_data_tournament, None, None, None, False)
+
+        def get_weight(self, chromosome):
+            """
+            Gets weight of this chromosome.
+            -----------------------------------
+            INPUT:
+                chromosome: (np.ndarray)
+
+            OUTPUT:
+                total weight for current chromosome: (int)
+            """
+            return 
+
+    def explore_pop_sizes(self, population):
         """
         Using different population sizes,
         1) Explore at least 10 population sizes,
@@ -387,24 +448,31 @@ class Knapsack(object):
         (active genes) at the stopping criterion.
         2) Run 30 trials and report mean weight, std dev.
         -----------------------------------------------------------
+        INPUT:
+            population: (np.ndarray)
+
         """
+        weight_value = self.weight_value
+        # Generates a list of 10 random integers between 13 and 73
+        pop_sizez = np.random.randint(13, 74, size=10).array_tolist()
+        
         for pop_size in pop_sizes:
             print(f"Running trials for population size: {pop_size}")
 
             # Initialize population based on the new size
-            self.population = np.random.randint(2, size=(pop_size, len(self.weight_value)))
+            population = np.random.randint(2, size=(pop_size, len(weight_value)))
 
             final_values = []
             final_weights = []
             final_no_items = []
 
             self.run_trials(num_trials=30)
-
-            # Assuming you have methods get_fitness, get_weight, get_active_items
-            best_chromosome = self.the_fittest(self.population)[0]
+    
+            # Get perfromance 
+            best_chromosome = self.the_fittest(population)[0]
             best_fitness = self.fitness_func(best_chromosome)
-            best_weight = self.get_weight(best_chromosome)  # Implement this method
-            no_items = self.get_active_items(best_chromosome)  # Implement this method
+            best_weight = self.get_weight(best_chromosome)
+            no_items = self.get_active_items(best_chromosome)
 
             final_values.append(best_fitness)
             final_weights.append(best_weight)
@@ -424,12 +492,15 @@ class Knapsack(object):
         Runs the genetic algorithm for each generation, creating a new
         population with each iteration.
         """
+        stop = self.stop
+        population = self.population
         best_fitness = 0
+        best_active_genes = 0
+        best_generation = None
         avg_fit_data = []
         the_fittest_data = []
-        population = self.population
 
-        for gen in range(self.stop):
+        for gen in range(stop):
             new_population = []
 
             # Ensure the population size stays same
@@ -448,14 +519,17 @@ class Knapsack(object):
                     remaining_population = random.sample(list(population),
                                                          remaining_population_size)
                     new_population.extend(remaining_population)
+                    break
 
                 elif q3:
                     # Integrate crossover/mutation
-                    pass
+                    self.integrate_crossover_mutation(population, stop)
+                    break
 
                 elif q4:
                     # Exploring population sizes
-                    pass
+                    self.explore_pop_sizes(population)
+                    break
 
                 else:
                     # Roulette selection
@@ -476,6 +550,7 @@ class Knapsack(object):
             # Append data to lists
             avg_fit_data.append(avg_fitness)
             the_fittest_data.append((most_fit, active_genes))
+            print(f"fittest_data = {the_fittest_data}")
 
             # Update best solution
             if most_fit > best_fitness:
@@ -515,11 +590,11 @@ class Knapsack(object):
             print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
 
 if __name__ == "__main__":
-    for i in range(1, 3):
-        ga = Knapsack(f"config_{i}.txt")
-        ga.run_genetic()
-#        ga.run_genetic(roulette=False)
-#        ga.run_genetic(q2=True)
-        sleep(3)
+    ga = Knapsack(f"config_1.txt")
+#    ga.run_genetic()
+#    ga.run_genetic(roulette=False)
+    ga.run_genetic(q2=True)
+    ga.run_genetic(q3=True)
+    ga.run_genetic(q4=True)
 
 
