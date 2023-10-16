@@ -88,6 +88,71 @@ class MyKnapsack(object):
                 return total_value
         return total_value
 
+    def compare_fitness(self):
+        # Data for original fitness function
+        avg_fitness_data_original = []
+        the_fittest_data_original = []
+        best_generation_original = 0
+        best_active_genes_original = 0
+
+        # Data for alternative fitness function
+        avg_fitness_data_alt = []
+        the_fittest_data_alt = []
+        best_generation_alt = 0
+        best_active_genes_alt = 0
+
+        # Run the genetic algorithm with the original fitness function
+        best_generation_original, best_active_genes_original = self.run_genetic(
+            roulette=True,
+            collect_data=(avg_fitness_data_original, the_fittest_data_original),
+            alt=False
+        )
+
+        # Run the genetic algorithm with the alternative fitness function
+        best_generation_alt, best_active_genes_alt = self.run_genetic(
+            roulette=True,
+            collect_data=(avg_fitness_data_alt, the_fittest_data_alt),
+            alt=True
+        )
+
+        # Plotting
+        self.fitness_plot(
+            avg_fitness_data_original,
+            the_fittest_data_original,
+            best_generation_original,
+            best_active_genes_original,
+            "Original Fitness Function"
+        )
+        self.fitness_plot(
+            avg_fitness_data_alt,
+            the_fittest_data_alt,
+            best_generation_alt,
+            best_active_genes_alt,
+            "Alternative Fitness Function"
+        )
+
+#    def compare_fitness(self):
+#        """
+#        Compares the two fitness functions by running the genetic algorithm
+#        twice and plotting the results.
+#        """
+#        # Data for original fitness function
+#        avg_fitness_data_original = []
+#        the_fittest_data_original = []
+#
+#        # Data for alternative fitness function
+#        avg_fitness_data_alt = []
+#        the_fittest_data_alt = []
+#
+#        # Run the genetic algorithm with the original fitness function
+#        self.run_genetic(roulette=True, collect_data=(avg_fitness_data_original, the_fittest_data_original), alt=False)
+#        # Run the genetic algorithm with the alternative fitness function
+#        self.run_genetic(roulette=True, collect_data=(avg_fitness_data_alt, the_fittest_data_alt), alt=True)
+#
+#        # Plotting
+#        self.fitness_plot(avg_fitness_data_original, the_fittest_data_original, "Original Fitness Function")
+#        self.fitness_plot(avg_fitness_data_alt, the_fittest_data_alt, "Alternative Fitness Function")
+
     def roulette_selection(self, initial_population):
         """
         Roulette Wheel Selection
@@ -227,23 +292,17 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
 
         return total_fitness / len(population)
 
-    def the_fittest(self, population, compare_fit_funcs=False):
+    def the_fittest(self, population):
         """
         Determines the fittest individual for a given population
         --------------------------------------------------------
         INPUT:
             population: (np.ndarray),
-            compare_fit_funcs: (bool) If True, both fitness functions are
-            compared.  (default: False)
 
         OUTPUT:
             max_chromosome, max_fitness, active_genes: (tuple: (np.ndarray),
             (np.int64), (np.int64))
         """
-        if compare_fit_funcs:
-            # compare fitness functions FUNCTION goes here
-            pass
-
         fittest_values = [self.fitness_func(chromosome) for chromosome in
                           population]
         max_fitness = max(fittest_values)
@@ -322,7 +381,11 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
         plt.tight_layout()
         plt.show()
 
-    def run_genetic(self, roulette=True, selection_only=False):
+    def run_genetic(self, 
+                    roulette=True,
+                    collect_data=None,
+                    alt=False,
+                    selection_only=False):
         """
         Runs the genetic algorithm, obtaining the best solution,
         most fit individual and active genese for each generation.
@@ -337,12 +400,17 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
             None
         """
         # Initialized average fitness data and fittest individual data
-        avg_fitness_data = []
-        the_fittest_data = []
+        if collect_data is None:
+            avg_fitness_data = []
+            the_fittest_data = []
+
+        else:
+            avg_fitness_data, the_fittest_data = collect_data
 
         best_solution = None
         best_fitness = 0
         best_active_genes = 0
+        most_fit = 0
         best_generation = self.generation
 
         # For each generation, run genetic algorithm
@@ -374,15 +442,16 @@ dedent(f"""Check the size of input population.\nIt must not exceed the
                                                       remaining_population_size)
                 new_population.extend(remaining_population)
 
-            avg_fitness = self.average_fitness(self.population) # (float)
-            # Gets numpy array of best chromosome, most_fit individual (int)
-            # and the number of active genes in chromosome (int)
-            fittest_chromosome, most_fit, active_genes = self.the_fittest(
-                self.population
-            )
+            # Collect data for fitness function comparison
+            if collect_data:
+                avg_fitness_data, the_fittest_data = collect_data
 
-            avg_fitness_data.append(avg_fitness) # List of floats
-            the_fittest_data.append((most_fit, active_genes)) # List of Tuples
+                avg_fitness = self.average_fitness(self.population)
+                fittest_chromosome, most_fit, active_genes = \
+                self.the_fittest(self.population)
+
+                avg_fitness_data.append(avg_fitness) # List of floats
+                the_fittest_data.append((most_fit, active_genes)) # List of Tuples
 
             # Update best solution based on whether 
             if most_fit > best_fitness:
@@ -426,10 +495,12 @@ if __name__ == "__main__":
 
     for i in range(1,3):
         sack = MyKnapsack(f"config_{i}.txt")
-#        sack.run_genetic()
-#        sack.run_genetic(roulette=False)
+        sack.run_genetic()
+        sack.run_genetic(roulette=False)
         # Question 2:
         sack.run_genetic(selection_only=True)
         sack.run_genetic(roulette=False, selection_only=True)
+        # Compare both fitness functions
+        sack.compare_fitness()
 
 
