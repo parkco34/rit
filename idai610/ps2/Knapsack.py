@@ -3,6 +3,7 @@ import numpy as np
 import random
 import matplotlib.pyplot as plt
 from textwrap import dedent
+from time import sleep
 
 seed = 1470
 print(f"\t\t...\t...\t...Random seed used: {seed}...\t...\t...")
@@ -517,7 +518,8 @@ if __name__ == "__main__":
     for i in range(1, 3):
         ga = Knapsack(f"config_{i}.txt")
         ga.run_genetic()
-        ga.run_genetic(roulette=False)
-        ga.run_genetic(q2=True)
+#        ga.run_genetic(roulette=False)
+#        ga.run_genetic(q2=True)
+        sleep(3)
 
 
