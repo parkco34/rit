@@ -56,6 +56,30 @@ class Knapsack(object):
         g = 0 # initial generation
         return population, W, S, g, stop
 
+    def get_weight(self, chromosome):
+        """
+        Gets total weight of chromosome.
+        ---------------------------------
+        INPUT:
+            chromosome: (np.ndarray)
+
+        OUTPUT:
+            total weight: (int)
+        """
+        return sum(self.weight_value[gene][0] for gene in range(len(chromosome)))
+
+    def get_value(self, chromosome):
+        """
+        Gets total value of chromosome.
+        ---------------------------------
+        INPUT:
+            chromosome: (np.ndarray)
+
+        OUTPUT:
+            total value: (int)
+        """
+        return sum(self.weight_value[gene][1] for gene in range(len(chromosome)))
+
     def fitness_func(self, chromosome, alt=False):
         """
         Determines fitness of chromosome by taking the sum of the products of
@@ -69,14 +93,12 @@ class Knapsack(object):
         OUTPUT:
             fitness of chromosome: (int)
         """
-        total_weight, total_value = 0, 0
+        total_weight = self.get_weight(chromosome)
+        total_value = self.get_value(chromosome)
         penalty_factor = 0.5
 
-        for i in range(len(chromosome)):
-            total_weight += self.weight_value[i][0] * chromosome[i]
-            total_value += self.weight_value[i][1] * chromosome[i]
-
         if alt:
+            # Alternative fitness function
             if total_weight > self.capacity:
                 return total_value - penalty_factor * (total_weight - self.capacity)
        
@@ -85,17 +107,6 @@ class Knapsack(object):
                 return total_value
 
             return total_value
-
-    def fitness_func_eval(self):
-        """
-        Evaluates performance of both fitness functions, plotting the average
-        fitness, fit score and active gene count for fittest individual per
-        generation
-        -----------------------------------------------------------
-        OUTPUT:
-            Plot for various fitness functions
-        """
-        pass
 
     def roulette_selection(self, initial_population):
         """
@@ -333,9 +344,10 @@ class Knapsack(object):
 
         # Title based on the selection method
         if roulette:
-            plt.title("The Fittest per Generation: Roulette")
+            plt.title(f"" + r"$\bf{" + f"{title}" r"}$" + "\nThe Fittest per Generation: Roulette")
+
         else:
-            plt.title("The Fittest per Generation: Tournament")
+            plt.title(f"" + r"$\bf{" + f"{title}" r"}$" + "\nThe Fittest per Generation: Tournament")
 
         # Plot for Active Genes Data
         plt.subplot(3, 1, 3)
@@ -351,9 +363,10 @@ class Knapsack(object):
 
         # Title based on the selection method
         if roulette:
-            plt.title("Active Genes per Generation: Roulette")
+            plt.title(f"" + r"$\bf{" + f"{title}" r"}$" + "\nActive Genes per Generation: Roulette")
+
         else:
-            plt.title("Active Genes per Generation: Tournament")
+            plt.title(f"" + r"$\bf{" + f"{title}" r"}$" + "\nActive Genes per Generation: Tournament")
 
         plt.tight_layout()
         plt.show()
@@ -493,7 +506,10 @@ class Knapsack(object):
         population with each iteration.
         """
         stop = self.stop
+        # Initialize populations: The 2nd one is for when comparing
         population = self.population
+        population2 = self.population
+
         best_fitness = 0
         best_active_genes = 0
         best_generation = None
@@ -502,34 +518,58 @@ class Knapsack(object):
 
         for gen in range(stop):
             new_population = []
+            new_population2 = []
 
             # Ensure the population size stays same
-            while len(new_population) < len(population):
+            if len(new_population) < len(population):
+
                 if not roulette:
                     # Tournament selection
                     parents = self.selection(population, roulette=False)
-                elif q2:
-                    # Compare selection methods
-                    parents1 = self.selection(population)
-                    parents2 = self.selection(population, roulette=False)
 
-                    new_population.extend(parents1)
+                    children = self.crossover(parents)
+                    mutants = [self.mutation(kid) for kid in children]
+                    new_population.extend(mutants)
+
                     remaining_population_size = len(population) - \
                     len(new_population)
                     remaining_population = random.sample(list(population),
                                                          remaining_population_size)
                     new_population.extend(remaining_population)
-                    break
+
+
+                elif q2:
+                    # Compare selection methods
+                    parents1 = self.selection(population)
+                    parents2 = self.selection(population, roulette=False)
+                    
+                    new_population.extend(parents1)
+                    new_population2.extend(parents2)
+
+                    remaining_population_size1 = len(population) - \
+                    len(new_population)
+                    remaining_population_size2 = len(population) - \
+                    len(new_population2)
+
+                    remaining_population1 = random.sample(list(population),
+                    remaining_population_size1)
+                    remaining_population2 = random.sample(list(population2),
+                    remaining_population_size2)
+
+                    new_population.extend(remaining_population1)
+                    new_population2.extend(remaining_population2)
+                    """
+                    !!!!1 ===> Generation is 0 everytime! ¯\_( ͡° ͜ʖ ͡°)_/¯ 
+                    """
+
 
                 elif q3:
                     # Integrate crossover/mutation
                     self.integrate_crossover_mutation(population, stop)
-                    break
 
                 elif q4:
                     # Exploring population sizes
                     self.explore_pop_sizes(population)
-                    break
 
                 else:
                     # Roulette selection
@@ -539,6 +579,10 @@ class Knapsack(object):
 
                     # Update population
                     new_population.extend(mutants)
+
+            else:
+                print(f"""Length of new  popultion exceeds the length of the
+                      initial population""")
 
     # Sort the old population by fitness and replace the least fit individuals
             sorted_indices = np.argsort([self.fitness_func(ind) for ind in population])
@@ -550,7 +594,6 @@ class Knapsack(object):
             # Append data to lists
             avg_fit_data.append(avg_fitness)
             the_fittest_data.append((most_fit, active_genes))
-            print(f"fittest_data = {the_fittest_data}")
 
             # Update best solution
             if most_fit > best_fitness:
@@ -559,42 +602,62 @@ class Knapsack(object):
                 best_generation = gen
                 best_active_genes = active_genes
 
-    # Sort the old population by fitness and replace the least fit individuals
+            if q2:
+                sorted_indices2 = np.argsort([self.fitness_func(ind) for ind in population])
+                population[sorted_indices2[:len(new_population2)]] = \
+                new_population2
+               
+            # Sort the old population by fitness and replace the least fit individuals
             sorted_indices = np.argsort([self.fitness_func(ind) for ind in population])
             population[sorted_indices[:len(new_population)]] = new_population
+
         # END LOOP
 
         # Plots
-        self.fitness_plot(
-            avg_fit_data,
-            the_fittest_data,
-            best_generation,
-            best_active_genes,
-        )
-        
-        # Output results to console
-        if roulette:
-            print(f"++++++++++++++++ ROULETTE ++++++++++++++++++++++++++++++++")
-            print(f"Best fitness overall: {best_fitness}")
-            print(f"Best solution overall: {best_solution}")
-            print(f"In generation: {best_generation}")
-            print(f"Number of active genes for most fit: {best_active_genes}")
-            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        var = True
 
-        else:
-            print(f"++++++++++++++++ TOURNAMENT ++++++++++++++++++++++++++++++++")
-            print(f"Best fitness overall: {best_fitness}")
-            print(f"Best solution overall: {best_solution}")
-            print(f"In generation: {best_generation}")
-            print(f"Number of active genes for most fit: {best_active_genes}")
-            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+        if q2:
+            
+
+            for i in range(1, 3):
+                self.fitness_plot(
+                    avg_fit_data,
+                    the_fittest_data,
+                    best_generation,
+                    best_active_genes,
+                    q2,
+                    q3,
+                    q4,
+                    roulette=var
+                )
+                
+                # Output results to console
+                if roulette:
+                    print(f"++++++++++++++++ ROULETTE ++++++++++++++++++++++++++++++++")
+                    print(f"Best fitness overall: {best_fitness}")
+                    print(f"Best solution overall: {best_solution}")
+                    print(f"In generation: {best_generation}")
+                    print(f"Number of active genes for most fit: {best_active_genes}")
+                    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+
+                else:
+                    print(f"++++++++++++++++ TOURNAMENT ++++++++++++++++++++++++++++++++")
+                    print(f"Best fitness overall: {best_fitness}")
+                    print(f"Best solution overall: {best_solution}")
+                    print(f"In generation: {best_generation}")
+                    print(f"Number of active genes for most fit: {best_active_genes}")
+                    print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+
+                var = False if var else True # Roulette -> Tournament
 
 if __name__ == "__main__":
     ga = Knapsack(f"config_1.txt")
 #    ga.run_genetic()
 #    ga.run_genetic(roulette=False)
     ga.run_genetic(q2=True)
-    ga.run_genetic(q3=True)
-    ga.run_genetic(q4=True)
-
+#    ga.run_genetic(q3=True)
+#    ga.run_genetic(q4=True)
+"""
+Need to refactor this entire thing so user doesn't have to run one at a time...
+"""
 
