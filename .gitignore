@@ -51,6 +51,7 @@ lib/
 lib64/
 share/
 pyvenv.cfg
+etc/
 
 # Other
 #################
