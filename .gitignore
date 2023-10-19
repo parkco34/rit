@@ -65,7 +65,6 @@ etc/
 /idai610/.ipynb_checkpoints
 /ida610/.DS_Store
 /idai610/pyvenv.cfg
-
-/idai610/requirements.txt
+/idai610/ps2/requirements.txt
 
 
