@@ -66,5 +66,6 @@ etc/
 /ida610/.DS_Store
 /idai610/pyvenv.cfg
 
+/idai610/requirements.txt
 
 
