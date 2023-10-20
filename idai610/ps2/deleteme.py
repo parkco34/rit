@@ -647,7 +647,7 @@ class MySack():
                     avg_fit_data.append(avg_fitness)  # Store average fitness
 
                     chromosome, max_fitness, active_genes = self.the_fittest(self.population)
-                    breakpoint()
+                    
                     the_fittest_data.append((max_fitness, active_genes))  # Store the fittest data
 
                     # Update the best solution if a better one is found

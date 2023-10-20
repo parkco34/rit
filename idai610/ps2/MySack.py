@@ -341,7 +341,7 @@ class MySack():
 
         # Title based on the selection method
         plt.title(r"$\bf{" + f"{title}" r"}$" + "\nThe Fittest per \
-                  Generation: {strategy}")
+                  Generation: {strategy.name}")
 
         # Plot for Active Genes Data
         plt.subplot(3, 1, 3)
@@ -357,7 +357,7 @@ class MySack():
 
         # Title based on the selection method
         plt.title(f"" + r"$\bf{" + f"{title}" r"}$" + "\nActive Genes per \
-                  Generation: {strategy}")
+                  Generation: {strategy.name}")
 
         plt.tight_layout()
         plt.show()
@@ -474,12 +474,10 @@ class MySack():
             print("Weight: {}".format(np.max(final_weights)))
             print("No of items: {}".format(np.mean(final_no_items)))
 
-    def apply_strategy(self, strategy):
+    def apply_strategy(self, strategy, new_population = []):
         """
         Applie given strategy to produce a new population.
-        """
-        new_population = []
-
+        """ 
         if strategy == SelectionStrategy.ROULETTE:
             new_population = self.apply_roulette_strategy()
 
@@ -588,13 +586,6 @@ class MySack():
         sorted_indices = np.argsort([self.fitness_func(ind) for ind in combined_population])[::-1]
         self.population = combined_population[sorted_indices[:len(self.population)]]
 
-    def collect_statistics(self):
-        """
-        Collects and storess the statistics.
-        """
-        avg_fitness = self.average_fitness(self.population)
-
-
     def run_genetic(self,
                     strategy=SelectionStrategy.ROULETTE
                    ):
@@ -611,20 +602,46 @@ class MySack():
             performance_metrics = self.apply_explore_strategy()
             
         else:
+
             for gen in range(self.stop):
 
                 if strategy in (SelectionStrategy.ROULETTE,
                                 SelectionStrategy.TOURNAMENT):
                     # Get mean, max and active genes for fittest  individual
-                    # overall generations
-                    self.collect_statistics()
-                    # Update population
-                    new_population = self.apply_strategy(strategy)
-                    self.update_population(new_population)
-                    breakpoint()
+                    avg_fitness = self.average_fitness(self.population)
+                    fittest_chromosome, most_fit, active_genes = self.the_fittest(self.population)
+                    # Append these to corresponding list
+                    avg_fit_data.append(avg_fitness)
+                    the_fittest_data.append((most_fit, active_genes))
                     
-                    # Plot
-#                    fitness_plot()
+                # Update best statistics
+                if most_fit > best_fitness:
+                    best_solution = fittest_chromosome
+                    best_fitness = most_fit
+                    best_generation = gen
+                    best_active_genes = active_genes
+
+                # Update population
+                breakpoint()
+                new_population = self.apply_strategy(strategy)
+                self.update_population(new_population)
+
+            # Output for all experiments for all generations
+            print(f"++++++++++++++++ {strategy.name} ++++++++++++++++++++++++++++++++")
+            print(f"Best fitness overall: {best_fitness}")
+            print(f"Best solution overall: {best_solution}")
+            print(f"In generation: {best_generation}")
+            print(f"Number of active genes for most fit: {best_active_genes}")
+            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+
+            # Plot
+            self.fitness_plot(
+                avg_fit_data,
+                the_fittest_data,
+                best_generation,
+                best_active_genes,
+                strategy.name
+            )
 
 
 if __name__ == "__main__":
