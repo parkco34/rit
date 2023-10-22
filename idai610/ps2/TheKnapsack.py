@@ -18,11 +18,13 @@ class TheKnapsack(object):
         self.config_file = config_file
         self.enable_crossover = enable_crossover
 
-        # Initialize stats
+        # Best stats for each generation
         self.generation_stats = {
-            "avg_fitness": [], "best_fit": [], "best_active_genes": []
+            "avg_fitness": [], "best_fitness": [], "best_active_genes": []
         }
-        self.best_solution = {'fitness': -1, 'active_genes': 0, 'generation': -1}
+        # Best stats for best generation
+        self.best_solution = {'fitness': 0.73, 'active_genes': 0, 'generation':
+                             0}
 
         (self.population,
         self.capacity,
@@ -55,11 +57,11 @@ class TheKnapsack(object):
         except Exception as e:
             print(f"Something went wrong!   ¯\_( ͡° ͜ʖ ͡°)_/¯  \n{e}\n")
 
-        pop_size, n, stop, W = map(int, [lines[i].strip() for i in
+        self.pop_size, n, stop, W = map(int, [lines[i].strip() for i in
                                                 range(4)])
         S = [tuple(map(int, line.strip().split())) for line in lines[4:]]
         # Initialize empty population
-        population = np.random.randint(2, size=(pop_size, n))
+        population = np.random.randint(2, size=(self.pop_size, n))
 
         g = 0 # initial generation
         return population, W, S, g, stop
@@ -86,6 +88,25 @@ class TheKnapsack(object):
         plt.title("Weights vs. Values for given population")
         plt.show()
 
+    def output_stats(self):
+        """
+        Outputs statistics to console.
+        """
+        # Output data from best_solution dictionary
+        print(f"{int(7) * '======' } Best Solutions {int(7) * '======' }:")
+        for i,j in self.best_solution.items():
+            print(dedent(f"""
+        {i}: {j}
+                  """), end='')
+        print(f"{int(13) * '========'}")
+
+        print(f"{int(7) * '======' } Generation Stats  {int(7) * '======' }:")
+        for i,j in self.generation_stats.items():
+            print(dedent(f"""
+        {i}: {j}
+                  """), end='')
+        print(f"{int(13) * '========'}")
+
     def fitness_func(self, chromosome):
         """
         Determines fitness of chromosome by taking the sum of the products of
@@ -97,16 +118,15 @@ class TheKnapsack(object):
         OUTPUT:
             fitness of chromosome: (int)
         """
-        weights = [self.weight_value[gene][0] for gene in
-                   range(len(self.weight_value))]
-        values = [self.weight_value[gene][1] for gene in
-                  range(len(self.weight_value))]
+        weights = [self.weight_value[gene][0] * chromosome[gene] for gene in range(len(chromosome))]
+        values = [self.weight_value[gene][1] * chromosome[gene] for gene in range(len(chromosome))]
+        
         total_weight = sum(weights)
         total_value = sum(values)
-        
+
         # Make sure total weight doesn't exceed knapsack capacity
         if total_weight > self.capacity:
-            return total_value
+            return 0
 
         return total_value
 
@@ -116,10 +136,8 @@ class TheKnapsack(object):
         that exceeds the capacity.
         --------------------------------------------------------
         """ 
-        weights = [self.weight_value[gene][0] for gene in
-                   range(len(self.weight_value))]
-        values = [self.weight_value[gene][1] for gene in
-                  range(len(self.weight_value))]
+        weights = [self.weight_value[gene][0] * chromosome[gene] for gene in range(len(chromosome))]
+        values = [self.weight_value[gene][1] * chromosome[gene] for gene in range(len(chromosome))]
         total_weight = sum(weights)
         total_value = sum(values)
         
@@ -134,14 +152,14 @@ class TheKnapsack(object):
 
         return total_value
 
-    def compare_fitness_functions(self):
+    def compare_fitness_functions(self, population):
         """
         Compares the two fitness functions via average fitness and the best
         solution.
         ------------------------------------------------
         """
-        fit1 = [round(self.fitness_func(chromosome)) for chromosome in self.population]
-        fit2 = [round(self.fitness_func2(chromosome)) for chromosome in self.population]
+        fit1 = [round(self.fitness_func(chromosome)) for chromosome in population]
+        fit2 = [round(self.fitness_func2(chromosome)) for chromosome in population]
         avg_fitness1 = round(np.mean(fit1))
         avg_fitness2 = round(np.mean(fit2))
         best_solution1 = round(max(fit1))
@@ -160,8 +178,8 @@ Best solution2: {best_solution2}
 ======================================================= 
               """))
 
-        roulette_parents = self.roulette_selection(self.population)
-        tournament_parents = self.tournament_selection(self.population)
+        roulette_parents = self.roulette_selection(population)
+        tournament_parents = self.tournament_selection(population)
         roulette_fitness = [self.fitness_func(roulette_parents[i]) for i in
                             range(2)]
         tournament_fitness = [self.fitness_func(tournament_parents[i]) for i in
@@ -188,7 +206,7 @@ Best solution2: {best_solution2}
             population: (np.ndarray)
 
         OUTPUT:
-
+            parents: Two (np.ndarray) fittest members of the population.
         """
         # Get fitness values in a list from all chromosomes
         fitness_values = [self.fitness_func(chromosome) for chromosome in population]
@@ -228,7 +246,7 @@ Best solution2: {best_solution2}
             # Randomly select k individuals from population
             chromosomes = random.sample(list(population), k)
             # Most fit among k chromosomes
-            best_fit = -1 # Initialize best fitness
+            best_fit = 0.37 # Initialize best fitness
             best_chrome = None
             
             for chrome in chromosomes:
@@ -242,16 +260,46 @@ Best solution2: {best_solution2}
 
         return selected_parents
 
-    def compare_selections(self):
-        """
-        Compares selection methods and produces a plot with:
-            a) Average population fitness
-        """
-        pass
+    import matplotlib.pyplot as plt
 
-    def plot_statistics(self):
+    def compare_selection_methods(self, num_trials=30):
+        """
+        Compares the performance of Roulette Wheel Selection and Tournament Selection methods.
+        """
+        methods = ["roulette", "tournament"]
+        method_stats = {method: {"avg_fitness": [], "best_fitness": [], "best_active_genes": []} for method in methods}
+
+        for method in methods:
+            for trial in range(num_trials):
+                self.run(selection=method)
+
+                method_stats[method]['avg_fitness'].append(self.generation_stats['avg_fitness'])
+                method_stats[method]['best_fitness'].append(self.generation_stats['best_fitness'])
+                method_stats[method]['best_active_genes'].append(self.generation_stats['best_active_genes'])
+
+        # Report and plot
+        for method in methods:
+            avg_fitness = [sum(x)/num_trials for x in zip(*method_stats[method]['avg_fitness'])]
+            best_fitness = [sum(x)/num_trials for x in zip(*method_stats[method]['best_fitness'])]
+            best_active_genes = [sum(x)/num_trials for x in zip(*method_stats[method]['best_active_genes'])]
+
+            plt.figure()
+
+            plt.subplot(2, 1, 1)
+            plt.plot(avg_fitness, label="Average Fitness")
+            plt.plot(best_fitness, label="Best Fitness")
+            plt.title(f"{method.capitalize()} Selection")
+            plt.legend()
+
+            plt.subplot(2, 1, 2)
+            plt.plot(best_active_genes, label="Best Active Genes")
+            plt.legend()
+
+            plt.show()
+
+    def plot_stats(self):
         # Initialize number of generations
-        generations = range(self.num_generations)
+        generations = range(self.stop)
 
         plt.figure()
 
@@ -278,6 +326,90 @@ Best solution2: {best_solution2}
         plt.tight_layout()
         plt.show()
 
+    def crossover(self, parents):
+        """
+        Single-point crossover possible at any chromosome index,
+        where the crossover rate C_x, wich functions as a cutoff - if a random
+        number is above it you perform crossover, otherwise you don't.
+        ------------------------------------------
+        INPUT:
+            parents: (list of np.ndarrays)
+
+        OUTPUT:
+            children: (list of np.ndarrays)
+        """
+        # Generate random number between 0 and 1
+        rand_number = random.uniform(0,1)
+
+        # Define crossover rate C_x
+        C_x = 0.473
+        if rand_number > C_x:
+            # Point crossover using a random integer for the split
+            point = random.randint(1, len(parents[0])-1)
+            # For the children; stacks arrays in sequence, horizontally
+            # (Column-wise)
+            child1 = np.hstack((parents[0][:point], parents[1][point:]))
+            child2 = np.hstack((parents[1][:point], parents[0][point:]))
+            return [child1, child2]
+
+        else:
+            return [parents[0], parents[1]]
+
+    def mutation(self, children):
+        """
+        Determines how often offspring have random mutations to their
+        representation. Once generated, offspring's bits are flipped with
+        probability = M_r (mutation rate)
+        -------------------------------------------------------------------
+        INPUT:
+            children: (list of np.ndarray) Two chromosomes
+
+        OUTPUT:
+            mutants: (list of np.ndarray)
+        """
+        # Randomly select a mutation rate between 0.05 and 0.2 with an increment of 0.05
+        mutation_rate = random.choice([0.05, 0.1, 0.15, 0.2])
+
+        for chromosome in children:
+            for gene in range(len(chromosome)):
+                rand_num = random.uniform(0, 1)  # Generate random number for each gene
+
+                # If the number is less than Mr, flip the bit!
+                if rand_num < mutation_rate:
+                    chromosome[gene] = 1 - chromosome[gene]
+
+        return children
+
+    def get_weakest(self, population, num_weakest=2):
+        """
+        Finds the weakest members of a population.
+        ------------------------------------------------------------------------
+        INPUT:
+            population: (np.ndarray)
+            num_weakest: (int) Number of weakest individuals to find.
+
+        OUTPUT:
+            weakest: (list) Indices of the weakest individuals in the population.
+        """
+        return sorted(range(len(population)), key=lambda i: self.fitness_func(population[i]))[:num_weakest]
+
+    def update_population(self, population, children):
+        """
+        Updates population by replacing the worst members by the new children.
+        ----------------------------------------------------------------------
+        INPUT:
+            population: (np.ndarray)
+            children: (list) New children to be added to the population.
+
+        OUTPUT:
+            Updated population: (np.ndarray)
+        """
+        weakest_indices = self.get_weakest(population, len(children))
+        for i, child in zip(weakest_indices, children):
+            population[i] = child
+
+        return population
+
     def run(self, selection="roulette"):
         """
         Runs overall genetic algorithm.
@@ -294,14 +426,15 @@ Best solution2: {best_solution2}
         for gen in range(self.stop):
             # Selection
             if selection == "roulette":
-                self.roulette_selection(population)
+                parents = self.roulette_selection(population)
 
-            elif seleciton == "tournament":
-                self.tournament_selection(population)
+            elif selection == "tournament":
+                parents = self.tournament_selection(population)
 
             # Crossover and mutation enabled or disabled
             if self.enable_crossover:
-                pass
+                children = self.crossover(parents)
+                mutants = self.mutation(children)
 
             # Compute and log statistics
             avg_fitness = np.mean([self.fitness_func(chrome) for chrome in
@@ -309,18 +442,28 @@ Best solution2: {best_solution2}
             best_solution = max(population, key=self.fitness_func)
             best_fitness = self.fitness_func(best_solution)
             best_active_genes = sum(best_solution)
+            
+            # Update best solution when better one is found
+#            breakpoint()
+            if best_fitness > self.best_solution["fitness"]:
+                self.best_solution.update({"fitness": best_fitness,
+                                           "active_genes": best_active_genes,
+                                           "generation": gen})
 
            # Log for this generation
             self.generation_stats['avg_fitness'].append(avg_fitness)
             self.generation_stats['best_fitness'].append(best_fitness)
             self.generation_stats['best_active_genes'].append(best_active_genes)
 
+            # Updates population by replacing the weak peepz with mutants
+            breakpoint()
+            population = self.update_population(population, mutants)
+
+        self.plot_stats()
+
 
 if __name__ == "__main__":
-    ga = TheKnapsack("config_2.txt")
+    ga = TheKnapsack("config_1.txt")
     ga.run()
-
-
-
 
 
