@@ -1,30 +1,30 @@
 #!/usr/bin/env python
+
+"""
++++++++++++++++++++++++++++++++++ KNAPSACK PROBLEM +++++++++++++++++++++++++++++++++
+
+"""
 import numpy as np
-import random
 import matplotlib.pyplot as plt
+import random
 from textwrap import dedent
-from enum import Enum
-
-seed = 1470
-print(f"\t\t...\t...\t...Random seed used: {seed}...\t...\t...")
-np.random.seed(seed)
 
 
-class SelectionStrategy(Enum):
-    # Constants
-    ROULETTE = "roulette"
-    TOURNAMENT = "tournament"
-    COMPARE = "compare"
-    INTEGRATE = "integrate"
-    EXPLORE = "explore"
-
-
-class MySack():
+class MySack(object):
     """
     Genetic Algorithm for the 0-1 Knapsack problem
     """
-    def __init__(self, config_file):
+    def __init__(self, config_file, enable_crossover=True):
         self.config_file = config_file
+        self.enable_crossover = enable_crossover
+
+        # Best stats for each generation
+        self.generation_stats = {
+            "avg_fitness": [], "best_fitness": [], "best_active_genes": []
+        }
+        # Best stats for best generation
+        self.best_solution = {'fitness': 0.73, 'active_genes': 0, 'generation':
+                             0}
 
         (self.population,
         self.capacity,
@@ -57,145 +57,281 @@ class MySack():
         except Exception as e:
             print(f"Something went wrong!   ¯\_( ͡° ͜ʖ ͡°)_/¯  \n{e}\n")
 
-        pop_size, n, stop, W = map(int, [lines[i].strip() for i in
+        self.pop_size, n, stop, W = map(int, [lines[i].strip() for i in
                                                 range(4)])
         S = [tuple(map(int, line.strip().split())) for line in lines[4:]]
         # Initialize empty population
-        population = np.random.randint(2, size=(pop_size, n))
+        population = np.random.randint(2, size=(self.pop_size, n))
 
         g = 0 # initial generation
         return population, W, S, g, stop
 
-    def get_weight(self, chromosome):
+    def get_overview_of_data(self):
         """
-        Gets total weight of chromosome.
-        ---------------------------------
-        INPUT:
-            chromosome: (np.ndarray)
-
-        OUTPUT:
-            total weight: (int)
+        Plots overview of data via weights and values for comparison.
         """
-        return sum(self.weight_value[gene][0] for gene in range(len(chromosome)))
+        weights = [self.weight_value[gene][0] for gene in
+                   range(len(self.weight_value))]
+        values = [self.weight_value[gene][1] for gene in
+                  range(len(self.weight_value))]
+        print("========================================================================")
+        print(f"Mean (weights): {np.mean(weights)}")
+        print(f"Mean (values): {np.mean(values)}")
+        print(f"Std Dev (weights): {np.std(weights)}")
+        print(f"Std Dev (values): {np.std(values)}")
+        print(f"Max weight: {max(weights)}")
+        print(f"Max value: {max(values)}")
+        
+        print(f"Weights: {weights}\nValues: {values}\n")
+        print("========================================================================")
+        plt.scatter(weights, values)
+        plt.xlabel("Weights")
+        plt.ylabel("values")
+        plt.title("Weights vs. Values for given population")
+        plt.show()
 
-    def get_value(self, chromosome):
+    def output_stats(self):
         """
-        Gets total value of chromosome.
-        ---------------------------------
-        INPUT:
-            chromosome: (np.ndarray)
-
-        OUTPUT:
-            total value: (int)
+        Outputs statistics to console.
         """
-        return sum(self.weight_value[gene][1] for gene in range(len(chromosome)))
+        # Output data from best_solution dictionary
+        print(f"{int(7) * '======' } Best Solutions {int(7) * '======' }:")
+        for i,j in self.best_solution.items():
+            print(dedent(f"""
+        {i}: {j}
+                  """), end='')
+        print(f"{int(13) * '========'}")
 
-    def fitness_func(self, chromosome, alt=False):
+        print(f"{int(7) * '======' } Generation Stats  {int(7) * '======' }:")
+        for i,j in self.generation_stats.items():
+            print(dedent(f"""
+        {i}: {j}
+                  """), end='')
+        print(f"{int(13) * '========'}")
+
+    def fitness_func(self, chromosome):
         """
         Determines fitness of chromosome by taking the sum of the products of
         weights and values, given a weight limit.
         ------------------------------------------------------
         INPUT:
             chromosome: (numpy.ndarray),
-            alt: (bool) When True, fitness function penalizes chromosomes whose
-            weights exceed the weight capacity
 
         OUTPUT:
             fitness of chromosome: (int)
         """
-        total_weight = self.get_weight(chromosome)
-        total_value = self.get_value(chromosome)
-        penalty_factor = 0.5
+        weights = [self.weight_value[gene][0] * chromosome[gene] for gene in range(len(chromosome))]
+        values = [self.weight_value[gene][1] * chromosome[gene] for gene in range(len(chromosome))]
+        
+        total_weight = sum(weights)
+        total_value = sum(values)
 
-        if alt:
-            # Alternative fitness function
-            if total_weight > self.capacity:
-                return total_value - penalty_factor * (total_weight - self.capacity)
+        # Make sure total weight doesn't exceed knapsack capacity
+        if total_weight > self.capacity:
+            return 0
 
-        else:
-            if total_weight > self.capacity:
-                return total_value
+        return total_value
 
-            return total_value
-
-    def roulette_selection(self, initial_population):
+    def fitness_func2(self, chromosome):
         """
-        Roulette Wheel Selection
-        Samples from probability distribution of population size, where:
-            p_s = fitness_func / sum of all fitness_funcs by obtaining a list
-            of fitness function results for each chromosome, returning a
-            list of most fit chromosomes
-        -----------------------------------------------------------
+        Alternative fitness function, which penalizes the fitness of chromosome
+        that exceeds the capacity.
+        --------------------------------------------------------
+        """ 
+        weights = [self.weight_value[gene][0] * chromosome[gene] for gene in range(len(chromosome))]
+        values = [self.weight_value[gene][1] * chromosome[gene] for gene in range(len(chromosome))]
+        total_weight = sum(weights)
+        total_value = sum(values)
+        
+        # For penatly calculation
+        mean = np.mean(values)
+        std_dev = np.std(values)
+        penalty_factor = random.uniform(0, 0.1) # Randomly selected number between 0 and .1
+        
+        # Make sure total weight doesn't exceed knapsack capacity
+        if total_weight > self.capacity:
+            return total_value - penalty_factor * (total_weight - self.capacity) # Penatly
+
+        return total_value
+
+    def compare_fitness_functions(self, population):
+        """
+        Compares the two fitness functions via average fitness and the best
+        solution.
+        ------------------------------------------------
+        """
+        fit1 = [round(self.fitness_func(chromosome)) for chromosome in population]
+        fit2 = [round(self.fitness_func2(chromosome)) for chromosome in population]
+        avg_fitness1 = round(np.mean(fit1))
+        avg_fitness2 = round(np.mean(fit2))
+        best_solution1 = round(max(fit1))
+        best_solution2 = round(max(fit2))
+       
+        print("""
+=======================================================
+COMPARING BOTH FITNESS FUNCTIONS:
+--------------------------------
+              """, end='')
+        print(dedent(f"""
+Average fitness function 1: {avg_fitness1}
+Average fitness function 2: {avg_fitness2}
+Best solution1: {best_solution1}
+Best solution2: {best_solution2}
+======================================================= 
+              """))
+
+        roulette_parents = self.roulette_selection(population)
+        tournament_parents = self.tournament_selection(population)
+        roulette_fitness = [self.fitness_func(roulette_parents[i]) for i in
+                            range(2)]
+        tournament_fitness = [self.fitness_func(tournament_parents[i]) for i in
+                             range(2)]
+        roulette_fitness2 = [self.fitness_func2(roulette_parents[i]) for i in
+                            range(2)]
+        tournament_fitness2 = [self.fitness_func2(tournament_parents[i]) for i in
+                             range(2)]
+   
+        # Output fitness of each fitness function
+        print(f"Roulette fitness1 of parents: {roulette_fitness}")
+        print(f"Tournament fitness1 of parents: {tournament_fitness}")
+        print(f"Roulette fitness2 of parents: {roulette_fitness2}")
+        print(f"Tournament fitness2 of parents: {tournament_fitness2}")
+        # Output parents for each fitness function and seleciton method
+#        print(f"Roulette: {roulette_parents}")
+#        print(f"Tournament: {tournament_parents}")
+    
+    def roulette_selection(self, population):
+        """
+        Fitness values of all individuals in the community are summed and the probability of each individual being selected is the ratio of the fitness value to that total value. The better the chromosomes, the more likely they are to be selected.
+        ----------------------------------------------------------------
         INPUT:
-            initial_population: (np.ndarray)
+            population: (np.ndarray)
 
         OUTPUT:
-            two parents: (list) the two chromosomes for the two most fit parents
+            parents: (list) Two (np.ndarray) fittest members of the population.
         """
-        list_of_fitness = [self.fitness_func(chromosome) for chromosome in
-                           initial_population] # Not sorted, if it matters
-        total = sum(list_of_fitness)
+        # Get fitness values in a list from all chromosomes
+        fitness_values = [self.fitness_func(chromosome) for chromosome in population]
+        total_fitness = sum(fitness_values)
 
-        p_s = [] # List of Probabilities of solutions
-        for fitness in list_of_fitness:
-            # If total_weight is over the weight limit, select two random
-            # parents, without weights
+        selected_parents = []
+        # Loop thru twice to get the two parents
+        for _ in range(2):
+            # Gets random number from 0 to total_fitness, which is used to
+            # determine a thresshold from which to select a parent
+            rand_num = np.random.rand() * total_fitness
+            partial_sum = 0
+            for chromosome in population:
+                # Iterate to add to partial sum 
+                partial_sum += self.fitness_func(chromosome)
+                
+                # If partial sum is greater the random number, add parent
+                if partial_sum >= rand_num:
+                    selected_parents.append(chromosome)
+                    break
 
-            if total == 0:
-                return random.choices(initial_population, k=2)
+        return selected_parents
 
-            else:
-                p_s.append(fitness / total)
-
-        parent1, parent2 = random.choices(initial_population, weights=p_s, k=2)
-        return [parent1, parent2]
-
-    def tournament_selection(self, initial_population):
+    def tournament_selection(self, population, k=3):
         """
-        Tournaments run among a few chromosomes, chosen at random from
-        population.
-        --------------------------------------------------------------
+        A random sequence is selected from the entire generation at a time. They will be in the tournament. In a tournament, whichever is better wins. Tournaments continue until the match pool is full. The random selection of chromosomes creates the possibility of co-selection of chromosomes with a low fitness value. In this case, chromosomes can be selected for the next generation, which is better than the rest of the population, even if they are mediocre. Thus, diversity in the population can be maintained.
+        ----------------------------------------------------------------
         INPUT:
-            initial_population: (np.ndarray)
-
-        OUTPUT:
-            two parents: (list) the two chromosomes for the two most fit
-            parents
-        """
-        # Randomly selects chromosomes from population
-        try:
-            competitors = random.sample(list(initial_population), 2)
-
-        except Exception as e:
-            print(f"Something went wrong: {e}")
-
-        fit_vals = [self.fitness_func(chromosome) for chromosome in competitors]
-        # Sort in descending order
-        sorted_indices = np.argsort(fit_vals)[::-1]
-        # Select most fit parents
-        parent1 = competitors[sorted_indices[0]]
-        parent2 = competitors[sorted_indices[1]]
-
-        return [parent1, parent2]
-
-    def selection(self, initial_population, roulette=True):
-        """
-        Selection method for selecting parents.
-        ----------------------------------------
-        INPUT:
-            initial_population: (np.ndarray)
-            roulette: (bool) True if using roulette, tournament is used
-            otherwise.
-                default: True
+            population: (np.ndarray)
 
         OUTPUT:
             parents: (list of np.ndarrays)
         """
-        if roulette:
-            return self.roulette_selection(initial_population)
+        selected_parents = []
+        
+        for _ in range(2):
+            # Randomly select k individuals from population
+            chromosomes = random.sample(list(population), k)
+            # Most fit among k chromosomes
+            best_fit = 0.37 # Initialize best fitness
+            best_chrome = None
+            
+            for chrome in chromosomes:
+                fit = self.fitness_func(chrome)
 
-        else:
-            return self.tournament_selection(initial_population)
+                if fit > best_fit:
+                    best_fit = fit
+                    best_chromosome = chrome
+            
+            selected_parents.append(best_chromosome)
+
+        return selected_parents
+
+    def compare_selection_methods(self):
+        self.enable_crossover = False  # Disable crossover and mutation
+
+        methods = ['roulette', 'tournament']
+        method_stats = {}
+
+        for method in methods:
+            avg_fitness_list, best_fitness_list, best_active_genes_list = [], [], []
+            
+            # Reset your population to its initial state
+            population = self.get_initial_population()
+            
+            for gen in range(self.stop):
+                if method == "roulette":
+                    parents = self.roulette_selection(population)
+                elif method == "tournament":
+                    parents = self.tournament_selection(population)
+
+                # Compute statistics here
+                avg_fitness = np.mean([self.fitness_func(chrome) for chrome in population])
+                best_solution = max(population, key=self.fitness_func)
+                best_fitness = self.fitness_func(best_solution)
+                best_active_genes = sum(best_solution)
+
+                # Update lists
+                avg_fitness_list.append(avg_fitness)
+                best_fitness_list.append(best_fitness)
+                best_active_genes_list.append(best_active_genes)
+                
+                # Update population
+                population = self.update_population(population, parents)
+
+            # Store method statistics for later comparison
+            method_stats[method] = {
+                'avg_fitness': avg_fitness_list,
+                'best_fitness': best_fitness_list,
+                'best_active_genes': best_active_genes_list
+            }
+        
+        # Plot the stats, compare, etc. - you'd flesh this out
+        self.plot_and_compare_stats(method_stats)
+
+    def plot_stats(self):
+        # Initialize number of generations
+        generations = range(self.stop)
+
+        plt.figure()
+
+        # Plot average population fitness per generation
+        plt.subplot(3, 1, 1)
+        plt.plot(generations, self.generation_stats['avg_fitness'])
+        plt.title('Average Population Fitness per Generation')
+
+        # Plot fitness score and number of active genes of fittest individual per generation
+        plt.subplot(3, 1, 2)
+        plt.plot(generations, self.generation_stats['best_fitness'], label='Best Fitness')
+        plt.plot(generations, self.generation_stats['best_active_genes'], label='Best Active Genes')
+        plt.legend()
+        plt.title('Best Individual Stats per Generation')
+
+        # Report number of active genes and fitness for the best solution overall
+        best_generation = self.generation_stats['best_fitness'].index(max(self.generation_stats['best_fitness']))
+        plt.subplot(3, 1, 3)
+        plt.scatter([best_generation], [self.generation_stats['best_fitness'][best_generation]], label='Best Fitness')
+        plt.scatter([best_generation], [self.generation_stats['best_active_genes'][best_generation]], label='Best Active Genes')
+        plt.legend()
+        plt.title('Best Solution Overall')
+
+        plt.tight_layout()
+        plt.show()
 
     def crossover(self, parents):
         """
@@ -226,432 +362,128 @@ class MySack():
         else:
             return [parents[0], parents[1]]
 
-    def mutation(self, chromosome):
-
+    def mutation(self, children):
         """
         Determines how often offspring have random mutations to their
-        representation.  Once generated, offspring's bits are flipped with
+        representation. Once generated, offspring's bits are flipped with
         probability = M_r (mutation rate)
         -------------------------------------------------------------------
         INPUT:
-            chromosome: (np.ndarray)
+            children: (list of np.ndarray) Two chromosomes
 
         OUTPUT:
-            chromosome: (np.ndarray)
+            mutants: (list of np.ndarray)
         """
         # Randomly select a mutation rate between 0.05 and 0.2 with an increment of 0.05
-        Mr = random.choice([0.05, 0.1, 0.15, 0.2])
+        mutation_rate = random.choice([0.05, 0.1, 0.15, 0.2])
 
-        # Iterate through genes
-        for i in range(len(chromosome)):
-            rand_num = random.uniform(0, 1)  # Generate random number
+        for chromosome in children:
+            for gene in range(len(chromosome)):
+                rand_num = random.uniform(0, 1)  # Generate random number for each gene
 
-            # If the number is less than Mr, flip the bit!
-            if rand_num < Mr:
-                chromosome[i] = 1 - chromosome[i]
+                # If the number is less than Mr, flip the bit!
+                if rand_num < mutation_rate:
+                    chromosome[gene] = 1 - chromosome[gene]
 
-        return chromosome
+        return children
 
-    def average_fitness(self, population):
+    def get_weakest(self, population, num_weakest=2):
         """
-        Calculates average fitness for a population
-        --------------------------------------------------------
-        INPUT:
-            population:  (np.ndarray)
-
-        OUTPUTS:
-            total_fitness: (float) Average fitness for a given population
-        """
-        total_fitness = sum([self.fitness_func(chromosome) for chromosome in
-                             population])
-
-        return total_fitness / len(population)
-
-    def the_fittest(self, population):
-        """
-        Determines the fittest individual for a given population
-        --------------------------------------------------------
-        INPUT:
-            population: (np.ndarray),
-
-        OUTPUT:
-            max_chromosome, max_fitness, active_genes: (tuple: (np.ndarray),
-            (np.int64), (np.int64))
-        """
-        fittest_values = [self.fitness_func(chromosome) for chromosome in
-                          population]
-        max_fitness = max(fittest_values)
-        max_index = fittest_values.index(max_fitness)
-        active_genes = sum(population[max_index])
-
-        return population[max_index], max_fitness, active_genes
-
-    def fitness_plot(self,
-                    avg_fit_data,
-                    the_fittest_data,
-                    best_generation,
-                     best_active_genes,
-                     strategy=SelectionStrategy.ROULETTE
-                    ):
-        """
-        Plots and compares the two different selection methods,
-        displaying average, most fit and active genes
-        ------------------------------------------------------
-        INPUT:
-            avg_fit_data: (list of floats)
-            the_fittest_data: (list of tuples)
-            roulette: (bool) True by default, depending on which Selection
-            method you choose to use
-
-        OUTPUT:
-            Plots graphs: (None)
-
-        """
-        title = ""
-        plt.figure(figsize=(12, 6))  # Set the figure size
-
-        # Plot for Average Fitness Data
-        plt.subplot(3, 1, 1)
-        plt.plot(avg_fit_data, marker='o', linestyle='-')
-        plt.xlabel(f'Generation: (Best Generation: {best_generation})')
-        plt.ylabel('Average Fitness')
-        plt.grid(True)
-
-        plt.title(r"$\bf{" + f"{title}" + r"}$" + f"\nAverage Fitness per \
-                  Generation: {strategy}")
-
-        # Prevents empty list from being passed through
-        if the_fittest_data is not None:
-            fittest, active_genes = zip(*the_fittest_data)
-
-        else:
-            print("Warning: the_fittest_data is None")
-            # Handle the case when the_fittest_data is None, maybe set fittest and active_genes to empty lists
-            fittest = []
-            active_genes = []
-
-        # Plot for The Fittest Data
-        plt.subplot(3, 1, 2)
-        fittest, active_genes = zip(*the_fittest_data)
-        plt.plot(fittest, label="The Fittest", marker='x', linestyle='-')
-        plt.xlabel(f'Generation: (Best Generation: {best_generation})')
-        plt.ylabel('Fitness')
-        plt.legend()
-        plt.grid(True)
-
-        # Title based on the selection method
-        plt.title(r"$\bf{" + f"{title}" r"}$" + "\nThe Fittest per \
-                  Generation: {strategy.name}")
-
-        # Plot for Active Genes Data
-        plt.subplot(3, 1, 3)
-        plt.plot(active_genes, label=
-                 f"Active Genes: (Best Count: {best_active_genes})",
-                 marker='s',
-                 linestyle='--')
-
-        plt.xlabel(f'Generation: (Best Generation: {best_generation})')
-        plt.ylabel(f'Active Genes')
-        plt.legend()
-        plt.grid(True)
-
-        # Title based on the selection method
-        plt.title(f"" + r"$\bf{" + f"{title}" r"}$" + "\nActive Genes per \
-                  Generation: {strategy.name}")
-
-        plt.tight_layout()
-        plt.show()
-
-    def check_diversity_loss(self, threshold=0.1):
-        """
-        My own stopping criteria.
-        Stops algorithm if diversity is below a certain threshold.
-        -----------------------------------------------------------------
-        INPUT:
-            threshold: (float) default: 0.1
-
-        OUTPUT:
-            stop_flag: (bool) True if diversity is below threshold, False
-            otherwise
-        """
-        unique_chromosome = np.unique(self.population, axis=0)
-        diversity_ratio = len(unique_chromosome) / len(self.population)
-
-        if diversity_ratio < threshold:
-            return True
-
-        return False
-
-    def integrate_crossover_mutation(self, population, stopping_criteria):
-        """
-        Running trials with each selection operator, reporting results on
-        crossover and mutation.
-            - Include comparative results for my implemented stopping criteria.
-        --> Use plots method
-        ---------------------------------------------------------
+        Finds the weakest members of a population.
+        ------------------------------------------------------------------------
         INPUT:
             population: (np.ndarray)
-            stopping_criteria: (int)
+            num_weakest: (int) Number of weakest individuals to find.
+
+        OUTPUT:
+            weakest: (list) Indices of the weakest individuals in the population.
         """
-        # Initialize data storage for plots
-        avg_fit_data_roulette = []
-        avg_fit_data_tournament = []
+        return sorted(range(len(population)), key=lambda i: self.fitness_func(population[i]))[:num_weakest]
 
-        # Run trials with Roulette selection
-        for gen in range(stopping_criteria):
-            parents_roulette = self.selection(population)
-            children_roulette = self.crossover(parents_roulette)
-            mutants_roulette = [self.mutation(kid) for kid in children_roulette]
+    def update_population(self, population, children):
+        """
+        Updates population by replacing the worst members by the new children.
+        ----------------------------------------------------------------------
+        INPUT:
+            population: (np.ndarray)
+            children: (list) New children to be added to the population.
 
-            # Replace least fit individuals
-            sorted_indices = np.argsort([self.fitness_func(ind) for ind in population])
-            population[sorted_indices[:len(mutants_roulette)]] = mutants_roulette
+        OUTPUT:
+            Updated population: (np.ndarray)
+        """
+        weakest_indices = self.get_weakest(population, len(children))
+        for i, child in zip(weakest_indices, children):
+            population[i] = child
 
-            # Collect data for plotting
-            avg_fitness_roulette = self.average_fitness(population)
-            avg_fit_data_roulette.append(avg_fitness_roulette)
+        return population
 
-        # Reset population for next trial
+    def run(self, selection="roulette"):
+        """
+        Runs overall genetic algorithm.
+        -------------------------------------------
+        INPUT:
+            selection_only (optional): (bool) Whether to run crossover and
+            mutation or not: default False
+
+        OUTPUT:
+            None
+        """
         population = self.population
+        parents, mutation = [], []
 
-        # Run trials with Tournament selection
-        for gen in range(stopping_criteria):
-            parents_tournament = self.selection(population, roulette=False)
-            children_tournament = self.crossover(parents_tournament)
-            mutants_tournament = [self.mutation(kid) for kid in children_tournament]
+        for gen in range(self.stop):
+            # Selection
+            if not (selection=="roulette" or selection=="tournament"):
+                self.compare_selection_methods()
+                self.enable_crossover = False
 
-            # Replace least fit individuals
-            sorted_indices = np.argsort([self.fitness_func(ind) for ind in population])
-            population[sorted_indices[:len(mutants_tournament)]] = mutants_tournament
-
-            # Collect data for plotting
-            avg_fitness_tournament = self.average_fitness(population)
-            avg_fit_data_tournament.append(avg_fitness_tournament)
-
-        # Use your existing plot method to visualize the results
-        self.fitness_plot(avg_fit_data_roulette, None, None, None, True)
-        self.fitness_plot(avg_fit_data_tournament, None, None, None, False)
-
-    def explore_pop_sizes(self, population):
-        """
-        Using different population sizes,
-        1) Explore at least 10 population sizes,
-        reporting on the total_value, weights and number of included items
-        (active genes) at the stopping criterion.
-        2) Run 30 trials and report mean weight, std dev.
-        -----------------------------------------------------------
-        INPUT:
-            population: (np.ndarray)
-
-        """
-        weight_value = self.weight_value
-        # Generates a list of 10 random integers between 13 and 73
-        pop_sizez = np.random.randint(13, 74, size=10).array_tolist()
-
-        for pop_size in pop_sizes:
-            print(f"Running trials for population size: {pop_size}")
-
-            # Initialize population based on the new size
-            population = np.random.randint(2, size=(pop_size, len(weight_value)))
-
-            final_values = []
-            final_weights = []
-            final_no_items = []
-
-            self.run_trials(num_trials=30)
-
-            # Get perfromance
-            best_chromosome = self.the_fittest(population)[0]
-            best_fitness = self.fitness_func(best_chromosome)
-            best_weight = self.get_weight(best_chromosome)
-            no_items = self.get_active_items(best_chromosome)
-
-            final_values.append(best_fitness)
-            final_weights.append(best_weight)
-            final_no_items.append(no_items)
-
-            print("Values: {} ± {}".format(np.mean(final_values), np.std(final_values)))
-            print("Weight: {}".format(np.max(final_weights)))
-            print("No of items: {}".format(np.mean(final_no_items)))
-
-    def apply_strategy(self, strategy, new_population = []):
-        """
-        Applie given strategy to produce a new population.
-        """ 
-        if strategy == SelectionStrategy.ROULETTE:
-            new_population = self.apply_roulette_strategy()
-
-        elif strategy == SelectionStrategy.TOURNAMENT:
-            new_population = self.apply_tournament_strategy()
-
-        elif strategy == SelectionStrategy.COMPARE:
-            new_population = self.apply_compare_strategy()
-        
-        elif strategy == SelectionStrategy.INTEGRATE:
-            new_population = self.apply_integrate_strategy()
-
-        elif strategy == SelectionStrategy.EXPLORE:
-            new_population = self.apply_explore_strategy()
-
-        return new_population
-
-    def apply_roulette_strategy(self):
-        """
-        Selection method of Roulette to obtain progeny.
-        """
-        parents = self.selection(self.population)
-        children = self.crossover(parents)
-        mutants = [self.mutation(kid) for kid in children]
-
-        return mutants
-
-    def apply_tournament_strategy(self):
-        """
-        Tournament Selection.
-        """
-        parents = self.selection(self.population, roulette=False)
-        children = self.crossover(parents)
-        mutants = [self.mutation(kid) for kid in children]
-
-        return mutants
-
-    def apply_compare_strategy(self):
-        """
-        Compares the Roulette and Tournament selection methods by creating two
-        new populations using each method.
-        """
-        # Population generated using Roulette
-        parents_roulette = self.selection(self.population)
-        children_roulette = self.crossover(parents_roulette)
-        mutants_roulette = [self.mutation(kid) for kid in children_roulette]
-
-        # Population generated using Tournament
-        parents_tournament = self.selection(self.population, roulette=False)
-        children_tournament = self.crossover(parents_tournament)
-        mutants_tournament = [self.mutation(kid) for kid in children_tournament]
-
-        return mutants_roulette, mutants_tournament
-
-    def apply_explore_strategy(self):
-        """
-        Explores different population sizes to analyze performance.
-        """
-        # Define a list of population sizes to explore
-        pop_sizes = [20, 50, 100, 200, 300, 500, 750, 1000, 1500, 2000]
-
-        # Dictionary to store performance metrics for each population size
-        performance_metrics = {}
-
-        for size in pop_sizes:
-            # Generate a new random population based on the new size
-            new_population = np.random.randint(2, size=(size, self.population.shape[1]))
-
-            # Initialize metrics storage for this population size
-            avg_fitness_list = []
-            max_fitness_list = []
-            active_genes_list = []
-
-            # Run genetic algorithm for a certain number of generations
-            for gen in range(self.stop):
-                parents = self.selection(new_population)
-                children = self.crossover(parents)
-                mutants = [self.mutation(kid) for kid in children]
-
-                # Replace least fit individuals
-                sorted_indices = np.argsort([self.fitness_func(ind) for ind in new_population])
-                new_population[sorted_indices[:len(mutants)]] = mutants
-
-                # Collect performance metrics
-                avg_fitness = self.average_fitness(new_population)
-                _, max_fitness, active_genes = self.the_fittest(new_population)
-
-                avg_fitness_list.append(avg_fitness)
-                max_fitness_list.append(max_fitness)
-                active_genes_list.append(active_genes)
-
-            # Store the metrics for this population size
-            performance_metrics[size] = {
-                'Average Fitness': avg_fitness_list,
-                'Max Fitness': max_fitness_list,
-                'Active Genes': active_genes_list
-            }
-
-        return performance_metrics
-
-    def update_population(self, new_population):
-        """
-        Updates current population with the new one.
-        """
-        combined_population = np.vstack([self.population, new_population])
-        sorted_indices = np.argsort([self.fitness_func(ind) for ind in combined_population])[::-1]
-        self.population = combined_population[sorted_indices[:len(self.population)]]
-
-    def run_genetic(self,
-                    strategy=SelectionStrategy.ROULETTE
-                   ):
-        """
-        Runs the genetic algorithm for each generation, creating a new
-        population with each iteration.
-        """
-        best_fitness = 0
-        best_active_genes = 0
-        best_generation = None
-        avg_fit_data, the_fittest_data = [], []
-
-        if strategy == SelectionStrategy.EXPLORE:
-            performance_metrics = self.apply_explore_strategy()
+            # This is so ugly
+            if selection == "tournament":
+                parents = self.tournament_selection(population) 
             
-        else:
+            elif selection == "roulette":
+                parents = self.roulette_selection(population)
 
-            for gen in range(self.stop):
+            # Crossover and mutation enabled or disabled
+            if self.enable_crossover:
+                children = self.crossover(parents)
+                mutants = self.mutation(children)
 
-                if strategy in (SelectionStrategy.ROULETTE,
-                                SelectionStrategy.TOURNAMENT):
-                    # Get mean, max and active genes for fittest  individual
-                    avg_fitness = self.average_fitness(self.population)
-                    fittest_chromosome, most_fit, active_genes = self.the_fittest(self.population)
-                    # Append these to corresponding list
-                    avg_fit_data.append(avg_fitness)
-                    the_fittest_data.append((most_fit, active_genes))
-                    
-                # Update best statistics
-                if most_fit > best_fitness:
-                    best_solution = fittest_chromosome
-                    best_fitness = most_fit
-                    best_generation = gen
-                    best_active_genes = active_genes
+            # Compute and log statistics
+            avg_fitness = np.mean([self.fitness_func(chrome) for chrome in
+                                  population])
+            best_solution = max(population, key=self.fitness_func)
+            best_fitness = self.fitness_func(best_solution)
+            best_active_genes = sum(best_solution)
+            
+            # Update best solution when better one is found
+            if best_fitness > self.best_solution["fitness"]:
+                self.best_solution.update({"fitness": best_fitness,
+                                           "active_genes": best_active_genes,
+                                           "generation": gen})
 
-                # Update population
-                breakpoint()
-                new_population = self.apply_strategy(strategy)
-                self.update_population(new_population)
+           # Log for this generation
+            self.generation_stats['avg_fitness'].append(avg_fitness)
+            self.generation_stats['best_fitness'].append(best_fitness)
+            self.generation_stats['best_active_genes'].append(best_active_genes)
 
-            # Output for all experiments for all generations
-            print(f"++++++++++++++++ {strategy.name} ++++++++++++++++++++++++++++++++")
-            print(f"Best fitness overall: {best_fitness}")
-            print(f"Best solution overall: {best_solution}")
-            print(f"In generation: {best_generation}")
-            print(f"Number of active genes for most fit: {best_active_genes}")
-            print("++++++++++++++++++++++++++++++++++++++++++++++++++++++++++")
+            # Updates population by replacing the weak peepz with mutants
+            if self.enable_crossover:
+                population = self.update_population(population, mutants)
 
-            # Plot
-            self.fitness_plot(
-                avg_fit_data,
-                the_fittest_data,
-                best_generation,
-                best_active_genes,
-                strategy.name
-            )
+            else:
+                population = self.update_population(population, parents)
+            
+#        self.plot_stats()
 
 
 if __name__ == "__main__":
-    ga = MySack(f"config_1.txt")
-    for i in range(1,5):
-        ga.run_genetic()
-#        ga.run_genetic(SelectionStrategy.TOURNAMENT)
-#        ga.run_genetic(SelectionStrategy.COMPARE)
-#        ga.run_genetic(SelectionStrategy.INTEGRATE)
-#        ga.run_genetic(SelectionStrategy.EXPLORE)
-#
+    ga = MySack("config_1.txt")
+
+    print("\t\t\tSELECTION ONLY")
+    ga.run(selection=None)
+    print("")
+
+    ga.run()
 
 

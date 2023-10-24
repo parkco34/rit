@@ -208,7 +208,7 @@ Best solution2: {best_solution2}
             population: (np.ndarray)
 
         OUTPUT:
-            parents: Two (np.ndarray) fittest members of the population.
+            parents: (list) Two (np.ndarray) fittest members of the population.
         """
         # Get fitness values in a list from all chromosomes
         fitness_values = [self.fitness_func(chromosome) for chromosome in population]
@@ -261,8 +261,6 @@ Best solution2: {best_solution2}
             selected_parents.append(best_chromosome)
 
         return selected_parents
-
-    import matplotlib.pyplot as plt
 
     def compare_selection_methods(self, num_trials=30):
         """
@@ -424,14 +422,20 @@ Best solution2: {best_solution2}
             None
         """
         population = self.population
+        parents, mutation = [], []
 
         for gen in range(self.stop):
             # Selection
-            if selection == "roulette":
-                parents = self.roulette_selection(population)
+            if not (selection=="roulette" or selection=="tournament"):
+                self.compare_selection_methods()
+                self.enable_crossover = False
 
-            elif selection == "tournament":
-                parents = self.tournament_selection(population)
+            # This is so ugly
+            if selection == "tournament":
+                parents = self.tournament_selection(population) 
+            
+            elif selection == "roulette":
+                parents = self.roulette_selection(population)
 
             # Crossover and mutation enabled or disabled
             if self.enable_crossover:
@@ -457,14 +461,22 @@ Best solution2: {best_solution2}
             self.generation_stats['best_active_genes'].append(best_active_genes)
 
             # Updates population by replacing the weak peepz with mutants
+            if self.enable_crossover:
+                population = self.update_population(population, mutants)
+
+            else:
+                population = self.update_population(population, parents)
             
-            population = self.update_population(population, mutants)
-            
-        self.plot_stats()
+#        self.plot_stats()
 
 
 if __name__ == "__main__":
     ga = TheKnapsack("config_1.txt")
+
+    print("\t\t\tSELECTION ONLY")
+    ga.run(selection=None)
+    print("")
+
     ga.run()
 
 
