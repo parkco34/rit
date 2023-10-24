@@ -653,8 +653,5 @@ if __name__ == "__main__":
 #        ga.run_genetic(SelectionStrategy.INTEGRATE)
 #        ga.run_genetic(SelectionStrategy.EXPLORE)
 #
-"""
-Need to refactor this entire thing so user doesn't have to run one at a time...
-"""
 
 

@@ -74,6 +74,7 @@ class TheKnapsack(object):
                    range(len(self.weight_value))]
         values = [self.weight_value[gene][1] for gene in
                   range(len(self.weight_value))]
+        print("========================================================================")
         print(f"Mean (weights): {np.mean(weights)}")
         print(f"Mean (values): {np.mean(values)}")
         print(f"Std Dev (weights): {np.std(weights)}")
@@ -82,6 +83,7 @@ class TheKnapsack(object):
         print(f"Max value: {max(values)}")
         
         print(f"Weights: {weights}\nValues: {values}\n")
+        print("========================================================================")
         plt.scatter(weights, values)
         plt.xlabel("Weights")
         plt.ylabel("values")
@@ -444,7 +446,6 @@ Best solution2: {best_solution2}
             best_active_genes = sum(best_solution)
             
             # Update best solution when better one is found
-#            breakpoint()
             if best_fitness > self.best_solution["fitness"]:
                 self.best_solution.update({"fitness": best_fitness,
                                            "active_genes": best_active_genes,
@@ -456,9 +457,9 @@ Best solution2: {best_solution2}
             self.generation_stats['best_active_genes'].append(best_active_genes)
 
             # Updates population by replacing the weak peepz with mutants
-            breakpoint()
+            
             population = self.update_population(population, mutants)
-
+            
         self.plot_stats()
 
 
