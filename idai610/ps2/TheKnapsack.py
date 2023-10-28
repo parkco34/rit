@@ -427,7 +427,6 @@ Best solution2: {best_solution2}
         for gen in range(self.stop):
             # Selection
             if not (selection=="roulette" or selection=="tournament"):
-                self.compare_selection_methods()
                 self.enable_crossover = False
 
             # This is so ugly
@@ -465,6 +464,7 @@ Best solution2: {best_solution2}
                 population = self.update_population(population, mutants)
 
             else:
+                self.compare_selection_methods()
                 population = self.update_population(population, parents)
             
 #        self.plot_stats()
