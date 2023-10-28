@@ -17,6 +17,8 @@ class MySack(object):
     def __init__(self, config_file, enable_crossover=True):
         self.config_file = config_file
         self.enable_crossover = enable_crossover
+        self.method_stats = {}
+        self.fitness_func_stats = {}
 
         # Best stats for each generation
         self.generation_stats = {
@@ -127,7 +129,7 @@ class MySack(object):
         total_value = sum(values)
 
         # Make sure total weight doesn't exceed knapsack capacity
-#        
+        # breakpoint()
         if total_weight > self.capacity:
             return 0
 
@@ -203,7 +205,8 @@ Best solution2: {best_solution2}
     
     def roulette_selection(self, population):
         """
-        Fitness values of all individuals in the community are summed and the probability of each individual being selected is the ratio of the fitness value to that total value. The better the chromosomes, the more likely they are to be selected.
+        Fitness values of all individuals in the community are summed and the probability of each individual being 
+        selected is the ratio of the fitness value to that total value. The better the chromosomes, the more likely they are to be selected.
         ----------------------------------------------------------------
         INPUT:
             population: (np.ndarray)
@@ -235,7 +238,12 @@ Best solution2: {best_solution2}
 
     def tournament_selection(self, population, k=3):
         """
-        A random sequence is selected from the entire generation at a time. They will be in the tournament. In a tournament, whichever is better wins. Tournaments continue until the match pool is full. The random selection of chromosomes creates the possibility of co-selection of chromosomes with a low fitness value. In this case, chromosomes can be selected for the next generation, which is better than the rest of the population, even if they are mediocre. Thus, diversity in the population can be maintained.
+        A random sequence is selected from the entire generation at a time. 
+        They will be in the tournament. In a tournament, whichever is better wins. 
+        Tournaments continue until the match pool is full. The random selection of 
+        chromosomes creates the possibility of co-selection of chromosomes with a low fitness value. 
+        In this case, chromosomes can be selected for the next generation, which is better than the rest of the population, even if they are mediocre. 
+        Thus, diversity in the population can be maintained.
         ----------------------------------------------------------------
         INPUT:
             population: (np.ndarray)
@@ -244,13 +252,13 @@ Best solution2: {best_solution2}
             parents: (list of np.ndarrays)
         """
         selected_parents = []
+        count = 0 # Avoids infinite loop
         
-        for _ in range(2):
+        while not all(selected_parents) and count < 7:
             # Randomly select k individuals from population
             chromosomes = random.sample(list(population), k)
             # Most fit among k chromosomes
-            best_fit = 0.37 # Initialize best fitness
-            best_chrome = None
+            best_fit = float('-inf')
             
             for chrome in chromosomes:
                 fit = self.fitness_func(chrome)
@@ -258,9 +266,13 @@ Best solution2: {best_solution2}
                 if fit > best_fit:
                     best_fit = fit
                     best_chromosome = chrome
-            
-            selected_parents.append(best_chromosome)
-
+                    
+                    # If best chromosome is not None, add it
+                    if best_chromosome is not None:
+                        selected_parents.append(best_chromosome)
+                        
+                    count += 1
+                    
         return selected_parents
 
     def compare_selection_methods(self, population):
@@ -273,9 +285,7 @@ Best solution2: {best_solution2}
         OUTPUT:
             None
         """
-        print("Comapre selection methods has been called")
         methods = ['roulette', 'tournament']
-        method_stats = {}
 
         for method in methods:
             avg_fitness_list, best_fitness_list, best_active_genes_list = [], [], []
@@ -302,60 +312,89 @@ Best solution2: {best_solution2}
                 population = self.update_population(population, parents)
 
             # Store method statistics for later comparison
-            method_stats[method] = {
+            # method_stats first officiallu being used
+            self.method_stats[method] = {
                 'avg_fitness': avg_fitness_list,
                 'best_fitness': best_fitness_list,
                 'best_active_genes': best_active_genes_list
             }            
             
-        print(f"Method stats: {method_stats}")
-        # Update a new attribute for method_stats
-        self.method_stats = method_stats
-        # Plot stats
-        self.plot_stats()
+        print(f"Method stats: {self.method_stats}")
 
     def plot_stats(self):
         """
-        PLots statistics for each selection method.
+        Plots statistics for each selection method.
         """
-        print("Plot stats has been called")
-        
-        if not hasattr(self, "method_stats"):
-            print("No statistics to plot. Run the algorithm first.")
-            return
-        
-        print(f"Method_stats: {self.method_stats}")
-
         plt.figure()
-        
-        for idx, method in enumerate(self.method_stats.keys()):
-            stats = self.method_stats[method]
+
+        if self.method_stats:
+            for idx, method in enumerate(self.method_stats.keys()):
+                stats = self.method_stats[method]
+                generations = range(len(stats['avg_fitness']))
+
+                # Plot average population fitness per generation
+                plt.subplot(3, 1, 1)
+                plt.plot(generations, stats['avg_fitness'], label=f"{method} Avg Fitness")
+                plt.title('Average Population Fitness per Generation')
+                plt.legend()
+
+                # Plot fitness score and number of active genes of fittest individual per generation
+                plt.subplot(3, 1, 2)
+                plt.plot(generations, stats['best_fitness'], label=f"{method} Best Fitness")
+                plt.plot(generations, stats['best_active_genes'], label=f"{method} Best Active Genes")
+                plt.title('Best Individual Stats per Generation')
+                plt.legend()
+
+                # Report number of active genes and fitness for the best solution overall
+                best_generation = stats['best_fitness'].index(max(stats['best_fitness']))
+                plt.subplot(3, 1, 3)
+                plt.scatter([best_generation], [stats['best_fitness'][best_generation]], label=f"{method} Best Fitness")
+                plt.scatter([best_generation], [stats['best_active_genes'][best_generation]], label=f"{method} Best Active Genes")
+                plt.title('Best Solution Overall')
+                plt.legend()
+                
+            else: 
+                # Plot average population fitness per generation
+                plt.subplot(3, 1, 1)
+                plt.plot(range(len(self.generation_stats['avg_fitness'])), self.generation_stats['avg_fitness'])
+                plt.title('Average Population Fitness per Generation')
+
+                # Plot fitness score and number of active genes of fittest individual per generation
+                plt.subplot(3, 1, 2)
+                plt.plot(range(len(self.generation_stats['best_fitness'])), self.generation_stats['best_fitness'], label='Best Fitness')
+                plt.plot(range(len(self.generation_stats['best_active_genes'])), self.generation_stats['best_active_genes'], label='Best Active Genes')
+                plt.legend()
+                plt.title('Best Individual Stats per Generation')
+
+                # Report number of active genes and fitness for the best solution overall
+                plt.subplot(3, 1, 3)
+                plt.scatter([self.best_solution['generation']], [self.best_solution['fitness']], label='Best Fitness')
+                plt.scatter([self.best_solution['generation']], [self.best_solution['active_genes']], label='Best Active Genes')
+                plt.legend()
+                plt.title('Best Solution Overall')
+                
+        # if hasattr(self, "fitness_func_stats"):
+        #     plt.figure()
             
-            # Intialize generations
-            generations = range(len(stats['avg_fitness'])) # Must match with length of data you plot
+        #     for idx, func_name in enumerate(self.fitness_func_stats.keys()):
+        #         stats = self.fitness_func_stats[func_name]
+        #         generations = range(len(stats['avg_fitness']))
+                
+        #         plt.subplot(3, 1, 1)
+        #         plt.plot(generations, stats['avg_fitness'], label=f"{func_name} Avg Fitness")
+        #         plt.legend()
+                
+        #         plt.subplot(3, 1, 2)
+        #         plt.plot(generations, stats['best_fitness'], label=f"{func_name} Best Fitness")
+        #         plt.legend()
 
-            # Plot average population fitness per generation
-            plt.subplot(3, 1, 1)
-            plt.plot(generations, self.generation_stats['avg_fitness'])
-            plt.title('Average Population Fitness per Generation')
-
-            # Plot fitness score and number of active genes of fittest individual per generation
-            plt.subplot(3, 1, 2)
-            plt.plot(generations, self.generation_stats['best_fitness'], label='Best Fitness')
-            plt.plot(generations, self.generation_stats['best_active_genes'], label='Best Active Genes')
-            plt.legend()
-            plt.title('Best Individual Stats per Generation')
-
-            # Report number of active genes and fitness for the best solution overall
-            best_generation = self.generation_stats['best_fitness'].index(max(self.generation_stats['best_fitness']))
-            plt.subplot(3, 1, 3)
-            plt.scatter([best_generation], [self.generation_stats['best_fitness'][best_generation]], label='Best Fitness')
-            plt.scatter([best_generation], [self.generation_stats['best_active_genes'][best_generation]], label='Best Active Genes')
-            plt.legend()
-            plt.title('Best Solution Overall')
-
-        plt.tight_layout()
-        plt.show()
+        #         plt.subplot(3, 1, 3)
+        #         best_generation = stats['best_fitness'].index(max(stats['best_fitness']))
+        #         plt.scatter([best_generation], [stats['best_fitness'][best_generation]], label=f"{func_name} Best Fitness")
+        #         plt.legend()
+                
+            plt.tight_layout()
+            plt.show()
 
     def crossover(self, parents):
         """
@@ -454,64 +493,57 @@ Best solution2: {best_solution2}
         """
         population = self.population
         parents, mutants = [], []
-        
-        if selection == None:
-            print("Calling compare_selection_methods")
-            self.compare_selection_methods(self.population)
-
-        for gen in range(self.stop):
-            # This is so ugly
-            if selection == "tournament":
-                parents = self.tournament_selection(population) 
-            
-            elif selection == "roulette":
-                parents = self.roulette_selection(population)
+       
+        if selection in ["roulette", "tournament"]:
+            # Run like normal
+            for gen in range(self.stop):
+                # This is so ugly
+                if selection == "tournament":
+                    parents = self.tournament_selection(population) 
                 
-            else:
-                self.enable_crossover = False
+                elif selection == "roulette":
+                    parents = self.roulette_selection(population)
 
-            # Crossover and mutation enabled or disabled
-            if self.enable_crossover:
-                children = self.crossover(parents)
-                mutants = self.mutation(children)
+                # Crossover and mutation enabled or disabled
+                if self.enable_crossover:
+                    children = self.crossover(parents)
+                    mutants = self.mutation(children)
+                    
+                    # Compute and log statistics
+                    avg_fitness = np.mean([self.fitness_func(chrome) for chrome in
+                                        population])
+                    best_solution = max(population, key=self.fitness_func)
+                    best_fitness = self.fitness_func(best_solution)
+                    best_active_genes = sum(best_solution)
+                    
+                    # Update best solution when better one is found
+                    if best_fitness > self.best_solution["fitness"]:
+                        self.best_solution.update({"fitness": best_fitness,
+                                                "active_genes": best_active_genes,
+                                                "generation": gen})
 
-            # Compute and log statistics
-            avg_fitness = np.mean([self.fitness_func(chrome) for chrome in
-                                  population])
-            best_solution = max(population, key=self.fitness_func)
-            best_fitness = self.fitness_func(best_solution)
-            best_active_genes = sum(best_solution)
-            
-            # Update best solution when better one is found
-            if best_fitness > self.best_solution["fitness"]:
-                self.best_solution.update({"fitness": best_fitness,
-                                           "active_genes": best_active_genes,
-                                           "generation": gen})
-
-           # Log for this generation
-            self.generation_stats['avg_fitness'].append(avg_fitness)
-            self.generation_stats['best_fitness'].append(best_fitness)
-            self.generation_stats['best_active_genes'].append(best_active_genes)
-
-            # Updates population by replacing the weak peepz with mutants
-            if self.enable_crossover:
-                population = self.update_population(population, mutants)
-
-        # Run compare_selection_methods if selection_only is None
-        if not self.enable_crossover:
-            self.compare_selection_methods(self.population)
-            print("called compare_selection_methods")
-            
+                    # Stats for this generation
+                    self.generation_stats['avg_fitness'].append(avg_fitness)
+                    self.generation_stats['best_fitness'].append(best_fitness)
+                    self.generation_stats['best_active_genes'].append(best_active_genes)
+                    
+                    # Updates population by replacing the weak peepz with mutants
+                    population = self.update_population(population, mutants)
+                    
         else:
-            print("PLOTTING STUFFZ")
-            self.plot_stats()
+            # Run selection only
+            self.compare_selection_methods(population) # Has the loop already in it. 
+                    
+        # Run compare_selection_methods if selection_only is None
+        self.plot_stats()
+
 
 if __name__ == "__main__":
-    ga = MySack("config_1.txt")
+    for config in ["config_2.txt"]:
+        ga = MySack(config)
+        print("\t\t\tSELECTION ONLY")
+        ga.run(selection=None)
+        # ga.run()
 
-    print("\t\t\tSELECTION ONLY")
-    ga.run()
-    # ga.run(selection=None)
-
-
+#"config_1.txt", 
 
