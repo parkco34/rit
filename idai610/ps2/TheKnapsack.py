@@ -1,8 +1,9 @@
 #!/usr/bin/env python
 
 """
+Cory Parker
+idai610 - problem set 2
 +++++++++++++++++++++++++++++++++ KNAPSACK PROBLEM +++++++++++++++++++++++++++++++++
-
 """
 import numpy as np
 import matplotlib.pyplot as plt
@@ -10,7 +11,7 @@ import random
 from textwrap import dedent
 
 
-class MySack(object):
+class TheKnapsack(object):
     """
     Genetic Algorithm for the 0-1 Knapsack problem
     """
@@ -25,7 +26,7 @@ class MySack(object):
             "avg_fitness": [], "best_fitness": [], "best_active_genes": []
         }
         # Best stats for best generation
-        self.best_solution = {'fitness': 0.73, 'active_genes': 0, 'generation':
+        self.best_solution = {'fitness': float('-inf'), 'active_genes': 0, 'generation':
                              0}
 
         (self.population,
@@ -129,7 +130,6 @@ class MySack(object):
         total_value = sum(values)
 
         # Make sure total weight doesn't exceed knapsack capacity
-        # breakpoint()
         if total_weight > self.capacity:
             return 0
 
@@ -140,6 +140,11 @@ class MySack(object):
         Alternative fitness function, which penalizes the fitness of chromosome
         that exceeds the capacity.
         --------------------------------------------------------
+        INPUT:
+            chromosome: (numpy.ndarray)
+            
+        OUTPUT:
+            fitness of chromosome: (int)
         """ 
         weights = [self.weight_value[gene][0] * chromosome[gene] for gene in range(len(chromosome))]
         values = [self.weight_value[gene][1] * chromosome[gene] for gene in range(len(chromosome))]
@@ -149,12 +154,12 @@ class MySack(object):
         # For penatly calculation
         mean = np.mean(values)
         std_dev = np.std(values)
-        penalty_factor = random.uniform(0, 0.1) # Randomly selected number between 0 and .1
+        penalty_factor = random.uniform(0, 0.1) # Randomly selected number between 0 and 1.
         
         # Make sure total weight doesn't exceed knapsack capacity
         if total_weight > self.capacity:
             return total_value - penalty_factor * (total_weight - self.capacity) # Penatly
-
+        
         return total_value
 
     def compare_fitness_functions(self, population):
@@ -278,6 +283,8 @@ Best solution2: {best_solution2}
     def compare_selection_methods(self, population):
         """
         Compares the two selection methods via average fitness and the best.
+        As a result of discrepencies between the two datasets, I decided to
+        standardize using the fitness_func2 for tournament selection.
         -------------------------------------------------------------------
         INPUT:
             population: (np.ndarray)
@@ -289,8 +296,17 @@ Best solution2: {best_solution2}
 
         for method in methods:
             avg_fitness_list, best_fitness_list, best_active_genes_list = [], [], []
+
+            # Because of the discrepencies between the two datasets, I decided to alternate
+            # which fitness function to be used.
+            if self.config_file == "config_1.txt":
+                the_fitness = self.fitness_func
+                
+            else:
+                the_fitness = self.fitness_func2
             
             for gen in range(self.stop):
+                # Select parents
                 if method == "roulette":
                     parents = self.roulette_selection(population)
 
@@ -298,9 +314,9 @@ Best solution2: {best_solution2}
                     parents = self.tournament_selection(population)
 
                 # Compute statistics
-                avg_fitness = np.mean([self.fitness_func(chrome) for chrome in population])
-                best_solution = max(population, key=self.fitness_func)
-                best_fitness = self.fitness_func(best_solution)
+                avg_fitness = np.mean([the_fitness(chrome) for chrome in population])
+                best_solution = max(population, key=the_fitness)
+                best_fitness = the_fitness(best_solution)
                 best_active_genes = sum(best_solution)
 
                 # Update lists
@@ -311,6 +327,12 @@ Best solution2: {best_solution2}
                 # Update population
                 population = self.update_population(population, parents)
 
+                # Update best solution when better one is found
+                if best_fitness > self.best_solution["fitness"]:
+                    self.best_solution.update({"fitness": best_fitness,
+                                            "active_genes": best_active_genes,
+                                            "generation": gen})
+                    
             # Store method statistics for later comparison
             # method_stats first officiallu being used
             self.method_stats[method] = {
@@ -325,76 +347,65 @@ Best solution2: {best_solution2}
         """
         Plots statistics for each selection method.
         """
-        plt.figure()
+        plt.figure(figsize=(10, 8))
 
         if self.method_stats:
+            plt.suptitle(f"Comparison of Selection Methods", fontsize=14, fontweight='bold')
             for idx, method in enumerate(self.method_stats.keys()):
                 stats = self.method_stats[method]
                 generations = range(len(stats['avg_fitness']))
-
+                
+                # color and styles based on method
+                color = 'b' if method == "roulette" else 'g'
+                style_fitness = '--' if method == "roulette" else '--'
+                style_genes = '-.' if method == "roulette" else ':'
+                
                 # Plot average population fitness per generation
                 plt.subplot(3, 1, 1)
                 plt.plot(generations, stats['avg_fitness'], label=f"{method} Avg Fitness")
                 plt.title('Average Population Fitness per Generation')
-                plt.legend()
+                plt.legend(loc='upper left', bbox_to_anchor=(1, 1))
 
                 # Plot fitness score and number of active genes of fittest individual per generation
                 plt.subplot(3, 1, 2)
                 plt.plot(generations, stats['best_fitness'], label=f"{method} Best Fitness")
                 plt.plot(generations, stats['best_active_genes'], label=f"{method} Best Active Genes")
                 plt.title('Best Individual Stats per Generation')
-                plt.legend()
+                plt.legend(loc='upper left', bbox_to_anchor=(1, 1))
 
-                # Report number of active genes and fitness for the best solution overall
+                # Report number of active genes and fitness for the best solution everall
                 best_generation = stats['best_fitness'].index(max(stats['best_fitness']))
                 plt.subplot(3, 1, 3)
                 plt.scatter([best_generation], [stats['best_fitness'][best_generation]], label=f"{method} Best Fitness")
                 plt.scatter([best_generation], [stats['best_active_genes'][best_generation]], label=f"{method} Best Active Genes")
                 plt.title('Best Solution Overall')
-                plt.legend()
+                plt.legend(loc='upper left', bbox_to_anchor=(1, 1))
                 
-            else: 
-                # Plot average population fitness per generation
-                plt.subplot(3, 1, 1)
-                plt.plot(range(len(self.generation_stats['avg_fitness'])), self.generation_stats['avg_fitness'])
-                plt.title('Average Population Fitness per Generation')
+        else: 
+            plt.suptitle(f"Regular Script Run", fontsize=14, fontweight='bold')
+            # Plot average population fitness per generation
+            plt.subplot(3, 1, 1)
+            plt.plot(range(len(self.generation_stats['avg_fitness'])), self.generation_stats['avg_fitness'])
+            plt.title('Average Population Fitness per Generation')
 
-                # Plot fitness score and number of active genes of fittest individual per generation
-                plt.subplot(3, 1, 2)
-                plt.plot(range(len(self.generation_stats['best_fitness'])), self.generation_stats['best_fitness'], label='Best Fitness')
-                plt.plot(range(len(self.generation_stats['best_active_genes'])), self.generation_stats['best_active_genes'], label='Best Active Genes')
-                plt.legend()
-                plt.title('Best Individual Stats per Generation')
+            # Plot fitness score and number of active genes of fittest individual per generation
+            plt.subplot(3, 1, 2)
+            plt.plot(range(len(self.generation_stats['best_fitness'])), self.generation_stats['best_fitness'], label='Best Fitness')
+            plt.plot(range(len(self.generation_stats['best_active_genes'])), self.generation_stats['best_active_genes'], label='Best Active Genes')
+            plt.legend()
+            plt.title('Best Individual Stats per Generation')
 
-                # Report number of active genes and fitness for the best solution overall
-                plt.subplot(3, 1, 3)
-                plt.scatter([self.best_solution['generation']], [self.best_solution['fitness']], label='Best Fitness')
-                plt.scatter([self.best_solution['generation']], [self.best_solution['active_genes']], label='Best Active Genes')
-                plt.legend()
-                plt.title('Best Solution Overall')
-                
-        # if hasattr(self, "fitness_func_stats"):
-        #     plt.figure()
+            # Report number of active genes and fitness for the best solution overall
+            plt.subplot(3, 1, 3)
+            plt.scatter([self.best_solution['generation']], [self.best_solution['fitness']], label='Best Fitness')
+            plt.scatter([self.best_solution['generation']], [self.best_solution['active_genes']], label='Best Active Genes')
+            plt.legend()
+            plt.title('Best Solution Overall')
             
-        #     for idx, func_name in enumerate(self.fitness_func_stats.keys()):
-        #         stats = self.fitness_func_stats[func_name]
-        #         generations = range(len(stats['avg_fitness']))
-                
-        #         plt.subplot(3, 1, 1)
-        #         plt.plot(generations, stats['avg_fitness'], label=f"{func_name} Avg Fitness")
-        #         plt.legend()
-                
-        #         plt.subplot(3, 1, 2)
-        #         plt.plot(generations, stats['best_fitness'], label=f"{func_name} Best Fitness")
-        #         plt.legend()
-
-        #         plt.subplot(3, 1, 3)
-        #         best_generation = stats['best_fitness'].index(max(stats['best_fitness']))
-        #         plt.scatter([best_generation], [stats['best_fitness'][best_generation]], label=f"{func_name} Best Fitness")
-        #         plt.legend()
-                
-            plt.tight_layout()
-            plt.show()
+        # Adjust top, bottom and hspace as per your requirement      
+        plt.subplots_adjust(top=0.85, bottom=0.3, hspace=0.75)
+        plt.tight_layout(pad=0.4, w_pad=0.5, h_pad=1.5)
+        plt.show()
 
     def crossover(self, parents):
         """
@@ -540,10 +551,32 @@ Best solution2: {best_solution2}
 
 if __name__ == "__main__":
     for config in ["config_1.txt", "config_2.txt"]: 
-        ga = MySack(config)
+        ga = TheKnapsack(config)
         print("\t\t\tSELECTION ONLY")
         ga.run(selection=None)
-        print("\t\t\tSELECTION + CROSSOVER + MUTATION")
-        ga.run()
+        # print("\t\t\tSELECTION + CROSSOVER + MUTATION")
+        # ga.run()
 
+# Code snippet for comparing fitness functions
+# -------------------------------------------------------------------
+        # Sad attempt at plotting the comaprision of the two fitness functions 
+        # if hasattr(self, "fitness_func_stats"):
+        #     plt.figure()
+            
+        #     for idx, func_name in enumerate(self.fitness_func_stats.keys()):
+        #         stats = self.fitness_func_stats[func_name]
+        #         generations = range(len(stats['avg_fitness']))
+                
+        #         plt.subplot(3, 1, 1)
+        #         plt.plot(generations, stats['avg_fitness'], label=f"{func_name} Avg Fitness")
+        #         plt.legend()
+                
+        #         plt.subplot(3, 1, 2)
+        #         plt.plot(generations, stats['best_fitness'], label=f"{func_name} Best Fitness")
+        #         plt.legend()
 
+        #         plt.subplot(3, 1, 3)
+        #         best_generation = stats['best_fitness'].index(max(stats['best_fitness']))
+        #         plt.scatter([best_generation], [stats['best_fitness'][best_generation]], label=f"{func_name} Best Fitness")
+        #         plt.legend()
+                
