@@ -259,14 +259,14 @@ Best solution2: {best_solution2}
         selected_parents = []
         count = 0 # Avoids infinite loop
         
-        while not all(selected_parents) and count < 7:
+        while len(selected_parents) < 4 and count < 7:
             # Randomly select k individuals from population
             chromosomes = random.sample(list(population), k)
             # Most fit among k chromosomes
             best_fit = float('-inf')
-            
+            # ==> Chromosomes are all same!            
             for chrome in chromosomes:
-                fit = self.fitness_func(chrome)
+                fit = self.fitness_func2(chrome)
 
                 if fit > best_fit:
                     best_fit = fit
@@ -339,7 +339,7 @@ Best solution2: {best_solution2}
                 'avg_fitness': avg_fitness_list,
                 'best_fitness': best_fitness_list,
                 'best_active_genes': best_active_genes_list
-            }            
+            }
             
         print(f"Method stats: {self.method_stats}")
 
