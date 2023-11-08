@@ -108,11 +108,11 @@ def calculate_priors(labels):
     # Number of pos/neg review counts
     class_counts = labels.value_counts()
     total_docs = len(labels)
-    priors = (class_counts / total_docs).to_dict()
+    priors = (class_counts / total_docs).to_dict() # convert to dict
 
     return priors
 
-def calculate_likelihoods(feature_matrix, labels, vocabulary, alpha=1):
+def max_likelihood_estimation(feature_matrix, labels, vocabulary, alpha=1):
     """
     Calculate the likelihood of each feature given the class label with Laplace smoothing.
     ------------------------------------------------------------
@@ -128,13 +128,18 @@ def calculate_likelihoods(feature_matrix, labels, vocabulary, alpha=1):
     likelihoods = {}
 
     for class_label in labels.unique():
-        # Filter the rows for the current class label
-        class_feature_matrix = feature_matrix[labels == class_label]
-        # Sum word counts for the class + alpha for Laplace smoothing
-        word_counts = class_feature_matrix.sum(axis=0) + alpha
-        # Sum all counts (denominator for the likelihood)
-        total_counts = word_counts.sum()
-        likelihoods[class_label] = (word_counts / total_counts).to_dict()
+        feature_subset = feature_matrix[labels == class_label]
+        # Total count of words plus number of unique words for denominator
+        # of LAPLACE SMOOTHING
+        total_word_count = feature_subset.to_numpy().sum() + alpha * len(vocabulary)
+        
+        word_likelihoods = {}
+        for word in vocabulary:
+            word_count = feature_subset[word].sum()
+            # Lapalce smoothing
+            smooth = word_count + alpha
+            word_likelihoods[word] = smooth / total_word_count
+        likelihoods[class_label] = word_likelihoods
 
     return likelihoods
 
@@ -144,9 +149,13 @@ def classification(document, priors, likelihoods, vocabulary):
     classification.
     ------------------------------------------------------------
     INPUT:
+        document: (str) Review (Sentence)
+        priors: (dict)
+        likelihoods: (dict)
+        vocabulary: (pandas Series) Unique words
 
     OUTPUT:
-
+        max posterior:    
     """
     # Process document
     wrangled_doc = data_wrangle(document)
@@ -156,6 +165,8 @@ def classification(document, priors, likelihoods, vocabulary):
     posteriors = {}
     # Get log2 of priors and log2 of posteriors 
     for class_label in priors:
+        # log2 to prevent numerical underflow
+        
         log_posterior = np.log2(priors[class_label])
         # Get log2 of likelihoods times count
         for word, count in doc_vector.items():
@@ -173,14 +184,14 @@ def evaluation_of_model(test_data, test_labels, priors, likelihoods, vocabulary)
     Evaluates accuracy, precision, recal and F-1 Score, if it's needed ...
     ----------------------------------------------------------------------
     INPUTS:
-        test_data: 
-        test_labels:
-        priors: 
-        likelihoods: 
-        vocabulary: 
+        test_data: (pandas Series)
+        test_labels:(pandas Series)
+        priors: (dict)
+        likelihoods: (dict)
+        vocabulary: (pandas Series)
 
     OUTPUTS:
-        accuracy: 
+        accuracy: (float)
     """
     # Number of correct labels
     correct = 0
@@ -202,9 +213,9 @@ df["wrangled_data"] = df["Text"].apply(data_wrangle)
 labels = df["Label"]
 
 # test data
-test_data = pd.read_csv(r"Data/dataset_1_review/reviews_polarity_test.csv")
-test_labels = test_data["Label"]
-#test_labels["wranlged_test_data"] = test_labels["Label"].apply(data_wrangle)
+test_df = pd.read_csv(r"Data/dataset_1_review/reviews_polarity_test.csv")
+test_data = test_df["Text"]
+test_labels = test_df["Label"]
 
 # unique words
 vocabulary = get_words(df["wrangled_data"])
@@ -213,9 +224,10 @@ feature_matrix = make_feature_matrix(df["wrangled_data"],
 
 # Probablilities
 priors = calculate_priors(labels)
-likelihoods = calculate_likelihoods(feature_matrix, labels, vocabulary)
+likelihoods = max_likelihood_estimation(feature_matrix, labels, vocabulary)
 
-# Accuracy result is 0.006666 NOT GOOD
+# Accuracy result is 0.5 ... FUCK!
 accuracy = evaluation_of_model(test_data, test_labels, priors, likelihoods, vocabulary)
 
 breakpoint()
+#!import code; code.interact(local=vars())
