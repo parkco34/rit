@@ -1,6 +1,7 @@
 #!/usr/bin/env python
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 import re
 import nltk
 from nltk.corpus import stopwords
@@ -112,7 +113,7 @@ def calculate_priors(labels):
 
     return priors
 
-def max_likelihood_estimation(feature_matrix, labels, vocabulary, alpha=1):
+def max_likelihood_estimation(feature_matrix, labels, vocabulary, alpha=False):
     """
     Calculate the likelihood of each feature given the class label with Laplace smoothing.
     ------------------------------------------------------------
@@ -120,7 +121,7 @@ def max_likelihood_estimation(feature_matrix, labels, vocabulary, alpha=1):
         feature_matrix: (pandas dataframe) matrix of word counts
         labels: (pandas series) series of class labels
         vocabulary: (pandas series) unique words
-        alpha: (int) smoothing parameter
+        alpha: (bool) Whether to use smoothing parameter or not
 
     OUTPUT:
         likelihoods: (dict) mapping of class label to word likelihoods
@@ -131,14 +132,21 @@ def max_likelihood_estimation(feature_matrix, labels, vocabulary, alpha=1):
         feature_subset = feature_matrix[labels == class_label]
         # Total count of words plus number of unique words for denominator
         # of LAPLACE SMOOTHING
-        total_word_count = feature_subset.to_numpy().sum() + alpha * len(vocabulary)
-        
+        if alpha:
+            total_word_count = feature_subset.sum().sum() + len(vocabulary)
+        # Without Laplace smoothing
+        else:
+            total_word_count = feature_subset.sum().sum()
+
         word_likelihoods = {}
         for word in vocabulary:
             word_count = feature_subset[word].sum()
             # Lapalce smoothing
-            smooth = word_count + alpha
-            word_likelihoods[word] = smooth / total_word_count
+            if alpha:
+                word_count = word_count + 1
+
+            word_likelihoods[word] = word_count / total_word_count
+
         likelihoods[class_label] = word_likelihoods
 
     return likelihoods
@@ -206,28 +214,73 @@ def evaluation_of_model(test_data, test_labels, priors, likelihoods, vocabulary)
 
     return accuracy
 
-# Get DataFrame
-df = pd.read_csv(r"Data/dataset_1_review/reviews_polarity_train.csv")
-# Create new column with processed data
-df["wrangled_data"] = df["Text"].apply(data_wrangle)
-labels = df["Label"]
+def plot_likelihoods(likelihoods, vocabulary, class_labels, title):
+    # Set up the figure and axis
+    fig, ax = plt.subplots(figsize=(10, 8))
 
-# test data
-test_df = pd.read_csv(r"Data/dataset_1_review/reviews_polarity_test.csv")
-test_data = test_df["Text"]
-test_labels = test_df["Label"]
+    # Number of words to plot
+    num_words = len(vocabulary)
+    index = np.arange(num_words)
+    bar_width = 0.35
 
-# unique words
-vocabulary = get_words(df["wrangled_data"])
-feature_matrix = make_feature_matrix(df["wrangled_data"],
-                                     vocabulary)
+    for i, class_label in enumerate(class_labels):
+        # Extract the likelihoods for the current class
+        class_likelihoods = [likelihoods[class_label][word] for word in vocabulary]
 
-# Probablilities
-priors = calculate_priors(labels)
-likelihoods = max_likelihood_estimation(feature_matrix, labels, vocabulary)
+        # Plot
+        ax.bar(index + i * bar_width, class_likelihoods, bar_width, label=class_label)
 
-# Accuracy result is 0.5 ... FUCK!
-accuracy = evaluation_of_model(test_data, test_labels, priors, likelihoods, vocabulary)
+    # Add labels and title
+    ax.set_xlabel('Words')
+    ax.set_ylabel('Likelihoods')
+    ax.set_title(title)
+    ax.set_xticks(index + bar_width / 2)
+    ax.set_xticklabels(vocabulary, rotation=90)
+    ax.legend()
 
-breakpoint()
-#!import code; code.interact(local=vars())
+    # Show the plot
+    plt.tight_layout()
+    plt.show()
+
+def main():
+    # Get DataFrame
+    df = pd.read_csv(r"Data/dataset_1_review/reviews_polarity_train.csv")
+    # Create new column with processed data
+    df["wrangled_data"] = df["Text"].apply(data_wrangle)
+    labels = df["Label"]
+
+    # test data
+    test_df = pd.read_csv(r"Data/dataset_1_review/reviews_polarity_test.csv")
+    test_data = test_df["Text"]
+    test_labels = test_df["Label"]
+
+    # unique words
+    vocabulary = get_words(df["wrangled_data"])
+    feature_matrix = make_feature_matrix(df["wrangled_data"],
+                                         vocabulary)
+
+    # Probablilities
+    priors = calculate_priors(labels)
+    # WIthout laplce smoothing
+    likelihoods = max_likelihood_estimation(feature_matrix, labels, vocabulary)
+    # With laplace smoothing
+    likelihoods_smooth = max_likelihood_estimation(feature_matrix, labels,
+                                                   vocabulary, alpha=True)
+
+    # Accuracy result is 0.5 ... not good
+    accuracy = evaluation_of_model(test_data, test_labels, priors, likelihoods, vocabulary)
+    accuracy_smooth = evaluation_of_model(test_data, test_labels, priors,
+                                   likelihoods_smooth, vocabulary)
+    # Sample dataset for sanity checks
+    class_labels = ['pos', 'neg']
+    subset_vocab = list(vocabulary)[:23]
+    # Plot likelihoods
+    plot_likelihoods(likelihoods, subset_vocab, class_labels, 'Likelihoods of words given class')
+    # Plot likelihoods with Laplace Smoothing
+    plot_likelihoods(likelihoods_smooth, subset_vocab, class_labels,
+                     'Likelihoods of words given class w/ Laplace Smoothing')
+
+
+if __name__ == "__main__":
+    main()
+
