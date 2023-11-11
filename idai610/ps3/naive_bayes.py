@@ -214,9 +214,20 @@ def evaluation_of_model(test_data, test_labels, priors, likelihoods, vocabulary)
 
     return accuracy
 
-def plot_likelihoods(likelihoods, vocabulary, class_labels, title):
+def plot_likelihoods(likelihoods, smoothed_likelihoods, vocabulary, class_labels):
+    """
+    Plots the comparison of the likelihoods without smoothin and likelihoods
+    with smoothing.
+    -------------------------------------------------------------------------
+    INPUT:
+        likelihoods: (dict) 
+        smoothed_lkelihoods: (dict) INcludes smoothing parameter.
+
+    OUTPUT:
+        None
+    """
     # Set up the figure and axis
-    fig, ax = plt.subplots(figsize=(10, 8))
+    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 8))
 
     # Number of words to plot
     num_words = len(vocabulary)
@@ -226,31 +237,42 @@ def plot_likelihoods(likelihoods, vocabulary, class_labels, title):
     for i, class_label in enumerate(class_labels):
         # Extract the likelihoods for the current class
         class_likelihoods = [likelihoods[class_label][word] for word in vocabulary]
+        class_smooth_likelihoods = [smoothed_likelihoods[class_label][word] for
+                                   word in vocabulary]
 
-        # Plot
-        ax.bar(index + i * bar_width, class_likelihoods, bar_width, label=class_label)
+        # Plots
+        ax1.bar(index + i * bar_width, class_likelihoods, bar_width, label=class_label)
+        ax2.bar(index + i * bar_width, class_smooth_likelihoods, bar_width, label=class_label)
 
-    # Add labels and title
-    ax.set_xlabel('Words')
-    ax.set_ylabel('Likelihoods')
-    ax.set_title(title)
-    ax.set_xticks(index + bar_width / 2)
-    ax.set_xticklabels(vocabulary, rotation=90)
-    ax.legend()
+    # Add labels
+    ax1.set_xlabel('Words')
+    ax1.set_ylabel('Likelihoods')
+    ax1.set_xticks(index + bar_width / 2)
+    ax1.set_xticklabels(vocabulary, rotation=90)
+    ax1.legend()
+
+    ax2.set_xlabel('Words')
+    ax2.set_ylabel('Likelihoods w/ Smoothing')
+    ax2.set_xticks(index + bar_width / 2)
+    ax2.set_xticklabels(vocabulary, rotation=90)
+    ax2.legend()
 
     # Show the plot
     plt.tight_layout()
     plt.show()
 
-def main():
-    # Get DataFrame
-    df = pd.read_csv(r"Data/dataset_1_review/reviews_polarity_train.csv")
+    plt.close(fig)
+
+def main(dataset, test_data):
+    # Get DataFrame and fill na values with string zero
+    df = pd.read_csv(dataset).fillna("0")
     # Create new column with processed data
     df["wrangled_data"] = df["Text"].apply(data_wrangle)
     labels = df["Label"]
+    class_labels = pd.Series(df["Label"].unique(), name="labels")
 
     # test data
-    test_df = pd.read_csv(r"Data/dataset_1_review/reviews_polarity_test.csv")
+    test_df = pd.read_csv(test_data)
     test_data = test_df["Text"]
     test_labels = test_df["Label"]
 
@@ -267,20 +289,25 @@ def main():
     likelihoods_smooth = max_likelihood_estimation(feature_matrix, labels,
                                                    vocabulary, alpha=True)
 
-    # Accuracy result is 0.5 ... not good
+    # Accuracy result is 0.5 for movie reviews and 0.41 for the newsgroup!
     accuracy = evaluation_of_model(test_data, test_labels, priors, likelihoods, vocabulary)
     accuracy_smooth = evaluation_of_model(test_data, test_labels, priors,
                                    likelihoods_smooth, vocabulary)
+#    breakpoint()
+    
     # Sample dataset for sanity checks
-    class_labels = ['pos', 'neg']
     subset_vocab = list(vocabulary)[:23]
-    # Plot likelihoods
-    plot_likelihoods(likelihoods, subset_vocab, class_labels, 'Likelihoods of words given class')
-    # Plot likelihoods with Laplace Smoothing
-    plot_likelihoods(likelihoods_smooth, subset_vocab, class_labels,
-                     'Likelihoods of words given class w/ Laplace Smoothing')
+    # Plot likelihoods and stuff
+    plot_likelihoods(likelihoods, likelihoods_smooth, subset_vocab, class_labels)
 
 
 if __name__ == "__main__":
-    main()
+    train_data1 = r"Data/dataset_1_review/reviews_polarity_train.csv"
+    train_data2 = r"Data/dataset_1_newsgroup/newsgroup_train.csv"
+    test_data1 = r"Data/dataset_1_review/reviews_polarity_test.csv"
+    test_data2 = r"Data/dataset_1_newsgroup/newsgroup_test.csv"
+    # Movie reviews
+    main(train_data1, test_data1)
+    # Newsgroup
+    main(train_data2, test_data2)
 
