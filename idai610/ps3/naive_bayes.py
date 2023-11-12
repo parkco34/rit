@@ -113,7 +113,7 @@ def calculate_priors(labels):
 
     return priors
 
-def max_likelihood_estimation(feature_matrix, labels, vocabulary, alpha=False):
+def max_likelihood_estimation(feature_matrix, labels, vocabulary, alpha=0):
     """
     Calculate the likelihood of each feature given the class label with Laplace smoothing.
     ------------------------------------------------------------
@@ -121,30 +121,25 @@ def max_likelihood_estimation(feature_matrix, labels, vocabulary, alpha=False):
         feature_matrix: (pandas dataframe) matrix of word counts
         labels: (pandas series) series of class labels
         vocabulary: (pandas series) unique words
-        alpha: (bool) Whether to use smoothing parameter or not
+        alpha: (int) 1 for Laplace Smoothing, zero otherwise.
 
     OUTPUT:
         likelihoods: (dict) mapping of class label to word likelihoods
     """
     likelihoods = {}
+    V = len(vocabulary) # Unique word count
 
+    # class_label is query variable, nad labels.unique is observed values
     for class_label in labels.unique():
         feature_subset = feature_matrix[labels == class_label]
         # Total count of words plus number of unique words for denominator
         # of LAPLACE SMOOTHING
-        if alpha:
-            total_word_count = feature_subset.sum().sum() + len(vocabulary)
-        # Without Laplace smoothing
-        else:
-            total_word_count = feature_subset.sum().sum()
+        total_word_count = feature_subset.sum().sum() + alpha * V
 
         word_likelihoods = {}
         for word in vocabulary:
-            word_count = feature_subset[word].sum()
             # Lapalce smoothing
-            if alpha:
-                word_count = word_count + 1
-
+            word_count = feature_subset[word].sum() + alpha
             word_likelihoods[word] = word_count / total_word_count
 
         likelihoods[class_label] = word_likelihoods
@@ -172,9 +167,8 @@ def classification(document, priors, likelihoods, vocabulary):
 
     posteriors = {}
     # Get log2 of priors and log2 of posteriors 
-    for class_label in priors:
+    for class_label in priors.keys():
         # log2 to prevent numerical underflow
-        
         log_posterior = np.log2(priors[class_label])
         # Get log2 of likelihoods times count
         for word, count in doc_vector.items():
@@ -182,14 +176,15 @@ def classification(document, priors, likelihoods, vocabulary):
                 # If None, just stick a zero in there, yo
                 log_posterior += np.log2(likelihoods[class_label].get(word,0))\
                 * count
-
+            
         posteriors[class_label] = log_posterior
-
+        breakpoint()
     return max(posteriors, key=posteriors.get)
 
-def evaluation_of_model(test_data, test_labels, priors, likelihoods, vocabulary):
+def evaluate_performance(true_labels, predicted_labels):
     """
-    Evaluates accuracy, precision, recal and F-1 Score, if it's needed ...
+    Evaluates accuracy, precision, recal and F-1 Score, outputting the results
+    in a table and confusion matrix.
     ----------------------------------------------------------------------
     INPUTS:
         test_data: (pandas Series)
@@ -199,20 +194,49 @@ def evaluation_of_model(test_data, test_labels, priors, likelihoods, vocabulary)
         vocabulary: (pandas Series)
 
     OUTPUTS:
-        accuracy: (float)
+        accuracy, precision, recall, f1_score, confusion_matrix: tuple((float), (float), (float),
+        (float), (dict))
     """
-    # Number of correct labels
-    correct = 0
-    # Evaluation process
-    for doc, label in zip(test_data, test_labels):
-        predicted = classification(doc, priors, likelihoods, vocabulary)
-        # Compare with true label
-        if predicted == label:
-            correct += 1
+    true_pos = sum((predicted_labels == 'pos') & (true_labels == 'pos'))
+    false_pos = sum((predicted_labels == 'pos') & (true_labels == 'neg'))
+    true_negs = sum((predicted_labels == 'neg') & (true_labels == 'neg'))
+    false_negs = sum((predicted_labels == 'neg') & (true_labels == 'pos'))
 
-    accuracy = correct / len(test_data)
+    # Calculate precision, recall and F1-score
+    precision = true_pos / (true_pos + false_pos)
+    recall = true_pos / (true_pos + false_neg)
+    f1_score = 2 * (precision * recall / (precision + recall))
+    accuracy = (true_pos + true_negs) / len(true_labels)
 
-    return accuracy
+    confusion_matrix = {
+        'pos': {'pos': true_pos, 'neg': false_negs}, 
+        'neg': {'pos': false_pos, 'neg': true_negs}
+    }
+
+    return accuracy, precision, recall, f1_score, confusion_matrix
+
+def perform(test_data, test_labels, priors, likelihoods, vocabulary):
+    """
+    Classifies test data and evaluates the performance of the classifier.
+    ----------------------------------------------------------------------
+    INPUT:
+        test_data: (pandas Series) containing the documents to classify.
+        test_labels: (pandas Series) containing the true labels for the test data.
+        priors: (dict) Prior probabilities for each class.
+        likelihoods: (dict) Likelihoods of features given the class.
+        vocabulary: (pandas Series) containing the vocabulary used in the feature matrix.
+
+    OUTPUT:
+        The performance metrics as a tuple (accuracy, precision, recall, f1_score, confusion_matrix).
+    """
+    predicted_labels = []
+    for doc in test_data:
+        predicted_label = classification(doc, priors, likelihoods, vocabulary)
+        predicted_labels.append(predicted_label)
+
+    predicted_labels = pd.Series(predicted_labels, index=test_labels.index)
+
+    return evaluate_performance(test_labels, predicted_labels)
 
 def plot_likelihoods(likelihoods, smoothed_likelihoods, vocabulary, class_labels):
     """
@@ -221,7 +245,9 @@ def plot_likelihoods(likelihoods, smoothed_likelihoods, vocabulary, class_labels
     -------------------------------------------------------------------------
     INPUT:
         likelihoods: (dict) 
-        smoothed_lkelihoods: (dict) INcludes smoothing parameter.
+        smoothed_lkelihoods: (dict) Includes smoothing parameter.
+        vocabulary: (pandas Series) Unique vocabulary words in dataset.
+        class_labels: (pandas Series) Labels.
 
     OUTPUT:
         None
@@ -290,15 +316,12 @@ def main(dataset, test_data):
                                                    vocabulary, alpha=True)
 
     # Accuracy result is 0.5 for movie reviews and 0.41 for the newsgroup!
-    accuracy = evaluation_of_model(test_data, test_labels, priors, likelihoods, vocabulary)
-    accuracy_smooth = evaluation_of_model(test_data, test_labels, priors,
-                                   likelihoods_smooth, vocabulary)
-#    breakpoint()
-    
+    performance = perform(test_data, test_labels, priors, likelihoods, vocabulary)
+    performance_smooth = perform(test_data, test_labels, priors, likelihoods_smooth, vocabulary)
     # Sample dataset for sanity checks
-    subset_vocab = list(vocabulary)[:23]
+#    subset_vocab = list(vocabulary)[:23]
     # Plot likelihoods and stuff
-    plot_likelihoods(likelihoods, likelihoods_smooth, subset_vocab, class_labels)
+#    plot_likelihoods(likelihoods, likelihoods_smooth, subset_vocab, class_labels)
 
 
 if __name__ == "__main__":
