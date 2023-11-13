@@ -173,14 +173,19 @@ def classification(document, priors, likelihoods, vocabulary):
         log_posterior = np.log2(priors[class_label])
         # Get log2 of likelihoods times count
         for word, count in doc_vector.items():
-            
+
             if word in list(vocabulary):
-                # If None, just stick a zero in there, yoL
-                log_posterior += np.log2(likelihoods[class_label].get(word))\
-                * count if likelihoods[class_label].get(word) > 0 else\
-                float("-inf")
+                log_likelihood = np.log2(likelihoods[class_label].get(word,
+                                                                      0))\
+                    if likelihoods[class_label].get(word, 0) > 0 else float("-inf")
+                log_posterior += log_likelihood * count
             
         posteriors[class_label] = log_posterior
+
+    # In case all posteriors are "-inf" (likeli)
+    if all(value == float("-inf") for value in posteriors.values()):
+        # If all else fails, default to class with highest priors.
+        return max(posterior.keys(), key=lambda k: priors[k])
 
     return max(posteriors, key=posteriors.get)
 
@@ -280,7 +285,7 @@ def main(dataset, test_data):
     # Plotting confusion matrix
 #    sns.heatmap(confusion_matrix, annot=True)
 #    plt.show()
-    breakpoint()
+#    breakpoint()
 
 
 if __name__ == "__main__":
