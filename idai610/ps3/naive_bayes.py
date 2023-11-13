@@ -2,6 +2,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import seaborn as sns
 import re
 import nltk
 from nltk.corpus import stopwords
@@ -168,17 +169,18 @@ def classification(document, priors, likelihoods, vocabulary):
     posteriors = {}
     # Get log2 of priors and log2 of posteriors 
     for class_label in priors.keys():
-        # log2 to prevent numerical underflow
+        # log2 to prevent numerical underflow; initialized to -1.0 ??
         log_posterior = np.log2(priors[class_label])
         # Get log2 of likelihoods times count
         for word, count in doc_vector.items():
-            if word in vocabulary:
-                # If None, just stick a zero in there, yo
-                log_posterior += np.log2(likelihoods[class_label].get(word,0))\
-                * count
+            
+            if word in list(vocabulary):
+                # If None, just stick a zero in there, yoL
+                log_posterior += np.log2(likelihoods[class_label].get(word))\
+                * count if likelihoods[class_label].get(word) > 1 else 0
             
         posteriors[class_label] = log_posterior
-        breakpoint()
+
     return max(posteriors, key=posteriors.get)
 
 def evaluate_performance(true_labels, predicted_labels):
@@ -187,11 +189,9 @@ def evaluate_performance(true_labels, predicted_labels):
     in a table and confusion matrix.
     ----------------------------------------------------------------------
     INPUTS:
-        test_data: (pandas Series)
-        test_labels:(pandas Series)
-        priors: (dict)
-        likelihoods: (dict)
-        vocabulary: (pandas Series)
+        true_labels: (pandas Series) Test labels.
+        predicted_labels: (pandas Series) Prediction calculated by
+            classification function.
 
     OUTPUTS:
         accuracy, precision, recall, f1_score, confusion_matrix: tuple((float), (float), (float),
@@ -202,16 +202,22 @@ def evaluate_performance(true_labels, predicted_labels):
     true_negs = sum((predicted_labels == 'neg') & (true_labels == 'neg'))
     false_negs = sum((predicted_labels == 'neg') & (true_labels == 'pos'))
 
-    # Calculate precision, recall and F1-score
-    precision = true_pos / (true_pos + false_pos)
-    recall = true_pos / (true_pos + false_neg)
-    f1_score = 2 * (precision * recall / (precision + recall))
-    accuracy = (true_pos + true_negs) / len(true_labels)
+    # Precision: Measure of EXACTNESS.
+    precision = true_pos / (true_pos + false_pos) if (true_pos + false_pos) > \
+                                                      0 else 0
+    # Recall: Measure of classifier's COMPLETENESS.
+    recall = true_pos / (true_pos + false_negs) if (true_pos + false_negs) > 0\
+            else 0
+    # F1-Score: Harmonic Mean of precision and recall
+    f1_score = 2 * (precision * recall / (precision + recall)) if (precision +
+                                                          recall) > 0 else 0
 
-    confusion_matrix = {
-        'pos': {'pos': true_pos, 'neg': false_negs}, 
-        'neg': {'pos': false_pos, 'neg': true_negs}
-    }
+    accuracy = (true_pos + true_negs) / len(true_labels) if len(true_labels) >\
+    0 else 0
+
+    # Confusion Matrix
+    confusion_matrix = pd.crosstab(true_labels, predicted_labels,
+                                   rownames=["Actual"], colnames=["Predicted"])
 
     return accuracy, precision, recall, f1_score, confusion_matrix
 
@@ -237,57 +243,6 @@ def perform(test_data, test_labels, priors, likelihoods, vocabulary):
     predicted_labels = pd.Series(predicted_labels, index=test_labels.index)
 
     return evaluate_performance(test_labels, predicted_labels)
-
-def plot_likelihoods(likelihoods, smoothed_likelihoods, vocabulary, class_labels):
-    """
-    Plots the comparison of the likelihoods without smoothin and likelihoods
-    with smoothing.
-    -------------------------------------------------------------------------
-    INPUT:
-        likelihoods: (dict) 
-        smoothed_lkelihoods: (dict) Includes smoothing parameter.
-        vocabulary: (pandas Series) Unique vocabulary words in dataset.
-        class_labels: (pandas Series) Labels.
-
-    OUTPUT:
-        None
-    """
-    # Set up the figure and axis
-    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 8))
-
-    # Number of words to plot
-    num_words = len(vocabulary)
-    index = np.arange(num_words)
-    bar_width = 0.35
-
-    for i, class_label in enumerate(class_labels):
-        # Extract the likelihoods for the current class
-        class_likelihoods = [likelihoods[class_label][word] for word in vocabulary]
-        class_smooth_likelihoods = [smoothed_likelihoods[class_label][word] for
-                                   word in vocabulary]
-
-        # Plots
-        ax1.bar(index + i * bar_width, class_likelihoods, bar_width, label=class_label)
-        ax2.bar(index + i * bar_width, class_smooth_likelihoods, bar_width, label=class_label)
-
-    # Add labels
-    ax1.set_xlabel('Words')
-    ax1.set_ylabel('Likelihoods')
-    ax1.set_xticks(index + bar_width / 2)
-    ax1.set_xticklabels(vocabulary, rotation=90)
-    ax1.legend()
-
-    ax2.set_xlabel('Words')
-    ax2.set_ylabel('Likelihoods w/ Smoothing')
-    ax2.set_xticks(index + bar_width / 2)
-    ax2.set_xticklabels(vocabulary, rotation=90)
-    ax2.legend()
-
-    # Show the plot
-    plt.tight_layout()
-    plt.show()
-
-    plt.close(fig)
 
 def main(dataset, test_data):
     # Get DataFrame and fill na values with string zero
@@ -316,12 +271,15 @@ def main(dataset, test_data):
                                                    vocabulary, alpha=True)
 
     # Accuracy result is 0.5 for movie reviews and 0.41 for the newsgroup!
-    performance = perform(test_data, test_labels, priors, likelihoods, vocabulary)
-    performance_smooth = perform(test_data, test_labels, priors, likelihoods_smooth, vocabulary)
-    # Sample dataset for sanity checks
-#    subset_vocab = list(vocabulary)[:23]
-    # Plot likelihoods and stuff
-#    plot_likelihoods(likelihoods, likelihoods_smooth, subset_vocab, class_labels)
+    accuracy, precision, recall, f1_score, confusion_matrix = perform(test_data, test_labels, priors, likelihoods, vocabulary)
+    (accuracy_smooth, precision_smooth, recall_smooth, f1_score_smooth,
+    confusion_matrix_smooth) = perform(test_data, test_labels, priors,
+                                      likelihoods_smooth, vocabulary)
+
+    # Plotting confusion matrix
+#    sns.heatmap(confusion_matrix, annot=True)
+#    plt.show()
+    breakpoint()
 
 
 if __name__ == "__main__":
@@ -334,3 +292,54 @@ if __name__ == "__main__":
     # Newsgroup
     main(train_data2, test_data2)
 
+
+#def plot_likelihoods(likelihoods, smoothed_likelihoods, vocabulary, class_labels):
+#    """
+#    Plots the comparison of the likelihoods without smoothin and likelihoods
+#    with smoothing.
+#    -------------------------------------------------------------------------
+#    INPUT:
+#        likelihoods: (dict) 
+#        smoothed_lkelihoods: (dict) Includes smoothing parameter.
+#        vocabulary: (pandas Series) Unique vocabulary words in dataset.
+#        class_labels: (pandas Series) Labels.
+#
+#    OUTPUT:
+#        None
+#    """
+#    # Set up the figure and axis
+#    fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(10, 8))
+#
+#    # Number of words to plot
+#    num_words = len(vocabulary)
+#    index = np.arange(num_words)
+#    bar_width = 0.35
+#
+#    for i, class_label in enumerate(class_labels):
+#        # Extract the likelihoods for the current class
+#        class_likelihoods = [likelihoods[class_label][word] for word in vocabulary]
+#        class_smooth_likelihoods = [smoothed_likelihoods[class_label][word] for
+#                                   word in vocabulary]
+#
+#        # Plots
+#        ax1.bar(index + i * bar_width, class_likelihoods, bar_width, label=class_label)
+#        ax2.bar(index + i * bar_width, class_smooth_likelihoods, bar_width, label=class_label)
+#
+#    # Add labels
+#    ax1.set_xlabel('Words')
+#    ax1.set_ylabel('Likelihoods')
+#    ax1.set_xticks(index + bar_width / 2)
+#    ax1.set_xticklabels(vocabulary, rotation=90)
+#    ax1.legend()
+#
+#    ax2.set_xlabel('Words')
+#    ax2.set_ylabel('Likelihoods w/ Smoothing')
+#    ax2.set_xticks(index + bar_width / 2)
+#    ax2.set_xticklabels(vocabulary, rotation=90)
+#    ax2.legend()
+#
+#    # Show the plot
+#    plt.tight_layout()
+#    plt.show()
+#
+#    plt.close(fig)
