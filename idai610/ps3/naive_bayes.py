@@ -177,7 +177,8 @@ def classification(document, priors, likelihoods, vocabulary):
             if word in list(vocabulary):
                 # If None, just stick a zero in there, yoL
                 log_posterior += np.log2(likelihoods[class_label].get(word))\
-                * count if likelihoods[class_label].get(word) > 1 else 0
+                * count if likelihoods[class_label].get(word) > 0 else\
+                float("-inf")
             
         posteriors[class_label] = log_posterior
 
