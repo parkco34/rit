@@ -284,9 +284,8 @@ def main(dataset, test_data):
                                       likelihoods_smooth, vocabulary)
 
     # Plotting confusion matrix
-#    sns.heatmap(confusion_matrix, annot=True)
-#    plt.show()
-    breakpoint()
+    sns.heatmap(confusion_matrix, annot=True)
+    plt.show()
 
 
 if __name__ == "__main__":
