@@ -1,6 +1,9 @@
 .git/
 programming_data/__pycache__/
 programming_data/.vscode
+idai610/610_ps4_training/trainingT1FD/
+idai610/610_ps4_training/trainingT2HAR/
+idai610/610_ps4_training/.*
 # .gitignore
 
 # OS generated files #
