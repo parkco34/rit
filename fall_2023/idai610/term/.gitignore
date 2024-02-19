@@ -1,0 +1,7 @@
+# Directories
+bin/
+include/
+lib/
+
+# Files
+term_data.csv

@@ -1,10 +1,10 @@
 .git/
 programming_data/__pycache__/
 programming_data/.vscode
-idai610/610_ps4_training/trainingT1FD/
-idai610/610_ps4_training/trainingT2HAR/
-idai610/610_ps4_training/.*
-# .gitignore
+/fall_2023/idai610/610_ps4_training/trainingT1FD/
+/fall_2023/idai610/610_ps4_training/trainingT2HAR/
+/fall_2023/idai610/610_ps4_training/.*
+/spring_24/pyvenv.cfg
 
 # OS generated files #
 ######################
@@ -55,19 +55,23 @@ lib64/
 share/
 pyvenv.cfg
 etc/
+/spring_24/bin
+/spring_24/include
+/spring_24/lib
+/spring_24/share
+/spring_24/src
 
 # Other
 #################
-/idai610/BMI.csv
-/idai610/bin
-/idai610/Pip*
-/idai610/include
-/idai610/share
-/idai610/src
-/idai610/lib
-/idai610/.ipynb_checkpoints
-/ida610/.DS_Store
-/idai610/pyvenv.cfg
-/idai610/ps2/requirements.txt
-
+/fall_2023/idai610/BMI.csv
+/fall_2023/idai610/bin
+/fall_2023/idai610/Pip*
+/fall_2023/idai610/include
+/fall_2023/idai610/share
+/fall_2023/idai610/src
+/fall_2023/idai610/lib
+/fall_2023/idai610/.ipynb_checkpoints
+/fall_2023/ida610/.DS_Store
+/fall_2023/idai610/pyvenv.cfg
+/fall_2023/idai610/ps2/requirements.txt
 
