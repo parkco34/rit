@@ -1,6 +1,5 @@
-#!/usr/bin/env python
 '''
-    Lab 2 : Visual Search Program
+    Lab 1 : Visual Search Program
     Independant variables that can be changed :
         @param      number_of_objects       Sets the number of objects that are displayed
         @param      independantText         Sets the text of the independant objects
@@ -36,7 +35,7 @@ def returnRandomPositions():
     #posY = random.randint(-400,400)
 
     #return [posX/1000,posY/1000]
-
+    
     posX = random.randint(-800,800)
     posY = random.randint(-800,800)
     return [posX/1000,posY/1000]
@@ -72,12 +71,12 @@ def drawObject(window, number_of_objects = 10, dependantText = 'O',
     drawnStims = []
     pos = []
     for _ in range(number_of_objects):
-
+        
         if len(drawnStims) == 0:
             pos = returnRandomPositions()
         else:
             flag = 0
-
+            
             while(True):
                 pos = returnRandomPositions()
                 for stims in drawnStims:
@@ -85,15 +84,15 @@ def drawObject(window, number_of_objects = 10, dependantText = 'O',
                         flag = 1
                     else:
                         flag = 0
-
+                        
                 if flag == 1:
                     break
 
         # visual.TextStim is used to create the Text that is seen on the screen
         # The window itself is passed, then the text, and then the position the text is to be displayed
-        independantTextStim = visual.TextStim(window, text = independantText,pos=pos,
+        independantTextStim = visual.TextStim(window, text = independantText,pos=pos, 
                                     height = dependantSize, color = dependantColor)
-
+        
 
         # When autoDraw is set to true, the object can be drawn on ever frame
         # If you want to choose when a stimuli is diplayed, use the draw() function instead
@@ -122,7 +121,7 @@ clock = core.Clock()
 
 def main():
 
-    results_file = open('results_easy1.txt',"a")
+    results_file = open('results_easy_few.txt',"a")
     number_of_objects = 10
     dependantText = 'X'
     independantText = 'O'
@@ -141,8 +140,9 @@ def main():
         startingTime = clock.getTime()
 
 
-        #This function creates the window that the graphics are drawn onL
-        window = visual.Window(units="norm", pos=[0, 0], fullscr=False, monitor="myMonitor")
+        #This function creates the window that the graphics are drawn on
+        window = visual.Window(units="norm", monitor = "myMonitor", 
+                               title="Easy Few", pos=[0, 0])
 
         # Draw objects with random positions
         drawObject(window, number_of_objects, dependantText, independantText, dependantSize, dependantColor, independantSize, independantColor)
@@ -157,7 +157,7 @@ def main():
                 clockStim.autoDraw = True
                 window.flip()
                 clockStim.text = ""
-
+                
                 if found == 1:
                     s = dependantText + "," + if_dep_present + "," + key_pressed + "," + str(clock.getTime() - startingTime) + "\n"
                     results_file.write(s)
@@ -174,5 +174,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
