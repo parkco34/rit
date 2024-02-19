@@ -61,6 +61,7 @@ etc/
 /spring_24/lib
 /spring_24/share
 /spring_24/src
+/spring_24/psych714/.python-version
 
 # Other
 #################
@@ -75,4 +76,3 @@ etc/
 /fall_2023/ida610/.DS_Store
 /fall_2023/idai610/pyvenv.cfg
 /fall_2023/idai610/ps2/requirements.txt
-
