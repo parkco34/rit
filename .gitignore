@@ -33,6 +33,7 @@ build/
 # virtual environment #
 #######################
 venv/
+.python-version
 *.venv
 .env
 env/
