@@ -1,0 +1,20 @@
+SELECT 
+    iucr,
+    ward,
+    date,
+    primary_type,
+    arrest,
+    domestic,
+    location,
+    location_description,
+    block,
+    description,
+    district,
+    community_area,
+    x_coordinate,
+    y_coordinate,
+    year
+FROM 
+    bigquery-public-data.chicago_crime.crime
+WHERE 
+    date >= '2021-01-01' AND date <= '2023-12-31';
