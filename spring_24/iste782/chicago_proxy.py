@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 # Re-import necessary libraries and re-define functions since the execution state was reset.
 import pandas as pd
+import geopandas as gpd
+import matplotlib.pyplot as plt
+from shapely.geometry import Point
 import numpy as np
 from math import sqrt
-import matplotlib.pyplot as plt
 import ast
 
 """
@@ -69,9 +71,14 @@ hiways = {
 } # Highways and their coordinates
 
 dframe = pd.read_csv('chicago_data.csv')
+dframe["arrest"] = dframe["arrest"].astype(bool)
+dframe["domestic"] = dframe["domestic"].astype(bool)
 df = dframe.dropna(axis=0, how='any', inplace=False)
 df = df.fillna(0)
 chosen_wards = [1, 2, 26, 32, 43]
+# Convert string tuple of cooridinates for "location"
+df['location'] = df['location'].apply(lambda x: ast.literal_eval(x) if
+                                      isinstance(x, str) else x)
 
 def haversine_miles(lat1, lon1, lat2, lon2):
     """
@@ -95,7 +102,6 @@ def ward_centroids(dataframe, chosen_wards):
     for ward in chosen_wards:
         # Remove all zeros
         ward_df = df[df["ward"] == ward].reset_index(drop=True)
-        ward_df['location'] = ward_df['location'].apply(lambda x: ast.literal_eval(x) if isinstance(x, str) else x)
         ward_df = ward_df[ward_df['location'] != 0]
         x_coord = ward_df["location"].apply(lambda x: x[0]).mean()
         y_coord = ward_df["location"].apply(lambda x: x[1]).mean()
@@ -104,6 +110,7 @@ def ward_centroids(dataframe, chosen_wards):
     centroid_df = pd.DataFrame(centroids, columns=["ward", "centroid_lat",
                                                    "centroid_long"])
     return centroid_df
+
 
 # Center of Chicago coordinates
 chicago_center = (41.8268944184666, -87.67148314232931)
@@ -122,6 +129,7 @@ data = []
 for highway, wards in hiways.items():
     for ward, distance in wards.items():
         data.append({"ward": ward, "highway": highway, "distance": distance})
+
 highways_df = pd.DataFrame(data)
 
 # Convert ward to integer for consistent plotting
@@ -140,6 +148,71 @@ for ward in chosen_wards:
     ward_dfs[ward]["date"] = pd.to_datetime(ward_dfs[ward]["date"])
     ward_dfs[ward].set_index('date', inplace=True)
 
-breakpoint()
-# Plot
+# Example
+
+chicago_map = gpd.read_file(
+"chicago_shapefiles/geo_export_33ca7ae0-c469-46ed-84da-cc7587ccbfe6.shp"
+)
+
+# Define a colormap for different crime weights, this could be any mapping you choose
+weight_colors = {
+    1: 'blue', 
+    2: 'green', 
+    3: 'yellow', 
+    4: 'orange', 
+    5: 'red'
+}
+
+# Plotting for all wards
+for ward in chosen_wards:
+    # Check if the ward is in the ward_dfs dictionary
+    if ward in ward_dfs:
+        # Create a new GeoDataFrame for each ward's crime data
+        ward_crime_df = ward_dfs[ward]
+        ward_crime_df["lat"] = ward_crime_df["location"].apply(lambda x: x[0])
+        ward_crime_df["lon"] = ward_crime_df["location"].apply(lambda x: x[1])
+        geometry = [Point(xy) for xy in zip(ward_crime_df["lon"], ward_crime_df["lat"])]
+        geo_ward_crime_df = gpd.GeoDataFrame(ward_crime_df, geometry=geometry)
+
+        # Plotting
+        fig, ax = plt.subplots(1, 1, figsize=(10, 10))
+        chicago_map.plot(ax=ax, color='lightgrey')
+
+        # Plot crimes for each weight
+        for weight, color in weight_colors.items():
+            geo_ward_crime_df[geo_ward_crime_df['weights'] == weight].plot(ax=ax, markersize=50, color=color, label=f'Weight {weight}')
+
+        plt.legend()
+        plt.title(f'Ward {ward}: Crimes by Weight')
+        plt.show()
+#
+#ward_example = 1  # Example ward number
+#if ward_example in ward_dfs:
+#    severe_crimes_df = ward_dfs[ward_example][ward_dfs[ward_example]['weights'
+#                                                                ].isin([4,
+#                                                                        5])].copy()
+#    # Creating GeoDataFrame for severe crimes
+#    severe_crimes_df.loc[:, "lat"] = severe_crimes_df["location"].apply(lambda x: x[0])
+#    severe_crimes_df.loc[:, "lon"] = severe_crimes_df["location"].apply(lambda x: x[1])
+#    geometry_severe = [Point(xy) for xy in zip(severe_crimes_df["lon"],
+#                                               severe_crimes_df["lat"])]
+#    geo_severe_df = gpd.GeoDataFrame(severe_crimes_df, geometry=geometry_severe)
+#
+#    # Plotting
+#    fig, ax = plt.subplots(1, 1, figsize=(8, 8))
+#    chicago_map.plot(ax=ax, color='lightgrey')
+#    
+#    # Plot severe (4) and most severe (5) crimes with different markers/colors
+#    for severity, color in [(4, 'orange'), (5, 'red')]:
+#        geo_severe_df[geo_severe_df['weights'] == severity].plot(ax=ax, markersize=50, color=color, label=f'Severity {severity}')
+#    
+#    plt.legend()
+#    plt.title(f'Ward {ward_example}: Severe and Most Severe Crimes')
+#    plt.show()
+#
+#
+##chicago_map.plot()
+#plt.title('Chicago Map')
+#plt.show()
+
 
