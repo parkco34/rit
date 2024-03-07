@@ -1,13 +1,10 @@
 #!/usr/bin/env python
+#!/usr/bin/env python
 import os
-# Set the environment variable for Pyglet shadow window
 from psychopy import visual, core, event
 import random
-from psychopy.monitors import Monitor
-my_monitor = Monitor(name='myMonitor', width=53.0, distance=60.0)  # Adjust these values as necessary
-my_monitor.setSizePix((1920, 1080))  # Adjust resolution as necessary
 
-# Replaces the function below this one
+# Function to calculate random positions for the blemish
 def returnRandomPositions():
     """
     Returns random coordinates on window of the signal.
@@ -24,7 +21,7 @@ def onKeyPressed(key, if_dep_present, results):
         results['false_alarms' if key == 'y' else 'misses'] += 1
     return True
 
-# Replaces the function below this one
+# Function to draw the blemish based on probability
 def drawObject(window, size, probability, blemishColor, weaves):
     if_dep_present = random.random() < probability
     weave = random.choice(weaves)
@@ -45,8 +42,12 @@ def run_experiment(num_trials, time_per_slide, size, blemishColor, probability):
     results = {'hits': 0, 'misses': 0, 'false_alarms': 0, 'correct_rejections': 0}
     weaves = ['bg1.png', 'bg2.png', 'bg3.png', 'bg4.png', 'bg5.png', 'bg6.png']
 
+    window = visual.Window(fullscr=True, color=(0, 0, 0))
+
+    results_file = open('results.txt', "a")
+    summary = open('summary.txt', 'a')
+
     for i in range(num_trials):
-        window = visual.Window(fullscr=True, color=(0, 0, 0))
         if_dep_present = drawObject(window, size, probability, blemishColor, weaves)
         window.flip()
 
@@ -59,20 +60,33 @@ def run_experiment(num_trials, time_per_slide, size, blemishColor, probability):
                     responded = onKeyPressed(key, if_dep_present, results)
                     break
 
-        window.close()
+        s = f"{i},{if_dep_present},{'y' if responded and key == 'y' else 'n' if responded else 'none'},{core.getTime() - start_time}\n"
+        results_file.write(s)
+
+    window.close()
+
+    t_hits = results['hits']
+    t_fa = results['false_alarms']
+    t_cr = results['correct_rejections']
+    t_miss = results['misses']
+    number_of_signals = t_hits + t_miss
+
+    summary.write(f"{t_hits/number_of_signals if number_of_signals > 0 else 0},{t_fa/number_of_signals if number_of_signals > 0 else 0},{t_cr/number_of_signals if number_of_signals > 0 else 0},{t_miss/number_of_signals if number_of_signals > 0 else 0}")
+
+    results_file.close()
+    summary.close()
 
     return results
 
 # Parameters for the experiment
 num_trials = 10
-time_per_slide = 10 # seconds
-size = 1 # relative size of the blemish
-blemishColor = 'black' # color of the blemish
-probability = 0.6 # probability of blemish occurring
+time_per_slide = 10  # seconds
+size = 1  # relative size of the blemish
+blemishColor = 'black'  # color of the blemish
+probability = 0.6  # probability of blemish occurring
 
 # Run the experiment
 experiment_results = run_experiment(num_trials, time_per_slide, size, blemishColor, probability)
 
 # Output the results
 print(experiment_results)
-
