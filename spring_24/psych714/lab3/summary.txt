@@ -1,1 +1,9 @@
-0.6666666666666666,0.0,0.6666666666666666,0.3333333333333333
+Condition: Short
+Hits: 0, False Alarms: 0, Misses: 1, Correct Rejections: 2
+
+Condition: Medium
+Hits: 0, False Alarms: 0, Misses: 3, Correct Rejections: 2
+
+Condition: Long
+Hits: 2, False Alarms: 0, Misses: 2, Correct Rejections: 0
+
