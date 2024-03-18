@@ -1,21 +1,51 @@
 #!/usr/bin/env pythonL
 from math import ceil
+import datetime
 
 def calculate_reading_rate():
     """
-    Prompts user to enter the number of pages read and the time taken in hours and minutes,
+    Prompts user to enter the number of pages read and the total time taken in minutes,
     then calculates reading rate in pages per hour.
 
     OUTPUT:
         Reading rate in pages per hour (float)
     """
     pages_read = float(input("Enter the number of pages you have read: "))
-    hours_spent = float(input("Enter the number of hours spent reading: "))
-    minutes_spent = float(input("Enter the number of additional minutes spent reading: "))
-    total_time_spent_hours = hours_spent + (minutes_spent / 60)  # Convert minutes to hours and add to hours
+
+    # Ask the user if their reading time was less than an hour
+    less_than_hour = input("Did you read for less than an hour? (yes/no): ").strip().lower()
+    if less_than_hour == "yes":
+        hours_spent = 0
+        minutes_spent = float(input("Enter the number of minutes spent reading: "))
+
+    else:
+        hours_spent = float(input("Enter the number of full hours spent reading: "))
+        minutes_spent = float(input("Enter the number of additional minutes spent reading: "))
+
+    total_time_spent_hours = hours_spent + (minutes_spent / 60)  # Convert total minutes to hours
     reading_rate = pages_read / total_time_spent_hours
     print(f"Your reading rate is {reading_rate:.2f} pages per hour.")
+    book_name = input("Enter the name of the book you are reading: ").strip()
+    save_reading_session(book_name, pages_read, total_time_spent_hours, reading_rate)
     return reading_rate
+
+def save_reading_session(book_name, pages_read, hours_spent, reading_rate):
+    """
+    Saves the reading session data to a file.
+
+    INPUT:
+        book_name: The name of the book (str)
+        pages_read: Number of pages read in the session (float)
+        hours_spent: Total hours spent in the session (float)
+        reading_rate: Calculated reading rate (float)
+    """
+    date_str = datetime.datetime.now().strftime("%Y-%m-%d %H:%M")
+    session_data = f"{date_str}, {book_name}, {pages_read}, {hours_spent:.2f}, {reading_rate:.2f}\n"
+
+    with open("reading_sessions.txt", "a") as file:
+        file.write(session_data)
+
+    print("Reading session saved.")
 
 def time_to_read_pages(reading_rate):
     """
@@ -53,7 +83,8 @@ def number_of_reading_sessions(reading_rate):
     print(f"You will need {sessions_needed} reading sessions to complete your reading.")
     return sessions_needed
 
+
 # Example usage
 reading_rate = calculate_reading_rate()
-number_of_reading_sessions(reading_rate)
+
 
