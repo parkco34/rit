@@ -64,6 +64,14 @@ etc/
 /spring_2024/src
 /spring_2024/psych714/.R*
 /spring_2024/psych714/.python-version
+/spring_2024/psych714/lab4/bin
+/spring_2024/psych714/lab4/share
+/spring_2024/psych714/lab4/src
+/spring_2024/psych714/lab4/lib
+/spring_2024/psych714/lab4/include
+/spring_2024/psych714/lab4/.python-version
+/spring_2024/psych714/lab4/pyvenv.cfg
+/spring_2024/psych714/lab4/delete*
 
 # Other
 #################

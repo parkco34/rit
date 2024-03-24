@@ -1,9 +1,9 @@
 Condition: Short
-Hits: 0, False Alarms: 0, Misses: 1, Correct Rejections: 2
+Hits: 1, False Alarms: 1, Misses: 0, Correct Rejections: 1
 
 Condition: Medium
-Hits: 0, False Alarms: 0, Misses: 3, Correct Rejections: 2
+Hits: 0, False Alarms: 0, Misses: 1, Correct Rejections: 3
 
 Condition: Long
-Hits: 2, False Alarms: 0, Misses: 2, Correct Rejections: 0
+Hits: 3, False Alarms: 0, Misses: 1, Correct Rejections: 2
 
