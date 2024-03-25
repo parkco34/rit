@@ -1,0 +1,31 @@
+Participant ID,Age,Gender,Education,Statement,Response,Response Time
+1,39,male,college,Humans need oxygen to survive.,good,0.8218932151794434
+1,39,male,college,Cats are better pets than dogs.,good,0.4084510803222656
+1,39,male,college,Climate change is not real.,bad,1.084115982055664
+1,39,male,college,Pineapple belongs on pizza.,bad,0.6892011165618896
+1,39,male,college,The sky is blue.,good,0.8779199123382568
+2,18,female,highschool,Humans need oxygen to survive.,neutral,1.0963530540466309
+2,18,female,highschool,Cats are better pets than dogs.,bad,0.923414945602417
+2,18,female,highschool,Climate change is not real.,neutral,1.5927770137786865
+2,18,female,highschool,Pineapple belongs on pizza.,good,1.8083598613739014
+2,18,female,highschool,The sky is blue.,good,0.889599084854126
+3,21,female,highschool,Humans need oxygen to survive.,neutral,1.5482158660888672
+3,21,female,highschool,Cats are better pets than dogs.,bad,0.5671768188476562
+3,21,female,highschool,Climate change is not real.,bad,0.5707972049713135
+3,21,female,highschool,Pineapple belongs on pizza.,bad,0.6180331707000732
+3,21,female,highschool,The sky is blue.,good,0.8678410053253174
+4,29,male,none,Humans need oxygen to survive.,bad,0.4079928398132324
+4,29,male,none,Cats are better pets than dogs.,bad,0.4529259204864502
+4,29,male,none,Climate change is not real.,good,1.5261480808258057
+4,29,male,none,Pineapple belongs on pizza.,good,1.6558442115783691
+4,29,male,none,The sky is blue.,neutral,2.2189838886260986
+5,34,female,none,Humans need oxygen to survive.,neutral,2.65762996673584
+5,34,female,none,Cats are better pets than dogs.,bad,0.49176573753356934
+5,34,female,none,Climate change is not real.,good,2.450575113296509
+5,34,female,none,Pineapple belongs on pizza.,neutral,1.5693402290344238
+5,34,female,none,The sky is blue.,good,1.8943629264831543
+6,62,male,college,Humans need oxygen to survive.,good,0.5859930515289307
+6,62,male,college,Cats are better pets than dogs.,neutral,1.6171140670776367
+6,62,male,college,Climate change is not real.,good,1.291888952255249
+6,62,male,college,Pineapple belongs on pizza.,bad,0.498427152633667
+6,62,male,college,The sky is blue.,good,1.5262889862060547
