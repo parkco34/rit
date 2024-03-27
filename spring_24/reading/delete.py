@@ -1,4 +1,4 @@
-#!/usr/bin/env pythonL
+#!/usr/bin/env python
 import re
 from math import ceil
 import datetime
@@ -68,6 +68,6 @@ def process_file_for_word_count():
 # Main script logic
 if __name__ == "__main__":
     pass
-    calculate_reading_rate()  # To calculate reading rate and manage reading sessions
-    process_file_for_word_count()  # To process a text file for word count
-
+    # Here, you can choose what functionality to execute, for example:
+    # calculate_reading_rate()  # To calculate reading rate and manage reading sessions
+    # process_file_for_word_count()  # To process a text file for word count
