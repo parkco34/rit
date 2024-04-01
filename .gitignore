@@ -4,8 +4,8 @@ programming_data/.vscode
 /fall_2023/idai610/610_ps4_training/trainingT1FD/
 /fall_2023/idai610/610_ps4_training/trainingT2HAR/
 /fall_2023/idai610/610_ps4_training/.*
-/spring_2024/pyvenv.cfg
-/spring_2024/psych714/requirements.txt
+/spring_24/pyvenv.cfg
+/spring_24/psych714/requirements.txt
 
 # OS generated files #
 ######################
@@ -57,22 +57,22 @@ lib64/
 share/
 pyvenv.cfg
 etc/
-/spring_2024/bin
-/spring_2024/include
-/spring_2024/lib
-/spring_2024/share
-/spring_2024/src
-/spring_2024/vis_anal/*.csv
-/spring_2024/psych714/.R*
-/spring_2024/psych714/.python-version
-/spring_2024/psych714/lab4/bin
-/spring_2024/psych714/lab4/share
-/spring_2024/psych714/lab4/src
-/spring_2024/psych714/lab4/lib
-/spring_2024/psych714/lab4/include
-/spring_2024/psych714/lab4/.python-version
-/spring_2024/psych714/lab4/pyvenv.cfg
-/spring_2024/psych714/lab4/delete*
+/spring_24/bin
+/spring_24/include
+/spring_24/lib
+/spring_24/share
+/spring_24/src
+/spring_24/vis_anal/*.csv
+/spring_24/psych714/.R*
+/spring_24/psych714/.python-version
+/spring_24/psych714/lab4/bin
+/spring_24/psych714/lab4/share
+/spring_24/psych714/lab4/src
+/spring_24/psych714/lab4/lib
+/spring_24/psych714/lab4/include
+/spring_24/psych714/lab4/.python-version
+/spring_24/psych714/lab4/pyvenv.cfg
+/spring_24/psych714/lab4/delete*
 
 # Other
 #################
