@@ -62,6 +62,7 @@ etc/
 /spring_2024/lib
 /spring_2024/share
 /spring_2024/src
+/spring_2024/vis_anal/*.csv
 /spring_2024/psych714/.R*
 /spring_2024/psych714/.python-version
 /spring_2024/psych714/lab4/bin
