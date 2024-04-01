@@ -57,6 +57,10 @@ def remove_text_within_parentheses_count_words_handle_hyphens(input_string):
     return input_string_without_hyphens, word_count
 
 # Function to read from text file and process for word count
+"""
+Fix this!! 
+I need to count the number of RELEVANT words in a textfile.
+"""
 def process_file_for_word_count():
     file_path = input("Enter the text file to be read: ")
     with open(file_path, 'r', encoding='utf-8') as file:
@@ -69,5 +73,5 @@ def process_file_for_word_count():
 if __name__ == "__main__":
     pass
     calculate_reading_rate()  # To calculate reading rate and manage reading sessions
-    process_file_for_word_count()  # To process a text file for word count
+#    process_file_for_word_count()  # To process a text file for word count
 
