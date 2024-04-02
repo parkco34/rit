@@ -1,0 +1,224 @@
+INTRODUCTION
+According to the 2017 National Survey on Drug Use and Health (NSDUH) an estimated
+11.4 million people misused opioids with approximately 2.1 million people having an opioid
+use disorder.1 That same year, approximately 1 in 4 young adults aged 18 to 25 were current
+illicit drug users. Irrespective of age, the 2017 estimates of current illicit drug use are
+primarily driven by the use of marijuana and misuse of prescription pain relievers such as
+opioids. With growing numbers of illicit drug use among young adults aged 18 to 25, college
+students represent a crucial age group with exposure to opioid pain relievers and potentially
+adverse consequences.1
+Opioid use among college students is a serious public health concern. Given college culture,
+it is unsurprisingly that many students are at increased exposure to drugs including tobacco,
+alcohol, stimulants, and opioids.2 Use of other substances such as marijuana, alcohol, and
+stimulants are among the risk factors for heroin use.2 An early report found that opioid use
+among college students, primarily driven by an increased use of heroin, increased by 343%
+between 1993 and 2005; with more than 50% of college students being offered a
+prescription drug for nonmedical purposes by their sophomore year.2 Furthermore, a study
+conducted in 2014 found that approximately 12% of college students reported lifetime
+nonmedical use of prescription opioid analgesics, 7% reported nonmedical use in the past
+year, and 3% reported nonmedical use in the past month.3 Given the high addiction potential
+of opioids and risk of immediate severe consequences such as overdose; overdose education
+and prevention efforts are essential among college students.4,5
+In addition to rising numbers of individuals using opioids, there is also a dramatic increase
+in the risk of opioid related overdose.6 In part this is a result of the unpredictability of
+substances present in illicit drugs but also a rise in number of individuals receiving higher
+doses of prescription opioids for long-term management of chronic pain.7 Even when taking
+opioid medications as prescribed, risk of accidental overdose remains a concern, especially
+when considering the risk of drug-drug interactions.7,8 To combat this growing crisis the
+surgeon general and Centers for Disease Control and Prevention (CDC) recommend
+expanding the awareness and availability of naloxone, an opioid agonist to temporarily
+reverse the effects of an opioid overdose.6,7,9-11 Several research studies have shown that
+when overdose education programs and naloxone are available to community members,
+those communities experience decreases in overdose related deaths.12-14 In most states,
+people who are or who know someone at risk for opioid overdose can go to a pharmacy or
+community-based program, to get trained on naloxone administration, and receive naloxone
+without a patient-specific prescription.15 Furthermore, most states have laws designed to
+protect health care professionals for prescribing and dispensing naloxone from civil and
+criminal liabilities as well as Good Samaritan laws to protect people who administer
+naloxone or call for help during an opioid overdose emergency.15,16 Naloxone is
+increasingly being used by police officers, emergency medical technicians, and non-
+emergency first responders to reverse opioid overdoses; however, too few community
+members are aware of the important role they can play to save lives.
+While this crisis has spread nationwide, certain areas are disproportionately affected by the
+opioid epidemic. In February 2017, an analysis from the West Virginia Health Statistics
+Center showed that at least 818 people in the state died of drug overdoses in 2016–a nearly
+13% increase from 201517 and of those deaths in 2016, approximately 86% involved at least
+one opioid.18 In 2017, West Virginia remained the state with the highest prescription opioid-
+involved death rates with 17.2 per 100,00019 and heroin overdose deaths with 14.9 per
+100,000.19 Furthermore, the state also led the country in synthetic opioid related deaths with
+37.4 per 100,000.19 This continues a multi-year streak leading the country in opioid-related
+deaths.
+The objective of this study is to investigate opioid overdose knowledge among college
+students in a high-risk, high opioid exposure state. West Virginia University (WVU) student
+knowledge about identifying an opioid overdose and resources available in the event of an
+overdose emergency were evaluated using the opioid overdose knowledge scale (OOKS).
+We hypothesize that the target population (college students in a high risk state) will be
+under-educated in terms of identifying opioid overdose signs and symptoms, knowing what
+to do in an overdose emergency, and identifying resources related to opioid overdose.
+METHODS
+Sample and Design
+A cross-sectional study of 214 WVU students was conducted using an online survey
+administered via an anonymous, public link. Participants were asked to complete a 36-
+question survey estimated to take approximately 10 minutes. It was administered
+independently of concurrent available naloxone training opportunities across the WVU
+campus. Responses were recorded in the online REDCap system,20 a secure web application
+for building and managing online surveys and databases. Survey dissemination utilized
+university list-servers of electronic mailing lists for students the WVU Main and Health
+Sciences Campuses. Other electronic dispersion methods such as posting to university group
+webpages, collaborating with the student health organizations, and snowballing techniques
+were also utilized.
+Study participants had to be 18 years of age or older, and able to speak and understand the
+English language. Participants were informed about the confidentiality of their responses
+initially, and again prior to initiation of the study survey. Ethical approval for this study was
+granted and on file with the WVU Institutional Review Board.
+Measures
+Sociodemographic information.—Participants were asked, via self-report, their age (in
+years), race, ethnicity, and relationship status. Participants were questioned on their access to
+healthcare in the dichotomous, yes/no form of “Do you have any kind of health care
+coverage, including health insurance, prepaid plans such as HMOs, or government plans
+such as Medicare?”
+Opioid Overdose Knowledge Scale.—The Opioid Overdose Knowledge Scale
+(OOKS) is a structured self-completion questionnaire.21 The scale consists of multiple-
+choice response items to classify changes in knowledge about overdose identification and
+management. The scale was originally administered family and friends of heroin users as
+well as healthcare professionals. It was originally assessed for internal reliability by
+Williams et al (2013; Cronbach’s alpha=0.83) and was found to be suitable in measuring
+outcomes of take-home naloxone training among family and friends of opioid users.21 The
+questionnaire also assessed previous experience dealing with an overdose, willingness, and
+confidence in administering naloxone.
+Additional Questions.—In addition to the OOKS, several additional questions were
+selected to better understand the sample population. Questions regarding previous exposure
+to opioid medication such as: “Have you ever received a prescription for opioids (example:
+Vicodin®, tramadol, Oxycontin®, hydrocodone, morphine, etc.)?” and additional substance
+use questions were included to assess alcohol, cigarette and other tobacco use. Questions to
+evaluate nonmedical substances use such as opioids, stimulants, depressants, hallucinogens,
+and other substance of potential abuse were also included.
+Questions regarding witnessing an opioid overdose, number of opioid overdoses witnessed,
+actions taken during such event(s) were included. Finally, participants were asked if they
+were aware of West Virginia’s “Good Samaritan Law”22 or if they had ever attended a
+naloxone/substance abuse training course or program. These questions were asked to
+identify a subset of the general population that may have prior opioid emergency training
+(i.e., first responders, health care providers, etc.).
+Statistical Analyses
+Descriptive statistics (frequencies and means) were calculated for gender, age, race, and
+substance to characterize the sample. Health insurance coverage (yes/no), attendance,
+receiving naloxone training (yes/no), awareness of West Virginia Good Samaritan law (yes/
+no), working or studying in a health field (yes/no) and ever receiving a prescription for an
+opioid medication (yes/no/unsure) were also accounted for in the sample. The OOKS scores
+were calculated for each of the four domains (knowledge of risk factors, signs of an
+overdose, actions to take, and naloxone) based on the OOKS scoring manual.21 A composite
+score out of 45 total points was calculated for total OOKS score for each respondent. T-tests
+were used to compare OOKS scores for participants receiving naloxone training and
+participants who did not receive naloxone training. Additional t-tests were used to compare
+participants who received a previous prescription for opioids compared to participants who
+had never received a prescription. Ten participants were unsure whether they had previously
+received a prescription for an opioid and were excluded from this analysis. Data was
+analyzed using STATA (14.0).23
+RESULTS
+The study sample was 72.5% female (n=137), 90% Caucasian (n=193), and has a mean age
+of 24.8 years old (range: 18-69 years). A majority of the sample endorsed consuming 1-6
+alcoholic beverages per week (40.4%) and never smokers (78.9%). Additional substance use
+for the sample is included in Table 1.
+Thirty-four students received naloxone training (15.9%). When compared to students who
+did not receive naloxone training, students with previous naloxone training scored
+significantly better on the risk, signs, action, and naloxone domains (Table 2). Overall
+students with naloxone training had a total OOKS score of 36.2 (SD=3.23) compared to 29.9
+(SD=5.22) students without training (p<0.001).
+Sixty-three students surveyed reported being in a health field. Compared to students who
+were in non-health programs students who were enrolled in a health-related major
+performed significantly higher on the OOKS subdomains signs, actions, and naloxone
+(Table 3). However, there was no statistically significant difference between their scores on
+the risk subdomain. Overall, students enrolled in health-related studies had a higher mean
+OOKS score of 33.7 (SD= 4.3) compared to 29.8 (SD=5.4) for students in non-health
+programs (p<0.00).
+One-hundred and eleven students have previously received a prescription opioid; ninety-
+three students had never received an opioid prescription and ten students were unsure. The
+ten students who were unsure if they ever received a prescription for an opioid and were
+excluded from the analysis, leaving a total sample of n=204 for this particular analysis.
+When compared to students with no previous prescription opioid, students with previous
+opioid prescriptions scored significantly higher on OOKS signs, action, and naloxone
+subdomains (Table 4). Overall, students with previous opioid prescriptions had a
+significantly higher OOKS total score of 32.3 (SD=4.6) compared to 29.6 (SD=6.0) for
+students without a previous opioid prescription (p<0.001). Previous receipt of a prescription
+opioid was the only substance use that show statistically significant differences between
+groups on OOKS performance.
+Additionally, 6.7% of our sample (n=14) previously witnessed an overdose. Students who
+witnessed an overdose scored significantly higher on OOKS subdomains for signs (p<0.01)
+and action (p<0.05). There were no significant differences for OOKS subdomain scores for
+risk or naloxone (Table 5). However, students who previously witnessed an overdose had a
+total mean OOKS score of 34.2 (SD= 4.4) compared to 30.9 (SD= 5.4) for students who had
+never witnessed an overdose which is statistically significant (p<0.05).
+DISCUSSION
+Opioid overdose education and naloxone distribution have been effective at reducing
+overdose death rates in community settings.13,14,24 Similar educational programs and
+widespread availability of naloxone kits in college campuses can also help to reduce this
+problem. However, most knowledge assessment studies have been conducted primarily in
+clinical health settings, and among current opioid users. Awareness of knowledge gaps
+surrounding knowledge about the resources available in overdose emergency situations
+could prove very helpful in providing lifesaving interventions.
+College students with naloxone training scored higher on opioid overdose risk, signs, action,
+and naloxone administration scales. However, only a small portion of our study sample had
+attended such training despite attending school in a high death risk state. While students
+with previous opioid prescription scored better overall on all domains compared to those
+who had not previously received an opioid prescription, their lowest score was on the action
+subdomain. This indicates that while students know how to identify an opioid overdose,
+more training is needed regarding what actions are necessary to take in the event of
+witnessing an overdose.
+Prescription drug misuse and related overdose deaths in college campuses have gone up
+substantially in recent years.25 Recent state legislature changes have improved layperson
+access to naloxone in order to reduce drug overdose deaths.7,12,26,27 However, acceptance
+and availability of naloxone in college communities has been hindered due to denial of risk,
+stigma, and lack of awareness or resources.28 Training and educating campus police
+departments and students, making naloxone kits available next to fire extinguishers in case
+of emergencies, and distributing information online can all be utilized to reduce the problem
+of overdose deaths in and around college campuses and in communities. It can not only
+improve risk behaviors of students taking the training but also empower them to intervene in
+an overdose situation making an impact on the whole community. Our study shows that
+student who take naloxone training are equipped with knowledge to tackle an overdose if
+they are to witness one. However, such trainings are not provided by all universities; and as
+see in our study, the overall percentage of students reporting participation in such training
+programs is low, which may represent an additional barrier.
+Results from our study also demonstrate that students with prior exposure to opioid
+prescriptions (as measured by self-report of receipt of previous opioid prescription), scored
+better on the OOKS than students who had not previously received an opioid prescription.
+This could be explained by several factors. It is possible that students who previously
+received an opioid prescription were also educated by their health care provider (i.e.
+physician, pharmacist etc.) about the potential risks associated with opioid medication and
+the proper use of their medication. Additionally, students who received an opioid
+prescription would be likely to have multiple points of contact in the healthcare system. For
+example, the doctor who prescribed the medication and the pharmacist who would distribute
+the medication. This would allow for several points of intervention where the person could
+be educated on the appropriate use as well as the potentials risks associated with prescription
+opioids. Another plausible explanation is that in light of the ongoing opioid epidemic,
+students were more aware of the intrinsic risks associated with opioid prescriptions and upon
+being prescribed an opioid were more inclined to research these risks on their own
+increasing their knowledge related to opioid overdose.
+We acknowledge several potential limitations to this study. First, the survey was restricted to
+online distribution, no other dissemination methods were utilized; limiting our sample size
+to students who check and have access to internet services. Second, this study is
+observational in nature and this is open to the limitations of such designs including self-
+report and reporting bias. The cross-sectional design of the survey does not allow us to make
+any claims about causality. Furthermore, there was no intrinsic safeguards to prevent the
+same student from taking the survey twice because of the anonymous nature of the survey.
+Third, questions regarding marijuana use were not included due to an oversight in survey
+construction, yielding an incomplete picture of substance use in this sample. Finally,
+students at WVU are attending an institution in a state that is at the epicenter of the opioid
+epidemic which may skew results of this study. Since we did not account for student’s place
+of origin (i.e. home city, country, or zip code of residence) we could not analyze knowledge
+gaps based on students residing in WV versus outside of the state.
+
+CONCLUSIONS
+College students with naloxone training or previous prescription opioid use have higher
+opioid overdose knowledge than their counterparts. However, all students showed a lack of
+knowledge about proper actions to take in case of an opioid overdose. Naloxone education
+and training programs need to emphasize the such aspects by not only focusing educational
+training on education about overdose risk, but how bystanders should react in these
+situations. Our study shows that while students do demonstrate key aspects of knowledge
+associated with signs and risks associated with opioid overdose, overall student participation
+in naloxone training programs was low. Ultimately, while naloxone training is effective for
+increasing student knowledge about signs, risks, actions, and naloxone administration,
+greater effort needs to be put forth to engage students in these training programs especially
+given the number of students with previous exposure to opioid medications. Thus, a shift in
+focus to engage students in naloxone trainings may be more appropriate than altering the
+trainings themselves at this time.
+
