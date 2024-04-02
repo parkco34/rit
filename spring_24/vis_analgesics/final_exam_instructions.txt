@@ -1,0 +1,5 @@
+Opioid Overdose Knowledge among College Students in a High Overdose Death State by Amanda Stover, et al. ( https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7500461/ ) paints a very interesting portrait of a very important topic for many parts of the country.  The problem with this paper is that they did not do much with visual analytics to make the study user friendly.  There are a lot of statistics in this paper so you will not be able to work with them all.  Create four graphic elements that you feel would present the researchers main points in a more visual format.  Be sure to include an indication of where in the paper you feel they should be placed (you can use line number of brief description of the paragraph they should follow, etc).
+The data set used for this article is available at: https://www.samhsa.gov/data/ 
+
+Using the report in question 3 develop a data viz that could be turned into a poster to be displayed in high schools and colleges to promote more kids learning about overdose information.  Be sure to include at least three data elements in your answer.  As this poster would be displayed in schools it should be colorful and eye catching.
+
