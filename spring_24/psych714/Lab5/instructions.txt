@@ -1,0 +1,64 @@
+DEPARTMENT OF PSYCHOLOGY, COLLEGE OF LIBERAL ARTS
+ROCHESTER INSTITUTE OF TECHNOLOGY
+PSYC 714/ISEE 732—GRADUATE ENGINEERING PSYCHOLOGY
+HANDOUT: MANUAL CONTROL
+PROF. RANTANEN
+March 16, 2024
+1 Preliminaries
+There are several important factors that must be understood and considered when examining control systems:
+• Discrete of continuous control
+• Open- or closed-loop control
+• Positive or negative feedback
+• Stability
+• Control order (zero-, first-, or second-order control)
+• Time delays (lags)
+• Gain
+• Tracking displays (pursuit or compensatory tracking)
+To put control in context, consider the model of human information processing system and some system
+to be controlled (a nuclear power plant, an airplane, even your automobile); the human operator needs and
+interface between him or her and the system. The interface must necessarily have two parts, (1) displays to
+convey information about the system’s state (e.g., the speed the car is traveling on a freeway) to the operator,
+and (2) controls by which the operator can change the state of the system (e.g., accelerator and steering in a
+car). See Figure 1 for an illustration.
+Another important concept to note is the stimulus-response (S-R) compatibility are the departures from
+the information theory assumptions. S-R compatibility is defined as “the expected relationship between the
+location of a control or movement of a control response and the location or movement of the stimulus or
+display to which the control is related.” Good S-R compatibility reduces response time by reducing the
+uncertainty associated with appropriate movement of the control. Departures from the information theory
+include stimulus discriminability (e.g., consider 4 and 7 vs. 721834 and 721837; the former would result in
+faster responses because of the greater discriminability), the repetition effect (advantage over alternations),
+confusability and complexity of the stimuli, and practice effects.
+1
+Figure 1. The model of human information processing in context.
+2 Speed-Accuracy Tradeoff and Fitts’ Law
+Fitts’ idea was to determine the information capacity of the human motor system, relying on the metaphor
+of information transmission. According to this metaphoric account the difficulty of a task can be measured
+in bits, familiar from the communication theory of Shannon and Weaver (1949). In carrying out a movement
+task information is transmitted through a human channel.
+A measure of difficulty of the task is the index of difficulty (ID), usually expressed as:
+ID = log2
+( 2A
+W
+)
+(1)
+where A is the movement amplitude and W is the target width. Thus, large movements to narrow targets
+are more difficult than small movements to wide targets. Fitts’ index of performance (IP) is analogous to
+Shannon’s channel capacity and is calculated as:
+IP = ID
+M T (2)
+where M T is the observed movement time. IP can also be calculated by regressing M T on ID, resulting
+in an equation of the regression line:
+M T = a + b(ID) (3)
+where a and b are the regression coefficients. Hence, Fitts’ law usually takes the form
+M T = a + b log2
+( 2A
+W
+)
+(4)
+where a is the y-intercept and b is the slope of the line.
+Figure 2 illustrates the Fitts’ task and the law like relationship between target width (accuracy require-
+ment), movement amplitude, and movement time (speed).
+Example: Consider two different controls: A trackball and a joystick; one could devise and perform the Fitts’
+2
+
+
