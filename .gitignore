@@ -57,6 +57,8 @@ lib64/
 share/
 pyvenv.cfg
 etc/
+/spring_24/vis_analgesics/.DS*
+/spring_24/vis_analgesics/iste_data
 /spring_24/bin
 /spring_24/include
 /spring_24/lib
