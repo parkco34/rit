@@ -1,0 +1,6 @@
+﻿OOKS Domain,Received Prescription Mean,Received Prescription Std Dev,Did Not Receive Mean,Did Not Receive Std Dev,Significance
+Risk,7.54,1.82,6.97,2.37,0.053
+Signs,6.54,1.25,5.95,1.65,0.004
+Action,9.74,1.08,9.15,1.46,0.001
+Naloxone Use,8.42,2.93,7.53,2.97,0.032
+Total Score,32.25,4.61,29.6,6.02,<0.001

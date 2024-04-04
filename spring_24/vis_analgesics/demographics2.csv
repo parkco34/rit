@@ -1,0 +1,35 @@
+﻿Characteristic,Number (N),Percentage,Percentage2,Percentage3
+Female,137,72.5,0.725,72.50%
+Male,48,25.4,0.254,25.40%
+Other,4,2.1,0.021,2.10%
+Mean Age (years),24.9,7.6,0.076,7.60%
+White,193,90.6,0.906,90.60%
+Other Race,21,9.4,0.094,9.40%
+High School Graduate/GED,8,3.8,0.038,3.80%
+Some College,96,45.3,0.453,45.30%
+Some Graduate School,51,24.1,0.241,24.10%
+College Graduate,21,9.9,0.099,9.90%
+Graduate Degree,36,17,0.17,17.00%
+Health Field - Yes,63,29.6,0.296,29.60%
+Health Field - No,150,70.4,0.704,70.40%
+Health Insurance - Yes,201,93.9,0.939,93.90%
+Health Insurance - No/Unsure,13,6.1,0.061,6.10%
+In a Relationship,110,51.4,0.514,51.40%
+Not in a Relationship,104,48.6,0.486,48.60%
+Alcohol Consumption <1 per week,67,32.2,0.322,32.20%
+Alcohol Consumption 1 to 6 per week,84,40.4,0.404,40.40%
+Alcohol Consumption >=7 per week,16,7.7,0.077,7.70%
+Never Used Alcohol,33,15.9,0.159,15.90%
+Current Smoker,21,9.8,0.098,9.80%
+Former Smoker,24,11.2,0.112,11.20%
+Never Smoked,169,79,0.79,79.00%
+Aware of WV's Good Samaritan Law - Yes,136,63.6,0.636,63.60%
+Used prescription opioids,15,7,0.07,7.00%
+Used stimulants,23,10.8,0.108,10.80%
+Used prescription stimulants,29,13.6,0.136,13.60%
+Used prescription depressants,18,8.4,0.084,8.40%
+Witnessed an Opioid Overdose - Yes,14,6.5,0.065,6.50%
+Received Naloxone Training - Yes,34,15.9,0.159,15.90%
+Received Prescription Opioids - Yes,111,54.4,0.544,54.40%
+Club drugs,11,5.1,0.051,5.10%
+"Other compounds (e.g. anabolic steroids, inhalants, nitrites, etc.)",20,9.4,0.094,9.40%
