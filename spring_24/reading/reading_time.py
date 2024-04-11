@@ -3,6 +3,33 @@ import re
 from math import ceil
 import datetime
 
+def input_validation():
+    """
+    Gets user input of a single integer, then outputting that integer.
+    -------------------------
+    Input:
+        None
+
+    Output:
+        key: key to a key-value pair (str)
+    """
+
+    try:
+        key = int(input("""Enter the number associated with the book: """))
+
+    except ValueError as e:
+        print(f"Incorrect input: {e}\n try again: ")
+
+        try:
+            key = int(input("""Enter the number associated with the book: """))
+
+        except ValueError as e:
+            print(f"You're plenty ( ͡° ͜ʖ ͡°  ) stupid aren't ya... ")
+
+            return "(◕‿◕)╭∩╮"
+
+    return key
+
 def book_selection(books):
     """
     USER ENTERS THE NUMBER ASSOCIATED WITH THE DESIRED BOOK.
@@ -17,23 +44,30 @@ def book_selection(books):
     Output:
         title: Book title (str)
     """
-    key = int(input("""Enter the number associated with the book: """))
+    key = input_validation()
 
     if (key > 1 or key <= len(books.values(list(books.values())))):
         print("Nice job asshole")
+
+
     
 
 # Function to convert mixed numbers or pure numbers to float
 def convert_string(string):
+
     try:
         parts = string.split()
+
         if len(parts) == 2:
             whole_number, fraction = int(parts[0]), parts[1]
             numerator, denominator = map(int, fraction.split('/'))
             return whole_number + numerator / denominator
+
         return float(string)
+
     except ValueError as e:
         print(f"An error occurred: {e}")
+
         return None
 
 # Main function to calculate and save the reading rate
@@ -49,6 +83,11 @@ def calculate_reading_rate():
     total_time_spent_hours = hours_spent + (minutes_spent / 60)
     reading_rate = pages_read / total_time_spent_hours
     print(f"Your reading rate is {reading_rate:.2f} pages per hour.")
+    
+    """
+    Replace this line (below) with book_selection function
+
+    """
     book_name = input("Enter the name of the book you are reading: ").strip()
     save_reading_session(book_name, pages_read, total_time_spent_hours, reading_rate)
     number_of_reading_sessions(reading_rate)
@@ -91,17 +130,18 @@ def process_file_for_word_count():
 
 # Main script logic
 if __name__ == "__main__":
-    check = input(
-"""Did you check the 'reading_session.txt' file?
-                  (y/n)""").lower()
-
-    if check == "y":
-        calculate_reading_rate()  # To calculate reading rate and manage reading sessions
-    #    process_file_for_word_count()  # To process a text file for word count
-
-    else:
-        print("Eat shit   (◕‿◕)╭∩╮")
-        exit()
-
+    calculate_reading_rate()
+#    check = input(
+#"""Did you check the 'reading_session.txt' file?
+#                  (y/n)""").lower()
+#
+#    if check == "y":
+#        calculate_reading_rate()  # To calculate reading rate and manage reading sessions
+#    #    process_file_for_word_count()  # To process a text file for word count
+#
+#    else:
+#        print("Eat shit   (◕‿◕)╭∩╮")
+#        exit()
+#
 
 
