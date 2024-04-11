@@ -3,6 +3,26 @@ import re
 from math import ceil
 import datetime
 
+def book_selection(books):
+    """
+    USER ENTERS THE NUMBER ASSOCIATED WITH THE DESIRED BOOK.
+    Dictionary of integer-book pairs.
+    Loops thru the dictionary for the the integer entered, returning that book
+    title.
+    while loop for proper user input.
+    ------------------
+    Input:
+        books: Integer-book pairs (dict)
+
+    Output:
+        title: Book title (str)
+    """
+    key = int(input("""Enter the number associated with the book: """))
+
+    if (key > 1 or key <= len(books.values(list(books.values())))):
+        print("Nice job asshole")
+    
+
 # Function to convert mixed numbers or pure numbers to float
 def convert_string(string):
     try:
@@ -71,7 +91,17 @@ def process_file_for_word_count():
 
 # Main script logic
 if __name__ == "__main__":
-    pass
-    calculate_reading_rate()  # To calculate reading rate and manage reading sessions
-#    process_file_for_word_count()  # To process a text file for word count
+    check = input(
+"""Did you check the 'reading_session.txt' file?
+                  (y/n)""").lower()
+
+    if check == "y":
+        calculate_reading_rate()  # To calculate reading rate and manage reading sessions
+    #    process_file_for_word_count()  # To process a text file for word count
+
+    else:
+        print("Eat shit   (◕‿◕)╭∩╮")
+        exit()
+
+
 

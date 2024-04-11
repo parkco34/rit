@@ -171,27 +171,34 @@ def compensatory():
 
             if directionY == 'RIGHT':
                 accelerationY +=0.001
+
             elif directionY == 'LEFT':
                 accelerationY -=0.001
+
             else:
                 pass
 
             prev_pos = mouse.getPos()
             if axis == 0:
                 pos = [crosshair.get(DISTANCE_FROM_CENTRE)[0] + accelerationX + distX,0]
+
             else:
                 pos = pos = [crosshair.get(DISTANCE_FROM_CENTRE)[0] + accelerationX + distX, crosshair.get(DISTANCE_FROM_CENTRE)[1] + accelerationY + distY]
+
             crosshair.setWithGain(pos,gain,DISTANCE_FROM_CENTRE)
 
         if crosshair.get(DISTANCE_FROM_CENTRE)[0]>=rect.getXBounds()[0] and crosshair.get(DISTANCE_FROM_CENTRE)[0]<=rect.getXBounds()[1] and crosshair.get(DISTANCE_FROM_CENTRE)[1]>=rect.getYBounds()[0] and crosshair.get(DISTANCE_FROM_CENTRE)[1]<=rect.getYBounds()[1]:
+
             if not entered_box:
                 entered_box = True
                 time_entered = core.getTime()
+
         else:
             entered_box = False
             time_entered = 0
 
         if entered_box:
+
             if (current_time - time_entered > capture_time):
                         total_time = core.getTime() - start_time - capture_time
                         f1 = open('Result.txt', 'r')
@@ -200,8 +207,10 @@ def compensatory():
                         f1.close()
                         f2 = open('Result.txt','a')
                         print (lines)
+
                         if len(lines) < 1:
                             f2.write(str(0) + "," + str(total_time) + "\n")
+
                         else:
                             f2.write(str(int(lines[-1].split(',')[0]) + 1) + "," + str(total_time) + "\n")
                         f2.close()

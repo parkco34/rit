@@ -1,0 +1,225 @@
+DEPARTMENT OF PSYCHOLOGY, COLLEGE OF LIBERAL ARTS
+ROCHESTER INSTITUTE OF TECHNOLOGY
+PSYC 714/ISEE 732—GRADUATE ENGINEERING PSYCHOLOGY
+HANDOUT: MANUAL CONTROL
+PROF. RANTANEN
+March 16, 2024
+1 Preliminaries
+There are several important factors that must be understood and considered when examining control systems:
+• Discrete of continuous control
+• Open- or closed-loop control
+• Positive or negative feedback
+• Stability
+• Control order (zero-, first-, or second-order control)
+• Time delays (lags)
+• Gain
+• Tracking displays (pursuit or compensatory tracking)
+To put control in context, consider the model of human information processing system and some system
+to be controlled (a nuclear power plant, an airplane, even your automobile); the human operator needs and
+interface between him or her and the system. The interface must necessarily have two parts, (1) displays to
+convey information about the system’s state (e.g., the speed the car is traveling on a freeway) to the operator,
+and (2) controls by which the operator can change the state of the system (e.g., accelerator and steering in a
+car). See Figure 1 for an illustration.
+Another important concept to note is the stimulus-response (S-R) compatibility are the departures from
+the information theory assumptions. S-R compatibility is defined as “the expected relationship between the
+location of a control or movement of a control response and the location or movement of the stimulus or
+display to which the control is related.” Good S-R compatibility reduces response time by reducing the
+uncertainty associated with appropriate movement of the control. Departures from the information theory
+include stimulus discriminability (e.g., consider 4 and 7 vs. 721834 and 721837; the former would result in
+faster responses because of the greater discriminability), the repetition effect (advantage over alternations),
+confusability and complexity of the stimuli, and practice effects.
+1
+Figure 1. The model of human information processing in context.
+2 Speed-Accuracy Tradeoff and Fitts’ Law
+Fitts’ idea was to determine the information capacity of the human motor system, relying on the metaphor
+of information transmission. According to this metaphoric account the difficulty of a task can be measured
+in bits, familiar from the communication theory of Shannon and Weaver (1949). In carrying out a movement
+task information is transmitted through a human channel.
+A measure of difficulty of the task is the index of difficulty (ID), usually expressed as:
+ID = log2
+ 2A
+W
+
+(1)
+where A is the movement amplitude and W is the target width. Thus, large movements to narrow targets
+are more difficult than small movements to wide targets. Fitts’ index of performance (IP) is analogous to
+Shannon’s channel capacity and is calculated as:
+IP = ID
+M T (2)
+where M T is the observed movement time. IP can also be calculated by regressing M T on ID, resulting
+in an equation of the regression line:
+M T = a + b(ID) (3)
+where a and b are the regression coefficients. Hence, Fitts’ law usually takes the form
+M T = a + b log2
+ 2A
+W
+
+(4)
+where a is the y-intercept and b is the slope of the line.
+Figure 2 illustrates the Fitts’ task and the law like relationship between target width (accuracy require-
+ment), movement amplitude, and movement time (speed).
+Example: Consider two different controls: A trackball and a joystick; one could devise and perform the Fitts’
+2
+task with different accuracy requirements (W ) and thus IDs with each, and compute M T = a + b(ID).
+Suppose that the slope b turns out much smaller for the trackball than for the joystick; what would that tell
+about the two different controls? Which would be better?
+Figure 2. The Fitts’ task and the law like relationship between target width (accuracy requirement), move-
+ment amplitude, and movement time (speed).
+Despite its simplicity, Fitts’ Law is immensely influential and useful in many aspects of human-machine
+interaction. Consider the common input device of alphanumeric keyboards. The common QWERTY key-
+board is difficult to use, for it has over 50% within-hand consecutive keystrokes, over 60% of keystrokes
+away from the “home-row”, and 10% of keystrokes that require moving a single hand two rows from the
+“home-row” (for typing in English). All these factors work to increase movement time, i.e., to slow typing
+speed (but then, that was the very purpose of the keyboard design!). QWERTY also has uneven distribution
+of strokes among the fingers resulting in overload of some fingers. The Dvorak keyboard has 5%–20%
+speed advantage over QWERTY and reduced hand and finger fatigue, but cost and effort of retraining the
+population (changing a standard) are important considerations, too.
+Of the two kinds of numeric keypads (“telephone”, which has 1-2-3 on the top row, and “calculator”, which
+has 7-8-9 on the top row), the telephone arrangement has been shown to be slightly faster than calculator
+arrangement. Alternating between keypads resulted in poorest performance.
+A specific application of Fitts’ Law is in the GOMS (Goals, Operators, Methods, and Selection rules) Model.
+GOMS is an HCI model developed by Stuart Card, Thomas P. Moran, and Allen Newell [1]. Goals are what
+the user intends to accomplish, operator is an action performed in service of a goal, method is a sequence
+of operators that accomplish a goal, and selection rule is to choose among more than one method available
+to accomplish a goal (a.k.a. CMN-GOMS, where CMN = Card, Moran, Newell).
+A Keystroke Level Model (KLM) GOMS is a simplified version CMN-GOMS, eliminating the goals, meth-
+ods, and selection rules, leaving only 6 primitive operators: (1) pressing a key, (2) moving the pointing
+device to a specific location, (3) pointer drag movements, (4) mental preparation, (5) moving hands to ap-
+propriate locations, and (6) waiting for the computer to execute a command. The times for each of the six
+operations determined empirically by Fitts’ Law. The operations for a compete task are arranged into a
+serial stream, and total task execution time is a simple calculation.
+3
+3 Continuous Control and Tracking
+Continuous control means continuous tracking and correction of errors, that is, deviations from some set
+point or criterion state of the system (e.g., consider lane keeping while driving a car). Control systems are
+often automated (e.g., a thermostat, or even a toilet tank that automatically shuts off water when the tank is
+full). For illustration of simple control systems, see Figure 3.Pneumatic
+controller
+Setpoint
+Pneumatic
+control valve
+Controller output Input
+flow
+rate
+Measured
+level signal
+Σ Error
+Level measuring
+means
+Level
+system
+Level
+Output
+flow
+Level measuring means
+Measured
+level signal
+Setpoint
+Pneumatic controller
+Input
+flow
+Control
+valve
+Controller output
+Display
+Target
+Cursor
+Human
+operator Control
+System
+or
+Plant
+Command
+Input
+Disturbance input
+ic(t)
+e(t) f(t) u(t) o(t)
+id(t)
+Figure 3. Block diagram of a simple control system. It is also easy to include the human operator in models
+like this and represent him or her by some appropriate transfer function.
+3.1 Feedback
+Examples of positive feedback include a booster rocket, or backing a tractor-trailer. Response error is to the
+same direction as the error. These systems are very difficult to control (as anyone who has tried to back up
+a tractor-trailer combination can attest) and typically not suitable for human control. In negative feedback
+systems response to error is opposite (= negative) to the error (e.g., lane-keeping while driving: if the car is
+drifting to the left, the driver will turn the steering wheel to the right). We quickly learn to control a negative
+feedback system without even thinking about it (i.e., automatically).
+3.2 Stability
+This concept should be familiar to everyone from high school physics. Figure 4 offers an illustration.
+4
+Figure 4. Which aircraft (Cessna C-150 on the top, Lockheed F-104 on the bottom) appears more stable and
+thus easier to control?.
+3.3 Control Order
+Zero-order or position control refers to a direct change in system as a result of a change in some control.
+For example, movement of a computer mouse results in a corresponding movement of the cursor on the
+screen, or a turn of a steering wheel in a car results in the front wheels turning to some angle away from
+their straight position.
+First order, or velocity control has the control input result in a start of a change in the system. For ex-
+ample, changing the position of the steering wheel of a car (= input) results in a rate of change of the
+heading of the automobile (=output); to stop the car from turning, the steering wheel must be returned to the
+neutral (center) position. The scanner in a car radio works the same way, continually jumping from station
+to station and it must be stopped at a desired station. Also joysticks are 1st order controllers.
+Second order or acceleration control results in increasing (i.e., accelerating) response of the system. For
+example, turning a steering wheel results in an increasing distance of the car relative to the lane. Balancing
+an empty soda can on a board is also an example of 2nd order control. First and second-order systems also
+have inherent time lags, making their control very difficult (See Fig. 5).
+Figure 5. Different responses in 0-, 1st-, and 2nd order control systems. The dashed lines represent control
+input, solid lines system response. Note that time lags are inherent to 1st- and 2nd order systems.
+3.4 Time Lags
+Time delays are always harmful. The greater the delay, the poorer the performance. Time lags require
+anticipation of system responses, which in turn requires cognitive resources and is generally imperfectly
+5
+done. Figure 6 illustrates the role of time lags. Note that also 0-order systems may have time lags, depending
+on the system design. Figure 7 illustrates the complex control inputs required for 1st and 2nd order systems.
+Figure 6. The role of time lags in control systems.
+Figure 7. The required control inputs for 1st and 2nd order systems. Note the complexity of control of the
+2nd order system and anticipation required to achieve the desired system state.
+3.5 Gain
+Gain is the ratio of system output to control input. High gain may results in overcorrection and loss of
+accuracy, whereas low gain makes control effortful and slow. An example is different steering ratios of
+different automobiles. Generally, a “happy medium” of gain affords best performance. Note that gain can
+also be variable, such as speed-sensitive steering in some cars of in computer track pads.
+3.6 Tracking
+There are two distinct types of tracking, pursuit tracking and compensatory tracking. Pursuit tracking has
+independent representation of movement of both target and cursor (control). In compensatory tracking only
+the movement of error relative to a fixed reference is displayed (e.g., flight instruments).
+6
+Tracking tasks can be aided by preview, allowing for prediction of the command input For example, preview
+of the road ahead in driving makes the lane keeping task quite easy, especially when compared to trying to
+maintain position on the lane by watching the lane edge marking from the side window of a car (do not try
+this at home!). Output prediction and quickening may also be used in displays to aid operators. Predictive
+displays show the future state of the system; see for an example Figure 8 for an EHSI (Electronic Horizontal
+Situation Indicator) (bottom left).
+Figure 8. A compensatory display (top left) only shows error relative to a reference, in this case a given
+radial from a radio beacon (the aircraft is to the right of the radial and should steer left to follow it). The
+display on the bottom left shows an EHSI; the dashed line emanating from the “ownship” symbol shows the
+predicted turning radius of the aircraft as it is following an alternative course, shown by the magenta line,
+and offering a preview to the pilots. The display on the bottom right shows a “tunnel in the sky” where pilots
+are offered cues where they should fly as well as preview where the aircraft will go given the present control
+inputs.
+3.7 Performance Measurement
+Performance in tracking tasks is commonly measured in terms of error, or the difference of the desired and
+actual paths or system states. Position error error refers to frequent deviations around the desired state or
+path. Velocity error represents tracking “out of phase” (see Figure 9 for illustrations).
+Note that if we simply averaged the error in the examples in Figure 9, it would be close to zero. How-
+ever, tracking performance in these examples was far from perfect. To accurately represent error in tracking,
+we must eliminate the signs. This is commonly done by calculating the Root Mean Square Error (RMSE),
+given by the following formula:
+7
+RM SE =
+s Pi
+n=1(Xi − ¯X)2
+n
+Figure 9. Measurement of error (performance) in tracking tasks.
+4 Human Operator Limitations
+Processing delay from perception of error to decision on a corrective action to execution of the correction
+(cf. the model of human information processing) is an inherent limiting factor in tracking performance.
+First order systems may be successfully tracked with 150-300 ms time delays. Second order systems exhibit
+400-500 ms delays, reflecting complexity of decision-making.
+The limit of information transmission in tracking is about 4–10 bits/s. The limit on frequency at which
+corrective decisions can be made, that is, max. bandwidth of random inputs, is therefore about 0.5–1.0 Hz.
+Performance may be improved beyond these limitations by having a good mental model of system dy-
+namics, which allows for accurate anticipation and even open-loop control, and compatibility of control and
+display relationship in tracking (S-R compatibility). Conversely, incompatible compensatory displays, e.g.,
+left-moving error cursor requires right-moving response, or the tracking motion is not aligned with display
+motion, hurt performance.
