@@ -1,0 +1,4 @@
+# For my Mac M1 (Whitney)
+
+Target Width: 0.06944444444444445
+Amplitude: 0.20833333333333334

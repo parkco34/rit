@@ -1,9 +1,11 @@
 #!/usr/bin/env python
 import pandas as pd
 
-df1 = pd.read_csv("demographics2.csv")
-df2 = pd.read_csv("naloxone_training.csv")
-df3 = pd.read_csv("prescriptions.csv")
-df4 = pd.read_csv("overdose_witness.csv")
+#df = pd.read_csv("iste_data/nightover_timeseries.csv")
+# Converts Series to datetime, showing the datatype as datetime64[ns]
+#df["Date"] = pd.to_datetime(df["Date"]).dt.floor("D")
+df = pd.read_csv("~/Desktop/arrival_purpose.csv")
+
+
 breakpoint()
 

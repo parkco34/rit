@@ -1,64 +1,215 @@
 DEPARTMENT OF PSYCHOLOGY, COLLEGE OF LIBERAL ARTS
 ROCHESTER INSTITUTE OF TECHNOLOGY
 PSYC 714/ISEE 732—GRADUATE ENGINEERING PSYCHOLOGY
-HANDOUT: MANUAL CONTROL
+LAB#5 INSTRUCTIONS: MANUAL CONTROL
 PROF. RANTANEN
-March 16, 2024
-1 Preliminaries
-There are several important factors that must be understood and considered when examining control systems:
-• Discrete of continuous control
-• Open- or closed-loop control
-• Positive or negative feedback
-• Stability
-• Control order (zero-, first-, or second-order control)
-• Time delays (lags)
-• Gain
-• Tracking displays (pursuit or compensatory tracking)
-To put control in context, consider the model of human information processing system and some system
-to be controlled (a nuclear power plant, an airplane, even your automobile); the human operator needs and
-interface between him or her and the system. The interface must necessarily have two parts, (1) displays to
-convey information about the system’s state (e.g., the speed the car is traveling on a freeway) to the operator,
-and (2) controls by which the operator can change the state of the system (e.g., accelerator and steering in a
-car). See Figure 1 for an illustration.
-Another important concept to note is the stimulus-response (S-R) compatibility are the departures from
-the information theory assumptions. S-R compatibility is defined as “the expected relationship between the
-location of a control or movement of a control response and the location or movement of the stimulus or
-display to which the control is related.” Good S-R compatibility reduces response time by reducing the
-uncertainty associated with appropriate movement of the control. Departures from the information theory
-include stimulus discriminability (e.g., consider 4 and 7 vs. 721834 and 721837; the former would result in
-faster responses because of the greater discriminability), the repetition effect (advantage over alternations),
-confusability and complexity of the stimuli, and practice effects.
+March 17, 2024
+The goals of this lab are to allow you to empirically investigate the impact of various variables on your
+performance in both discrete and continuous control. Instead of letting you design the experiment like in the
+past, this time I have determined the manipulations to demonstrate some key effects.
+1 Instructions
+In this lab you will be collecting data in both discrete and continuous manual control tasks. You may work
+in groups to collect the data and tabulate and plot the results. Part 1 will focus on understanding Fitts’ Law
+for discrete manual control with a mouse. Part 2 will demonstrate the effects of gain, time delay, and control
+order in tracking tasks.
+You will be using a computer program titled “MCL200”. Unfortunately, the program only runs of Win-
+dows PCs. Follow the login instructions below to begin the labs.
+Login Instructions:
+1. Open the folder labeled “MCL200”
+2. Open the folder “Calibrations” and run the “Monitor.Cal” executable
+3. Run the “MCL200” executable
+1.1 Part 1: Discrete Control
+The objectives of this part is to measure movement time to targets of different distances and amplitudes and
+note the equivalence of the movements that have equal Index of Difficulty (ID) and to compare position and
+velocity control for discrete movements. The tasks are quite difficult, so concentrate on your performance
+to ensure good data. Feel free to rerun any part of the lab if you are not satisfied with your performance.
+Remember to save your data when the results screen appears by clicking on “Save Data As...”. Files are
+saved in the corresponding “Results” folder (i.e., Discrete Results, Pursuit Results) as .DAT files which can
+be opened in Notepad.
+1.1.1 Index of Difficulty (Position Control)
+Follow the instructions below to load the program and set the parameters for each of the 5 conditions. For
+each condition, you will be able to save your results from the 10 trials. When the results screen appears,
+click the “Save Results As...” button and save the file to the Discrete Results folder.
 1
-Figure 1. The model of human information processing in context.
-2 Speed-Accuracy Tradeoff and Fitts’ Law
-Fitts’ idea was to determine the information capacity of the human motor system, relying on the metaphor
-of information transmission. According to this metaphoric account the difficulty of a task can be measured
-in bits, familiar from the communication theory of Shannon and Weaver (1949). In carrying out a movement
-task information is transmitted through a human channel.
-A measure of difficulty of the task is the index of difficulty (ID), usually expressed as:
-ID = log2
-( 2A
-W
-)
-(1)
-where A is the movement amplitude and W is the target width. Thus, large movements to narrow targets
-are more difficult than small movements to wide targets. Fitts’ index of performance (IP) is analogous to
-Shannon’s channel capacity and is calculated as:
-IP = ID
-M T (2)
-where M T is the observed movement time. IP can also be calculated by regressing M T on ID, resulting
-in an equation of the regression line:
-M T = a + b(ID) (3)
-where a and b are the regression coefficients. Hence, Fitts’ law usually takes the form
-M T = a + b log2
-( 2A
-W
-)
-(4)
-where a is the y-intercept and b is the slope of the line.
-Figure 2 illustrates the Fitts’ task and the law like relationship between target width (accuracy require-
-ment), movement amplitude, and movement time (speed).
-Example: Consider two different controls: A trackball and a joystick; one could devise and perform the Fitts’
+1. From the Manual Control Task Select screen, select the “Discrete Control Task: FITT’S LAW” radio
+button, then click “OK”
+2. On the Discrete Task Settings menu, enter the following values for Condition 1, then click “OK” to
+begin the trials (ignore the “Open Saved Settings” or “Save Settings As” buttons):
+• Control Order is Zero
+• Number of Trials is 10
+• Target Width is 100.0
+• Amplitude (to target) is 300.0
+• Input Gain is 1.0
+• Input Time Delay is 0.0
+• Target Capture Criterion is 1.0
+• Trial Timeout is 30.0
+3. For Condition 2, make the following changes:
+• Target Width is 50.0
+• Amplitude is 150.0
+4. For Condition 3:
+• Target Width is 15.0
+• Amplitude is 300.0
+5. For Condition 4:
+• Target Width is 50.0
+• Amplitude is 300.0
+6. For Condition 5:
+• Target Width is 50.0
+• Amplitude is 150.0
+• Change the Input Gain to 3.0
+Assignment: (1) Compute the Index of Difficulty (ID) for each of the four conditions (Conditions 1 through
+4 above) and plot the average movement time (MT) as a function of ID. Do the two conditions with similar
+ID also have similar MT? Is the function linear? What are the coefficients a and b in Fitts’ law? (Note:
+To compute the straight line equation you can either use a statistics program and compute the regression
+equation for all your data points or just choose two best-fitting points and solve the equation manually). (2)
+What kind of an effect did increased gain for setting 5 have in your performance?
+1.1.2 Control Dynamics
+Follow the instructions below to load the program and set the parameters.
+1. On the Discrete Task Settings menu, enter the following values for Condition 1, then click “OK” to
+begin the trials:
+• Control Order is 1st
+• Target Width is 50.0
 2
-
-
+• Amplitude is 150.0
+• Input Gain is 2.0
+2. Do 3 blocks of 10 trials, recording movement time after each trial:
+Assignment: (1) What kind of a learning curve do you observe? (2) Compare Block 3 MT with the
+corresponding ID MT with the zero-order (position) control from part 1A (with the same ID). Which task
+was harder? Why?
+1.2 Part 2: Continuous Control
+The objectives of this part of the lab is to demonstrate the effects of time delay, gain, and control order on
+tracking performance. Remember to save your results after every set of trials as described above.
+1.2.1 Compensatory Tracking: Gain and Time Delay
+1. From the Manual Control Task Select screen, select the “Continuous Control Task: Compensatory
+Tracking” radio button, then click “OK”
+2. You will run a series of practice trials so that your tracking performance stabilizes before you run
+the experimental trials (one trial per each of four conditions). If your results from the practice trials
+show continuous improvement (decreasing RSME values), continue doing practice trials until the
+RSMEs for your performance are pretty constant. Write down your very first practice trial RMSE for
+comparison, and then the RMSEs for each of the four conditions.
+3. On the Compensatory Tracking Task menu, enter the following values for the practice trials, then click
+“OK” to begin the trials (ignore the “Open Saved Settings” or “Save Settings As“ buttons):
+• Control Order is Zero
+• Number of Axes is Single
+• Disturbance Bandwidth is Low
+• Number of Trials is 15
+• Input Gain is 1.0
+• Input Time Delay is 0.0
+• Output Sample Rate is 20
+• Trial Duration is 30.0
+4. For Condition 1, keep the above settings, but change the following:
+• Number of Trials is 1
+5. For Condition 2, change the following settings:
+• Input Gain is 3.0
+6. For Condition 3, change the following settings:
+• Input Gain is 1.0
+• Input Time Delay is 0.3
+7. For Condition 4, change the following settings:
+• Input Gain is 3.0
+3
+• Input Time Delay is 0.3
+Assignment: Considering your tracking in Conditions 1–4, what do you conclude about the effects of gain,
+time delay, and their interaction? Plot your results for visualization of the data and easy comparison of the
+effects of the experimental conditions.
+1.2.2 Pursuit Tracking: Order Demonstration
+In this set of trials, you will be comparing your pursuit tracking performance under various control orders.
+1. First run the demonstration by selecting the “Continuous Tracking Task: ORDER DEMONSTRA-
+TION” radio button and clicking “OK”.
+2. Use the mouse to drag the circles back and forth. The top circle has zero control order motion (you
+control the position of the circle). The middle circle has first control order motion (you control the
+circle’s velocity). The bottom circle has second control order motion (you control the circle’s accel-
+eration). Try to align them back on the center line.
+3. Next, go back to the Pursuit Tracking task and choose the following settings for Condition 1:
+• Control order is Zero
+• Number of axes is Single
+• Disturbance Bandwidth is Low
+• Number of Trials is 15
+• Input Gain is 1.0
+• Input Time Delay is 0.0
+• Output Sample Rate is 20
+• Trial Duration is 30.0
+4. For Condition 2, set Control Order to 1st
+5. For Condition 3, set Control Order to 2nd
+Assignment: (1) Considering your tracking in Conditions 1-3, what do you conclude about the effects of
+control order on your performance? Plot your results for visualization of the data and easy comparison of
+the effects of the experimental conditions. Were you aware of the demands in second order tracking? (2)
+Discuss the changes you noticed in your attempts to control the cursor in each control order condition. (3)
+Also, compare your results from Part 2.1 Condition 1 to those from Part 2.2 Condition 1: How was the task
+different in the former (compensatory tracking) compared in the latter (pursuit tracking)? Describe this first
+in qualitative terms, then show whether your data supports your description.
+4
+2 Manual Control, Supplemental Handout
+To compute the Index of Difficulty (ID), you need to use a base 2 log, which cannot be found on calculators
+(MS Excel could do it for you, however!). Use the following property of logarithms to change the base to
+something you have in your calculators (e.g., 10, or e):
+loga x = logb x
+logb a (1)
+where b can be any base you want (e.g., 10, or e).
+To find the constants a and b in Fitts’ law you are welcome to use your favorite statistical software package
+and do a linear regression on your results. For a “quick and dirty” shortcut, you may choose two represen-
+tative points from the results and find the equation of the line passing through these points:
+y − y1
+x − x1
+= y2 − y1
+x2 − x1
+(2)
+Then put the equation in the slope-intercept form
+y = ax + b (3)
+and you have your constants. Do not forget to interpret the meaning of the slope (a) in the discussion.
+5
+3 Lab Report
+The lab reports must be completed individually. In your lab reports, remember to make explicit connec-
+tion between your narrative sections (introduction, discussion) and your data (method and results). Use
+subheadings to organize your reports.
+3.1 Introduction
+• Provide here a general introduction to manual control and human performance problems,
+• considering both discrete and continuous control.
+• Try to think of practical examples.
+3.2 Part 1
+3.2.1 Method
+• Describe the method of Part 1 here. Make sure you
+• list the independent and
+• dependent variables and
+• provide a detailed description of the experimental procedure.
+3.2.2 Results
+• Describe your results here. In a brief narrative, state the facts, i.e., what happened to the dependent
+variables under various manipulations of the independent variables.
+• Compute the Index of Difficulty (ID) for each of the four conditions in part 1A and plot the average
+movement time (MT) as a function of ID.
+• Plot also Block 3 (first order) MT with the corresponding ID movement time with the zero-order
+(position) control from part 1A (with the same ID).
+3.2.3 Discussion
+Here you will explain your results. Answer the following questions:
+• Do the two conditions with similar ID also have similar MT?
+• Is the function linear?
+• What are the implications of the coefficients a and b in Fitts’ law? (Note: To compute the straight line
+equation you can either use a statistics program and compute the regression equation for all your data
+points or just choose two best-fitting points and solve the equation manually).
+• What kind of an effect did increased gain have in your performance?
+• What observations did you make about your performance?
+• In part 1B, what kind of a learning curve do you observe?
+• Compare the first order (Block 3) MT with the corresponding ID movement time with the zero-order
+(position) control from part 1A (with the same ID). Which task was harder? Why?
+6
+3.3 Part 2
+3.3.1 Method
+Write the method section for Part 2 in a similar manner as in Part 1.
+3.3.2 Results
+• Plot your results for visualization of the data and easy comparison of the effects of the experimental
+conditions. Consider plotting RMSE on the y-axis and gain on the x-axis, with separate lines for the
+time delay conditions in a single graph.
+• Plot your results from Part 2B for easy comparison of your performance in the experimental condi-
+tions.
+• Provide a brief narrative of what you observe in the plots.
+3.3.3 Discussion
+• What do you conclude about the effects of gain, time delay, and their interaction?
+• Discuss the effects of control order on performance. Were you aware of the demands in second order
+tracking?
+• Discuss the respective characteristics of compensatory and pursuit tracking and their impact on track-
+ing performance
+3.3.4 Conclusion
+• What do your results from both parts say about human tracking performance?
+• What are the design implications of your results?
+• What else did you learn in this lab?
+4 Deadline
+The complete lab report is due in a designated dropbox folder in myCourses on Sunday, April 7, at midnight.
+7

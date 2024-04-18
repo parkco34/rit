@@ -1,68 +1,62 @@
 #!/usr/bin/env python
-from psychopy import visual, core, event, monitors
 import numpy as np
+import matplotlib.pyplot as plt
 
-# Function to run a single trial of the compensatory tracking task
-def run_trial(sr_compatibility='high'):
-    # Create a window
-    win = visual.Window([800, 600], pos=[300,0], fullscr=False, units="pix")
+def compute_index_of_difficulty(width, amplitude):
+    """
+    Compute the Index of Difficulty (ID) based on Fitts' Law.
 
-    # Initialize target and cursor
-    target = visual.Circle(win, radius=10, fillColor='red', lineColor='red')
-    cursor = visual.Circle(win, radius=10, fillColor='green', lineColor='green')
-    target.pos = [0, 0]  # Start target at center
+    Parameters:
+    - width (float): The width of the target.
+    - amplitude (float): The amplitude or distance to the target.
 
-    # Variables for target movement
-    speed = 2  # Pixels per frame
-    direction = [speed, 0]  # Move horizontally initially
+    Returns:
+    - float: The computed Index of Difficulty.
+    """
+    return np.log2((amplitude / width) + 1)
 
-    # Variables for tracking accuracy
-    distances = []
+def plot_mt_vs_id(widths, amplitudes, movement_times):
+    """
+    Plot the average movement time (MT) as a function of the Index of Difficulty (ID).
 
-    # Clock to control the frame rate
-    clock = core.Clock()
+    Parameters:
+    - widths (list of float): List of target widths.
+    - amplitudes (list of float): List of target amplitudes.
+    - movement_times (list of float): List of average movement times for each condition.
+    """
+    # Compute the Index of Difficulty for each condition
+    ids = [compute_index_of_difficulty(w, a) for w, a in zip(widths, amplitudes)]
+    
+    # Plot MT vs ID
+    plt.figure(figsize=(10, 5))
+    plt.scatter(ids, movement_times, color='blue', label='Data Points')
+    plt.title('Average Movement Time vs Index of Difficulty')
+    plt.xlabel('Index of Difficulty (ID)')
+    plt.ylabel('Average Movement Time (MT)')
+    
+    # Fit a linear regression line to the data points
+    coefficients = np.polyfit(ids, movement_times, 1)
+    # Create a linear polynomial from the coefficients
+    polynomial = np.poly1d(coefficients)
+    # Generate a sequence of IDs for the line
+    ids_line = np.linspace(min(ids), max(ids), 100)
+    mts_line = polynomial(ids_line)
+    
+    # Plot the linear regression line
+    plt.plot(ids_line, mts_line, color='red', label='Linear Fit')
+    plt.legend()
+    plt.grid(True)
+    plt.show()
+    
+    return coefficients
 
-    # Run until key press
-    while not event.getKeys():
-        # Update target position
-        target.pos += direction
+# Example usage:
+# Define widths, amplitudes, and movement times
+example_widths = [0.2, 0.4, 0.6, 0.8]
+example_amplitudes = [0.5, 1.0, 1.5, 2.0]
+example_movement_times = [1.5, 2.0, 2.5, 3.0]
 
-        # Get current mouse position
-        mouse_pos = event.Mouse(win=win).getPos()
-
-        # Invert mouse X position for low S-R compatibility
-        if sr_compatibility == 'low':
-            mouse_pos[0] = -mouse_pos[0]
-
-        cursor.pos = mouse_pos
-
-        # Calculate and record the distance between cursor and target
-        distance = np.linalg.norm(np.array(cursor.pos) - np.array(target.pos))
-        distances.append(distance)
-
-        # Draw target and cursor
-        target.draw()
-        cursor.draw()
-
-        # Flip the display
-        win.flip()
-
-        # Bounce target off the edges
-        if abs(target.pos[0]) >= win.size[0] / 2 or abs(target.pos[1]) >= win.size[1] / 2:
-            direction = -np.array(direction)
-
-    # Close the window
-    win.close()
-
-    # Calculate average deviation
-    avg_deviation = np.mean(distances)
-    print(f"Average deviation for {sr_compatibility} S-R compatibility: {avg_deviation:.2f} pixels")
-
-# Main experiment
-if __name__ == "__main__":
-    # Run trials for both high and low S-R compatibility
-    run_trial('high')
-    core.wait(2)  # Wait for 2 seconds between trials
-    run_trial('low')
-
+# Call the function to plot the graph and get the coefficients of the linear fit
+coefficients = plot_mt_vs_id(example_widths, example_amplitudes, example_movement_times)
+print(f"Coefficients of the linear fit: a = {coefficients[0]}, b = {coefficients[1]}")
 

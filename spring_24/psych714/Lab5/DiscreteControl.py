@@ -17,11 +17,11 @@ def discreteControl():
     
     
     dlg = gui.Dlg(title = 'Discrete Control', size = (300,300))
-    dlg.addField(label = 'Width of target [0-1]', initial = '0.2' )
-    dlg.addField(label = 'Amplitude [0-1.2]', initial = '1')
+    dlg.addField(label = 'Width of target [0-1]', initial = '0.010416666666666666' )
+    dlg.addField(label = 'Amplitude [0-1.2]', initial = '0.20833333333333334')
     dlg.addField(label = 'Gain', initial = '1')
     dlg.addField(label = 'Order', choices = ['0th Order','1st Order','2nd Order'])
-    dlg.addField(label = 'Capture time', initial = '2.5')
+    dlg.addField(label = 'Capture time', initial = '1')
     data = dlg.show()
     
     if data == None:
@@ -45,6 +45,7 @@ def discreteControl():
     
     if CANCEL == True:
         return
+
     monitor = monitors.Monitor('myMon')
     window = visual.Window(allowGUI = True,fullscr=True, monitor = monitor, units = 'norm',color = (-1,-1,-1))
     rect = Rect(window,(0.8,0),float(WIDTH))
@@ -64,7 +65,7 @@ def discreteControl():
     mouse = event.Mouse(visible = True, win = window)
     mouse.setPos(newPos = (rect.get()[0] - distance,0))
     
-    mouse.setVisible(False)
+    mouse.setVisible(True)
 
     start_time = core.getTime()
     start_pos = crosshair.get(DISTANCE_FROM_CENTRE)
@@ -75,8 +76,7 @@ def discreteControl():
     while not event.getKeys():
         current_time = core.getTime()
         if order == 0:
-            mouse.setPos (newPos=(mouse.getPos()[0],0))
-
+#            mouse.setPos (newPos=(mouse.getPos()[0],0))
             crosshair.setWithGain(mouse.getPos(),gain,DISTANCE_FROM_CENTRE)
         
         if order == 1:
