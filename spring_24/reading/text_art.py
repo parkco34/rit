@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 from textwrap import dedent
 
-print(dedent("""\n\n
+thing = dedent("""\n\n
 SSSS   TTTTT  U   U  PPPP   III  DDDD  
 S        T    U   U  P   P   I   D   D 
  SSS     T    U   U  PPPP    I   D   D 
@@ -31,7 +31,7 @@ SSSS     T     UUU   P      III  DDDD
                 || ||
                ooO Ooo
 
-          \n\n"""))
+          \n\n""")
 
 
 #print(dedent("""
