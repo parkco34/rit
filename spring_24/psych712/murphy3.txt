@@ -1,0 +1,793 @@
+‘‘made of metal’’ would not be. Where do these weights come from? One possibility
+is that they are the family-resemblance scores that Rosch and Mervis derived (see
+previous chapter). That is, the more often a feature appears in the category and does
+not appear in other categories, the higher its weight will be. Unlike a best-example
+representation, this list of features can include contradictory features with their
+weights. For example, the single best example of a dog might be short-haired. How-
+ever, people also realize that some dogs have very long hair and a few have short
+hair. These cannot all be represented in a single best example. The feature list would
+represent this information, however. It might include ‘‘short hair,’’ and give it a high
+weight; ‘‘long hair,’’ with a lower weight; and ‘‘hairless’’ with a very low weight. In
+this way, the variability in a category is implicitly represented. Dimensions that have
+low variability might have a single feature with high weight (e.g., ‘‘has two ears’’
+might have a high weight, and ‘‘has three ears’’ would presumably not be listed at
+all). Dimensions with high variability (like the colors of dogs) would have many
+features listed (‘‘white,’’ ‘‘brown,’’ ‘‘black,’’ ‘‘orange-ish,’’ ‘‘spotted’’), and each one
+would have a low weight. Such a pattern would implicitly represent the fact that
+dogs are rather diverse in their coloring. This system, then, gives much more infor-
+mation than a single best example would.
+One aspect of this proposal that is not clearly settled yet is what to do with con-
+tinuous dimensions that do not have set feature values. So, how does one represent
+the size of birds, for example: as ‘‘small,’’ ‘‘medium,’’ and ‘‘large,’’ or as some con-
+tinuous measurement of size? If it is a continuous measurement, then feature count-
+ing must be somewhat more sophisticated, since items with tiny differences in size
+should presumably count as having the same size feature, even if they are not iden-
+tical. Perhaps for such continuous dimensions, what is remembered is the average
+rather than the exact features. Another idea is that features that are distinctive are
+counted, whereas those that are close together are averaged. So, for categories like
+robins, the size differences are small enough that they are not represented, and we
+only remember the average size for a robin; but for categories like birds as a whole,
+we do not average the size of turkeys, hawks, robins, and wrens, which are too di-
+verse. There is some evidence for this notion in category-learning experiments (e.g.,
+Strauss 1979), but it must be said that a detailed model for how to treat such fea-
+tures within prototype theory seems to be lacking.
+If this feature list is the concept representation, then how does one categorize new
+items? Essentially, one calculates the similarity of the item to the feature list. For
+every feature the item has in common with the representation, it gets ‘‘credit’’ for
+the feature’s weight. When it lacks a feature that is in the representation, or has a
+Theories 43
+feature that is not in the representation, it loses credit for that feature (see Smith and
+Osherson 1984; Tversky 1977). After going through the object’s features, one adds
+up all the weights of the present features and subtracts all the weights of its features
+that are not part of the category. 1 If that number is above some critical value, the
+categorization criterion, the item is judged to be in the category; if not, it is not.
+Thus, it is important to have the highest weighted features of a category in order to
+be categorized. For example, an animal that eats meat, wears a collar, and is a pet
+might possibly be a dog, because these are all features associated with dogs, though
+not the most highly weighted features. If this creature does not have the shape or
+head of a dog, does not bark, does not drool, and does not have other highly
+weighted dog features, one would not categorize it as a dog, even though it wears a
+collar and eats meat. So, the more highly weighted features an item has, the more
+likely it is to be identiﬁed as a category member.
+This view explains the failure of the classical view. First, no particular feature is
+required to be present in order to categorize the item. The inability to ﬁnd such
+deﬁning features does not embarrass prototype theory the way it did the classical
+view. So long as an item has enough dog features, it can be called a dog—no par-
+ticular feature is deﬁning. Second, it is perfectly understandable why some items
+might be borderline cases, about which people disagree. If an item has about equal
+similarity to two categories (as tomatoes do to fruit and vegetable), then people may
+well be uncertain and change their mind about it. Or even if the item is only similar
+to one category, if it is not very similar—in other words, right near the catego-
+rization criterion—people will not be sure about it. They may change their mind
+about it on a different occasion if they think of slightly different features or if there’s
+a small change in a feature’s weight. Third, it is understandable that any typical item
+will be faster to categorize than atypical items. Typical items will have the most
+highly weighted features (see Barsalou 1985; Rosch and Mervis 1975), and so they
+will more quickly reach the categorization criterion. If you see a picture of a German
+shepherd, its face, shape, size, and hair all immediately match highly weighted val-
+ues of the dog concept, which allow speedy categorization. If you see a picture of a
+sheepdog, the face, length of hair, and shape are not very typical, and so you may
+have to consider more features in order to accumulate enough weights to decide that
+it is a dog.
+Recall that Hampton (1982) demonstrated that category membership judgments
+could be intransitive. For example, people believe that Big Ben is a clock, and they
+believe that clocks are furniture, but they deny that Big Ben is furniture. How can
+this happen? On the prototype view, this comes about because the basis of similarity
+44 Chapter 3
+changes from one judgment to the other. Big Ben is a clock by virtue of telling time;
+clocks are furniture by virtue of being objects that one puts in the home for decora-
+tion and utility (not by virtue of telling time, because watches are not considered
+furniture). However, Big Ben is not similar to the furniture concept, because it isn’t
+in the home and is far bigger than any furniture. Thus, concept A can be similar to
+concept B, and B can be similar to C, and yet A may not be very similar to C. This
+can happen when the features that A and B share are not the same as the features
+that B and C share (see Tversky 1977). On the classical view, this kind of intransi-
+tivity is not possible, because any category would have to include all of its superset’s
+deﬁnition, and so there is no way that deciding that something is a clock would not
+also include deciding that it was furniture.
+Smith and Medin (1981) discuss other results that can be explained by this feature-
+listing model. Most prominent among them are the effects of false relatedness: It
+is more difﬁcult to say ‘‘no’’ to the question ‘‘Is a dog a cat?’’ than to ‘‘Is a dog a
+mountain?’’ I will leave it as an exercise for the reader to derive this result from the
+feature list view.
+More Recent Developments
+Unlike the other views to be discussed in this chapter, the prototype view has not
+been undergoing much theoretical development. In fact, many statements about
+prototypes in the literature are somewhat vague, making it unclear exactly what the
+writer is referring to—a single best example? a feature list? if a feature list, deter-
+mined how? This lack of speciﬁcity in much writing about prototype theory has
+allowed its critics to make up their own prototype models to some degree. As we
+shall see in chapter 4, many theorists assume that the prototype is the single best
+example, rather than a list of features, even though these models have very different
+properties, for real-life categories, at least.
+Feature combinations. The view taken by Rosch and Mervis (1975), Smith and
+Medin (1981), and Hampton (1979) was that the category representation should
+keep track of how often features occurred in category members. For example, people
+would be expected to know that ‘‘fur’’ is a frequent property of bears, ‘‘white’’ is a
+less frequent property, ‘‘has claws’’ is very frequent, ‘‘eats garbage’’ of only mod-
+erate frequency, and so on. A more elaborate proposal is that people keep track not
+just of individual features but conﬁgurations of two or more features. For example,
+perhaps people notice how often bears have claws AND eat garbage, or have fur
+AND are white—that is, combinations of two features. And if we propose this, we
+Theories 45
+might as well also propose that people notice combinations of three features such
+as having claws AND eating garbage AND being white. So, if you saw a bear with
+brown fur eating campers’ garbage in a national park, you would update your
+category information about bears by adding 1 to the frequency count for features
+‘‘brown,’’ ‘‘has fur,’’ ‘‘eats garbage,’’ ‘‘brown and has fur,’’ ‘‘brown and eats gar-
+bage,’’ ‘‘has fur and eats garbage,’’ and ‘‘brown and has fur and eats garbage.’’ This
+proposal was ﬁrst made by Hayes-Roth and Hayes-Roth (1977) and was made part
+of a mathematical model (the conﬁgural cue model ) by Gluck and Bower (1988a).
+One problem with such a proposal is that it immediately raises the question of
+a computational explosion. If you know 25 things about bears, say (which by no
+means is an overestimate), then there would be 300 pairs of features to be encoded.
+(In general, for N features, the number of pairs would be N  (N  1)=2.) Further-
+more, there would be 2,300 triplets of features to encode as well and 12,650 quad-
+ruplets. Even if you stopped at triplets of features, you have now kept track of not
+just 25 properties, but 2,635. For any category that you were extremely familiar
+with, you might know many more features. So, if you are a bird watcher and know
+1,000 properties of birds (this would include shapes, sizes, habitats, behaviors, colors,
+and patterns), you would also know 499,500 pairs of features and 166,167,000
+feature triplets. This is the explosion in ‘‘combinatorial explosion.’’ Not only would
+this take up a considerable amount of memory, it would also require much more
+processing effort when using the category, since every time you viewed a new cate-
+gory member, you would have to update as many of the pairs, triplets, and quad-
+ruplets that were observed. And when making a category decision, you couldn’t just
+consult the 1,000 bird properties that you know about—you would also have to
+consult the relevant feature pairs, triplets, and so on.
+For these reasons, this proposal has not been particularly popular in the ﬁeld at
+large. Models that encode feature combinations have been able to explain some data
+in psychology experiments, but this may in part be due to the fact that there are
+typically only four or ﬁve features in these experiments (Gluck and Bower 1988a,
+pp. 187–188, limited themselves to cases of no more than three features), and so it is
+conceivable that subjects could be learning the feature pairs and triplets in these
+cases. However, when the Gluck and Bower model has been compared systemati-
+cally with other mathematically speciﬁed theories, it has not generally done as well
+as the others (especially exemplar models), as discussed by Kruschke (1992) and
+Nosofsky (1992). In short, this way of expanding prototype theory has not caught
+on more generally. The question of whether people actually do notice certain pairs
+of correlated features is discussed at greater length in chapter 5.
+46 Chapter 3
+Schemata. One development that is tied to the prototype view is the use of schemata
+(the plural of schema) to represent concepts. This form of representation has been
+taken as an improvement on the feature list idea by a number of concepts researchers
+(e.g., Cohen and Murphy 1984; Smith and Osherson 1984). To understand why,
+consider the feature list view described above. In this view, the features are simply
+an unstructured list, with associated weights. For example, the concept of bird might
+have a list of features such as wings, beak, ﬂies, gray, eats bugs, migrates in winter,
+eats seeds, blue, walks, and so on, each with a weight. One concern about such a list
+is that it does not represent any of the relations between the features. For example,
+the features describing a bird’s color are all related: They are different values on the
+same dimension. Similarly, the features related to what birds eat are all closely con-
+nected. In some cases, these features are mutually exclusive. For example, if a bird
+has a black head, it presumably does not also have a green head and a blue head
+and a red head. If a bird has two eyes, it does not have just one eye. In contrast,
+other features do not seem to be so related. If a bird eats seeds, this does not place
+any restriction on how many eyes it has or what color its head is, and vice versa.
+A schema is a structured representation that divides up the properties of an item
+into dimensions (usually called slots) and values on those dimensions (ﬁllers of the
+slots). (For the original proposal for schemata, see Rumelhart and Ortony 1977. For
+a general discussion of schemata see A. Markman 1999.) The slots have restrictions
+on them that say what kinds of ﬁllers they can have. For example, the head-color
+slot of a bird can only be ﬁlled by colors; it can’t be ﬁlled by sizes or locations, be-
+cause these would not specify the color of the bird’s head. Furthermore, the slot may
+place constraints on the speciﬁc value allowed for that concept. For example, a bird
+could have two, one or no eyes (presumably through some accident), but could not
+have more than two eyes. The slot for number of eyes would include this restriction.
+The ﬁllers of the slot are understood to be competitors. For example, if the head
+color of birds included colors such as blue, black, and red, this would indicate that
+the head would be blue OR black OR red. (If the head could be a complexpattern
+or mixture of colors, that would have to be a separate feature.) Finally, the slots
+themselves may be connected by relations that restrict their values. For example, if a
+bird does not ﬂy, then it does not migrate south in winter. This could be represented
+as a connection between the locomotion slot (which indicates how the bird moves
+itself around) and the slot that includes the information on migration.
+Why do we need all this extra apparatus of a schema? Why not just stick with the
+simpler feature list? The answer cannot be fully given here, because some of the evi-
+dence for schemata comes from the topics of other chapters (most notably chapter
+Theories 47
+12). However, part of the reason is that the unstructured nature of the feature list
+could lead to some peculiar concepts or objects being learned. Any features can be
+added to the list, and there are no restrictions on one feature’s weights depending on
+what other features are. So, if I told you that birds are generally carnivorous, and
+you read somewhere that birds were generally vegetarian, you could simply list the
+features in your concept, say, carnivorous, weight ¼ :80; and vegetarian, weight ¼
+:80. The fact that these two features both having high weights is contradictory
+would not prevent a feature list from representing them. Similarly, if I represented
+both the features ‘‘ﬂies’’ and ‘‘doesn’t ﬂy’’ for birds (since some do and some don’t),
+there is nothing to stop me from thinking that speciﬁc birds have both these fea-
+tures. The intuition behind schema theory is that people structure the information
+they learn, which makes it easier to ﬁnd relevant information and prevents them
+from forming incoherent concepts of this sort (for evidence from category learning
+in particular, see Kaplan 1999; Lassaline and Murphy 1998).
+Another argument often made about feature lists is that they do not have the
+kinds of relations that you need to understand an entire object. For example, a pile
+of bird features does not make a bird—the parts need to be tied together in just the
+right way. The eyes of a bird are above the beak, placed symmetrically on the head,
+below the crest. This kind of information is critical to making up a real bird, but it
+usually does not appear in feature lists, at least as produced by subjects in experi-
+ments. Subjects may list ‘‘has eyes,’’ but they will not provide much relational in-
+formation about how the eyes ﬁt with the other properties of birds. Nonetheless,
+people clearly learn this information, and if you were to see a bird with the beak and
+eyes on opposite sides of its head, you would be extremely surprised. Schemata can
+include this information by providing detailed relations among the slots.
+In short, a feature list is a good shorthand for noting what people know about a
+category, but it is only a shorthand, and a schema can provide a much more com-
+plete picture of what people know about a concept. For some purposes, this extra
+information is not very relevant, and so it may be easier simply to talk about fea-
+tures, and indeed, I will do so for just that reason. Furthermore, in some experi-
+ments, the concepts have been constructed basically as feature lists, without the
+additional relational information that a schema would include. In such cases, talk-
+ing about feature lists is sufﬁcient. However, we should not make the mistake of
+believing too much in the concepts we make up for experiments, which probably
+drastically underestimate the complexity and richness of real-world concepts. Sche-
+mata may be a better description of the latter, even if they are not required for the
+former.
+48 Chapter 3
+The Exemplar View
+The theory of concepts ﬁrst proposed by Medin and Schaffer (1978) is in many
+respects radically different from prior theories of concepts. In the exemplar view, the
+idea that people have a representation that somehow encompasses an entire concept
+is rejected. That is, one’s concept of dogs is not a deﬁnition that includes all dogs, nor
+is it a list of features that are found to greater or lesser degrees in dogs. Instead, a
+person’s concept of dogs is the set of dogs that the person remembers. In some sense,
+there is no real concept (as normally conceived of), because there is no summary rep-
+resentation that stands for all dogs. However, as we shall see, this view can account
+for behaviors that in the past have been explained by summary representations.
+To explain a bit more, your concept of dogs might be a set of a few hundred dog
+memories that you have. Some memories might be more salient than others, and
+some might be incomplete and fuzzy due to forgetting. Nonetheless, these are what
+you consult when you make decisions about dogs in general. Suppose you see a new
+animal walking around your yard. How would you decide that it is a dog, according
+to this view? This animal bears a certain similarity to other things you have seen in
+the past. It might be quite similar to one or two objects that you know about, fairly
+similar to a few dozen things, and mildly similar to a hundred things. Basically,
+what you do is (very quickly) consult your memory to see which things it is most
+similar to. If, roughly speaking, most of the things it is similar to are dogs, then
+you’ll conclude that it is a dog. So, if I see an Irish terrier poking about my garden,
+this will remind me of other Irish terriers I have seen, which I know are dogs. I
+would conclude that this is therefore also a dog.
+As in the prototype view, there must also be a place for similarity in this theory.
+The Irish terrier in my yard is extremely similar to some dogs that I have seen, is
+moderately similar to other dogs, but is mildly similar to long-haired ponies and
+burros as well. It has the same general shape and size as a goat, though lacking the
+horns or beard. It is in some respects reminiscent of some wolves in my memory as
+well. How do I make sense of all these possible categorizations: a bunch of dogs, a
+few goats, wolves, and the occasional pony or burro? Medin and Schaffer (1978)
+argued that you should weight these items in your memory by how similar they are
+to the item. The Irish terrier is extremely similar to some of my remembered dogs, is
+moderately similar to the wolves, is only slightly similar to the goat, and only barely
+similar to the ponies and burro. Therefore, when you add up all the similarities,
+there is considerably more evidence for the object’s being a dog than for its being
+anything else. (I will describe this process in more detail later.) So, it is not just the
+Theories 49
+number of exemplars that an item reminds you of that determines how you catego-
+rize it; just as important is how similar the object is to each memory.
+How does this view explain the phenomena that the prototype view explained?
+First, this theory does not say anything about deﬁning characteristics, so the prob-
+lems for the classical view are not problems for it. Second, the view has a natural
+explanation for typicality phenomena. The most typical items are the ones that are
+highly similar to many category members. So, a German shepherd is extremely simi-
+lar to many dogs and is not so similar to other animals. A dachshund is not as sim-
+ilar to other dogs, and it bears a certain resemblance to weasels and ferrets, which
+count against it as a dog. A chihuahua is even less similar to most dogs, and it is
+somewhat similar to rats and guinea pigs, and so it is even less typical. Basically, the
+more similar an item is to remembered dogs, and the less similar it is to remembered
+nondogs, the more typical it will be. Borderline cases are items that are almost
+equally similar to remembered category members and noncategory members. So, a
+tomato is similar to some fruit in terms of its having seeds, being round with edible
+skin, and so forth, but is similar to some vegetables in terms of its taste and how it is
+normally prepared.
+Typical items would be categorized faster than atypical ones, because they are very
+similar to a large number of category members, and so it is very easy to ﬁnd evidence
+for their being members. When you see a German shepherd, you can very quickly
+think of many dogs you have seen that are similar to it; when you see a chihuahua,
+there are fewer dogs that are similar to it. Thus, the positive evidence builds up more
+quickly when an item is typical (Lamberts 1995; Nosofsky and Palmeri 1997). The
+case of category intransitivity is explained in a way similar to that of the prototype
+view. For example, Big Ben is similar to examples of clocks you have seen in many
+respects. Clocks are similar to furniture exemplars in different respects. But Big Ben
+is not very similar to most furniture exemplars (beds, dressers, couches, etc.), and so
+it does not reach the categorization criterion. Whenever the basis for similarity
+changes, the exemplar model can explain this kind of intransitivity.
+In short, the exemplar view can explain a number of the major results that led to
+the downfall of the classical view. For some people, this view is very counterintuitive.
+For example, many people don’t consciously experience recalling exemplars of dogs
+in deciding whether something is a dog. However, conscious experience of this sort
+is not in general a reliable guide to cognitive processing. Indeed, one typically does
+not have conscious experience of a deﬁnition or a list of features, either. Access to
+the concept representation is often very fast and automatic. Second, some people
+point out that they feel that they know things about dogs, in general, not just about individual exemplars. This is a concern that will come up later as well. However,
+note that what you know about dogs in general may be precisely what is most
+common in the remembered exemplars. So, when you think of such exemplars, these
+general characteristics are the ones that come to mind. Finally, when you first learn
+a category, exemplar information may be all you encode. For example, if you went
+to the zoo and saw a llama for the first time, all you know about llamas would be
+dependent on that one exemplar. There would be no difference between your mem-
+ory for the whole category and your memory for that one exemplar. If you saw an-
+other llama a few months later, you could now form a generalization about llamas
+as a whole (though the exemplar view is saying that you do not do this). But you
+would clearly also remember the two llama examples as separate items. When you
+saw the third llama, you might still remember parts of the first two llamas, and so
+on. The question is, then, when you have seen a few dozen llamas, are you forming
+a general description of llamas—as the prototype view says—or are you just getting
+a better idea of what llamas are like because you have more memories to draw on—
+as the exemplar view says? But at the very initial stages of learning, it seems that any
+theory would have to agree that you remember the individual exemplars, or else you
+would have no basis on which to form generalizations (see Ross, Perkins, and Ten-
+penny 1990, for a clever twist on this idea).
+A final point is that the exemplar model requires that you have specifically cate-
+gorized these memories. You can easily recognize a German shepherd as a dog be-
+cause it is similar to other things you have identified as dogs. If you had just seen a
+lot of other German shepherds without knowing what they were, they couldn’t help
+you classify this similar object. This requirement of explicit encoding will come up
+again later.
+Similarity calculation. Medin and Schaffer (1978) were the first to propose an
+elaborate exemplar model of concepts. In addition to the exemplar aspect itself, they
+also introduced a number of other ideas that were taken up by the field. One aspect
+was the nature of the similarity computation used to identify similar exemplars. In
+the past, most researchers had considered similarity to be an additive function of
+matching and mismatching features (Tversky 1977). Medin and Schaffer, however,
+proposed a multiplicative rule, which had a number of important effects on how
+their model operated.
+The first part of this rule (as for additive versions) requires us to identify which
+aspects of two items are shared and which are different. For example, consider
+Ronald Reagan and Bill Clinton. They share many aspects: Both are men, are
+Theories 51
+Americans, were born in the twentieth century, were Presidents of the United States,
+attended college, are married, and so on. They also differ in a number of aspects:
+Where they were born, their ages, their political philosophies, their presidential
+actions, whether they have been divorced, what kinds of clothes they wear, and so
+on. For each of these matching and mismatching features, we need to decide two
+things. First, how important is this dimension to determining similarity? So, how
+important is it for two people to have the same or different sex? How important is
+age or marital status? How important is political philosophy? We need to decide this
+so that trivial differences between the two men don’t swamp our decision. For exam-
+ple, perhaps neither man has been to Nogales, Arizona, but this should not count as a
+very important similarity. Perhaps Ronald Reagan has never played bridge, but Bill
+Clinton has. This does not seem to be an important difference. Second, for the mis-
+matching features, we need to decide just how mismatching they are. For example,
+the political philosophies of Clinton and Reagan are very different. Their ages are
+pretty different (Reagan was the oldest president, and Clinton one of the youngest),
+though both are adults, and so the difference in age is not as large as it could be.
+However, their typical clothes are not so different. Clinton differs from Reagan a
+great deal on political beliefs, then, moderately on age, and only a little on clothing.
+In order to calculate similarity, we need to quantify both of these factors: the
+importance of the dimension and the amount of similarity on a given dimension.
+Medin and Schaffer suggested that the amount of mismatch of each feature should
+be given a number between 0 and 1. If two items have matching features, they get a
+1; if they have mismatching features, they get a number that is lower, with 0 indi-
+cating the greatest possible difference on that dimension (this score is typically not
+given, for reasons that will become apparent). However, the importance of the di-
+mension would be represented by raising or lowering that number. For example,
+suppose that Reagan’s favorite color is yellow, and Clinton’s is blue. These are very
+different colors, but this dimension is not very important. Therefore, Medin and
+Schaffer (1978, p. 212) suggest that we could still give this item a difference score
+near to 1. By not paying attention to a difference, you are effectively acting as if the
+items have the same value on that dimension. So, Medin and Schaffer’s rule combines
+the importance of the dimension and the difference on that dimension in one score.
+How similar are Clinton and Reagan, then? If we were to use a similarity rule like
+the one used by the prototype model described above, we would take the mismatch
+score of each feature and add it up for all the features (hence, an additive rule).
+Things that are similar would have many matches and so would have higher scores.
+Medin and Schaffer, however, suggested that we should multiply together the scores
+52 Chapter 3
+for each feature. Because the mismatch scores range between 0 and 1, a few mis-
+matches will make overall similarity quite low. For example, suppose that Reagan
+and Clinton were identical on 25 dimensions but differed on 3 dimensions. And sup-
+pose that their differences on those dimensions were moderate, so that they received
+mismatch scores of .5 each. The overall similarity of Clinton and Reagan would
+now be only .125 on a 0–1 scale (25 scores of 1  :5  :5  :5 for the three mis-
+matching dimensions). This does not seem to be a very high number for two items
+that are identical on 25 out of 28 dimensions. If you work through a few examples,
+you will see that any mismatching feature has a large effect on diminishing similarity
+when a multiplicative rule is used. That is, mismatching features actively lower simi-
+larity on a multiplicative rule, but they simply do not improve it on an additive
+view. (You can now see why a similarity score of 0 is seldom given. If a dimension
+were given a 0, then the entire similarity of the two items is 0, since 0 multiplied by
+any number is always 0. That single mismatch would result in the two items being
+as different as possible.)
+So far, we have been discussing how to decide the similarity of an item to a single
+other item. But what if you are comparing an item to a set of exemplars in a cate-
+gory? If you see an animal run across the road, and you want to decide whether to
+apply the brakes to avoid hitting it with your car, you might first try to identify
+what kind of animal it is (no point in risking an accident for a squirrel, you might
+feel) by comparing it to exemplars of other animals you have seen. So, you would
+compare it to cat exemplars, dog exemplars, raccoon exemplars, skunk exemplars,
+possum exemplars, and so on. Medin and Schaffer (1978) suggested that you add up
+the similarity scores for each exemplar in a category. So, if you have 150 exemplars
+of dogs in memory, you add up the similarities of the observed animal to these 150
+items, and this constitutes the evidence for the animal being a dog. If you have 25
+possums in memory, you add up the 25 similarity scores to get the evidence for
+possums, and so on. Loosely speaking, the category with the most similarity to the
+item will ‘‘win’’ this contest. If the item is similar to a number of categories, then
+you will choose each category with a probability that is proportional to the amount
+of similarity it has relative to the others. So, you might decide that such an animal is
+a raccoon on 60% of such cases but a skunk on 40% of the cases. For mathematical
+details, see Medin and Schaffer (1978) or Nosofsky (1984).
+Because of the multiplicative nature of the similarity score, the Medin and Schaffer
+rule has an important property: It is best to be very similar to a few items, and it is
+unhelpful to be somewhat similar to many items. Imagine for example, that this
+animal was extremely similar to two other dogs you have seen, but not at all similar
+Theories 53
+to any other dogs. The animal will have high similarity to these two items (near to
+1.0), which would make the dog category have an overall similarity of almost 2.0.
+Now imagine that the animal shared three features with every possum you know
+(25 of them) and was different on three features with every possum. If the three
+mismatching features each have mismatch values of .25, then the animal would have
+a similarity of 1  1  1  :25  :25  :25 to each possum, which is only .015625.
+When this is added up across all 25 possums, the total similarity for the category
+is only about .39—considerably less than the 2.0 for the dogs. Perhaps counter-
+intuitively, the two highly similar dogs beat out the 25 somewhat similar possums.
+This is because the mismatching features result in very low similarities, which
+cannot easily be made up by having many such examples. In short, the Medin and
+Schaffer model says that it is better to have high overlap with a few items than to
+have moderate overlap with many items. This property turns out to be a critical one,
+as the next chapter will reveal. 2
+Prototype advantages. Some empirical results initially discouraged researchers from
+seriously considering exemplar approaches. One such result was the prototype ad-
+vantage that was found by Posner and Keele (1968, 1970) and others. When sub-
+jects learned categories by viewing distortions of a prototype (see above), they were
+often better at categorizing the prototype than another new item. (Though they were
+not initially better at identifying the prototype than the old items, as is commonly
+repeated.) This suggested to many researchers that subjects had actively abstracted
+the prototype from seeing the distortions. That is, they had learned what the items
+had in common and stored this as a representation of the whole category. (Because
+Posner and Keele 1968, actually started with a prototype to make the category
+members, it is natural to think of subjects who are exposed to the category members
+doing the same process in reverse.) But from the above discussion, you can see that
+an exemplar model could easily explain this result. Perhaps the prototype is more
+similar to the learned exemplars than a new, nonprototypical item is. Since the pro-
+totype was the basis for making all the other items, it must be similar to all of them
+to some degree, but this is not true for an arbitrary new item.
+Another result was more of a problem for the exemplar view. Posner and Keele
+(1970) examined categorization for items immediately after category learning and
+after a one-week delay. When tested immediately, subjects were most accurate for
+the specific items that they had been trained on (old items), next most accurate for
+the prototype, and less accurate for new items they had not seen in training. But
+when tested a week later, memory for the old items declined precipitously, whereas
+the prototype suffered only a slight decrement. Posner and Keele argued that if the
+54 Chapter 3
+prototype advantage were due to memory for old exemplars, it should have shown
+the same kind of decrement after a delay. They concluded that subjects formed a
+prototype during learning, and this prototype is somehow more insulated against
+memory loss than are memories for individual exemplars (perhaps because the pro-
+totype is based on many presented items, not just one). A similar effect was reported
+by Strange, Keeney, Kessel, and Jenkins (1970), and Bomba and Siqueland (1983)
+found the same effect in infants. There are other variables that have similar effects.
+For example, as more and more exemplars are learned for a category, the memory
+for old items decreases, but the prototype advantage generally increases (e.g., Knapp
+and Anderson 1984). If prototype performance is caused by memory for specific
+exemplars, how could performance on the prototype and old exemplars go in dif-
+ferent directions?
+An explanation for this kind of result was given by Medin and Schaffer (1978).
+First, consider why it is that in many cases with immediate testing, old exemplars
+are remembered best of all. This must be because when the item is presented at test,
+it results in the retrieval of itself. That is, when item 9 is presented at test, you re-
+member having seen it before, and this makes you particularly fast and accurate at
+categorizing it. If you forgot this particular item, then it would no longer have this
+good performance, because it must be less similar to any other item than it is to
+itself. Over time, however, this loss of memory is just what happens. So, perhaps
+item 9 was a red circle over a green square. Even though you learned this item dur-
+ing the first part of an experiment, after a week’s delay, this memory would be
+degraded. Perhaps you would only remember that it was a red circle over something
+green. Now when you get item 9 at test, it is not so very similar to its own memory,
+because that memory has changed. Similarly, if you learned 25 items as being in
+category A, your memory for each individual item will not be as good as if you only
+learned 4 items in this category. As you learn more and more, there is interference
+among the items which causes the exemplar memory for any one of them to be less
+accurate. This explains the decrements obtained in performance on old items.
+What happens when you present the prototype (which was never seen during
+learning) at test? If it is an immediate test, the prototype is fairly similar to many
+items in the category, and so it is easy to categorize. However, it is not identical to
+any individual item, and so it is still not as fast as the old exemplars are. So, the
+advantage of old items over prototypes on immediate test is, according to the ex-
+emplar model, caused by the fact that the former has a perfect match in memory but
+the latter does not. (Note that this explanation relies on the exemplar model’s
+weighting close similarity to one item more than moderate similarity to many items.)
+At delayed testing, the prototype is still very similar to a number of items. In fact, fat. So, celery is an excellent example of things to eat on a diet, because it has vir-
+tually no fat and is extremely low in calories. Bread is a fairly good example, though
+it has somewhat more calories and fat. Fruit juice might be a moderate example,
+since it is low in fat but not particularly low in calories. And ice cream would be a
+bad example. Barsalou found that the most typical examples of goal-derived cate-
+gories were the ones that were closest to the ideal. Family resemblance did not ex-
+plain a signiﬁcant portion of the variance. This is an extreme case in which an item’s
+place in a larger knowledge structure is perhaps the most important aspect of cate-
+gory membership, and the ‘‘average’’ properties of the category members count for
+little. For example, the best food to eat on a diet would be a ﬁlling food with no
+calories, fat or other bad ingredients. However, these properties are by no means the
+most frequent ones of foods that people actually eat while on diets. So, this ideal
+seems to be imposed by our understanding of what the category is supposed to be,
+which is in turn driven by our understanding of how it ﬁts into the rest of what we
+know about foods and their effects on our bodies. The ideal cannot be derived from
+just observing examples and noting the features that occur most. Although the goal-
+derived categories are an extreme example of this (because the members have very
+little in common besides the ideal), Barsalou found evidence for the importance of
+ideals in common categories as well (see previous chapter). Also, recall that Lynch
+et al. (2000) found a similar pattern for the category of trees; many other related
+examples will be described in chapter 6.
+One of the themes of the knowledge approach, then, is that people do not rely on
+simple observation or feature learning in order to learn new concepts. They pay at-
+tention to the features that their prior knowledge says are the important ones. They
+may make inferences and add information that is not actually observed in the item
+itself. Their knowledge is used in an active way to shape what is learned and how
+that information is used after learning. This aspect of the theory will be expounded
+in greater detail in chapter 6.
+One clear limitation of the knowledge approach should already be apparent:
+Much of a concept cannot be based on previous knowledge. For example, you
+might have previous knowledge that helps you to understand why an airplane has
+wings, how this relates to its ability to ﬂy, what the jets or propellers do, and so on.
+However, it is probably only by actual observation of planes that you would learn
+where propellers are normally located, what shape the windows are, that the seats
+usually provide no lower back support, and so on, because these things are not
+predictable from your knowledge before learning the category. Or, in other cases,
+it is only after observing some category members that you know what knowledge
+Theories 63
+is relevant and can only then use it to understand the category (see Murphy 2000,
+for a discussion). So, the knowledge approach does not attempt to explain all of
+concept acquisition by reference to general knowledge; it must also assume a
+learning mechanism that is based on experience. However, this approach has not
+incorporated any empirical learning mechanism. This may be seen as a shortcoming
+of the knowledge approach, or one can view the empirical learning process as sim-
+ply being a different problem. That is, proponents of the knowledge approach are
+pointing out the ways that prior knowledge inﬂuences the learning of a new con-
+cept, and other aspects of learning are not part of the phenomena they are trying to
+explain. However, it should be clear that a complete account requires an integrated
+explanation of all aspects of concept learning. Furthermore, we should not neces-
+sarily assume that the empirical and knowledge-based learning components will be
+easily separable modules. It is possible that the two interact in a complexway so
+that one must study them together to understand either one (Wisniewski and Medin
+1994). However, that discussion must await a later chapter.
+Conclusions
+It is too early in this book to evaluate these different approaches. However, it is
+worth emphasizing that none of them suffers from the problems of the classical
+approach. All of them actively predict that categories will have gradations of typi-
+cality and that there will be borderline cases. Unlike the later revisions of the classical
+model (discussed in the previous chapter; e.g., Armstrong, Gleitman, and Gleitman
+1983), these theories claim category fuzziness as an integral part of conceptual pro-
+cessing, rather than an unhappy inﬂuence of something that is not the ‘‘true’’ con-
+cept. This is because similarity of items is inherently continuous. Category members
+will be more or less similar to one another and to their prototype, and this gradation
+of similarity leads to typicality differences, RT differences in judgments, and learning
+differences. Similarly, whether an item is consistent with one’s knowledge in a com-
+plexdomain is not an all-or-none matter but often a question of relative consistency.
+Thus, unlike for the classical view, typicality phenomena are not a nuisance to be
+explained away, but are rather inherent to the working of these approaches.
+Another point to be made about each of these approaches is that they are not as
+entirely self-sufﬁcient as one might like. For example, the prototype view does not
+deny that people learn and remember exemplars. Clearly, if Wilbur, the bulldog,
+lives next door to me, and I see him many times per week, I will be able to identify
+64 Chapter 3
+him and his peculiar attributes. And, as already mentioned, the ﬁrst time one
+encounters a category member, the only prototype one can form would be based on
+that single exemplar. Thus, exemplar knowledge and prototype knowledge must
+exist side by side to at least some degree, according to prototype theory. The general
+claim of that theory, however, is that for mature categories, people rely on summary
+representations of the entire category rather than speciﬁc exemplars in making judg-
+ments about the concept.
+Similarly, I pointed out that the knowledge approach focuses on one important (it
+claims) aspect of learning and representing concepts. However, it must admit that
+there is an empirical learning component to concepts, if only to explain the results
+of psychological experiments that use artiﬁcial stimuli that are removed from any
+knowledge. It is likely, then, that this view will have to be combined with one of the
+other views in order to form a complete theory of concepts. Finally, exemplar theo-
+rists might also agree that there must be a level of general knowledge that is separate
+from exemplar knowledge and that affects concepts and their use (though in fact
+most have not addressed this issue). For example, one could argue that facts such as
+whales being mammals are school-learned general facts, rather than something one
+learns from seeing many whale exemplars. But of course one does see whale exem-
+plars occasionally too. So, in answering questions about whales, some information
+might come from the exemplars and some from general knowledge.
+This mixture of different kinds of conceptual knowledge makes it difﬁcult to
+evaluate the different theories. The result in the ﬁeld has been to focus on certain
+experimental paradigms in which such mixtures would be expected to be less likely.
+However, for real-life concepts, we would do best not to assume that a single form
+of conceptual representation will account for everything.
+APPENDIX: THE GENERALIZED CONTEXT MODEL
+The body of this chapter has discussed the Context Model, proposed by Medin and
+Schaffer (1978), as the most inﬂuential version of the exemplar approach. However,
+in more recent times, Robert Nosofsky’s enhancement of this, the Generalized
+Context Model or GCM, has been more widely cited and tested. This model has a
+number of different forms, as it has developed over years of investigation. The pur-
+pose of this appendixis to describe it in more detail and to give an idea of how it
+works. For more formal descriptions, see Nosofsky (1992) or Nosofsky and Palmeri
+(1997).
+The Generalized Context Model 65
+Overview
+Recall that exemplar models argue that you categorize objects by comparing them
+to remembered exemplars whose categories you have already encoded. The more
+similar the object is to exemplars in a given category, the more likely it is to be cate-
+gorized into that category. The categorization process can be thought of as having
+three parts. First, one must calculate the distance between the exemplar of interest
+and all the other exemplars. In the Medin and Schaffer (1978) model, this was done
+by the multiplicative rule described in the main chapter. In the GCM, this is done
+by a more general distance metric. Second, this distance metric is scaled in a way
+that has the effect of weighting close similarity much more than moderate similarity.
+Third, once one has all these similarities of the object to known exemplars, one must
+decide which category the object is in. This involves a fairly simple comparison of
+the exemplar similarities of the different categories involved.
+The formulas involved in the GCM can be difﬁcult if you aren’t familiar with
+them. I personally am not a math modeling expert, and it has taken me some time to
+understand them (to the degree that I do). This chapter will help you begin to under-
+stand the model. However, to reach a fuller appreciation, I would recommend that
+when you read individual papers that describe this or other models, you resist the
+very natural temptation to skip over all the formulas. If you read these formulas and
+the authors’ explanations of them in four or ﬁve different papers, you will eventually
+ﬁnd (perhaps to your amazement) that you understand what they are talking about.
+So, don’t give up just because it all seems so complicated here. I describe the three
+parts of the GCM in the following sections.
+Distance Calculations
+The basic idea of exemplar models is that an object brings to mind other similar
+exemplars. To measure this, the model calculates the psychological distance between
+the object to be categorized (usually called i below) and all the known exemplars, in
+order to identify which exemplars are going to be brought to mind.
+In order to compare various stimuli, the GCM assumes that they have been broken
+into dimensions of some kind. This could be because they are items that have been
+constructed according to certain dimensions (color, size, position on a card, etc.) that
+subjects would be sensitive to. In other cases, one may have psychological dimen-
+sions of the stimuli that are derived from a scaling program, such as multidimen-
+sional scaling. For example, using multidimensional scaling, Rips, Shoben, and
+66 Appendix
+Smith (1973) discovered that animals were thought to be similar based on their size
+and predacity. The scaling program provided the values of each item on each di-
+mension, and these would be used to calculate similarity. The distance between any
+two objects is a function of how far apart they are on each dimension.
+Equation (1) shows how the GCM calculates the distance between two items, i
+and j, when the dimensions of the objects are known. (Think of i as being the object
+to be categorized, and j one of the remembered exemplars.) It is essentially the same
+as the Euclidean distance between two points in space, from high-school geometry.
+d ij ¼
+ﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃﬃX
+m
+w mjx im  x jmj2
+r
+(1)
+For each dimension m of the items (either a physical dimension or one from a multi-
+dimensional scaling solution), you calculate the difference between the items (x i  xj)
+and square it. Then this number is multiplied by the weight for that dimension
+(w m). So, important dimensions will be counted more heavily than less important
+dimensions. (In the original context model, this was reﬂected in the mismatch values.
+The GCM more clearly separates psychological similarity from dimensional impor-
+tance in categorization.) These numbers are added up for all the m dimensions, and
+the square root is taken. The main difference between this and simple Euclidean
+distance is the weighting of the dimensions. In calculating real distances, no spatial
+dimension is weighted more than any other. In the GCM, the w values for each di-
+mension are a free parameter—that is, they are calculated from the data themselves
+rather than being speciﬁed by the model. Kruschke’s (1992) inﬂuential ALCOVE
+model (based on the GCM to a large degree) provides a connectionist mechanism
+that actually learns which dimensions are important.
+I should note that this particular form of the distance metric can vary in different
+studies. (Those who are just trying to get the basic idea of this model should deﬁ-
+nitely skip this paragraph.) Note that we squared the differences on each dimension
+and then took the square root of the sum. That is, we raised the distance to the
+power 2 and then raised the sum to the power 1/2 (that’s a square root). Distance
+metrics in general raise the separation by some power and then the sum to one over
+that power. The number 2 is only one such number that could be used. We could
+have used the number 1—that is, raise the distances to the power of 1 (i.e., do
+nothing) and taken the sum to the power of 1/1 (i.e., do nothing again). This would
+give us the ‘‘city block’’ metric, in which the distance between two points is the sum
+of their distances on each dimension. This is called the city block metric, because
+one does not form hypotenuses for distances—one cannot cut through a city block.
+The Generalized Context Model 67
+To get from 40th Street and Second Avenue to 43rd Street and Sixth Avenue, one
+must walk three blocks north and four blocks west, resulting in seven total blocks
+(let’s assume the blocks are squares). By Euclidean distance, the shortest distance
+connecting these points (cutting across) would be only ﬁve blocks. For some stimu-
+lus dimensions, the city block metric seems most appropriate, whereas for others,
+Euclidean distance works best. 4 And for still others, some number in between is
+most appropriate. Thus, this difference between dimensions can be made into a
+variable (usually called Minkowski’s r), which is altered depending on the nature of
+the stimuli. So, you may see something like equation (1) with rs and 1/rs in it.
+Turning Distances into Similarity
+Unfortunately, we are still not done with deciding the psychological distance be-
+tween two items. Research has shown that behavioral similarity between items is
+an exponentially decreasing function of their psychological distance (Shepard 1987).
+For example, if rats learn to produce a response to a certain colored light, other
+lights will elicit the same response as a function of the exponential distance between
+the test light and the original. The exponential function has the effect that things
+that are extremely close to the object have a large effect, which falls off very quickly
+as things become moderately and less similar. Recall that Medin and Schaffer (1978)
+used a multiplicative rule so that objects that are moderately different would have
+little effect on categorization decisions. The exponential function does the same
+thing.
+As shown in equation (2), the distance scores derived from equation (1) are input
+to the exponential function, producing a similarity score, s.
+s ij ¼ exp(c  dij) (2)
+Note that exp(x) means to raise e to the xth power, ex, and that exp(x) ¼ 1=ex.
+Therefore, the bigger x gets, the smaller exp(x) gets. In equation (2), this means
+that the greater the distance between i and j, the smaller the similarity, since the
+distance is being negated. When distance is 0 (i.e., two stimuli are identical), s would
+equal 1.0; otherwise, s falls between 0 and 1. The variable c basically determines the
+spread of similarity by modulating the effect of distance. Sometimes people seem to
+pay attention to only very close similarity, and other times people take into account
+even fairly weak similarity. A high value of c corresponds to the former situation,
+and a low value corresponds to the latter. If c is very high, then the exemplar model
+is essentially requiring that an item be identical to a known exemplar, because any
+68 Appendix
+distance between i and j would be multiplied by a high number, resulting in a low
+similarity. If c is very low, then the similarity to all known items is used. Usually, c is
+a free parameter estimated from the data.
+Making the Decision
+In order to make a categorization decision, one has to decide which category exem-
+plars are most like the object being categorized, i. If the object is similar to many
+dogs, a few cats, and one burro, then it is probably a dog. The GCM does this by
+looking at the object’s similarity to all objects in every category, and then comparing
+the similarity of one category to that of all the others. In the previous sections, we
+calculated the similarity of the object to every other exemplar. If you were to add up
+all these similarity scores, you would know the total pool of similarity this object
+has to everything. The GCM uses something called the Luce Choice Axiom to turn
+this similarity into a response. The Luce Choice Axiom basically asks how much of
+the total pool of similarity comes from dogs, how much from cats, and how much
+from burros, and then turns those answers into response probabilities. Equation (3)
+calculates the probability that the object, i, will be placed into each category, J.
+P( J j i) ¼ X
+j A J
+s ij
+, X
+K
+X
+k A K
+s ik
+" #
+(3)
+The numerator is the similarity of i to all the members j of category J (as calculated
+in equation (2)). The more similar the item is to known exemplars in J, the higher
+this probability. The denominator is the similarity of i to members of all known
+categories (K), the total pool of similarity mentioned above. In English, then, equa-
+tion (3) is the ratio of the similarity of i to all the things in J to the total similarity
+pool.5 Continuing the previous example, if i is mostly similar to dogs, then perhaps
+P(dog j i) ¼ :75, because dogs have 75% of the total similarity for this object. And
+perhaps P(cat j i) ¼ :20, because the object is similar to a few cats. And because you
+once saw a very strange burro, P(burro j i) ¼ :05. What the Luce Choice Axiom says
+is that you should call this object a dog 75% of the time, a cat 25% of the time, and
+a burro 5% of the time.
+Note that this formula is probabilistic. It doesn’t say that people will always cate-
+gorize i into the category with the highest score. Instead, it says that their catego-
+rization will match the probability score. This behavior is not entirely rational. If it
+is 75 percent likely that i is a dog, then I should obviously categorize it as a dog
+The Generalized Context Model 69
+whenever I see it, because it is much more likely to be a dog than a cat or a burro,
+based on my own experience. Any other response is much less likely. However,
+people tend to do probability matching in these situations, in which they give less
+likely responses a proportional number of times, rather than always choosing the
+most likely answer. This behavior is found in many choice tasks in both humans and
+other animals.
+Later versions of the GCM have sometimes incorporated another parameter pro-
+posed by Ashby and Maddox(1993), called gamma, which relates to the probability
+matching phenomenon. To do this, the numerator of (3) is raised to the gamma
+power, and the inside term of the denominator (P
+k A K s ik) is also raised to that
+power. (The exact value of gamma is usually a free parameter.) That is, once one
+has calculated the total similarity of i to a category, that similarity is raised to the
+power gamma. Gamma has the effect of varying the amount of determinacy in sub-
+jects’ responses. When gamma is 1, the categorization rule has the characteristics
+mentioned earlier: Subjects respond proportionally to the probability. When gamma
+is higher, they respond more deterministically: They tend to choose the most likely
+category more. This is because the similarity values are less than 1, so raising them
+to a high power tends to decrease the small values almost to 0, thereby beneﬁting
+the larger values.
+See how simple it all is? No? Well, you are not alone. Although all this may be
+confusing on ﬁrst reading, if one simply focuses on one variable or equation at a
+time, one can usually understand how it works. Attempting to keep the entire GCM
+in one’s head at a time is pretty much impossible, so do not be too discouraged if
+you don’t feel that you get it. Especially at the beginning, you can probably only
+understand it piece by piece.
+Although the GCM has been extremely successful in modeling results of catego-
+rization experiments, one criticism of it has been that it is too powerful. The com-
+plexity of the model and the number of parameters it has makes it very good at
+ﬁtting data, even if the data are exactly what would be predicted by a prototype
+model (Smith and Minda 2000). Perhaps because it is a rather late addition to the
+model, gamma has struck some in the ﬁeld as being a dubious construct. Some crit-
+ics feel that it is simply a free parameter that lets the GCM account for data that
+could not previously be accounted for, without any clear psychological evidence
+that determinacy of responding is a variable that changes systematically. However,
+this level of argument is far beyond that of the present discussion. See the inter-
+change between Smith and Minda (2000) and Nosofsky (2000) for discussion and
+references.
+Whatever the criticisms of it, the GCM has been an extremely inﬂuential catego-
+rization model. What should now be obvious is that there is a lot more to the GCM
+than simply saying that people remember exemplars. There are many assumptions
+about how similarity is calculated, how decisions are made, and what variables af-
+fect performance that go far beyond the simple claim of exemplar representations of
+concepts. Thus, the model’s successes and failures cannot be taken as direct evidence
+for and against exemplars alone.

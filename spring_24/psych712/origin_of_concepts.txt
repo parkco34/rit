@@ -1,0 +1,751 @@
+I assume we can all agree that language is one part of the
+answer. Ristau qualiﬁes this assumption with the obser-
+vation that other animals also have calls with referential
+content. Therefore, this aspect of language cannot dis-
+tinguish us from other animals. But clearly no nonhuman
+animal has a system of external symbols with the proper-
+ties of human language. TOOC details the role that
+language plays in Quinian bootstrapping, which in turn
+plays a role in the expansion of our representational
+repertoire.
+R3.4. Number representations
+Commentators Landy, Allen, & Anderson (Landy
+et al.) argue that number representations are neither
+modular nor domain speciﬁc, because they proﬂigately
+draw on representations of space. These commentators
+review many fascinating phenomena that show that
+numerical representations share computational machinery
+with spatial ones. The question then arises, for each,
+whether it reﬂects mappings between the domains that
+occur in evolutionary or ontogenetic time.
+I agree that computational machinery is recycled over
+evolutionary time, and that systems that evolved under
+selection pressures for spatial representations were later
+drawn upon for other purposes, including numerical rep-
+resentations. The worked-out example in TOOC is that of
+AM representations, which are used in representing many
+different dimensions of experience (brightness, loudness,
+duration, length, area) in addition to representing cardinal
+values of sets; there is even evidence of a common neural
+substrate for several of these representational systems
+(Walsh 2003). But these facts do not undermine the
+claim of innate, domain-speciﬁc number representations,
+as long as the infant does not confuse mental symbols
+for number with symbols for other dimensions of experi-
+ence (which infants do not), and as long as the numerical
+symbols have a further innate numerical conceptual role,
+as is the case. The domain speciﬁcity in question here
+concerns content, not the nature of (or even the neural
+substrate of) the computational machinery.
+Landy et al. endorse TOOC’s claim that conceptual
+discontinuity in the course of ontogenesis also involves
+recycling old representations and computational capacities
+in new domains. Quinian bootstrapping is a speciﬁc propo-
+sal for one way that this is actually accomplished. Such
+ontogenetic recycling also does not undermine the
+domain-speciﬁcity of innate systems of core number
+cognition.
+R4. On the possibility and extent of conceptual
+discontinuity
+The commentaries express two incompatible sentiments
+with respect to conceptual discontinuity. Some deny it
+(Rips & Hespos) and some say it is much more
+common and comes in many more varieties than is
+suggested in TOOC (Gopnik, Margolis & Laurence,
+Weiskopf). I am persuaded by the commentaries that
+express the second sentiment.
+Theories of conceptual development face two explana-
+tory challenges: specifying how cognitive development is
+possible, and specifying why, in some cases, it is so hard.
+The second half of TOOC concerns some of the hard
+cases, where years of input is mis-analyzed, and the
+target conceptual system is sometimes never grasped.
+There are many reasons conceptual development might
+be slow (including lack of access to relevant input), and
+one of them is that mastering the target system of rep-
+resentation requires building a representational system
+that is discontinuous with its input. In each case study
+TOOC characterizes the two successive conceptual
+systems, CS1 and CS2, specifying the senses in which
+CS2 is discontinuous with CS1 – having more expressive
+power, being incommensurable, or both.
+Clearly, if we learn or construct new representational
+resources, we must draw on those we already have.
+Rips & Hespos characterize discontinuity as involving
+the construction of “entirely new systems” of concepts.
+This is true in some sense. Discontinuities involve cre-
+ation of new representational primitives and new
+systems of concepts articulated in terms of those primi-
+tives. For example, the concepts, weight, density,
+volume, and matter are interdeﬁned and acquired en
+suite, as are the concepts fraction and division. But the
+bootstrapping processes that explain how new represen-
+tational resources are constructed do draw on already
+existing representational resources. In that sense they
+are not “entirely new.” Nonetheless, in cases of disconti-
+nuity, CS2 cannot be translated into the language of the
+CS1, and therefore cannot be learned by testing hypoth-
+eses stated in that language.
+TOOC explicitly discusses the challenge Rips &
+Hespos offer to the very possibility of incommensurabilty.
+As Rips & Hespos put it, if bootstrapping is possible, then
+it must be possible to characterize a function from CS1 to
+CS2, and hence to translate between CS1 and CS2. The
+key issues here are what that function is, and whether it
+counts as a “translation” (Kuhn 1982). To translate is to
+express a proposition stated in the language of CS2 in
+the language one already has (CS1), as in translating “Je
+suis heureux” into “I am happy.” In cases of discontinuity
+in which Quinian bootstrapping is required, this is imposs-
+ible. Bootstrapping is not translation; what is involved is
+language construction, not translation. That is, drawing
+on resources from within CS1 and elsewhere, one con-
+structs an incommensurable CS2 that is not translatable
+into CS1.
+Margolis & Laurence and Weiskopf point out that in
+addition to Quinian bootstrapping, there are also atomistic
+processes that create new representational primitives,
+Weiskopf (2008) makes a convincing case that these ato-
+mistic processes also result in increases of expressive
+power. I agree, and I also agree that what Weiskopf calls
+“coining” is always involved in the creation of new rep-
+resentational primitives. Discontinuities come in many
+different ﬂavors, however, and I stand by my thesis that
+those that require bootstrapping are an important class.
+According to the analysis of Laurence and Margolis
+(2002), adding a new natural kind concept to one’s reper-
+toire depends upon the prior existence of a natural kind
+schema with the content “same natural kind as x” and
+ﬁlling in x with a kind syndrome (a prototype, a theory)
+for the kind x. This is clearly a different process than learn-
+ing that a quark is a new kind of subatomic particle, if one
+does not currently have the capacity to entertain thoughts
+about subatomic particles. It is this latter type of
+Response/Carey: Pre´ cis of The Origin of Concepts
+BEHAVIORAL AND BRAIN SCIENCES (2011) 34:3 157
+discontinuity, that which requires Quinian bootstrapping,
+that is my focus in TOOC.
+R5. On bootstrapping
+R5.1. Bootstrapping in general
+Commentators Haman & Hernik emphasize that there is
+genuine conceptual development that does not require
+creation of new representational primitives, and that
+there are bootstrapping processes short of Quinian boot-
+strapping. I agree, and TOOC discusses syntactic and
+semantic bootstrapping processes in language acquisition
+as examples of bootstrapping processes that do not result
+in the creation of new representational primitives.
+Abstractly, all bootstrapping involves using mappings
+between different representations in the service of extend-
+ing them in some speciﬁable way. Haman & Hernik’s pro-
+posal for the creation of new object kind representations,
+drawing on core cognition of objects, causal/functional
+analysis, and the capacity to create long-term memory
+symbols would be a bootstrapping process by this charac-
+terization (and is essentially what I propose as well in Ch. 7
+of TOOC). My account of the creation of long-term
+memory models of small sets of individuals that support
+the meanings of “one,” “two,” “three,” and “four” in the
+subset-knower stage is another bootstrapping process.
+Working out exactly how such processes work is an impor-
+tant project in the ﬁeld of cognitive development. But one
+major thrust of TOOC is that there are episodes of concep-
+tual development that require more.
+R5.2. Must the placeholder structure be articulated in
+public symbols?
+Placeholder structures consisting of semantically impover-
+ished symbols are the key to how Quinian bootstrapping
+differs from the bootstrapping processes involved in the
+episodes of learning described in section 5.1. The place-
+holder symbols gain whatever initial meaning they have
+from their relations to each other. Several commentators
+(Allen & Bickhard, Heintz, Weiskopf) wonder why it
+is important that the placeholder structure be encoded
+in the external public symbols of language, mathematical
+symbols, diagrams, and the like.
+Allen & Bickhard make use of the possibility that pla-
+ceholders may be mental symbols to counter my argument
+for innate representational primitives. They suggest that
+infants might create a whole suite of interrelated new
+mental symbols, the content of each being exhausted by
+its role in the mental structure. By hypothesis, none is con-
+structed from already existing concepts. I agree that this is
+a logical possibility, but what would ever lead an infant to
+do this?
+Encountering a new external symbol from others’ use of
+it (e.g., ﬁrst hearing the word “mass” in the context of the
+sentence “force equals mass times acceleration,” or “two”
+in the context of the count routine) is often the impetus
+for an individual’s coining a new mental symbol. As
+Weiskopf points out, this is not the only impetus to
+create a new symbol in the language of thought. I agree
+with these commentators that from the point of view of
+how Quinian bootstrapping generates new represen-
+tational resources, it is not necessary that the symbols be
+public. It is certainly logically possible that a whole place-
+holder structure of interrelated empty symbols could be
+generated in the language of thought and used to model
+other domains of representations that already have wide
+content. As I said, the question is what might lead this to
+happen. Before I can even begin to evaluate this possi-
+bility, I would need to see a plausible worked example.
+In all of the case studies of Quinian bootstrapping in
+TOOC, the placeholder structures were external
+symbols, probably for several reasons. As emphasized by
+Heintz, conceptual change is a social process, fueled by
+communication. But appeals to communication, even
+with its assumptions of relevance, will not do all the
+work we need here, for what is at issue is how listeners
+construct the representational resources to understand
+what is being communicated. The role of placeholder
+structures in conceptual change may also depend upon
+their being public. Some public symbols may be easier
+to think with. Maxwell explained that he used diagram-
+matic models that he knew captured the mathematics of
+Newtonian forces in a ﬂuid medium (his placeholder
+structure) in his modeling of the empirical phenomena
+involving electricity and magnetism in exactly this way:
+that they are easier to think with (see Nersessian 1992).
+Finally, the modeling processes involved in conceptual
+change unfold over years, and the placeholder structures
+need to be stable; external symbols may facilitate that.
+Although conceptual change is a social process, its ﬁrst
+step, contrary to Weiskopf, is not always learning from
+others a set of new symbols and their interrelations. This
+is usually so in development, but obviously never so in
+the bootstrapping episodes in cultural history (see Ch.
+11 of TOOC). In the case of Maxwell, an abductive
+guess led him to explore the hypothesis that the forces at
+work in electromagnetic phenomena were similar to the
+Newtonian forces in a ﬂuid medium. That is, nobody
+was using the language of electromagnetic theory; its
+theoretical terms and equations were the output of the
+bootstrapping episode. In the case of historical bootstrap-
+ping, the placeholders derive from conceptual structures
+created in other contexts and seen to be relevant to the
+domain at hand through an abductive leap.
+R5.3. The prehistory of number representations
+Commentators Overmann, Wynn, & Coolidge (Over-
+mann et al.) consider the construction of explicit rep-
+resentations of natural number in cultural history. They
+assume, and I agree, that external tally systems (lines on
+clay tablets, notches on sticks), which are widespread
+both in the archeological and in the ethnographic
+records, were the ﬁrst step in the process. Such external
+symbol systems constitute an example of “extended cogni-
+tion,” in which external objects take on symbolic functions.
+Note also that tally systems represent number as does
+parallel individuation, with the external tallies making up
+for the limits on working memory. That is, each tally
+stands in one-to-one correspondence with an individual
+in the set, such that the set of tallies as a whole represents
+the cardinality of the set. Overmann et al. speculate that
+strung beads, which go back in the archeological record
+for 100,000 years, may have been an artifact co-opted for
+this use.
+Response/Carey: Pre´ cis of The Origin of Concepts
+158 BEHAVIORAL AND BRAIN SCIENCES (2011) 34:3
+This may be, but is there any evidence that beads were
+ever used as external tallies? If so, understanding the
+invention of tally systems would involve understanding
+how people came to the insight that beads could serve
+this symbolic function, rather than decorative uses, or as
+markers of wealth, or myriad others. That is, the avail-
+ability of an artifact that could serve as the medium of a
+tally system doesn’t explain how it came to be one. Now
+that we are in the realm of speculation, I believe, contra
+Overmann et al., that body counting systems could well
+also play an extended cognition role in the cultural con-
+struction of integer representations. Bodies, before
+beads, may have been the basis of the ﬁrst tally systems.
+Beads may go back 100,000 years, but ﬁngers go back
+millions, and ﬁnger tally systems are also widely attested
+in the ethnographic literature. But even so, the question
+then becomes how the insight arose that ﬁngers could be
+used in a tally system based on one-to-one
+correspondence.
+R5.4. Acquiring representations of natural number
+Commentators Gelman, Gentner & Simms, and Spelke
+engaged the fundamental issues concerning conceptual
+discontinuities in and bootstrapping of natural number
+representations. These debates might be hard to follow
+for those not steeped in the dialog, so here I will try to
+bring out the main issues.
+Gelman’s and my disagreements coexist within broad
+agreement on the big theoretical picture, and all of my
+work on number starts with hers. There are two major dis-
+agreements: (1) She presupposes that there is only one
+innate nonverbal representational system that plays a
+role in the extended developmental process we both
+endorse (“the inherited. . .”), whereas I believe that there
+are other innate resources and that they are more impor-
+tant in the initial construction of integer representations;
+and (2) I argue that innate number representations are dis-
+continuous with representations of natural number,
+including verbal numerals deployed in a counting algor-
+ithm, whereas she argues that children understand how
+counting represents number upon ﬁrst learning how to
+count.
+Gelman and I agree that AM number representations
+are continuous throughout development, support arith-
+metic computations, and compute representations of
+small sets as well as large ones, both in infancy and adult-
+hood (TOOC, Ch. 4). But, contra Gelman, I believe the
+parallel individuation system also has a big role to play in
+the construction of natural number. This system is also
+continuous throughout development, and also has numeri-
+cal content, in the form of numerically relevant compu-
+tations carried out over models of small sets.
+Additionally, there are other representational resources
+with innate support that contribute to the construction
+of representations of natural number. These include the
+logical capacities that underlie the semantics of natural
+language, including quantiﬁers. It is clear that the
+resources for building the culturally constructed represen-
+tations of natural number include much more than those
+provided by the AM system. TOOC argues that none of
+these three systems of number representation, on their
+own, contains representations of natural number (there
+are no symbols for any natural numbers, for example) in
+any of these systems. Therein lies the discontinuity. In
+her recent writings, Gelman acknowledges this; the AM
+system contains no representation of exactly one, and is
+not built on the successor function (Leslie et al. 2007).
+Therefore, AM representations are discontinuous with
+the numeral list representation of natural number, which
+has both of these properties. In creating a numeral list,
+or a symbolic tally system, for that matter, cultures
+create a representational system that can express thoughts
+and support arithmetic calculations that were not available
+to the infant or nonhuman animal, and when individuals
+master these culturally created systems, they similarly
+extend the expressive power of their representational
+repertoire.
+The discontinuity at stake in Gelman’s and my debate is
+between the numerical concepts expressed by the verbal
+count list and those in core cognition. What the child is
+creating goes beyond a way of talking about what they
+already represent. I stand by the evidence that learning
+how counting represents number is extremely difﬁcult,
+and by the evidence that children who are cardinal prin-
+ciple-knowers are qualitatively different from those that
+are not. Much of the data Gelman alludes to in her com-
+mentary reﬂect performance by children who already are
+cardinal principle-knowers (i.e., many 3-year-olds), and
+therefore cannot directly bear on this debate. It would
+be very interesting to explore children’s performance on
+Zur and Gelman’s intuitive arithmetic tasks, for example,
+as a function of knower-level rather than age. Evidence
+is mounting that Gelman is right that TOOC underesti-
+mates the numerical understanding of children in the
+subset-knower stage, For example, before they have
+worked out the cardinal principle, some subset-knowers
+do know that numerals later in the list refer to larger car-
+dinal values than do numerals earlier in the list (e.g., Shus-
+terman et al. 2009). How counting represents number is
+worked out in small steps during the subset-knower
+stage. Still, subsequent work has also conﬁrmed that only
+cardinal principle-knowers understand, even if implicitly,
+how counting implements the successor function (e.g.,
+Sarnecka & Carey 2008; Shusterman et al. 2009). There-
+fore, the basic bootstrapping story stands.
+Spelke, like Gelman, believes that I have underesti-
+mated the role of the AM system of number represen-
+tation in the creation of public symbols for natural
+number. She offers an alternative bootstrapping proposal,
+in which the numerical content in the parallel individua-
+tion system is combined with that in the AM system
+directly, not in the service of learning verbal numerals.
+Notice that we still must explain how children learn the
+meanings of verbal numerals and how they learn how
+the count list represents number. However, if Spelke’s
+bootstrapping process exists, and were to take place
+prior to mastering counting, it might support learning to
+count.
+In Chapter 7 of TOOC I consider two bootstrapping
+proposals similar to Spelke’s, although in the service of
+mastering counting. One involves mappings between the
+count list and AM representations alone, and the other
+involves mappings between AM representations, parallel
+individuation and the count list. I reject the ﬁrst on the
+grounds that AM representations do not contain represen-
+tations of “one” or the successor function, and therefore
+cannot support the induction that there is ample evidence
+Response/Carey: Pre´ cis of The Origin of Concepts
+BEHAVIORAL AND BRAIN SCIENCES (2011) 34:3 159
+children make upon becoming cardinal principle –
+knowers – namely that two adjacent numerals in the
+count list represent sets that differ in cardinal values by
+one. The second proposal is very similar to that outlined
+in Spelke’s alternative. I note if children had mapped
+numerals to AMs and induced the “later in the list,
+larger AM” generalization, this could aid in working out
+how verbal numerals represent number. I rejected this
+proposal on empirical grounds – there was no evidence
+that subset-knowers have made this induction, and some
+evidence from my own laboratory that they had not
+(LeCorre & Carey 2007). However, since then, new evi-
+dence has come to light that perhaps they have done so
+(e.g., Shusterman et al. 2009). Nonetheless, learning how
+counting works requires inducing the relations between
+order in the list and the successor function, not only the
+relation between order in the AM system and the succes-
+sor function. Therefore, I stand by my bootstrapping story
+for how children work out how verbal numerals represent
+number.
+But is it possible that children and animals might create
+representations of integers through some process that does
+not involve mastering a count list? I am open to that possi-
+bility. Tally systems represent exact cardinal values
+without counting, but of course, they do not draw on
+Spelke’s proposed bootstrapping mechanism. Rather,
+they also draw on the representational resources of parallel
+individuation. However, I doubt that such a process occurs
+in the absence of the construction of some public rep-
+resentational system (a tally, a verbal count routine).
+First, one would need to specify a context in which such
+a mapping would be constructed. Second, one would
+need to understand why this construction is not achieved
+by humans who do not have a count list or a tally system
+in their public symbolic repertoire (e.g., the Piraha˜:
+Gordon 2004; Frank et al. 2008; the Munduruku: Pica
+et al. 2004; and homesigners: Spaepen et al. 2011.
+Finally, although mastering counting requires under-
+standing the relation between order in the list and numeri-
+cal order, I nowhere claim that children derive
+representations of numerical order only from the count
+list. Numerical order is implicitly captured in the compu-
+tations carried out in the parallel individuation system, and
+easily read off from AM representations. Once children
+have integrated AM representations with counting, they
+can and do use AM representations to support arithmetic
+reasoning using symbols. Therefore, I do not disagree with
+any of Spelke’s arguments that AM representations
+support, even are crucial to, certain adult arithmetic com-
+putations. But evidence derived from 5-year-olds and
+adults does not bear on the process engaged in by
+2-year-olds as they create the ﬁrst public representations
+of natural number.
+Analogy underlies one of the modeling processes
+through which representational resources are combined
+during episodes of Quinian bootstrapping. I agree with
+Gentner & Simm’s observation that analogy has other
+roles to play in conceptual development as well. But I dis-
+agree slightly with their characterization of the steps in
+mastering verbal numerals. It is true that the child
+creates a mapping between sequential order in the
+numeral list and ordered quantities, but it is important
+to notice that the quantities so modeled (captured in
+enriched parallel individuation) are not yet natural
+numbers. Gentner discusses the creation of the ﬁrst
+natural number representations as a redescription or rere-
+presentation of the two parallel relations so that they are
+one and the same relations: SUCCESSOR [numeral n,
+numeral n þ 1) ! SUCCESSOR (set size n, set size
+n þ 1). I doubt whether the 3-year-old child has any rep-
+resentation of the successor function that labels the
+relation – that is, has any mental symbol successor.
+Rather, I would characterize the last step of this particular
+bootstrapping episode differently. The order relation in
+the numeral list is still merely serial order in a list, but
+what the child now has done is analyze “ﬁve, six,
+seven. . .” as summary symbols “n, n þ 1” by analogy to
+“one, two, three” and “four.” Following up on Gentner
+& Simm’s central point, many more bootstrapping epi-
+sodes are yet to come before the child will have a full rep-
+resentation of natural number and the successor function.
+R6. On concepts and concept acquisition,
+in general
+R6.1. On the theory–theory of narrow content
+A commitment to the existence of narrow content requires
+distinguishing between those aspects of inferential role
+that determine conceptual content and those that do not.
+Commentator Keil suggests that evidence concerning
+what he calls the degraded nature of our knowledge mili-
+tates against the possibility of succeeding at this project, as
+well as militating against the theory – theory of concepts.
+One thing Keil means by “degraded” is “sketchy.” I
+agree that our explanatory theories are sketchy and
+sparse in the way Keil’s research has shown us, but this
+may be irrelevant to the existence of narrow content if,
+as I believe, only a very small part of conceptual role is
+content determining. Narrow content does not exhaust a
+symbol’s content, which is why we have representations
+of entities about which we have the sketchiest of knowl-
+edge. There is also wide content; the motivation of the
+externalist movement was to explain how we borrow refer-
+ence from those from whom we hear a term. The narrow
+content of a natural kind symbol like dog, is perhaps
+only that it refers to a natural kind, and therefore falls
+under the assumptions of psychological essentialism, or
+perhaps some placement in a framework theory (e.g.,
+that it is a kind of animal, and therefore is constrained
+by a skeletal vitalist biology). That we hold contradictory
+beliefs about dogs is part of the motivation for this
+guess, not a problem for the existence of narrow content.
+That is, the existence of contradictory beliefs requires
+that we must be able to distinguish concepts from
+conceptions, and supports the hypothesis that content-
+determining conceptual role is a small part of everything
+we know about the entities categorized under our con-
+cepts. These considerations apply to metaconceptually
+held scientiﬁc theories as well as to intuitive ones: Only
+a few relations among concepts distinguish the source-
+recipient theory of thermal phenomena from the caloric
+theory, although those relations allow separate concepts
+of heat and temperature only in the latter case.
+Keil raises a very interesting issue not touched upon in
+TOOC – how studies of the breakdown of conceptual rep-
+resentations with age, disease, brain damage, and the like,
+bear on our understanding of the nature of concepts (here
+Response/Carey: Pre´ cis of The Origin of Concepts
+160 BEHAVIORAL AND BRAIN SCIENCES (2011) 34:3
+“degraded” means damaged). Deborah Zaitchik and col-
+leagues (Lombrozo et al. 2007; Zaitchik & Solomon
+2008; 2009) have found that patients with Alzheimer’s
+disease (AD) resemble preschool children when perform-
+ing tasks that diagnose conceptual structure – they make
+animistic judgments that the sun, cars, and similar things
+are alive, and they demonstrate promiscuous teleology.
+These ﬁndings leave open two very different interpret-
+ations: (1) AD affects domain general processes that
+underlie the participant’s capacity to bring relevant con-
+ceptual resources to bear on a given task; and (2) AD
+affects the conceptual resources themselves, those that
+underlie the knowledge, and perhaps even the concepts,
+in the domain. For example, the disease might disrupt
+the skeletal inferential structures that constitute a vitalist
+biology, such that the participants no longer have a
+concept of living things. Gaining a fundamental knowledge
+of which interpretation is correct will be important to our
+understanding of the nature of concepts, perhaps even
+bearing on which aspects of conceptual role are content
+determining.
+Contrary to commentator Korman’s assumption about
+what the theory – theory of concepts comes to, TOOC
+nowhere claims that conceptual changes occur only in
+the context of formal scientiﬁc development. Rather, the
+idea is that there are important commonalities between
+the conceptual changes in the history of science and
+those that occur in childhood. That is, many questions
+about conceptual development receive the same answers
+in both cases. These include: how is conceptual change
+distinguished from belief revision, what is an “undifferen-
+tiated concept,” and what is the role of Quinian bootstrap-
+ping in episodes of conceptual change? Korman advocates
+the existence of smaller-scale conceptual changes than
+those involved in the case studies in TOOC. I am open
+to that possibility (see sect. 4). Before I would be able to
+evaluate the proposal, I would need to know in what
+sense a developmental change is a conceptual change as
+opposed to a change in belief. TOOC provides such an
+analysis for the conceptual changes in its case studies,
+but Korman gives no examples of what kinds of changes
+she has in mind.
+Although I mention the proposal that the causally
+deepest features of a concept are likely to be those that
+are content determining, I do not particularly endorse it.
+I agree with Korman’s reading of the literature on the
+causal status hypothesis concerning categorization
+decisions, but I am skeptical about making categorization
+decisions the central phenomenon in our exploration of
+the nature of concepts. My positive proposal is quite
+different; namely that in at least some circumstances
+narrow content is determined by the conceptual role
+that is exhausted by the placeholder structures in which
+new primitives are introduced.
+R6.2. On the relations between the philosophers’ and
+the psychologists’ approaches to understanding
+concepts
+Machery’s commentary raises a deep issue on which we
+have opposing views. He believes that the traditional cog-
+nitive psychologists’ project (understanding categoriz-
+ation, inference, conceptual combination) and the
+philosopher’s project (understanding reference, truth,
+propositional attitudes) are completely distinct, whereas
+I do not. My appeals to a part of the philosophical litera-
+ture were aimed at sketching some of the arguments for
+wide content. I also showed that psychological work sup-
+porting psychological essentialism, explanation-based
+reasoning, and conceptual development converges with
+these arguments. So whereas he and I agree that the
+psychological and philosophical literatures emphasize
+different phenomena, many philosophers also endorse
+that understanding inference, categorization, conceptual
+combination, and conceptual development (omitted from
+Machery’s list) are part of the explananda of a theory of
+concepts. One goal of TOOC was to encourage psycholo-
+gists to see that reference, truth, and propositional atti-
+tudes are as well. Machery suggests that I endorse
+information semantics, while failing to distinguish it from
+other approaches to wide content. Instead, TOOC
+endorses a dual factor theory and I draw from information
+semantics, the causal theory of reference, and other work,
+as different approaches to wide content. I distinguish
+among them, but do not choose among them.
+Machery proposes a solution to the problem of dis-
+tinguishing concepts from conceptions. He suggests that
+the content-determining aspects of the representations
+that underlie categorization and inference are those that
+are activated by default, independent of context, whenever
+we use a given concept. Insofar as the representational
+structures being considered here are prototypes, deﬁ-
+nitions, representations of exemplars, and/or intuitive the-
+ories, I am deeply skeptical of this proposal. I would bet
+dollars to donuts that there are no such default represen-
+tations activated independent of context. Indeed, Mach-
+ery’s (2009) masterly review of the literature in the
+service of his argument that cognitive psychology’s
+concept concept is not a natural kind undermines the exist-
+ence of such default representations.
+R6.3. On the possibility of a dual factor theory of
+concepts
+I disagree with Rips & Hespos that my version of dual
+factor theory collapses to a single factor. I offer general
+arguments for wide content, and I assume that the mech-
+anisms though which it is determined will be complex and
+messy, encompassing aspects of social/causal history, as
+well as the machinery envisioned by developers of infor-
+mation semantics. In the last chapter of TOOC, I write
+that the challenge is to defend the claim that there is
+any narrow content at all. Although narrow content may
+play some role in the processes through which wide
+content is determined (e.g., by constraining the nature
+of the causal connections between certain classes of
+symbols and the entities they represent), it in no way
+exhausts them. Nonetheless, Rips & Hespos raise an
+important point – any workable dual factor theory will
+have to specify how the two factors work together.
+Commentator Mandelbaum also raises concerns about
+the very possibility of a dual factor theory of concepts. He
+points out that my proposal for specifying the narrow
+content of symbols in core cognition differs from my pro-
+posal for how to do so in the case of concepts that arise
+through episodes of Quinian bootstrapping, and he
+rightly points out that neither proposal applies to newly
+acquired atomic concepts, such as, taking his example,
+Response/Carey: Pre´ cis of The Origin of Concepts
+BEHAVIORAL AND BRAIN SCIENCES (2011) 34:3 161
+fence. I agree. I believe it is unlikely that there is one sol-
+ution to the problem of specifying what aspects of concep-
+tual role determine narrow content. Different kinds of
+concepts will require different solutions. The theoretical
+challenge is to ﬁnd the principled distinctions among
+types of concepts, as well as to specify what aspects of con-
+ceptual role determine narrow content of each type.
+I do discuss the question of how newly acquired atomic
+concepts might get their content, focusing on the proposal
+by Laurence and Margolis (2002) and of Macnamara
+(1986) (see also Weiskopf 2008). Their example is a
+natural kind term, such as tiger. The narrow content of a
+newly learned public symbol “tiger” or a newly coined
+mental symbol tiger is same natural kind as [kind syn-
+drome of a tiger], where the kind syndrome might be rep-
+resented as a prototype, set of exemplars, or intuitive
+theory. The work done by the abstract schema for a
+natural kind is that the holder of this representation is
+open to almost everything in the kind syndrome being
+revisable; that is, this concept falls under all of the assump-
+tions of psychological essentialism and the division of cog-
+nitive labor of deferring to tiger experts. Therefore, the
+relevant aspect of conceptual role that determines
+content here is not the whole kind syndrome, but that
+which determines the nature of the function between
+the symbol and the world, including that which deter-
+mines that the symbol is a symbol for a natural kind. An
+analogous solution could apply for fence. My guess is
+that there is an artifact kind schema that supports mean-
+ings like same artifact kind as [kind syndrome for a
+fence], where the information in the kind syndrome is
+taken to be tentative and revisable (i.e., not itself content
+determining). The schema speciﬁes the importance of
+function and original intent of the designers, leaving
+open that current representations of these may be
+wrong. On this view, it would be possible to have the
+lexical item “fence” in one’s vocabulary without yet
+having assigned it to that minimal schema (e.g., if all one
+knew about fences are that they are something that
+make good neighbors – after all, good intentions and
+warm feelings make good neighbors too, but these are
+neither artifact kinds nor fences).
+R6.4. Is concept learning “explicable by content?”
+Commentator Shea raises the possibility that TOOC pro-
+vides a recognizably psychological explanation of the
+acquisition of concepts that does not ﬁt the dominant
+explanation schema in psychology. Speciﬁcally, he
+suggests that my accounts of concept acquisition neither
+rely (solely) on rational inference nor on explanation by
+content. I am not sure what philosophers mean by “expla-
+nation by content,” so my response is tentative. As I under-
+stand it, explanation by content is explanation in terms of
+non-metalinguistic inferences over mental representations
+alone, as when we explain an agent’s opening the refriger-
+ator by appeal to the agent’s desire for an apple and belief
+that there is one in the refrigerator. This is explanation by
+content because it makes no appeal to the truth of the
+matter of the location of an apple.
+I agree with Shea’s gloss of the bootstrapping process
+that underlies the transition between the subset-knower
+stage and the cardinal principle– knower stage: “Carey
+rightly rejects the idea that it is properly described as
+hypothesis testing. The child is doing something different:
+building an uninterpreted model with the counting words,
+and then giving that model an interpretation.” My “unin-
+terpreted” here refers to wide content; the model is not
+yet mapped to numbers. However, I believe that cognitive
+modeling is a rational process, and the cognitive model has
+narrow content given by inferential role. Therefore in one
+sense of “explanation by content,” this is an explanation by
+content. Shea criticizes this proposal because it would lead
+to pernicious holism. I do not see why. This proposal is
+important to my characterization as to which aspects of
+inferential role determine narrow content in the case of
+concepts whose origin lies in episodes of Quinian boot-
+strapping. And the holism is not pernicious, because not
+every aspect of the conceptual system is potentially
+content determining.
+When the child induces that the each numeral rep-
+resents a cardinal value one more than the preceding
+one, the child conﬁrms that guess against further input.
+That is, cognitive modeling is a rational process. Impor-
+tantly, the numerical content of the count routine is
+partly implicit, just as the numerical content of parallel
+individuation is implicit. Representations of the successor
+function, insofar as they are attributable to the newly
+minted cardinal principle –knower, are carried in the
+counting principles the child masters. That is, learning to
+count is learning a skill. Therefore, the question I would
+ask Shea is whether skill acquisition is explainable by
+content? If not, it is easy to ﬁnd violations of the principle
+that all explanation in psychology is explanation by
+content. If so, then learning the count list is not a counter-
+example to the principle. My instinct is to favor the latter
+possibility.
+The same questions arise with respect to Shea’s charac-
+terization of how the child becomes a “one”-knower, and
+then a “two”-knower. What the child is learning is a pro-
+cedure, and the procedure the child builds draws on rep-
+resentational and computational resources that are part of
+core cognition. That is, procedurally, the child does have
+the resources out of which a hypothesis about one-ness
+could be constructed (even though the child has no
+symbol for one that could articulate a hypothesis about
+what the word “one” means.) The enriched parallel indivi-
+duation account of the meaning of “one” in the subset-
+knower stage is that the child makes a long-term
+memory model of a single individual, a model that is iden-
+tical in format to core cognition’s working memory models
+formulated in terms of individual ﬁles, and acquires the
+following procedure for applying the word “one:” if a
+working memory model of a given set can be put in one-
+to-one correspondence with that long-term memory
+model, then “one” applies to that set. Similarly for “two.”
+The process by which the child builds these procedures
+is rational; it does not depend only on correlations
+mediated by causal connections to the same external-
+world property.
+R7. Concluding remark
+I thank my commentators again for their clarifying
+remarks. The controversies aired in our debates conﬁrm
+the interdependence of the projects of explaining the
+origin and nature of concepts.

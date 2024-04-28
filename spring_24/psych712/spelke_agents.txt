@@ -1,0 +1,2091 @@
+What Babies Know. Elizabeth S. Spelke, Oxford University Press. © Elizabeth S. Spelke 2022.
+DOI: 10.1093/ oso/ 9780190618247.003.0007
+7
+Agents
+In this chapter, I focus on the early development of knowledge of animate beings.
+The most important animate beings, for infants, are people: Infants’ survival
+depends entirely on the actions of others, and people remain interdependent
+throughout our lives. Nevertheless, human survival also depends on abilities
+to recognize and reason about the actions of a host of animals, including pests,
+predators, prey, and pets. I defer discussion of social knowledge to chapter 8 and
+focus here on infants’ knowledge of people and animals as agents: living beings
+who cause their own motions and, by moving, change the state of the objects on
+which they act.
+People and most animals have bodies that are cohesive and bounded; we exist
+and move continuously; we cannot pass through walls or other objects; and
+our motions and states, including mental states, are subject to the constraints
+of contact mechanics. All our perceptions, for example, depend on events that
+occur on contact with our sensors. People and animals also grow, and the forms
+of our growing bodies allow us to move and function in ways that sustain life.
+Nevertheless, people and animals have two properties that inanimate living and
+nonliving objects lack: We generate forces from within that allow us to move au-
+tonomously, causing changes in the things we act on, and we perceive things at a
+distance, allowing us to direct our actions to goals.
+Much of our reasoning in the domains of politics, economics, law, ethics, and
+ordinary life rests on the assumption that the changes that we and other people
+produce result from our chosen actions. We assume that people have options and
+make consequential choices: Had a person acted otherwise, the state of the world
+would differ. We also view people’s actions as windows into their minds: By
+observing what people do, we can discover what they know, want, and aim to
+achieve. The premise that people choose their actions has been questioned by
+philosophers (e.g., Dennett, 1984), social psychologists (e.g., Wegner, 2002),
+neuroscientists (e.g., Gazzaniga, 2011), and others. I will not defend this premise
+but note that it is nearly unshakeable. For example, I cannot help but believe that
+I have chosen to work on this book, and that all the other activities that tempted
+me were real options.
+What are the sources of our intuitions about our own and others’ actions
+and the mental states that guide them? I begin by turning to research on infants
+for insights into this question. First, I ask whether and how infants distinguish
+Agents 249
+self-moving agents from inanimate objects (section 1). Then I ask whether
+infants view the actions of agents as causally efficacious (section 2), efficient (sec-
+tion 3), goal-directed (section 4), and guided by what agents perceive (section
+5) as well as what they want and believe (section 6). Research on infants provides
+evidence that their understanding of agents and their actions centers on a system
+of interconnected, abstract, and limited concepts, but this research leaves the
+status of infants’ mental state concepts unresolved. The core knowledge hypo-
+thesis predicts, however, that a core agent system will be ancient, automatic,
+encapsulated, and dependent on attention. Accordingly, I turn to studies of agent
+representations in animals (section 7) and human adults (section 8) for further
+insights into core capacities for reasoning about agents’ mental states, and I pre-
+sent new tests of two of those insights (section 9). Although evidence is incom-
+plete, I suggest that a system of core knowledge, with the properties discussed
+in chapter 5, is the primary source of our mature intuitions about our own and
+others’ actions (section 10). The system, however, supports only limited abilities
+to reason about the mental states that guide our actions.
+1 Infants’ Perception of People and Animals
+As adults, we distinguish people and other animals from inanimate objects in at
+least three ways. First, people and other animals have bodies, composed of parts
+with characteristic shapes that undergo distinctive patterns of motion. Second,
+people and animals have heads with eyes that allow them to adapt their actions
+to the objects and surfaces within their field of view. They therefore move in
+the direction in which they are facing and act on things toward which they are
+looking. Third, people and animals tend to initiate and change their movements
+in the absence of external forces, counter the motions of objects that impinge on
+them, and direct their movements efficiently to objects that are physically and
+perceptually accessible to them. Each of these properties, by itself, can support
+adults’ detection of an agent: When a body moves spontaneously toward an ob-
+ject, circumventing obstacles efficiently to approach it, we perceive an agent even
+if the body has no visible face, limbs, or biological motion (Heider & Simmel,
+1944; Gelman, Durgin, & Kaufman, 1995; Gergely et al., 1995; Baker, Saxe, &
+Tenenbaum, 2009). What of infants?
+Human infants and controlled-reared animals perceive and attend to the
+movement patterns generated by vertebrate bodies, but they are surprisingly
+insensitive to the features that distinguish human from animal bodies (see
+chapter 6). Infants learn to recognize human body parts and their arrangements,
+likely by drawing on their sensitivity to self-propelled, biological motion (S.
+Ullman, Harari, & Dorfman, 2012). Consistent with that possibility, infants
+250 What Babies Know
+come to recognize not only human hands and feet but also the words that name
+these body parts by 6 months of age (Bergelson & Swingley, 2012; Tincoff &
+Jusczyk, 2013), and they infer people’s body structure from moving lights on
+their joints as they walk or dance (Johansson, 1973; Moore et al., 2007). Thus,
+infants’ ability to perceive agents likely depends, in part, on specialized motion-
+sensitive mechanisms that evolved in a distant, common ancestor of all verte-
+brate species and that support infants’ learning about human and animal bodies,
+body parts, and actions.
+Infants also are sensitive to faces at birth, both when viewing real people or
+animals and in schematic displays. The youngest infants prefer to look at upright
+rather than inverted faces but are equally attracted to the faces of diverse spe-
+cies of animals. The same preferences are found in chicks and monkeys, attesting
+to the ancient origins of face perception. Because the most extensive research
+on infants’ sensitivity to faces focuses on their social inferences and preferences,
+I review this literature in chapter 8.
+Do similarly ancient, early-emerging mechanisms allow animals and infants
+to represent and reason about agents’ actions? In the rest of this chapter, I con-
+sider the developmental origins of reasoning about actions as self-generated,
+causally efficacious, goal-directed, and efficient. Then I ask whether infants are
+sensitive to the physical states that constrain agents’ movements and the mental
+states that guide their actions.
+2 Infants’ Attributions of Causal Powers to People
+and Animals
+When agents act on inanimate objects, their actions provide information
+about the workings of the world. Well before babies can pick up objects, they
+observe other people’s object-directed actions (Cicchino, Aslin, & Rakison,
+2011; S. Ullman et al., 2012). Because motion is critical to infants’ perception
+of objects, young infants likely represent the unity, boundaries, and interactions
+between inanimate objects primarily when other people act on them (chapter 2).
+These actions also provide information about objects’ functional properties: As
+infants watch other people manipulate cups and books, they begin to learn about
+the activities these objects afford (chapter 6).
+More deeply, by observing the actions of other agents, and by acting on objects
+themselves, children may come to infer the causal structure of the world. They
+may determine whether flipping a switch causes a light to go on, by choosing
+when to flip and not flip the switch, and see if their choice determines the out-
+come (Mill, 1865; Helmholtz, 1867). Children also may discover the hidden
+mechanisms that connect the movement of the switch to the activation of the
+Agents 251
+light by observing that an adult’s removal of the plate that covers the switch does
+not alter this relation, but cutting the wires beneath it does. Thus, children may
+gain insight into the workings of physical systems both by acting on those systems
+and by observing other agents’ actions, because agents have the power to choose
+their actions and thereby to transform the objects around them (Muentener &
+Lakusta, 2011; Muentener & Schulz, 2012; Wu, Muentener, & Schulz, 2016).
+Do infants attribute causal powers to agents? In chapter 2, I described two
+experiments that suggest they do. The experiments focused on a simple animated
+event involving two objects, usually circles or squares, with no animate features. If
+one such object appears on-screen in a state of uniform motion and collides with a
+second, stationary object, which begins to move at the moment of impact, adults
+perceive the first object’s motion as the cause of the second object’s motion, although
+we do not invest either object with the power to move on its own: We see them as
+billiard balls that cause changes in one another’s motion, not as animate beings
+(Michotte, 1963; figure 7.1a). Interestingly, 10-month-old infants, tested with this
+“launching” event in experiments by Cicchino et al. (2011), failed to see the first
+moving object as causing the motion of the second object. Infants’ perception of this
+event differed, however, when the first object began at rest and then spontaneously
+began to move toward the second object and collided with it (Figure 7.1b): Now
+infants represented the first object as causing both its own motion and the motion of
+the second object (Leslie & Keeble, 1987; Cicchino et al., 2011).
+The same effects were found in controlled-reared chicks, tested in an
+imprinting paradigm (Mascalzoni, Regolin, & Vallortigara, 2010; described in
+chapter 2, figure 2.8). Separate groups of newly hatched chicks were imprinted
+to two versions of the launching event, and then their preference between
+the two objects that participated in the event was measured by placing the
+objects at opposite ends of a chick’s cage and observing the classic signs of
+imprinting: the chicks’ tendency to remain close to one of the objects. Chicks
+who saw the first object spontaneously change its state, from rest to motion
+and from motion to rest, selectively imprinted to that object, whereas those
+who did not see either object start or stop its own motion spontaneously did
+not.1 Because the object of a chick’s imprinting is an animate being, not an
+1 As noted in chapter 2, Justin Wood (personal communication) has attempted to replicate the
+first of these experiments, using the events in Figure 7.1b. This replication produced a different
+finding: Chicks who were imprinted to the launching event like that of Leslie & Keeble (1987), be-
+ginning and ending with visible changes in both objects’ motions, developed affiliative tendencies
+toward both objects: They preferred each of the objects in the launching event to a third, novel ob-
+ject, providing evidence that they imprinted to both objects, suggesting that both were seen as ani-
+mate. One difference between the studies in the two labs is that in Wood’s experiments, chicks were
+exposed to the launching event throughout all their waking hours, whereas in Vallortigara’s lab,
+chicks lived in darkness except during exposure to relatively brief imprinting sessions. It is possible
+that the attribution of causal powers to objects that change their motion is probabilistic and varies in
+degree. If an object stops moving with no evident cause sufficiently often, we may attribute its beha-
+vior to an internal cause, rather than to unseen external factors.
+252 What Babies Know
+inanimate object, these findings suggest that chicks viewed the first object
+in the causal event as an animate being with causal powers (Michotte, 1963;
+Saxe & Carey, 2006). Infants, chicks, and adults may be highly predisposed
+to attribute causal powers to an object that initiates its own motion, and less
+predisposed to attribute such powers to an object that stops its own motion,
+either because attending to motion onsets is computationally efficient (T.
+Ullman et al., 2017, see chapter 2) or because in many cases, moving objects
+stop moving because friction and resisting media slow them down or block
+their forward progress, making changes from motion to rest more likely to
+occur in the absence of any causal agent.
+(a) (b) (c)
+Figure 7.1 Displays for studies of infants’ inferences of action on contact. In (a), the
+red disk enters from the left, moving at constant speed (top) and stops upon contact
+with the green disk (middle), which begins to move at the same speed and exits on
+the right (bottom). In (b), the two disks are visible onscreen throughout the event.
+Both objects begin at rest (top), and then the red disk begins to move rightward
+toward the green disk, which begins to move on contact. Finally, the green disk stops
+moving at the right and again is seen at rest. Reprinted from Kominsky & Scholl
+(2020). In (c) infants are familiarized with videorecorded events in which a person
+walks behind a screen toward a stationary object and after a pause, the object begins
+to move (top). At test, the screen is removed, and infants view alternating events in
+which the person contacts the object and pushes it (middle) or stops short of the
+object, which begins to move without contact (bottom). Infants looked longer at
+the latter event, providing evidence that they expected the agent to set the object in
+motion on contact. (Reprinted from Kosugi & Fugita, 2002.)
+Agents 253
+Infants are sensitive to further cues to animacy. In one series of experiments,
+Sabina Pauen and Birgit Träuble presented 7-month- old infants with two
+objects—a multicolored ball and a toy animal with a face and furry tail but no vis-
+ible limbs. The objects stood on opposite sides of a puppet stage, without moving,
+while infants’ looking time to each object was recorded. Infants showed equal
+interest in the two objects during this initial period of familiarization. Then a
+curtain closed, and when it opened again, the animal and ball were attached and
+moved together around the stage in fits and starts. Infants typically watched this
+event with rapt attention. Finally, the curtain closed and reopened to reveal the
+critical test display, which was same as the display that began the experiment: the
+motionless animal and ball on opposite sides of the screen. Although the display
+was the same, infants’ looking behavior differed: They now looked longer at the
+toy animal (Pauen & Träuble, 2009).
+Why did infants show this looking preference? It cannot reflect an intrinsic
+preference for objects with a head or furry body, because infants showed no pref-
+erence between these objects in the first phase of the experiment. It also cannot
+reflect a preference for stationary objects that have previously changed their
+motion in an irregular pattern, because both the ball and the animal underwent
+the same irregular motion in the experiment’s second phase. Pauen and Träuble
+reasoned that infants’ preference at the end of the study stemmed from a causal
+inference they had made: Infants inferred that the pattern of animate motion
+shown by the two objects was produced by the object with animate features,
+which caused its own motion and thereby caused the motion of the ball. Further
+experiments using violation-of- expectancy methods supported this interpre-
+tation of their findings (Setoh et al., 2013; Träuble, Pauen, & Poulin-Dubois,
+2014).2 Infants’ attribution of causal powers to autonomously moving objects is
+robust, and it is influenced systematically by the presence of a face or furry body.
+Further experiments reveal a key signature of infants’ causal attribu-
+tion: Agents cause changes in other objects only on contact. These experiments
+began with a classic study by Alan Leslie (1982, 1984b). Seven-month- old infants
+2 Setoh et al. (2013) conducted several experiments presenting infants with a can covered with
+soft material that moved on its own in a straight line on an empty stage, in alternation with a hard
+box that also moved on its own. Then each object appeared onstage with a person, who lifted and
+either rotated each object toward the infant or shook each object, revealing that both objects were
+hollow. Infants looked longer when the soft can was revealed to be hollow. These findings suggest
+that infants show a further signature of perception of animacy: They expect animate agents to have
+internal mechanisms that generate their motions (Gelman & Wellman, 1991). In these experiments,
+however, the two visible objects were containers of familiar shapes (a box and can) with no faces, so
+it is possible that infants inferred that the container making animate noises and motions contained
+an animal, rather than animal insides. Either inference could explain why infants were surprised
+when the spontaneously moving container was revealed to be empty. One of their experiments, how-
+ever, showed that infants’ surprise was modulated by the presence of animate features, in accord with
+Pauen and Träuble’s findings.
+254 What Babies Know
+were habituated to an event in which a hand picked up an object by reaching for
+it, grasping it, and lifting it into the air. Then they viewed an event in which the
+hand and object each moved in the same manner but without contact: The hand
+stopped short of the object, and then both the hand and object rose into the air
+in synchrony, with a visible gap between them. Infants showed marked recovery
+from habituation in this condition, but not in further conditions varying the spa-
+tial relation of the hand and object but preserving their contact. Recovery from
+habituation also did not occur when the hand was replaced by a block of similar
+dimensions, even when action on contact was followed by action at a distance.
+Leslie concluded that the infants represented the hand, but not the block, as the
+cause of the inanimate object’s motion, and that this causal attribution occurred
+only when the motion of the object began on contact with the hand. The infants
+in these experiments therefore showed two signatures of causal attribution,
+which depended both on the animate motion of the hand and on the contact of
+the hand with the object (see also S. Ullman et al., 2012).
+Variations of the experiment extended these findings. In one series of studies,
+8- month-old infants viewed events involving a person and an object, rather than
+two inanimate objects. In each event, a person moved toward a large stationary
+object that stood behind a screen, the person disappeared behind the screen, and
+soon the object began to move away from the person (figure 7.1c). After famil-
+iarization to this event, the screen was removed, and infants viewed alternating
+events in which the person either contacted the object at the time it began to
+move or stopped short of the object. Infants looked longer at the latter event,
+providing evidence that they attributed the object’s motion to the agent who
+contacted it (Kosugi & Fugita, 2002).
+In further studies, 7-month-old infants were shown two windup toy ani-
+mals that each underwent an irregular pattern of motion, in turn, on a puppet
+stage. One toy moved while it was held by the hand of an experimenter; the
+other moved on its own after the experimenter’s hand released it and remained
+on stage but out of contact with the object. On a subsequent preference test
+presenting the two objects without motion, infants looked longer at the ob-
+ject that had previously moved with no contact with the hand: They evidently
+inferred that the motion of that object was internally generated, whereas the
+motion of the other object was caused by the experimenter (Markson & Spelke,
+2006). Note that in this experiment, infants inferred that a toy with animal
+features did not cause its own motion when it was in contact with another,
+more familiar, and more convincingly animate object: the experimenter’s
+hand. In contrast, infants inferred that the toy animal caused its own motion
+when it spontaneously underwent changes in motion in the absence of con-
+tact with the experimenter. In further experiments, infants attributed causal
+powers to objects that lacked any recognizable face or body parts, provided
+Agents 255
+that they engaged in jointed, coordinated motions in the absence of contact
+with a human hand (Shutts, Markson, & Spelke, 2009).
+The simplest experiment revealing the effect of contact was conducted with
+displays much like the original studies of Michotte (1963) and Leslie & Keeble
+(1987). Cicchino and Rakison (2008) presented infants with two versions of
+Michotte’s launching event, involving colored 2D forms. In one version, a yellow
+cross moved into view and hit a red cross, which began to move on contact. In
+the other version, the yellow cross moved as before but stopped short of a blue
+cross, which began to move after a pause. Both the red and blue crosses un-
+derwent exactly the same pattern of motion. In a subsequent preference test in
+which the red and blue crosses appeared side by side without moving, 6- month-
+old infants looked longer at the blue cross, suggesting that they expected it to
+move on its own. In contrast, 5-month-old infants showed no looking preference
+between the two crosses. Attributions of animacy to a self-propelled object ei-
+ther develop between 5 or 6 months or require richer information for animacy at
+younger ages.
+The last series of experiments on causal attributions, by Paul Muentener
+and Susan Carey (2010), sheds light on a further signature of these
+attributions: Animate beings can cause a broad array of changes in objects.
+The experiments build on findings, discussed in chapter 2, that infants as
+young as 3 months of age expect objects to change their motion on con-
+tact but do not expect collisions between inanimate objects to cause other
+changes in the objects. Presented with a partly occluded launching event in
+which a train moves behind a screen and then a stationary block, half-hidden
+by the same screen, undergoes a change, infants infer contact between the
+train and block if the block begins to move but not if the block breaks apart,
+lights up, or makes a noise (Muentener & Carey, 2010). Infants represent
+colliding inanimate objects as cohesive bodies that change their motion on
+contact, but they have no expectations about objects that light up, make
+noise, or fall apart.
+In the experiment that sheds light on perception of agency, Muentener and
+Carey (2010) presented 8-month-old infants with the displays and methods
+of the study just described, with one change: The train was replaced either by
+a person’s visible hand and arm or by a novel self-propelled object with a face.
+With each of these new objects and each event outcome (the block collapsing
+or changing in color), infants now looked longer at the no-contact test events.
+Further experiments showed that this inference was robust over variations in the
+nature of the test events. For example, infants who were familiarized with the
+hand and the collapsing box not only looked longer at the no-contact test event
+when the box collapsed but also reversed this test preference when, at test, the
+hand contacted the box and it failed to collapse. Infants evidently inferred that
+256 What Babies Know
+the hand or animal caused the collapse of the block or its color change, and there-
+fore occurred on contact with the block.
+These studies provide evidence that 8-month- old infants reason about
+humans and other agents, but not inanimate objects, in ways that go beyond the
+object principles discussed in chapter 2.3 The findings of all these studies there-
+fore raise two questions. First, what are the developmental origins of these abili-
+ties? Because the infants in these studies were at least 6 months old, it is possible
+that they learned to identify the features of objects that are most likely to have
+these causal powers: objects with faces, with hands, or with furry bodies. Studies
+analyzing the events recorded by a camera on the head of an infant reveal that
+the visual world of infants is replete with events in which objects with animate
+features cause changes in the motion of other objects (Cicchino et al., 2011), and
+research using computational modeling shows how infants who cannot yet reach
+for objects might learn to identify the visible properties of animals and human
+hands, if they begin with the abstract notion that some bodies—agents—have
+causal powers that enable them to move themselves and other objects (S. Ullman
+et al., 2012). But do much younger infants endow agents with causal powers?
+Second, what cognitive resources underlie the reasoning of infants in the
+studies described in this section? Do infants have a unitary system of core
+knowledge, focused on agents and their actions, or does their success in these
+experiments depend on a set of local expectations: for example, expectations that
+interesting things happen when hands contact objects or when objects have eyes?
+If infants’ responses to agents depend on a unified system of core knowledge with
+the properties of the core object, place, and number systems, then their abili-
+ties to reason about agents’ causal powers should rest on an interconnected set
+of abstract concepts that are shared by animals and present and functional in
+adults. Moreover, the abilities described earlier likely will be found in younger
+infants and will support their learning. I turn now to evidence bearing on these
+predictions, beginning with more studies of infants.
+3 Infants’ Representations of Action Cost
+An adult or infant who reaches for an unobstructed moving object aims her
+reach so as to take the shortest, least costly path to a point where the object can
+3 In this respect, infants differ from older children and adults, who can and do view inanimate
+objects and motions as causes of certain state changes: We consider a tornado or a flood to be
+the cause of a house’s destruction, and we view falling rocks as the cause of a hiker’s injury. These
+developments emerge hand in hand with the development of causal language (Muentener & Schulz,
+2012), and such language continues to influence adults’ causal attributions (Kline, Muentener, &
+Schulz, 2013). I defer discussion of these developments to How Children Learn.
+Agents 257
+be intercepted (von Hofsten, 1980). If the object changes its motion before that
+point, the actor will redirect her reach in accord with the object’s new direc-
+tion and speed of motion (von Hofsten et al., 1998). If a barrier is placed in the
+path of an adult human or animal who is moving to a goal object or location, the
+adult will circumvent it on a path that efficiently minimizes the length of the de-
+tour (Tolman, 1948), whereas infants sometimes are stymied by such obstacles
+(Piaget, 1954; Diamond & Gilbert, 1989). As adults, we use these regularities to
+predict and interpret the actions of other agents. In this section, I ask whether
+infants expect that agents will minimize the cost of their actions.
+Classic experiments by Gyorgy Gergely, Gergely Csibra, and their collaborators
+investigated how infants understand the circuitous actions of an agent who seeks
+an object that stands behind a barrier. In one study (Gergely et al., 1995) 12-
+month-old infants viewed an animated agent that repeatedly jumped smoothly
+over a barrier and came to rest on the far side of the barrier, next to an object
+(figure 7.2a). On different trials, the barrier varied in height, and the agent’s mo-
+tion was adjusted accordingly, maximizing the efficiency of its path to the ob-
+ject. At test, the barrier was removed, and infants viewed events in which the
+agent moved from the starting to the final position either on a familiar but now
+inefficient path or on a novel, direct path. Infants in this condition generalized
+familiarization
+(a)
+(b)
+test
+Figure 7.2 Displays for studies of infants’ inferences about the costs of agents’
+actions. In (a), infants inferred that the black barrier blocked the white agent’s direct
+path to the red object, leading the agent to circumvent it (left). When the barrier was
+removed at test, infants expected the agent to take a direct path to the object (right)
+and looked longer when it repeated its original action (center). In (b) infants viewed
+the white agent taking a curvilinear path to its goal across a space that was partly
+occluded (left). In accord with the expectation that agents will act efficiently, they
+inferred that a hidden obstacle stood in the agent’s path (as at right), and they looked
+longer when the occluder was removed to reveal no such object (center). (Reprinted
+from Gergely & Csibra, 2003.)
+258 What Babies Know
+habituation to the direct path and looked longer at the familiar but deviating
+path; those in a control condition, who were familiarized with the same jumping
+motions in the absence of any barrier, did not. These findings suggest that infants
+represent agents as solid, as other research attests (Saxe, Tzelnic, & Carey, 2006).
+After seeing the agent efficiently circumvent the barrier in its path, they expected
+the agent to take a direct path to its goal after the barrier was removed.
+Further studies showed that this effect is robust: Presented with the same cur-
+vilinear motions as in the original study but with a screen occluding the space
+the agent jumped over, infants inferred that an unseen barrier stood behind
+the screen, leading the agent to take a detour (Csibra et al., 2003; figure 7.2b).
+Importantly, infants failed to make this inference when presented with the same
+motions over objects whose tops appeared at the same height as the barrier but
+that were suspended in midair, leaving a gap below that afforded a direct path
+to the object (Csibra et al., 1999). Infants’ inferences, therefore, do not depend
+on their abilities to learn simple regularities connecting features of the display
+to features of the agent’s actions (e.g., an agent’s jump will always just exceed the
+height of a given object). Instead, infants assessed the agent’s path in relation to
+its goal, to the constraints posed by other objects, and to the availability of alter-
+native paths by which the agent could arrive at the goal.
+Still further studies extended these findings to events involving human ac-
+tors and either multistep or incomplete actions. In one study, 16-month- old
+toddlers saw a person reach equally often to two equidistant, featurally identical
+objects. One object stood inside a transparent container from which it could
+be retrieved directly; the other object stood under a transparent cover (a twin
+of the container, presented upside down) that first had to be removed: a more
+costly action. Infants looked longer when the person reached toward the latter
+object, suggesting that they expected her to choose the less costly action (Scott
+& Baillargeon, 2013). In another study, 10- and 12-month- old infants viewed
+a person reaching over a barrier on an indirect path toward an object that was
+too far away to be grasped on this trajectory: The person therefore failed to ar-
+rive at the object. Although infants never saw the person contact the object, they
+inferred that the object was the goal of her action and expected her to reach the
+object successfully on a direct path, after the barrier was removed (Brandone &
+Wellman, 2009). Thus, infants attributed a goal to an agent who failed to attain it,
+when the agent’s actions were both object-directed and appropriately adapted to
+environmental constraints. Infants expect agents to move efficiently in a variety
+of circumstances.
+How broad is this expectation? Because the objects in these experiments had
+no animate features, and—in one study—did not even engage in patterns of irreg-
+ular, self- propelled motion (the object was already in motion when it appeared
+on-screen, and it moved smoothly over each barrier), Csibra et al. (1999) initially
+Agents 259
+proposed that infants expect efficient motion from a broad array of percep-
+tible entities, not just from agents. If that proposal were correct, then infants’
+attributions of efficiency would not align with their attributions of causal effi-
+cacy, which depend on animate features or movements (Saxe & Carey, 2006; sec-
+tion 1). Contrary to Csibra et al.’s suggestion, however, experiments by Rebecca
+Saxe, Joshua Tenenbaum, and Susan Carey (2005) showed that inferences of effi-
+ciency in the Gergely paradigm are restricted to agents with exactly the proper-
+ties described in section 1.
+Saxe et al. (2005) first allowed 10- and 12-month- old infants to handle an inert
+beanbag that generated no self-propelled motion. Then infants watched a series
+of events on a puppet stage containing a barrier object, in which the beanbag
+emerged at one side of the stage already in motion, passed over a central bar-
+rier, and landed on the stage’s opposite side. On different trials, the barrier varied
+in color and height, and the beanbag rose just high enough to sail over it, as in
+Gergely’s original experiments. Although the source of the beanbag’s motion was
+never visible, these events looked to adults as if the beanbag was thrown over
+the barrier by a hidden agent (as, indeed, it was). After these events, the infants
+viewed alternating test events in which the beanbag flew across the stage as be-
+fore, followed by the emergence of either a hand or a train, either on the side
+where the beanbag had emerged or on the side where it landed. Infants looked
+longer when the hand (but not the train) appeared on the side where the beanbag
+landed, providing evidence that the appearance of a hand was more expected on
+the opposite side, from which the beanbag was propelled.
+Did this inference involve a causal attribution, or simply an association of in-
+teresting events with human hands? A key feature of causal reasoning is that dis-
+tinct candidate causes compete: If someone sneezes in the presence of a cat, we
+are less likely to attribute her sneeze to a cat allergy if we know she has a cold.
+That is why, in the animal-ball studies in section 1, attribution of causal powers to
+one moving object (the animal) blocked infants’ inference that a second moving
+object in contact with it (the ball) was moving under its own power.
+Saxe and her collaborators tested for this signature of causal attribution by
+conducting a further experiment using the same familiarization and test events,
+but replacing the beanbag by a puppet with a face and body. Infants first saw
+the puppet move spontaneously across the stage, in an irregular pattern of chan-
+ging motion. Then infants saw the puppet fly across the barriers, before the hand
+appeared on the test events. In contrast to the study with the beanbag, infants
+looked equally at the test events presenting the hand at the two locations: Given
+evidence that the puppet was self-propelled, infants did not expect another agent
+to appear at the location where its motion began. Thus, infants do not simply
+expect hands to appear at places where interesting things have happened, or vis-
+ible motions to follow events in which people are present. Infants make causal
+260 What Babies Know
+inferences, attributing the visible motion of an inanimate object, but not an ob-
+ject with animate features and behavior, to an unseen agent.
+Saxe et al.’s (2005) studies provide evidence that inferences of efficient ac-
+tion occur only when infants infer that an agent—a being with the power to
+move from within and to cause changes in other objects through its motions—
+is the source of the motion. This finding supports a different interpretation of
+the findings of Csibra et al. (1999). When an object sails on efficient paths over
+barriers of different heights without ever visibly changing its motion in a manner
+that would suggest it has causal powers, infants infer that an unseen agent set
+the object in motion. Thus, the expectation of efficient motion does not apply to
+all moving objects, but only to objects that are agents themselves or that are set
+in motion by an agent. Inferences of action efficiency connect to inferences of
+causal efficacy.
+The experiments of Gergely and his collaborators have generated rich bodies
+of research findings, but they have two limitations. First, because the efficient
+actions in the test events of these studies involve motion on a direct and linear
+path, infants’ longer looking at the circuitous test motion might reflect specific
+expectations that agents will face their goals and move in straight lines to reach
+them in the absence of barriers (Johnson, Shimizu, & Ok, 2007) rather than a
+general expectation that agents will minimize the cost of their actions. Second,
+because the familiarization events in these studies presented an agent that always
+jumped just a bit higher than the obstacle in its path, infants may come to expect
+that the size of the agent’s jump will be proportional to the size of the obstacle
+between the agent and the goal. Such expectations require no general notion of
+action efficiency.
+As a new graduate student in my lab, Shari Liu conducted a series of
+experiments to distinguish between these accounts (Liu & Spelke, 2017). To
+determine whether infants expect agents to minimize the cost of their actions,
+she familiarized 6-month-old infants with an animated agent that jumped effi-
+ciently over high barriers of variable height, as in past studies, but then tested
+infants with a much shorter barrier blocking any linear path to the goal. On al-
+ternating trials, the agent moved to the goal on two different curved paths, one
+involving a high jump that was familiar but now inefficient, the other involving
+a low jump that was novel but efficient. Looking times to these events were com-
+pared to each other, both in this condition and in a control condition in which
+the barriers used for familiarization appeared behind the goal object, such that
+all the actions were inefficient. Infants in the experimental condition, but not
+the control condition, looked longer when the agent moved on the superficially
+familiar, inefficient path. Thus, infants expect efficient action in situations where
+action predictions are not supported by the simple rule that unobstructed agents
+move in straight lines, directly to their goals.
+Agents 261
+To determine whether infants expected the more efficient action the first time
+they saw the agent face a novel set of constraints, Shari conducted a further ex-
+periment using the test events with the low barrier, preceded by familiarization
+with higher jumps of variable height. In this study, the barriers stood behind
+the goal object during familiarization and moved in front of that object only at
+test, so that only the test presented the agent taking an efficient, object-directed
+action. Infants again looked longer at the test event presenting the less efficient
+action: a high jump over a low barrier. At 6 months, therefore, infants expect
+efficient action from agents that have never displayed efficient action in the
+past, the first time that an agent confronts a new situation. If an agent acts ineffi-
+ciently in a particular situation (as in the control conditions of Gergely’s and Liu’s
+experiments), infants learn to override that assumption for that agent and situa-
+tion. In the absence of such learning, however, infants who view new situations
+expect the actions of agents to be as efficient as the environmental constraints
+allow, even if they have acted inefficiently in other situations.
+4 Infants’ Representations of Agents’ Goals
+When an agent jumps over a barrier and arrives at a new location, efficiency
+calculations depend on the assumption that the end state of the agent’s action was
+the goal of the action: If the jumping had been performed for its own sake, or as
+part of a dance or exercise, then different inferences about future actions would
+have followed (Schachner & Carey, 2013). The experiments described in section 2
+therefore suggest that infants view agents’ causally efficacious actions as directed
+toward achieving the end state that the action brings about. Those experiments
+do not reveal how infants determine an agent’s goal, however, because they did
+not vary any properties of the end state that the agent achieved: Every action in
+the studies described in the last section carried the agent to the same object in the
+same position. In natural environments, in contrast, people and animals move
+in multiple directions, to different locations furnished with diverse objects. Can
+infants determine the goal of an person’s action under these conditions?
+Landmark research by Amanda Woodward addressed this question. She
+investigated infants’ inferences about the goals of a person who engages in a
+simple action in the presence of two objects. In her first experiments, 6- to 8-
+month-old infants saw a toy bear and a ball, each standing on a pedestal, and
+a human hand that emerged from offstage, grasped one of the objects (for half
+the infants, the bear), and remained at rest on the object until the infant looked
+away, whereupon a curtain closed to end the event (figure 7.3). To test whether
+infants encoded this action as directed to the bear, infants were habituated to re-
+peated presentations of this event, and then the bear and ball switched positions.
+262 What Babies Know
+On alternating test trials, the hand entered and moved to the new object or to
+the new location. Each of these actions differed from the original action in one
+way, but infants did not treat these differences as equivalent: They looked longer
+when the hand moved on the old path to the new goal object (Woodward, 1998).
+Infants evidently individuate actions not by their trajectories but by their goal
+objects. But do infants view reaches to the same object as guided by the actor’s
+intentions?
+Woodward addressed this question in a series of glorious experiments;
+here is a quick summary. Infants represent acts of reaching as directed to goal
+objects when they view a moving human hand and arm, but not when they
+view a moving object that lacks bodily features. If the hand and arm in the orig-
+inal event are replaced by a rigid stick with a sponge or claw at its end, infants
+do not show what I will hereafter call the Woodward effect: They do not look
+longer when the stick approaches and touches the new object in the old location
+Habituation (left or right)(a)
+Test (left and right)
+Incomplete reaching
+Pointing
+(b)
+Figure 7.3 (a) Schematic depiction of the endpoints of the events during
+habituation and test in the original experiment by Woodward (1998). After
+habituation to one of the two reaching actions, each 6-month-old infant saw the ball
+and bear in the opposite locations, before the two alternating test actions occurred.
+Infants looked longer at the test action presenting the same trajectory and ending in
+a different object. (b) The incomplete reaching and matched pointing actions in the
+experiment by Hamlin et al. (2008). After viewing the actress reaching for one of two
+objects unsuccessfully, the 7-month-old infants selectively reached for the object
+she had tried to obtain. In contrast, the infants reached equally for the two objects
+after the actress pointed to one of them. Before infants understand pointing (at the
+end of the first year), they infer the goal of an incomplete reach toward an object.
+(Reprinted from Woodward, 1998, and Hamlin et al., 2008.)
+Agents 263
+(Woodward, 1998). Infants also do not show the Woodward effect if the human
+hand is gloved, changing its color and texture, although they do show the effect if
+they can see that the gloved hand belongs to a person with an otherwise normal
+body and face (Guajardo & Woodward, 2004).
+In these studies, the Woodward effect is not explained by infants’ greater atten-
+tion to the familiar object during habituation, because attention to that object is
+comparable across conditions that do and do not elicit this effect. Moreover, the
+effect is not limited to events involving recognizable human bodies: Infants show
+the Woodward effect when presented with an object with no bodily features, pro-
+vided that the object undergoes animate biological motion (Schlottmann & Ray,
+2010). Thus, infants appear to attribute goals to agents by using the same features
+that elicit infants’ expectations that agents cause changes in objects (section
+2) and act efficiently (section 3).
+In further studies, Woodward presented infants with the human arm and
+hand in the original study under conditions of passive motion: The hand fell on
+the bear, palm up, instead of making a controlled approach to it, palm down. In
+this condition, infants did not show the Woodward effect: That effect requires
+that a person act in a deliberate, controlled manner (Woodward, 1999). Infants
+also do not view object motions as goal-directed actions if a person approaches
+an object but does so without consistently facing in the direction in which she
+is moving (Shimizu & Johnson, 2004; Csibra, 2008; Baillargeon et al., 2009).
+Thus, infants do not see all animate motions that end on contact with an object,
+performed by people with hands and arms, as directed to that object.
+Conversely, infants see some actions that fail to end on contact with an ob-
+ject as goal-directed. Evidence for this ability comes from studies led by Kiley
+Hamlin. She first showed that infants who have seen a person choose one of two
+objects, and then view the objects within their own reaching distance, will reach
+more often for the object that the person had chosen (Hamlin, Hallinan, and
+Woodward, 2008). Based on that finding, she presented a new group of infants
+with an actress who faced two out-of- reach objects and extended her arm toward
+one of the objects, but failed to attain it. When the two objects then appeared
+within reach of the infants, they reached primarily for the object that she had
+previously tried and failed to grasp. Thus, infants represented the object as the
+goal of the actress’s incomplete reach and aligned their own actions with her
+intentions, rather than her specific movements.
+Studies of goal attribution in infancy reveal not only infants’ successful
+representations of goal-directed actions but also limits to their action under-
+standing. First, there are limits to the specificity of infants’ representations of goal
+objects. Elisabet (Liesje) Spaepen and I presented 12-month- old infants with two
+familiar objects, either in distinct categories (a doll and a truck) or in the same
+category (two dolls of different race and gender, or two trucks of different colors,
+264 What Babies Know
+materials, and detailed shapes), and a person who reached for one of the objects
+(Spaepen & Spelke, 2007). Infants showed the Woodward effect in the first con-
+dition, looking longer when the person who had previously reached for a truck
+now reached for a doll. In contrast, infants did not show the Woodward effect
+when the person was presented with two dolls or two trucks and consistently
+reached for one doll or truck over the other, despite evidence that infants dis-
+criminated between the members of each pair of toys.
+In light of the findings of Xu and Carey (1996; see chapter 2), Liesje and
+I wondered whether infants might have failed to individuate the object-directed
+actions more finely because they failed to track the two goal objects over occlu-
+sion. To address this possibility, we repeated the experiments but left the two
+potential goal objects continuously in view, visibly switching positions between
+the habituation and test trials. Again, infants failed to show the Woodward effect
+when an agent reached for one of two distinct dolls or trucks, providing further
+evidence for a limit in infants’ attributions of action goals. People often target
+their actions to specific objects: On leaving a restaurant, we want our own coat,
+not just any coat on the rack. Infants, however, may distinguish between different
+action goals in the Woodward paradigm only when the goal objects would be
+classified as having different forms and functions.
+Second, there are limits to the nature of the action goals that infants attribute
+to agents. Feiman, Carey, and Cushman (2015) presented 7-month- old infants
+with a succession of reaching events in which a bear consistently appeared, in
+alternation, on the left or right sides of the stage, together with a second object
+that changed from trial to trial. In one condition, the agent consistently reached
+for the bear; in the other condition, the agent consistently avoided the bear
+and reached for a new object on each trial. After habituation, infants in both
+conditions viewed the bear paired with one of the other objects, and the agent’s
+hand alternately reached to each object. Infants in the first condition showed the
+Woodward effect: They looked less at reaches to the bear than at reaches to the
+other object, providing evidence that they represented the previous reaches as
+directed to the bear. In contrast, infants in the second condition looked equally
+at the two test events. These findings suggest, first, that infants do not represent
+the action goal of obtaining a new object. On every trial, the actor in this study
+chose a new object over the continuously visible bear, yet infants never appeared
+to learn to anticipate this choice, even though they are sensitive to novelty and
+are attracted by novel objects. Second, the findings suggested that infants do not
+represent negative action goals: that is, avoiding the bear.
+The third limit to infants’ goal attributions in the Woodward paradigm comes
+from studies that focused on an object-directed action that emerges at birth and
+is extensively exercised thereafter: looking at objects. Brune and Woodward
+(2007) presented infants with the same bear and ball on pedestals as in studies of
+Agents 265
+reaching. Instead of reaching for one of the two objects on repeated trials, how-
+ever, the actor turned and looked intently at one of the two objects. When the
+object positions were exchanged at test, infants up to 10 months of age looked no
+longer when the person turned to look at the new object than when she looked
+again at the old object. Only 12-month-old infants showed the Woodward effect
+in these experiments. These findings suggest that younger infants do not view
+looking as an object-directed action.
+The fourth limit has received the most attention: In a variety of situations,
+infants show the Woodward effect only when they view object-directed actions
+that they themselves can perform (Sommerville & Woodward, 2010). For ex-
+ample, 3- month-old infants, who cannot yet reach for, grasp, and pick up
+objects, fail to show the Woodward effect when they view an agent reaching for
+the bear over the ball. The Woodward effect emerges between 3 and 5 months,
+with the emergence of infants’ own abilities to pick up objects. Similarly, infants
+under 9 months, who do not point to objects, fail to represent another agent’s
+pointing at one of two objects as directed to that object, rather than to that spa-
+tial position (Woodward & Guajardo, 2002; Brune & Woodward, 2007; see also
+Sodian & Thoermer, 2004). Understanding of others’ pointing emerges at about
+12 months, together with the emergence of a penchant for pointing at objects
+themselves (Brune & Woodward, 2007). Finally, infants under 12 months, who
+fail to engage in sequences of causally related actions, such as pulling a cloth to
+obtain an out-of- reach toy that sits on it (Piaget, 1952), also fail to infer that an-
+other agent who performs this action is aiming for the toy rather than the cloth
+(Sommerville & Woodward, 2005a, 2005b).
+These findings led Sommerville and Woodward to propose that infants learn
+about other agents’ action goals through their experience with their own object-
+directed actions, beginning when they start to pick up objects at 4–5 months.
+Amy Needham developed a means for testing this hypothesis through an im-
+portant series of training experiments, using a device she called “sticky mittens.”
+Three-month-old infants were outfitted with a pair of mittens that had a Velcro
+palmar surface, and they were presented with a pair of objects whose surfaces
+stuck to the Velcro. Although infants do not begin to grasp and pick up objects
+until 4– 5 months of age, the infants who wore the mittens were able to pick up the
+objects just by touching them. Over the course of one brief session, the infants
+learned to do this, and they showed enduring effects of this learning on their sub-
+sequent manipulations of objects (Needham, Barrett, & Peterman, 2002).
+Sommerville, Woodward, and Needham (2005) therefore used sticky mittens
+to investigate the effects of the infant’s action experiences on their representations
+of other agents’ goals. Two groups of 3-month- old infants were tested with the
+standard Woodward method, while viewing an adult who reached for a ball or
+a bear while wearing mittens. Both groups of infants also received Needham’s
+266 What Babies Know
+mittens training, wearing mittens with the same patterns as those used by the
+actor and reaching to the same two objects: One group received the mittens
+training before participating in the Woodward experiment, and the other group
+received the two sessions in the reverse order. Infants who had first learned to use
+the sticky mittens showed the Woodward effect; the others did not.
+Experiments with sticky mittens show that infants’ own action experience
+influences their understanding of the actions of others, but why? Many consid-
+erations, logical and empirical, raise problems for the hypothesis that infants
+learn to understand the actions of others by first learning to perform the actions
+themselves (Saxe, 2009, provides a useful discussion), including the findings of
+experiments using the Woodward method. For example, this hypothesis does
+not readily explain why older infants failed to represent individual objects as ac-
+tion goals in Spaepen’s studies, given that they themselves often directed their
+actions to their individual cat or teddy bear rather than to cats and teddies in ge-
+neral. It also doesn’t explain why older infants failed to represent the action goals
+of reaching for a novel object or of avoiding an undesirable object in Feiman’s
+studies, as these also are goals that infants themselves have experienced. And
+the Somerville/Woodward hypothesis would seem to predict that infants should
+represent an agent’s looking at an object as goal-directed before they represent
+an agent’s reaching as goal-directed, because infants become adept at exploring
+objects visually before they begin to manipulate objects.
+Stepping back from these specifics, it is unlikely that evolution would favor
+a learning process that precludes learning from observation about actions
+that one cannot yet perform. Bound by this constraint, infants could only dis-
+cover new actions by trial and error. If the Somerville/Woodward account is
+extended beyond studies using Woodward’s paradigm, moreover, it fails to ex-
+plain the findings of the wealth of experiments in which infants attribute goals
+to agents whose actions lie outside any infant’s repertoire. Infants who cannot
+yet crawl or walk attribute goals to agents who move independently from one
+place to another (Csibra, 2008; Luo, Kaufman, & Baillargeon, 2009; section 2),
+and infants who cannot yet jump or throw objects attribute goals to agents that
+jump or toss beanbags over barriers (Gergely et al., 1995; Saxe et al., 2005; sec-
+tion 3). In these cases, infants’ action understanding exceeds their own action
+capacities.
+I propose, therefore, to reconsider Sommerville and Woodward’s hypothesis,
+and the Woodward effect more generally, in the context of the findings described
+in earlier sections of this chapter. The same set of conditions governs infants’
+causal attributions, their expectations of action efficiency, and their represen-
+tation of object motions as goal-directed: All these abilities are manifest when
+infants view an object that moves with apparent deliberation and efficiency
+under conditions in which no perceptible external force has caused its motion,
+Agents 267
+especially if the object has animate features such as a face, hands, or the jointed
+body of a person or animal and consistently moves in the direction in which it
+is facing. Moreover, infants’ attributions of causal powers and of efficiency are
+linked: Infants expect efficient action only when they attribute causal powers to
+the actor. Finally, efficiency calculations in the Gergely paradigm presuppose
+that the end state of the agent’s motion is its goal state: If an actor were jumping
+for pleasure or exercise, then walking instead of jumping would fail to achieve
+the actor’s goal (Schachner & Carey, 2013).
+Based on these considerations, I hypothesize that a single system of core
+knowledge underlies all the phenomena described thus far: a core system for
+representing and reasoning about agents, their actions, and their mental states. If
+that hypothesis is correct, then infants in a Woodward experiment should infer
+that the person who reaches for an object has the power to cause changes in the
+state of the world, the predisposition to choose actions that effect those changes
+as efficiently as possible, and the intention of changing the state of the object on
+which she acts.
+With these expectations, how would infants construe the events in a
+Woodward experiment? Let’s consider a 6-month- old infant in Woodward’s first
+study, who sees an actress reach to and rest her hand on a bear rather than a
+ball. Reaching for objects is a highly frequent action that is almost always under-
+taken with the aim of causing a change in the state of the object: It is a prelude
+to an object-directed action, not an end in itself, and it typically is followed by
+movement of the hand and object together (S. Ullman et al., 2012). Thus, infants
+should expect an actor’s first reach to the bear to be followed by an action on
+the bear: For example, she might cuddle the bear, engage in pretend play, move
+the bear to a new location, or show the bear to the infant. In a Woodward ex-
+periment, however, no actions follow the actor’s reach: Instead, the actor’s hand
+comes to rest on the bear without changing its state. By my hypothesis, there-
+fore, infants should learn, during the repeated event that occurs over the habit-
+uation sequence, that the actor’s movement to the bear is not the prelude to a
+bear- directed action. When the person’s hand lands on the bear at test, therefore,
+infants should expect no action and pay little attention to that event.
+The ball, however, is a different kind of object, with a distinctive form and
+affordances. When people reach for a ball, they typically pick it up and move
+it: They may bounce it, roll it, toss it in the air, or give it to the child; in all these
+cases, their reaching is followed by an action on the ball. Thus, infants who have
+learned that the actor will not act on the bear should still expect her to act on
+the ball, and they should attend to her movements to discover what she does.
+Similarly, infants in the other half of the Woodward experiment, who are habit-
+uated to reaches to the ball, should learn, during habituation, that reaches to the
+ball are not a prelude to any ball-directed actions. At test, these infants should
+268 What Babies Know
+expect object-directed actions only when the person reaches to the bear, and at-
+tend more when she reaches to that object.
+This hypothesis does not challenge Woodward’s primary conclusions: Infants
+indeed represent actions as directed to goal objects and as guided by intentions
+toward those objects. The hypothesis relates the phenomena she studied to those
+described in sections 1 and 2: Just as causal attributions stand at the center of
+infants’ apprehension of self-propelled objects and expectations of action effi-
+ciency, causal attributions may account for infants’ behavior in all of Woodward’s
+experiments.
+The hypothesis of a core agent system helps to explain the limits to infants’
+goal attributions in experiments using Woodward’s paradigm. First, why do
+infants show the Woodward effect when a person reaches for a doll over a truck
+but not when she reaches for one of two dolls or trucks? Dolls and trucks afford
+different actions. When a person reaches repeatedly for the doll in the presence
+of a truck and then does nothing, infants learn that she does not intend to engage
+in any of the actions that dolls afford: Her touch is not a prelude to doll-play. This
+conclusion does not imply, however, that the person will also fail to play with the
+truck when she reaches for it, because trucks afford different actions. In contrast,
+when a person reaches repeatedly for one of two dolls and does nothing, infants
+have no reason to expect that a shift from first doll to the second one will elicit
+a change in the state of the object: Although the two unfamiliar dolls are dif-
+ferent individuals, they afford the same sorts of actions: actions that the person
+has chosen not to perform.
+Second, why do infants show the Woodward effect when a person reaches for
+a bear in the context of a parade of companion objects but not when the person
+avoids the bear and reaches for each new object? In the first condition, infants
+learn that the person’s bear-directed touching will not be followed by a bear-
+directed action, but they continue to expect, at test, that her reaching to any of
+the other objects will be followed by an action on that object, because people
+rarely reach for things unless they plan to act on them. In the second condition,
+in contrast, each of the objects the actor touches affords different actions. Since
+no action by the agent ever follows, infants learn that this actor’s reach is not a
+prelude to actions on any object: learning that generalizes, at test, to the bear.
+Third, why do infants under 12 months show no Woodward effect when a
+person looks at an object, an action that they have engaged in throughout their
+lives? Moreover, why do 12-month-old infants begin to view looking as object-
+directed in the Woodward paradigm? Looking at an object does not change the
+state of the object—it is not a causally efficacious action—so it elicits in young
+infants no attribution, to the person, of an intention to change the state of the
+world. At the end of the first year, however, infants begin to share attention to
+objects with other people (Tomasello, 2008; to be discussed in chapter 10). In
+Agents 269
+states of joint attention, object-directed looking indeed becomes an efficacious
+action, thanks to its social and communicative functions. Consistent with my hy-
+pothesis, the emergence of shared attention correlates, across individual infants,
+with the emergence of an understanding of people’s acts of looking as object-
+directed in the Woodward paradigm (Brune & Woodward, 2007).
+Finally, why do the youngest infants fail to show the Woodward effect un-
+less they receive mittens training? If infants’ action understanding depends on
+a system of core knowledge, centering on abstract concepts that apply to all an-
+imals but oblivious to the more specific concepts that apply to specific human
+actions, then this question can be reframed: When do infants begin to expect
+that a person who reaches for an object and contacts it with a palmar grasp
+intends to cause changes in the object, and what changes does the person intend
+to bring about?
+Grasping, lifting, and manipulating objects are difficult actions for infants
+to understand (and for robots to perform). Although objects canonically are
+supported from below, one lifts an object by grasping its top or sides and exerting
+pressure on it. If the object is rigid, then this pressure cannot be seen. When
+prereaching infants manage to contact an enticing object, moreover, the most
+likely outcome will be that the object rolls, bounces away, or slips through their
+fingers: One must approach an object gently and exert just the right amount of
+pressure— neither too little nor too much—to lift it. To manipulate an object
+effectively, moreover, one must adapt one’s actions both to the object’s shape
+and functions and to biomechanical constraints on one’s movement. Children
+struggle with aspects of this problem for years (Keen, 2011; Ossmy et al., 2021),
+and most animals never master this skill. Thus, infants likely must learn that an
+actor intends to grasp, pick up, and manipulate an object when the palmar sur-
+face of her hand is extended toward the object and her fingers are open, but not
+when the back surface of the hand extends toward the object or her fist is closed
+(Woodward, 1999; Rochat et al., 2008). Infants who cannot yet pick up objects
+may be bewildered by adults’ acts of reaching toward and touching objects.
+This hypothesis suggests a different account of the sticky mittens training
+effect. When an infant touches an object that sticks to his mittens, he causes a
+change in the state of the object on contact, independently of the object’s shape
+and of the manner in which it was touched. Over the mittens training, the infant
+now can entrain the object and move it at will, without needing to grasp the ob-
+ject or approach it gently. Mittens training therefore converts a causally opaque
+pick- up action into a causally transparent contact event. After training, when the
+infant sees another actor lay her mittened hand on a sticky object, he expects an
+action to follow. When no action follows on the succession of habituation trials,
+he gives up this expectation but continues to expect an action to follow a reach
+for the other object. Thus, mittens-trained infants show the Woodward effect.
+270 What Babies Know
+This hypothesis explains two further findings from training studies with
+sticky mittens (Woodward, 2008). First, mittens training does not produce a
+Woodward effect if the mittens-trained infants view an actor who is not wearing
+mittens. Because all the infant’s experience has taught her that objects do not
+stick to bare hands when they are touched, only reaches wearing the mittens
+should elicit expectations of action on contact. Second, mittens training does not
+produce a Woodward effect if the adult who is wearing mittens reaches for a dif-
+ferent object from the ones used in training. During training, the mittens stick to
+the test objects but not to the table or to each other, so expectations of causally
+efficacious actions are only warranted for the sticky objects.
+This hypothesis makes predictions about goal attributions by younger
+infants, some of which have been tested. First, in light of evidence that
+attributions of causal efficacy and efficiency are related, the hypothesis
+predicts that infants who receive mittens training should expect an agent,
+who wears the same mittens and reaches for the same objects, to reach effi-
+ciently. Amy Skerry, working with Susan Carey and me, tested this prediction
+in a version of the Gergely paradigm (Skerry, Carey, & Spelke, 2013). Three-
+month-old infants were randomly assigned to two conditions in which they
+explored a set of objects while wearing mittens. In one condition, the mittens
+had Velcro that allowed infants to pick up and move the objects on contact;
+in the other, the mittens had no Velcro and afforded no such actions (figure
+7.4a, A1 and A2).
+After this experience, these infants and a separate group of infants who re-
+ceived no mittens experience were habituated to filmed events in which an ac-
+tress who was wearing a similar Velcro glove reached over a barrier to a goal
+object, picked up the object, and displaced it (figure 7.4a, H1). As in the studies
+of Gergely’s group and of Brandone and Wellman, the hand consistently moved
+on an efficient trajectory over the barrier. When the barrier was removed at test,
+the infants who had explored the objects with the Velcro mittens looked longer
+at the test event with the familiar but inefficient trajectory, providing evidence
+that they expected a direct reach for the object (figure 7.4b). A further experi-
+ment, varying the location of the barrier (figure 7.4a, H2), showed that this effect
+depended on infants’ expectation that the actress would reach efficiently, not an
+expectation that unobstructed arm extensions that will follow straight paths (von
+Hofsten, 1980). When the actress reached on the same curvilinear trajectories
+during familiarization but the barrier stood behind the object rather than in her
+path, infants failed to expect efficient, direct reaching at test. Thus, infants who
+wore sticky mittens did not learn to expect straight rather than curved reaches
+in general. Infants only expected straight reaches to an object when previous,
+curved reaches to the object had been efficient, given the constraints imposed by
+the barrier.
+Agents 271
+These experiments support two conclusions. First, infants do not learn,
+from their own experience with sticky mittens, that other agents’ reaching
+is constrained by barriers and directed efficiently to objects, with the goal of
+causing changes in the objects. The 3-month- old infants in these experiments
+never experienced reaching with the mittens in the presence of a barrier, and
+so they had no opportunity for such learning during the experiment. Outside
+this experimental context, moreover, infants do not become capable of planning
+and executing an indirect reach to an object behind a barrier, whether opaque or
+transparent, until the end of the first year (Diamond, 1988). When young infants
+view another person reaching around a barrier, they understand that the person’s
+indirect reaching for the object is goal-directed many months before they them-
+selves become capable of performing this action.
+Second, infants’ understanding of actions as causally efficacious and as effi-
+cient indeed are interconnected. The experience with mittens allowed infants to
+reanalyze the agent’s reaching action as having a key signature of actions that
+cause changes in the world: They occur on contact between the actor and the
+Action phase:
+inefficient action
+0.6
+0.55
+0.5
+0.45
+0.4
+looking time proportion
+effective
+action
+training
+ineffective
+action
+training
+no
+training constrained
+action
+habituation
+unconstrained
+action
+habituation
+Exp 1 Exp 2 Exp 3 Exp 4 Exp 5
+efficient action
+Habituation phase:
+Test phase:
+Figure 7.4 Displays for five experiments assessing 3-month-old infants'
+representations of actions as object-directed and efficient. In experiments 1–3,
+infants first experienced reaching for objects with Velcro mittens (A1), reaching
+with mittens without Velcro (A2), or no reaching (A3). Then they were habituated
+to events in which an actor reached efficiently over a barrier to an object (H1). In
+experiments 4–5, infants first experienced reaching for objects with Velcro mittens
+(A1) and then were habituated either to the same efficient action (H1) or to an
+inefficient action (H2). All infants were given the same test events, presenting a
+novel but efficient reaching trajectory (T1) and a familiar but inefficient reaching
+trajectory (T2). Infants expected a direct reach to the object at test only if they had
+worn Velcro mittens and had seen efficient reaching over the barrier. (Reproduced
+from Skerry et al., 2013.)
+272 What Babies Know
+object. Once infants attributed a causal intention to the actor, they also inferred
+that she would act as efficiently as the environmental conditions allowed, con-
+sistent with the hypothesis that a single system underlies attributions of causal
+efficacy, efficiency, and goal-directedness.
+Skerry’s findings further support the view that young infants’ action under-
+standing is guided by the interconnected, abstract concepts of causal efficacy,
+goal- directedness, and efficiency. The act of reaching, grasping, and displacing
+an object may be baffling to infants who have not mastered it, because it is highly
+complex: Successful acts of picking up an object depend on the position, orien-
+tation, and shape of the hand and on the pressure it exerts, relative to the shape,
+weight, rigidity, and slipperiness of the object. Most animals do not have hands
+that can grasp objects, so ancient mechanisms for inferring contact causality
+likely are not sufficient for analyzing this action. In the infant’s own experience,
+moreover, swiping and contacting an object may cause it to move, but not to en-
+train with movements of the hand. When 3-month- old infants without mittens
+experience see an agent reach for an object on a curved path, they may wonder
+whether this approach from above is a necessary part of a successful pick-up
+action. If so, the curved path might be the most efficient means to achieve the
+agent’s goal.
+This analysis leads to a further prediction: Prereaching infants with no mittens
+experience should expect the object-directed actions of an agent to be efficient if
+the agent’s action causes a perceptible change in the object simply by contacting
+it, even if the infants receive no mittens experience. Shari Liu and Neon Brooks
+tested this prediction in experiments in my lab (Liu, Brooks, & Spelke, 2019).
+In our first experiment, conducted by Neon, 3-month- old infants viewed an
+agent wearing a glove, who extended her hand toward an object exactly as in the
+studies just described. Instead of picking up the object, however, she touched
+it with the tips of her fingers, whereupon it lit up and made a whirring sound.
+When the barrier was removed, infants looked longer at the superficially similar,
+now inefficient action on the curved path.
+In further studies, Shari probed the reasons for this effect. As in her previous
+studies of infants’ expectations of efficient action, she found that infants’ at-
+tention to the test events that occurred on removal of the barrier depended on
+the position of the barrier during the habituation events. When the barrier was
+placed behind the object during habituation so that all the curvilinear reaches
+were inefficient, infants looked equally at the two test events. With neither
+reaching and grasping experience nor mittens experience, these young infants
+expected the agent to reach directly toward the object at test only if her reaches
+during familiarization had been efficient.
+Shari next asked whether infants’ expectation of efficient action showed the
+signature of infants’ causal reasoning: The lighting up of the object occurred
+Agents 273
+on contact with the hand. She repeated the first experiment with one critical
+change: Instead of contacting the object, the hand stopped short of it, and the
+object lit up after a pause of 0.5 seconds—conditions that abolish the impression
+of causality in the experiments described in section 1. In this condition, infants
+showed no expectation of efficient action at test. Then Shari replicated these two
+experiments in a single, preregistered study, with random assignment of infants
+to the two conditions (contact vs. no contact) and condition-blind experimenters
+as well as observers. Except for the half-second period during which the hand
+froze in one condition and moved into contact with the object in the other condi-
+tion, the two conditions involved entirely identical filmed events.4 Infants again
+expected efficient action in the condition with contact between the hand and
+object, they failed to expect efficient action in the condition with no contact, and
+performance in the two conditions differed reliably. Three-month- old infants’
+action representations therefore showed a key signature of causal attribution.
+In summary, 3-month-old infants, who cannot pick up objects and manipu-
+late them, nevertheless expect the actions of agents who have these abilities to
+be efficient and causally efficacious. Because the infants in these experiments
+were 3 months old, the experiments do not shed light on the earlier develop-
+ment of these expectations. It is possible that younger infants learn that agents
+tend to reach on efficient paths in relation to environmental constraints and that
+they produce changes in the state of the world on contact. Alternatively, these
+assumptions may be built into the cognitive systems by which infants represent
+agents and actions. The latter possibility gains some support from the finding
+that controlled-reared chicks, given evidence that the moving object in a colli-
+sion event is self- propelled, represent that object as causing the motion of the
+object with which it collides (Mascalzoni et al., 2010; section 2 here). Future
+experiments with still younger infants, or controlled-reared animals, could test
+these possibilities further.5
+Meanwhile, the research just described raises a further question: Will 3-
+month-old infants who observe a person causing a change in an object on con-
+tact show the Woodward effect? Sticky mittens experiments were motivated
+by the finding that 3-month-old infants do not show the Woodward effect. Do
+4 Indeed, the same film was used in all these experiments, digitally altered so as to equate all
+sounds and timing across positions and rendering everyone except the infant wholly blind to the
+infant’s condition.
+5 A large literature has explored interrelations between action production and action perception
+in monkeys (e.g., Rizzolatti et al., 1996), but relatively few studies have probed the nature and devel-
+opment of processes of goal attribution in animals. At the time of this writing, there is evidence for
+representations of reaching actions as goal-directed (in Woodward’s sense) and as efficient in relation
+to environmental constraints (in Gergely’s sense) in untrained adult apes and monkeys (Wood et al.,
+2007; Rochat et al., 2008) as well as dogs (Range, Viranyi, & Huber, 2007), but some of these findings
+have been disputed (Hare et al., 2010), and none, to my knowledge, has been extended to infant ani-
+mals. I discuss some of this research in section 6.
+274 What Babies Know
+they fail only because they do not view the reaching actions as causal? Or have
+3- month-old infants also not yet learned that contacting an object usually is a
+prelude to specific actions on the object, such as rolling a ball or cuddling a bear—
+actions that depend on the object’s intrinsic properties, not its spatial location?
+Brandon Woo, a grad student working in my lab, and Shari recently completed
+experiments that begin to address these questions (Woo, Liu, & Spelke, 2021).
+First, Brandon and Shari asked whether young infants will show the
+Woodward effect if the actress causes a change in the object on contact. They
+tested 3- month-old infants with a single change to the Woodward method: When
+the actress’s hand contacted the goal object, during familiarization and test, both
+objects lit up in synchrony with a sound (figure 7.5a).6 At test, however, infants
+habituation(a) (b)
+objects change positions
+different object different position
+test
+habituation
+objects change positions
+different object different position
+test
+and
+Figure 7.5 Displays for two experiments assessing 3-month-old infants’ ability to
+infer the goal of an agent’s reach. Infants were habituated to events in which an actor
+reached for one object (in this case, a ball) over another (a bear) and both objects lit
+up changed color on contact with the hand; the objects occupied constant positions
+in experiment 1 (a) and alternated between two positions at the center and one side
+of the array in experiment 2 (b). Test events presented infants with the two objects
+at the two side positions, and the actor alternately reached for the same object (in a
+new position) or for the other object (in a familiar position). In (a), infants who had
+seen only reaches to a single object and position treated reaches to the new object
+and the new position as equally novel. In (b), infants who had seen reaches to a
+single object at two positions expected reaches to that object at a third position at
+test and treated reaches to the other object, at one of the two familiar positions, as
+more novel. (Figure adapted from Woo et al., 2021.)
+6 Experiments using Woodward’s method require that the same change occur in both objects si-
+multaneously: If it did not, then infants might look longer at the test event in which the new object
+lit up in synchrony with the sound, because it would be a novel event. In planning the study, we
+wondered if the synchronous state changes of the two objects would present infants with an event
+Agents 275
+looked equally when her hand contacted the original object in the new posi-
+tion and the new object in the original position. Infants still failed to show the
+Woodward effect, providing evidence that causal information alone does not in-
+dicate that the goal of a person’s reach is an object with particular affordances,
+rather than an object at a particular location.
+Accordingly, Brandon and Shari designed and undertook two further
+experiments. For these studies, they modified the Woodward method in order
+to present infants with reaches to two objects at three spatial positions. In the
+first study (figure 7.5b), infants viewed an actor who reached consistently for a
+ball (or, for half the infants, a bear). Across trials, the ball appeared alternately on
+the left side of the display (or, for half the infants, the right side) and at the center
+of the display, and so the actor alternately reached to one side and to the center.
+Thus, the familiarization events suggest that it is the intrinsic properties of the
+ball, and therefore its affordances, rather than its position, that make the ball the
+goal of the actor’s reach.
+At test, the two objects appeared on opposites sides of the display, with the
+reached- for object occupying the novel position: In this example, the ball stood
+on the right, where no object stood before, and the bear stood on the left, at a
+now-familiar position. Throughout the study, both objects lit up and changed
+color in synchrony with a sound when one object was touched. The 3-month- old
+infants looked longer at the test event in which the person reached to the new
+object at the familiar position than at the test event in which the person reached
+to the original object at the novel position. Thus, the 3-month- old infants
+represented the reach as directed to the object the actor had reached for previ-
+ously, despite its novel position. Given information that clarified the goal of the
+actor’s reach, infants appropriately inferred the actor’s object-directed intention.
+Currently, we are testing whether 3-month- old infants can learn with equal ease
+that an actor intends to reach for an object at a specific position, regardless of its
+other properties and affordances.
+In summary, the large and rich body of studies initiated by Woodward now
+suggests that prereaching infants are sensitive to three abstract properties of
+people’s acts of reaching: They view these acts as causal, as costly, and as goal-
+directed. Without further information, however, prereaching infants do not as-
+sume that people are more likely to reach for objects with particular forms and
+that they either found anomalous, or that suggested to them that the two objects were connected.
+Two prior findings suggested, however, that infants would not be affected by the correlated change in
+the two objects. First, 4-month- old infants do not view synchronous state changes in two stationary
+objects as evidence that the objects are connected (Jusczyk et al., 1999; chapter 2 here). Second, Liu
+et al.’s (2019) experiments show that 3-month- old infants do not connect an act of reaching to a
+change in the state of an object if the hand stops moving at a distance from the object. The findings to
+be presented provide more direct evidence that infants were not perturbed or distracted by the syn-
+chronous state changes.
+276 What Babies Know
+functions rather than for objects at particular positions. Thus, they are ignorant
+of properties of people’s most common actions that we (and older infants) take
+for granted. Brandon and Shari’s last experiment, however, provides evidence for
+another key property of core knowledge systems: Infants’ abstract knowledge of
+agents and their actions supports their learning. Over the course of a single ses-
+sion, 3-month-old infants who viewed a person reaching for a single object in
+two different locations learned that the goal of the person’s reach was to move
+to that object, not to move to that location. Like the object and place systems,
+infants’ abstract, early-emerging knowledge of people as agents supports their
+learning about people’s actions and goals.
+5 Do Infants Attribute Perceptions to Agents?
+All interpretations of the experiments described in the previous two sections pre-
+suppose that infants attribute to agents the ability to detect objects at a distance.
+To adjust the height of their jumping to the height of a barrier that blocks their
+direct path to an object, agents must detect the barrier and assess its height. To di-
+rect a reach to an object, a person must detect the object and its location. If infants
+did not make this assumption, then they could not expect agents either to plan
+actions around barriers that they never contact or to direct their actions to dis-
+tant goals. These considerations raise a question: Do infants assume that agents
+are omniscient detectors of every object in a scene, or do they, like adults, expect
+agents to detect surrounding objects under some conditions but not others?
+Considerable evidence indicates that infants expect an agent to act only on
+objects within its field of view, which in turn depends on its position and heading.
+Recall that 6-month-old infants view a person’s movements as goal-directed only
+when she faces in the direction in which she is moving (Johnson, Shimizu, &
+Ok, 2007a; see also Csibra, 2008). Further experiments show that infants expect
+people to move out of the path of an oncoming object when they face the ob-
+ject but not when they face away from it. Kosugi and Fugita (2002) presented
+8- month-old infants with events in which an object moved smoothly behind a
+screen in the direction of a stationary, standing person, who was partly visible on
+the far side of the screen: a similar arrangement to that at the top of figure 7.1c,
+but reversing the positions of the object and the person. After habituation to this
+event, the screen was removed, and infants viewed alternating events with and
+without contact: displays like those at the middle and bottom of figure 7.1c, but
+presented in two versions, with the stationary person facing either toward or
+away from the moving person. When the person faced away from the silently
+approaching object, infants expected the object to contact him. In contrast, when
+the person faced the approaching object, infants expected him to begin to move
+Agents 277
+away before the object arrived (see also Woodward, Phillips, & Spelke, 1993).
+Thus, infants expected the person to adapt his actions only to objects that would
+have been visible to him.
+Experiments by Yuyan Luo and her collaborators provide evidence that
+young infants recognize that other agents’ detection of objects also is lim-
+ited by occlusion. Her studies build on the finding that 5-month-old infants
+show the Woodward effect when they reach for one of two objects but not
+when they reach for the only available object in the scene (Luo & Baillargeon,
+2005). Thus, the Woodward effect depends on evidence that the actor made
+a choice between two possible goals (Luo & Baillargeon, 2005; see section
+6). In one study, Luo asked whether infants would show the Woodward ef-
+fect if two objects were present in the scene and the actor reached for one of
+them, but only the chosen object was visible to the actor, who stood between
+the objects and faced one of them. Infants did not show the Woodward effect
+in this situation: When the unchosen object stood behind the actor’s back,
+infants did not interpret the action as a choice between two options (Luo &
+Johnson, 2009). In other studies, Luo tested for the Woodward effect when
+the actor faced in the direction of two objects but one of the objects was oc-
+cluded from the actor’s perspective (though both objects were visible to the
+infant). Under these conditions, infants did not expect the actor to reach for
+the chosen object after the barrier that blocked the actor’s view of the other
+object was removed. These findings were replicated in 3-month-old infants
+(Luo, 2011; see also Choi, Mou, & Luo, 2018).
+The findings just described are open to two interpretations, because vari-
+ations in an actor’s facing direction, and variations in the existence or position
+of an occluder, influence not only what actors can see but what they can easily
+do: It is more costly to reach for an object that stands behind one’s back or that
+is positioned behind a barrier than for an object that stands before the actor, un-
+obstructed. To determine whether infants attributed varying perceptions to the
+agents in these experiments, further experiments have focused on a key signa-
+ture of perception: Perceptual information in other modalities can compensate
+for barriers to vision, but not for barriers to action. In studies of 12-month-old
+infants, Luo showed that the Woodward effect could be restored if the agent had
+the opportunity to feel the occluded object behind the screen (Luo & Baillargeon,
+2007). Similarly, Kosugi’s studies showed that infants’ expectations concerning
+actions of an agent who faces away from an approaching person can be modulated
+by sound: The person’s voice can lead the agent to move out of the way (Kosugi &
+Fugita, 2002). Thus, older infants’ expectations of object-directed action are mod-
+ulated by the actor’s perceptual access to the goal object, whether by vision, touch,
+or sound. Because the youngest infants tested in these studies were 5 months old,
+the earlier development of these abilities is not clear. Controlled-reared chicks,
+278 What Babies Know
+however, avoid foraging in places that lie within the view of an unfamiliar, poten-
+tial predator, providing evidence that aspects of these abilities are innate in one
+species (Rosa Salva, Regolin, & Vallortigara, 2007).
+Thus, infants as young as 3 months expect other agents to adapt their actions
+only if the objects are perceptually accessible to them. Do infants further ex-
+pect that agents will act on objects only if they look at them? Four lines of re-
+search suggest that they do not. First, infants do not view another agent’s acts
+of looking as directed to objects until the end of the first year: Infants do not
+show a Woodward effect when presented with an actor who looks at one of two
+objects (Woodward, 2003; Brune & Woodward, 2007; section 4).7 Second, older
+infants integrate their representations of agents’ gaze direction, body orienta-
+tion, and direction of action, but younger infants do not. When 12-month- old
+infants view a body that is oriented in a particular direction, they expect that the
+head and eyes also will face in that direction, combining their analysis of biolog-
+ical motion with an analysis of gaze direction (Yoon & Johnson, 2009). Younger
+infants, in contrast, fail even simple tasks assessing such integration: They expect
+the eyes to be oriented in the same direction as the head but have no expectation
+concerning the relative orientations of the eyes and head with the body (Gliga &
+Dehaene- Lambertz, 2007).
+Third, infants under 1 year of age do not use the direction of an agent’s gaze to
+predict the direction of her goal-directed action. If a person looks at one of two
+objects and then begins to reach as a curtain closes, 14-month- old infants expect
+the actor to reach for the object at which she was looking, and 12-month- old
+infants show emerging signs of this ability, but younger infants do not (Phillips,
+Wellman, & Spelke, 2002; figure 7.6). Despite a year of experience with people
+7 Several investigators have questioned Woodward’s conclusion. In one study, Johnson, Ok,
+& Luo (2007b) showed that 9-month- old infants dishabituate to looking in the direction of a new
+object if they are habituated to events in which an agent looks at the familiar object from a set of
+varying positions. This task, however, can be solved by processes of pattern learning over the course
+of the experiment: It may not reflect any general expectation that people look at objects. Luo (2010)
+questioned Woodward’s interpretation on different grounds, arguing that young infants may under-
+stand looking as object-directed but may view an act of looking at an object without reaching for it
+as anomalous. However, Luo’s interpretation does not explain the developmental change observed
+by Woodward (2003) and by Brune & Woodward (2007): If looking at an object without touching
+it were anomalous, older infants should be equally or more sensitive to the anomaly. Luo’s interpre-
+tation also cannot account for the findings of Beier & Spelke (2012), in which 9-month- old infants
+fail to perceive gaze as goal-directed when an agent looks at another person (see chapter 8). As early
+as 6 months, infants appreciate that people act on objects by reaching for them but act on people by
+talking to them (Molina et al., 2004). Thus, when one person turns to look at and speak to one of two
+people, infants should not find it anomalous that the person does not reach for the person toward
+whom he is looking. Nevertheless, when an actor turned to look at and talk to one of two people,
+infants under 10 months failed to perceive his action as goal-directed, consistent with Woodward’s
+original interpretation. No finding, therefore, shows that infants construe acts of looking as
+object- directed.
+Agents 279
+who tend strongly to look at the objects they act on, infants are remarkably ob-
+livious to this cue. Fourth, infants do not begin to consistently follow the gaze of
+an agent to an object until about 7 months of age. Until 10 months, moreover,
+their gaze following depends on the agent’s head direction more than on his eyes.
+When an agent turns to look at an object, infants are equally likely to turn to the
+object if the agent’s eyes are open or closed (Brooks & Meltzoff, 2005), and until
+14 months, they are equally likely to follow the gaze of a person wearing a head-
+band with open, unobstructed eyes and a person wearing a blindfold that covers
+his eyes (Brooks & Meltzoff, 2002).
+These negative findings cannot be explained by limits to infants’ sensitivity or
+attention to eyes and gaze direction. When newborn infants are presented with
+two still photographs of a face, side by side, one with the eyes facing forward to-
+ward the infant, the other with the eyes facing to the side, infants look longer at
+the face with the direct gaze (Farroni et al., 2002). When the face first looks at
+them and then looks to the side without turning the head, moreover, newborn
+infants detect and follow this shift in gaze (Farroni et al., 2004). (I discuss these
+Habituation
+Test
+Congruent with gaze Incongruent with gaze
+Figure 7.6 Displays for an experiment testing infants’ predictions of object motion
+from their direction of gaze and displays of emotion. During habituation, an actress
+looked and smiled at one of two identical objects (top left) and, after the curtain
+closed and reopened, she held the object at which she had looked (top right). At
+test, she either looked in the same direction (bottom right) or the opposite direction
+(bottom left) and was revealed, when the curtain opened, to be holding the object
+that had been positioned in the new direction. Infants looked equally at these
+events: They failed to predict the change in the person’s goal from the change in her
+direction of gaze. (Reprinted from A. Phillips et al., 2002.)
+280 What Babies Know
+findings in chapter 8.)8 Thus, young infants perceive and attend both to an actor’s
+gaze and to his object- directed actions but show little understanding of the rela-
+tion between these two indicators of the actor’s intentions.
+Although young infants do not predict agents’ actions from their direction
+of gaze, I suggest— drawing on insights from computational models of action
+understanding—that infants predict and interpret an agent’s actions by assessing
+the contents of the agent’s visual field: the surfaces and objects that are visually
+accessible, given the agent’s position and heading. Objects that are occluded
+from the agent’s perspective lie outside his visual field (though the agent will de-
+tect them if he hears or feels them), as are the backs of objects that face the agent
+and the objects that lie behind the agent’s back. All features of the environment
+within the visual field, however, may be considered by infants as potential targets
+of the agent’s actions.
+As adults, we often assume that people have seen things that are perceptually
+accessible to them, without knowing where they are looking. If, while teaching a
+class, I introduce and act on an object to demonstrate a point in the lecture, I do
+not check the eyes of all the students to see if each is looking at the object. As
+long as my demonstration is accessible to every student, I assume that everyone
+has seen it. Experiments by Chris Baker, Rebecca Saxe, and Joshua Tenenbaum
+(2017) show that adults make astute inferences about agents’ action plans and
+mental states, using this assumption.
+In summary, infants as young as 3 months attribute to agents the power to de-
+tect objects at a distance, but they appear to fail to appreciate that agents only see
+the things they look at. Although 3-month-old infants expect that an agent will
+not act on an object that is occluded from her perspective, only at 12 months do
+infants begin to expect that an agent will not act on a visually accessible object
+toward which she has not looked. More deeply, infants below 12 months may
+not view other agents as having perceptual experiences of objects like their own
+(Meltzoff & Brooks, 2008). They may connect agents’ actions to their perceptual
+access to objects but not to their experiences of objects. I return to this sugges-
+tion in section 9.
+8 In these studies, infants first see a still photograph with direct gaze, then the same pose with
+averted gaze, and finally the face disappears and is replaced by an object positioned to the left or
+right, either toward or away from the shift in gaze. Under such conditions, newborn infants tend to
+fixate the object faster when it appears on the side of the shift in gaze (Farroni, Massaccesi, Pividori,
+& Johnson, 2004; Nakato et al., 2009) as do older infants (Hood, Willen & Driver, 1998) and adults
+(Driver et al., 1999). I discuss this research in chapter 8, because the evidence from these studies
+suggests that this attentional effect pertains to infants’ representation of gaze as a sign of social en-
+gagement, not as a cue to an agent’s object-directed action. In particular, the movements of attention
+only occur when a face appears in a scene that is devoid of objects, and only when the face disappears
+before the objects are presented.
+Agents 281
+6 Do Infants Attribute Desires, Knowledge, and Beliefs
+to Agents?
+As adults, we construe agents as acting in accord with their stable preferences
+and their current desires and beliefs, as well as their perceptions. Accordingly,
+experiments using Woodward’s method have asked whether infants interpret
+another agent’s act of reaching as a manifestation of her desire for that object.9
+Attributions of desires to an agent who repeatedly reaches for an object are
+not unreasonable, even if the agent does nothing more with the object, as in a
+Woodward paradigm, and even if infants learn over the course of habituation
+that the agent does not intend to cause changes in the object she touches, as I pro-
+pose. Selective touching of an object could be a signal that the object holds a priv-
+ileged status for the agent, who wishes to be in contact with it.
+One finding described in section 3 provides evidence for this possibility: After
+watching a person reach repeatedly, but unsuccessfully, for a distant bear over a
+distant ball, infants themselves choose to reach for the bear (Hamlin et al., 2008,
+figure 7.3b). This effect cannot be attributed to imitation of the observed ac-
+tion, because the person’s hand never arrived at the bear. Instead, it must reflect
+infants’ reading of the person’s intentions (see also Brandone & Wellman, 2009,
+and Meltzoff, 1995). The experiment therefore shows that infants inferred, from
+a person’s behavior, that the bear was the intended goal of her action, and per-
+haps the more valued object.
+Selective reaching for one of two objects is not a particularly reliable indi-
+cator of an actor’s desires, however, because people reach for objects for mul-
+tiple reasons: not just to commune with the objects but to put them in their
+proper place or throw them away. People also use objects as means to a diverse
+ends: We grasp a doorknob because we wish to enter a room, and we head for
+a movie theater to experience a desired activity, not to sit in a desirable audito-
+rium. Consistent with these observations, 10-month- old infants, tested in the
+Woodward paradigm, do not show the Woodward effect if critical information
+about the goal of the agent’s reach is provided in a different room from that of
+9 Some experiments using the Woodward paradigm, and aiming to test whether infants attribute
+preferences or desires to people who act on objects, presented infants with one person reaching for
+one of two objects during habituation and a different person reaching alternately to the two objects at
+test. In one series of studies, infants did not generalize from one person to the other in this paradigm
+(Buresh & Woodward, 2007). Infants do generalize from one person to another in other experiments
+using this method, however (Csibra & Gergely, 2009). I will discuss these studies, and the opposite
+effects they revealed, in chapter 8, but here note that regardless of whether or not habituation to one
+person’s reaching generalizes to a second person, these studies do not bear on infants’ attributions
+of desires or preferences to agents. Infants may generalize across people even if they think people’s
+actions reveal their desires, if they also expect different people to want the same things. Moreover,
+infants may fail to generalize across people even if they attribute no desires to them, if they realize
+that different people sometimes act on the same object in different ways.
+282 What Babies Know
+the experiment itself (Sommerville & Crane, 2009). Infants may not assume that
+actions by a person in one context will be guided by the same intentions in other
+contexts.
+Better evidence for a person’s desires comes from the effort she expends in
+bringing about a goal state, from the risks of failure she is willing to assume, from
+the collateral damage she is willing to risk for a chance to obtain her goal, and
+from the opportunities she forgoes in pursuing her goal. Infants are sensitive to
+the physical costs of an action (section 2). Here I ask whether they use this infor-
+mation to infer the value, to an agent, of the goal state her actions aim to achieve.
+Research by Shari Liu, working with Tomer Ullman, Joshua Tenenbaum and
+me, addressed this question (Liu et al., 2017). In Shari’s first experiment, infants
+were familiarized with four events, each involving the same agent and one of two
+goal objects (figure 7.7). In two events, the agent appeared at the center of the
+screen with one goal object to its left, a barrier fell on-screen between the agent
+and the object, and the agent looked up and down the barrier. Then the agent
+jumped efficiently over the barrier, reaching the object, in one event, and refused
+to jump in the other event. The other two events involved the same agent begin-
+ning in the same central position, accompanied by a different goal object on the
+right. Again a barrier fell in front of the object, and the agent looked up and down
+the barrier before jumping to the object in one event and not in the other (figure
+Habituation
+Test
+Higher cost action
+Goal value consistent with action cost Goal value inconsistent with action cost
+Lower cost action
+and
+Figure 7.7 Displays from the first experiment by Liu et al. (2017). Infants were
+familiarized with four events, in which an animated agent took a medium-cost
+action and refused a high-cost action to get to one goal object (top left) and took a
+low-cost action and refused a medium-cost action to get to the other (top right).
+At test, both goal objects appeared together and the agent moved to each object on
+alternating trials. Infants looked longer when the agent approached the object for
+which it had taken the lower-cost action, providing evidence that they expected the
+goal of the higher-cost action to have higher value. (Reproduced and adapted from
+Liu et al., 2017.)
+Agents 283
+7.7, top). Thus, the infants saw the agent approach each object in one event and
+refuse to do so in another event: Simple tracking of the agent’s choices to jump or
+stay would suggest no preference between the objects.
+The critical manipulation in the experiment concerned the heights of the
+barriers, and therefore the relative costs of the agent’s actions. The agent jumped
+a low barrier for one object and balked at a barrier of medium height; it jumped
+the medium barrier for the other object and refused a high one. To determine
+whether infants take account of these costs in inferring the agent’s future choices,
+infants were tested with events in which the agent stood between the two objects
+with no barriers and moved to each object in turn on alternating trials. Infants
+looked longer when the agent moved to the object for which it had taken the
+less costly action, providing evidence that this choice was unexpected. Thus, the
+infants inferred the relative values of the two objects to the agent from the rela-
+tive costs of the actions it performed to obtain them.
+Shari’s finding provides further evidence that infants assess the relative costs
+of actions of jumping over a barrier to obtain a goal object but does not reveal the
+basis of infants’ cost evaluations. Do they depend on local features of the actions,
+such as the length of the path the agent follows, or the duration or speed of his
+motion? Alternatively, do infants have a more abstract and general representa-
+tion of the effort an agent expends to arrive at an object? To begin to address this
+question, Shari replicated the experiment with new actions. Instead of jumping
+over barriers of three heights, the agent climbed ramps of equal lengths but dif-
+ferent degrees of inclination: It climbed a shallow ramp and refused a moder-
+ately inclined ramp leading to one object, and it climbed a moderate ramp and
+refused a steep ramp leading to the other object. Then infants received the same
+test events as in the first experiment. Although the lengths, speeds, and durations
+of the four actions were equated, the 10-month- old infants expected the agent to
+approach the object for which it had climbed a steeper ramp.
+Because these two experiments both involved moving to a higher location for
+one object than for the other, they raised the possibility that infants based their
+action predictions on this local cue rather than on abstract cost calculations. In
+a final experiment, therefore, infants viewed events in which the agent moved
+to a goal object by jumping over trenches of variable width, interposed between
+the agent and its goal. The agent jumped a narrow trench and refused a trench
+of moderate width to get to one object, and jumped the moderate trench and
+refused a wider trench to get to the other object. Thus the agent undertook jumps
+of equal height but exerted greater force to get to one of the objects. After this fa-
+miliarization, infants again expected the agent to approach the object for whom
+it had taken the more costly action.
+Three experiments, therefore, provide evidence that 10-month- old infants
+attribute something like desires to agents: Infants infer that agents value more
+284 What Babies Know
+highly the goal states they work harder to achieve. We have attempted for sev-
+eral years to test for this inference in younger infants, with limited success. In
+one experiment, 6-month-old infants who were presented with the events from
+our first experiment showed a marginally significant preference in the opposite
+direction: They looked longer at the agent’s approach to the more highly valued
+object. Because infants tend to look at events that confirm their expectations
+when these expectations are developing and uncertain, it is possible that abili-
+ties to infer goal values from action costs have begun to develop by the middle of
+the first year. It is also possible that younger infants connect action costs to goal
+values at all ages, but young infants lack the attentional and memory resources
+that are needed to compare all the events in our experiments, which present each
+infant with four different action choices toward two different goals, at three dif-
+ferent levels of cost. At the time of this writing, therefore, the earlier development
+of the utilitarian inferences made by 10-month- old infants is not clear.10
+These studies also do not reveal whether infants endow agents with
+experiences of desire and with its associated expressions of emotion. I reserve
+detailed discussion of this question for chapter 8, as emotional expressions are
+elicited and interpreted most readily in social contexts. To anticipate, infants do
+appear to attribute phenomenal states to the people in their social world (see
+Meltzoff, 2007). Many studies suggest, however, that young infants have only
+limited and late-emerging abilities to connect the actions that agents direct to
+objects, in nonsocial contexts, to their emotional states and expressions.
+For example, infants do not expect an actor to reach to an object toward which
+she has shown positive emotion until 12 months of age (Phillips, Wellman,
+10 The research by Yuyan Luo and Renee Baillargeon (2005), discussed in section 5, has been
+interpreted to show that younger infants make these inferences. They presented two groups of 5-
+month-old infants with an agent—a self- propelled box—that moved repeatedly toward one object
+on a puppet stage. In one condition, a second object was present, as in Woodward’s experiments; in
+the other condition, only the agent and the single goal object were present. Although the behavior
+of the agent was the same in the two conditions, its movement in the condition with two objects had
+an opportunity cost: The agent could have moved to the other object and chose not to. In the second
+condition, in contrast, the environment afforded no alternative action, so moving to the first object
+carried no evident opportunity cost. In both conditions, infants were tested with events in which
+the agent faced a choice between the two objects, whose positions were reversed. Only in the first
+condition did infants look longer when the agent approached the new goal object. Infants’ analysis
+of an agent’s behavior therefore depends on the alternatives that are available to the agent. On one
+interpretation of this finding, young infants are sensitive to an agent’s opportunity costs, and they
+infer that chosen objects have greater value if other options are available. If this interpretation is
+correct, then 5-month- old infants infer the values of goal states from the costs of agents’ actions, as
+do older infants. Further studies by Luo (2011) extend the evidence for this effect to 3-month- old
+infants (Luo, 2011). However, alternative interpretations of Luo and Baillargeon’s (2005) findings can
+be offered. Infants are strongly attracted to novel objects and may attribute this attraction to others.
+Even if they take no account of opportunity costs and attribute equal value to the reached-for object
+in both conditions, they may look longer at reaches to the new object in the two-object condition and
+show high and equal looking at reaches to the two objects in the one-object habituation condition,
+because the familiar object’s higher intrinsic value is offset by the value of exploring something new.
+Other paradigms may be needed to investigate infants’ sensitivity to opportunity costs.
+Agents 285
+& Spelke, 2002, fig. 7.6; Sommerville & Crane, 2009). When a person faces
+two objects, looks at one of the objects, and expresses positive emotion while
+ignoring the other object, infants do not expect that the person will reach for that
+object over the other one. Moreover, 10-month- old infants do not expect an arti-
+ficial agent to express more positive emotion after successful jumps over a barrier
+to a goal object (a mat on the floor), relative to jumps that fail (Skerry & Spelke,
+2014), although such infants do expect the agent to express negative emotions
+more strongly after failed than after successful actions (Skerry & Spelke, 2014;
+Vaish, Grossman, & Woodward, 2008). Eight-month- old infants do not show
+even the latter expectation, although they expect the agent to express negative
+emotion if it is injured (Skerry & Spelke, 2014). Infants appear to have limited
+abilities to attribute feelings of desire or expressions of happiness or satisfaction
+to people who act on objects. I will show, in chapter 8, that infants are more sen-
+sitive to emotional expressions in social contexts.
+Do infants attribute beliefs to agents and use those beliefs to predict and in-
+terpret their actions? A number of experiments have been interpreted as evi-
+dence that infants and toddlers have these abilities as early as 6 or 7 months of
+age (Kovacs, Téglás, & Endress, 2010; Southgate & Vernetti, 2014; see Scott &
+Baillargeon, 2017, for review), but these findings have sometimes failed to rep-
+licate in other labs (Poulin-Dubois et al., 2018; for a meta-analysis, see Holland
+& Phillips, 2020), leaving the status of the evidence unclear. Here, however,
+I note that even if all the successful studies included in the meta-analysis prove
+to be replicable, they reveal limited abilities to reason about the mental states of
+agents. They would provide evidence that 6- to 7-month- old infants predict and
+interpret an agent’s object-directed actions in accord with the objects that have
+been visible to the agent in the immediate past. They would not show, however,
+that infants attribute to agents the beliefs that older children and adults attribute
+to one another.
+In summary, considerable research provides evidence that infants expect
+agents to act to attain valued goal states by causing changes in objects that are
+or were perceptually accessible to them. Little evidence suggests, however,
+that infants endow agents with phenomenal perceptions of objects, desires for
+objects, or the kinds of beliefs about objects that we attribute to agents as adults
+and that support inferences about other agents’ experiences and behavior. It is
+possible, however, that evidence for richer mental state inferences is lacking, be-
+cause the demands these tasks place on attentive object tracking and working
+memory are too difficult for infants to perform.
+To consider this possibility further, I return to the core knowledge hypothesis.
+The core object, place, and number systems have further properties that I have
+not yet discussed in this chapter: They are ancient, early-emerging, invariant
+over later development, automatically activated, and unconscious. If infants’
+286 What Babies Know
+early understanding of agents stems from a system of core knowledge, it should
+have these properties. To shed further light on early reasoning about the mental
+states of agents, therefore, I turn briefly to studies of nonhuman animals and
+human adults.
+7 Core Representations of Agents in Nonhuman Primates
+The perceptual abilities underlying agent representations have a long evolu-
+tionary history, for they are shared by a variety of infant animals (section 1).
+Do nonhuman animals form interconnected representations of the causal effi-
+cacy, efficiency, and goal-directedness of agents’ actions, as human infants do?
+Moreover, do they reason about other agents’ mental states, and if so, how?
+A large literature in neurophysiology provides evidence for homologous
+representations of actions in human infants and both infant and adult monkeys.
+Rizzolatti and his collaborators discovered a population of neurons (in regions of
+the frontal and parietal cortex of monkeys) that are active both when a monkey
+performs a specific action (for example, picking up an object with a pincer grip)
+and when the monkey observes another monkey or human performing the same
+action. Rizzolatti called them “mirror neurons” and studied their properties
+(Rizzolatti et al., 1996; Rizzolatti & Arbib, 1998).
+The behavior of these neurons in monkeys shows many of the signatures of
+human infants’ agent representations (Iacoboni & Dapretto, 2006). In particular,
+mirror neurons respond to motions that contact objects and effect changes in the
+state of the objects: The neurons that are active when the monkey sees a person
+pick up a small object are inactive if the person’s action is directed to the side of
+the object. The neurons respond to actions of a monkey or human hand but not
+to otherwise similar movements by an inanimate object. They respond to actions
+that are biomechanically possible but not to impossible ones. They also respond
+to actions on occluded objects, and the timing of their response provides evi-
+dence that monkeys expect occluded actions on an object to be accompanied by
+sounds. These findings, along with functional brain imaging studies on human
+adults (e.g., Chong, Cunnington, Williams, Kanwisher, & Mattingley, 2008) sug-
+gest that human infants’ abilities to identify agents and reason about their actions
+are not unique to our species.
+Concerning representations of object-directed actions, behavioral studies of
+nonhuman primates reveal effects that converge with those found in behavioral
+studies of human infants. Adult chimpanzees, monkeys, and tamarins represent
+human acts of reaching for and grasping objects, but not motions of falling on or
+looking at objects, as goal-directed (Hauser, Glynn, & Wood, 2007/2011; Wood
+et al., 2007; Wood & Hauser, 2011; Hauser & Wood, 2011). Adult monkeys, like
+Agents 287
+3- month-old human infants, represent the act of reaching over a barrier as ef-
+ficient, and they expect a direct reach after the barrier is removed. In contrast,
+when an action is unfamiliar, its causal mechanisms are opaque, and it causes
+no change in the state of the object (making a fist and bumping the top of the ob-
+ject), monkeys show no expectation of a direct reach after removal of the barrier
+(Rochat et al., 2008). Like prereaching human infants who view causally opaque
+reaching actions outside their repertoire (Skerry et al., 2013), monkeys may be
+unclear as to whether the actor is performing an instrumental act and, if so, for
+what purpose.
+Research on nonhuman primates plays a prominent role in theorizing about
+what Premack and Woodruff (1978) called “theory of mind” (e.g., Krupenye et al.,
+2016). Adult animals of many species are sensitive to other agents’ present and past
+perceptual access to objects. For example, semi-free-ranging monkeys on the re-
+search island of Cayo Santiago, Puerto Rico, are adept at stealing food from humans
+who eat on the island, and their success depends on careful monitoring of humans’
+perceptual access to their transgressions. Monkeys attempt to steal food more often
+from the people who are least likely to see them, depending on the orientation of
+each person’s body, face, and eyes and on the positioning of an occluder (Flombaum
+& Santos, 2005). Like human infants, however, monkeys avoid food near a person
+who cannot see it if the person would be able to hear the act of stealing (Santos,
+Nissen, & Ferrugia, 2006).
+Similar abilities have been found in studies of apes (e.g., Hare, Call, & Tomasello,
+2001, 2006), dogs (Kaminski et al., 2009; Kundey et al., 2010), and birds (Emery &
+Clayton, 2001; Stulp et al., 2009). Indeed, adult nonhuman primates and dogs, but
+not wolves, are more skilled than the youngest human infants at following the gaze
+of another monkey or human to objects (Povinelli & Eddy 1996; Hauser et al., 2007/
+2011; Duranton, Range, & Viranyi, 2017), and adult dogs, but not chimpanzees, are
+more adept than young infants at interpreting a person’s pointing gestures (Povinelli
+et al., 1997; Kirchhofer et al., 2012). These abilities, though modulated by domesti-
+cation, likely depend on learning (Povinelli & Eddy, 1996; Lampe et al., 2017).
+Despite these abilities, there is no evidence that apes, monkeys, or dogs repre-
+sent other agents’ distinctive experiences of the objects and events that are visible
+both to them and to another agent (Apperly & Butterfill, 2009; J. Phillips et al.,
+2020), although chimpanzees do take account of the past visual perspectives of
+other agents in predicting their behavior (Krupenye et al., 2016). Studies of apes
+and monkeys therefore are consistent with the claim that an ancient system of
+agent representation takes account of agents’ perceptual access to objects but not
+of their mental experiences.11
+11 One challenge to the core knowledge thesis advanced in this chapter comes from a recent exper-
+iment providing evidence that chimpanzees learn, from their own past experience looking through
+288 What Babies Know
+Consistent with that possibility, the sole experiment providing evidence
+that chimpanzees anticipate the actions of an observed agent based only on the
+agent’s past history of perceptual access to a hidden object used a human dressed
+in an ape costume as the agent, and used an outcome measure involving no so-
+cially consequential actions: anticipatory looking at the places to which the agent
+might move (Krupenye et al., 2016). Neither this experiment nor the one showing
+action predictions based on current goal visibility (Kano et al., 2019) shows that
+apes represent the beliefs of other individuals, but both do show abilities compa-
+rable to those found in human infants (section 7).
+Do apes and monkeys reason about agents’ actions in accord with the same
+interconnected, abstract concepts of causal efficacy, efficiency, and goal-
+directedness as human infants? Tomasello (2008) proposed a fundamental
+difference between the social reasoning of chimpanzees and human chil-
+dren: Whereas children are predisposed to reason about mental states in coop-
+erative contexts (for example, using pointing to inform an agent of the location
+of an object she hasn’t noticed), chimpanzees are more likely to reason about
+mental states in competitive contexts (for example, monitoring what a dominant
+competitor can and cannot see, so as to take resources without his awareness).
+Note, however, that the patterns of cooperation on which Tomasello focused
+do not begin to arise in human children until the end of the first year: Younger
+infants’ reasoning about actions centers on the actor’s causal intentions with re-
+gard to objects. Contexts in which animals interpret another animal’s intentions
+toward objects, rather than the animal’s social intentions, may call on just the
+sort of action representations that infants form, centered on action cost, goal
+value, and causal efficacy.
+In particular, apes monitor the motivational states and perceptual access of
+more dominant apes in determining whether they can safely approach a given
+food item (Hare, Call, & Tomasello, 2001), and they may deliberately take
+a transparent barrier that appears from a distance to be opaque, that another animal who faces the
+barrier will also be able to see objects that stand behind it, in contrast to the performance of young
+human infants, to be discussed in chapter 8 (Kano et al., 2019; see also Hare et al., 2001). These
+apes, however, had extensive experience with competitive interactions with others under varying
+conditions of perceptual access, so they likely were better prepared for this task than are human
+infants.
+A further challenge to the present thesis comes from experiments providing evidence that adult
+monkeys do not represent another human agent's visual perspective automatically, as do human
+adults and infants and as the core knowledge hypothesis predicts (Martin & Santos, 2014). Martin
+and Santos suggest that automatic belief attribution may be unique to humans, but the species dif-
+ference they found may have stemmed from the differing patterns of attention that the experiment
+elicited in the two populations. In research at their field site, monkeys were never approached or
+engaged by an agent who kindled their interest in the events that she went on to show. Thus, both
+human infants and adult monkeys may track other agents’ changing perceptual access to an object
+when they are motivated to attend to the agent, and neither may do so when they are not. Though
+core knowledge is activated automatically, its activation is gated by attention.
+Agents 289
+inefficient routes to a resource that they wish to exploit without detection: a
+strategy that presupposes that other apes will discern their intentions if they head
+to a food source or potential mate efficiently (Hare, Call, & Tomasello, 2006).
+Nevertheless, experiments probing the relationships between contact causality,
+action efficiency, and goal value have not been conducted in other animals, to
+my knowledge. It will be important to study these abilities in young animals
+and evolutionarily more distant animals, like chicks. In addition to the strong
+homologies in mechanisms for perceiving agents in infants of different species,
+the hypothesis of a core agent system predicts homologous mechanisms for rea-
+soning about agents’ mental states in human infants and other infant animals .
+8 Core Representations of Agents in Human Adults
+As in the case of representations of places and number, some of the most con-
+vincing evidence for an abstract but limited and encapsulated core system of
+agent representation comes from studies of human adults. I will pass over the
+immense literature on the mechanisms of face perception (chapter 8 will provide
+a brief review) and perception of biological motion (see chapter 6) and begin
+with adults’ reasoning about the actions and mental states of agents, presented
+as animated displays with few or no human attributes but described as in-
+telligent beings. Like infants, adults expect agents to act with the intention of
+causing changes in the world, so as to bring about valued goal states as efficiently
+as possible (Ullman, 2015; Jara-Ettinger et al., 2016). Also like infants, adults’
+predictions of the future actions of agents are guided by information about the
+barriers to action that an agent must circumvent to reach a goal object (Baker
+et al., 2009), the barriers to vision that block an agent’s perceptual access to a
+goal object (Baker et al., 2017), and the persistence with which an agent pursues
+its goal over movement of the goal object and other changes in the environment
+(Gao, McCarthy, & Scholl, 2010).
+Among languages with classifier systems—grammatical devices that distin-
+guish among different types of nouns— some of the most common function
+words distinguish agents from nonagentive objects. Because these classifiers
+are obligatory in certain contexts, as is the use of one of the pronouns he, she,
+or singular they, rather than it, when referring to a sentient being, Strickland
+(2017) suggests that grammatical devices arose in languages because core
+representations of agents allow for their rapid use by speakers and their rapid ac-
+quisition by children. (See chapter 9 for more discussion.) These studies provide
+evidence for qualitative similarities between the reasoning of adults and infants
+but do not reveal whether any of our mature agent representations show the sig-
+nature limits of core knowledge in other domains.
+290 What Babies Know
+Research by Ian Apperly and his collaborators addresses this question. They
+conducted experiments similar to experiments on infants described in this
+chapter (section 5), but performed with adults and older children, who were
+tested under time pressure. In one set of studies (Samson et al., 2010; Surtees &
+Apperly, 2012), adults and children were presented with images of a room with
+walls that sometimes displayed disks, and with a human-like avatar, in profile,
+facing one wall (figure 7.8a). In different conditions, participants determined as
+(a)
+(b)
+Ambiguous Unambiguous
+Wall
+Table
+600 ms 1800 ms
+She sees
+N You see
+N
+or
+or or
+Consistent Consistent
+InconsistentInconsistent
+Figure 7.8 Displays for experiments on adults' and children's representations of
+(a) the perceptual access of another character to objects, and (b) the character's
+distinctive experience of an object that is accessible both to him and to the
+participant. In (a), participants were told on each trial to report what they saw, or
+what an avatar saw (top images); in control conditions, the avatar was replaced by a
+similarly sized block (bottom images). Both judgments were slower when the avatar
+could not see all the dots that the participant saw. Judgments were unaffected by
+the position of the block. In (b) numerals were visible both to the participant and
+to the avatar throughout but designated different numbers for the participant and
+the avatar on some trials. When the numbers seen by the avatar and the participant
+differed, participants were slower to judge what the avatar saw than when the avatar,
+and they, saw the same number. In contrast, judgments of what the participant
+saw were as fast on these trials as on trials when the participant’s and the avatar’s
+experiences were aligned, in contrast to their performance in (a). (Reprinted,
+respectively, from Surtees & Apperly, 2012, and Surtees et al., 2012.)
+Agents 291
+quickly as possible either how many disks appeared in each room (i.e., how many
+disks the participant could see) or how many disks were visible to the avatar.
+The critical manipulation concerned the position of the disks relative to the
+avatar. In some trials, the information accessible to the participant and to the av-
+atar was the same: All the disks in the room were positioned within the avatar’s
+view. In other trials, the information differed: Some of the disks appeared behind
+the avatar’s back. With this arrangement, the investigators could compare adults’
+and children’s abilities to report both on their own perspective and on the avatar’s
+perspective. Moreover, the investigators could measure whether automatic de-
+tection of one of these perspectives interfered with participant’s ability to report
+on the other perspective.
+The responses of the adults were particularly interesting, and I focus on them
+here. Participants judged how many disks were visible to the avatar more quickly
+when the avatar’s perspective coincided with their own, just as our communica-
+tions with others are faster and easier when we and our communicative partners
+see the same things (Keysar et al., 2000). Surprisingly, participants’ judgments of
+the number of disks they themselves saw in each display also were faster when
+their own perspective coincided with that of the avatar. Neither effect occurred
+in control experiments, in which the avatar was replaced by an inanimate object.
+Thus, adults automatically represent the objects that are visibly accessible to an-
+other agent, even when that agent’s perspective is irrelevant to the task the adults
+are performing, and even when the adults know that the other agent is not a real
+animate being who can see or do anything. The adults’ assessments of what was
+perceptually available to the avatar evidently depended on a mechanism that is
+encapsulated both against knowledge of the current task demands and know-
+ledge of the capacities of the other agent.
+Further measures suggested that adults’ inferences about the avatar were un-
+conscious: Adults typically were unaware of attending to the avatar’s perspec-
+tive. In these respects, representations of agents resemble representations of the
+entities formed by other systems of core knowledge, such as number (Apperly &
+Butterfill, 2009). Apperly’s research provides evidence that the representations
+that guide infants’ reasoning about the objects that are perceptually accessible
+to an agent are present and functional in adults and operate automatically and
+unconsciously.12
+Further experiments by Apperly and his collaborators provide evidence for
+an important limit to this automatic system: It supports inferences of perceptual
+12 Surtees and Apperly did not manipulate participants’ attention to the visual field of the avatar in
+these studies. If their experiments reveal a core agent system that has all the properties of core know-
+ledge systems discussed in chapter 5, then the automatic activation of the avatar’s perspective should
+not occur if participant’s attention were directed elsewhere: an untested prediction of the present core
+knowledge hypothesis.
+292 What Babies Know
+access but not attributions of perceptual experience. Surtees, Butterfill, & Apperly
+(2012) presented adults with an avatar in a room containing a single Arabic nu-
+meral that was visible both to the participant and to the avatar. On some trials,
+the numeral appeared on a wall and thus had the same orientation for the partic-
+ipant and the avatar. On other trials, the numeral appeared on a table, such that
+its top from the participant’s perspective appeared as its bottom from the avatar’s
+perspective (figure 7.8b). On congruent trials, the numeral was invariant over in-
+version and therefore depicted the same number for both the participant and the
+avatar (e.g., 8). On incongruent trials, the numeral changed with inversion (e.g.,
+6/ 9), and so the avatar and the participant experienced the same written pattern
+as different numerals. Once again, participants either had to report the number
+they saw or the number seen by the avatar.
+Not surprisingly, judgments of the number seen by the avatar were faster
+when the participant perceived the same numeral. In contrast to the previous
+study, however, judgments of the number seen by the participants were equally
+fast on congruent and incongruent trials. Thus, adults showed no automatic ac-
+tivation of the avatar’s differing experience of the written pattern that was vis-
+ible to both of them. Like infants, adults form rapid, automatic, unconscious
+representations of another agent’s visual access to an object but do not form auto-
+matic representations of another agent’s experience of that object.
+The limits to automatic encoding of an agent’s perspective are especially
+striking in the studies of adults, because the adults clearly knew that the “agent”
+in these studies did not see the same number 6 that they saw: Indeed, they re-
+ported on this fact in one condition of the experiment. Nevertheless, the same
+numerical symbol was visible to the participant and the avatar. Although
+participants knew that a person at the avatar’s position would interpret that
+symbol differently, their knowledge did not affect their rapid, automatic system
+of agent representation. Surtees and collaborators’ (2012) experiments show that
+adults’ automatic activation of representations of another agent’s perspective has
+a signature limit: Adults quickly compute what is visually accessible to an agent
+but not what the world looks like from the agent’s perspective.
+Together, studies of animals and of human adults, viewed through the lens
+of the core knowledge hypothesis, support two suggestions concerning infants’
+representations of the mental states of agents. First, although studies of infants’
+“theory of mind” have been difficult to replicate, their central finding—that
+infants take account of an agent’s past access to an object in predicting the agent’s
+future actions on that object—is likely correct, because this ability is present
+in human adults and nonhuman animals as well as in some studies of infants,
+where it shares the signatures of systems of core knowledge. Second, despite this
+ability, there may be a critical limit to infants’ and animals’ knowledge of the
+mental states of agents: a limit that has been difficult to test for in studies of these
+Agents 293
+populations. Although adults make automatic judgments about what objects
+are perceptually accessible to another agent, they make no automatic judgments
+about what another agent can experience. Such judgments also may lie beyond
+the capacities of animals and infants, who may construe agents as beings who act
+on perceptually accessible objects but possibly not as beings who experience the
+world in ways that are both like and unlike the infant’s own experiences of the
+same objects.
+9 From Adults to Toddlers: A Possible Limit to Core
+Representations of the Mental States Guiding Object-
+Directed Actions
+These possibilities have inspired new research by Brandon Woo. Brandon has
+conducted a series of experiments that present 14- to 15- month- old toddlers
+with a setup like that of Surtees and collaborators (2012), using pairs of pictures
+of faces instead of number symbols, lying on a horizontal surface between the
+toddler and a human actor, positioned opposite the toddler during habituation,
+and directly in front of the toddler, on the opposite side of the room, at test (Woo
+& Spelke, 2021). One experiment tested the first suggestion made earlier, that
+toddlers will track what is and is not visible to another person, even when that
+person’s perspective differs from their own (see figure 7.9a). During familiariza-
+tion, the actor faced the toddler, and after both viewed both faces, occluders were
+positioned so that one face remained visible to the toddler but not to the actor,
+and the other face remained visible to the actor but not the toddler. In familiar-
+ization, half the infants saw the actor consistently point to the picture that was
+visible to him; the others saw him consistently point to the screen that occluded
+the other picture from his view. Then the actor moved to the toddler’s side of the
+room at test and pointed to the newly visible picture and to the screen that oc-
+cluded the other picture, on alternating trials. Toddlers’ looking times provided
+evidence that they expected the actor to point consistently from his perspective,
+not from their perspective. If he had pointed to the object that was visually acces-
+sible to him (and not to the toddler) during familiarization, then he should con-
+tinue to point to the object that was visible to him (and now also to the toddler)
+at test. This finding accords with the evidence that infants are sensitive to other
+agents’ perceptual access to objects, although the participants in this study were
+considerably older than the infants in the studies described in section 5.
+Brandon’s next experiments tested for the mental state inferences of percep-
+tual experience that adults make explicitly but fail to make implicitly when their
+task demands a rapid response. In one experiment, the same actor viewed the
+same faces, first from the opposite side of the room and then, at test, from the
+294 What Babies Know
+toddler’s side of the room. In this study, both faces were visible to both the actor
+and the toddler throughout the study; what varied was their orientation. During
+familiarization, the face that was upright from the actor’s perspective was in-
+verted from the toddler’s perspective, and the face that was inverted to the actor
+was upright to the toddler (figures 7.9b and 7.9c). The actor consistently pointed
+to pictured faces at one of these two orientations: for half the infants, the face
+that was upright to him. At test, the actor’s perspective on the pictures reversed
+when he moved to the opposite side of the room, as it did in the first experiment.
+In contrast to their performance in the first experiment, toddlers systematically
+(a) (b) (c)
+Occluded or visible faces Upright or inverted faces Rotation of faces
+familiarizationtest
+Figure 7.9 Displays for three experiments assessing 14- to 15-month-old toddlers’
+representations of object goals. In experiment 1 (a, top), toddlers were familiarized
+to events in which an actor pointed consistently to pictures of faces that were either
+visible or occluded to him. Because he faced the child, the picture that was visible
+to him was occluded for the toddler, and the reverse. In test trials, the actor moved
+to the other side of the room (a, middle) and then pointed, on alternating trials,
+to pictures that were of the same visibility to the toddler or to himself (a, bottom).
+Infants looked longer when the actor’s behavior was inconsistent from the actor’s
+perspective: a non-egocentric response. In experiment 2 (b) both faces were visible
+in opposite orientations. During familiarization, the actor reached consistently
+for pictures of faces that were either upright or upside-down to him, and therefore
+were seen by the toddler at the opposite orientation. Then he moved to the toddler’s
+side of the room and reached, on alternating trials, to faces at the same orientation
+to the toddler or to himself. Toddlers showed the opposite looking pattern to
+experiment 1, providing evidence that they interpreted the actor’s action from their
+own perspective. Displays in experiment 3 (c) were the same as those of experiment
+2, except that the actor reached only for faces that were inverted to him during
+familiarization, and rotated the faces so that they became upright to him. Toddlers
+still interpreted the actor’s action in accord with their own perspective. (The images
+in a and b are reproduced from Woo and Spelke, 2021b.)
+Agents 295
+predicted that the actor’s actions (of reaching for or rotating a picture) would ac-
+cord with their own perspective on the pictures and not with the perspective of
+the actor. For example, if the actor, during familiarization, reached to the picture
+that was upright from his own perspective, toddlers expected him, after moving
+to their side of the room, to reach to the picture that was inverted from his own
+perspective at test, ignoring the change in the actor’s perspective on the picture
+and consistent with the toddler’s perspective throughout the study. Across mul-
+tiple experiments that followed our initial report, varying the actor’s actions
+(e.g., reaching to and touching a picture vs. reaching to and rotating the picture
+to a different orientation), the degree of orientation change (full vs. partial in-
+version) and the nature of the pictures that elicited different experiences at dif-
+ferent orientations (photographed human faces vs. line-drawn faces and heads
+of animals), infants have consistently failed to track the actor’s experiences of the
+pictures. Their behavior on this task accorded with the performance of Apperly’s
+adults on his speeded tasks.
+These studies of toddlers cast doubt on the ability of infants to endow people
+who act on objects with distinctive experiences of things and events. Infants may
+fail to appreciate that different agents can experience the same object or event
+in different ways. If these suggestions are correct, then when other people act
+on objects in a situation involving no social communication, young infants will
+not endow them with minds of the sort that older children and adults explicitly
+attribute to one another. Studies of nonhuman animals, and of human adults en-
+gaged in tasks that elicit automatic activation of an agent’s perspective, all suggest
+this limit to core representations of agents’ mental states. I return to this limit in
+chapter 8, where research suggests that infants attribute different mental states to
+people who engage with other people instead of acting on objects.
+10 Core Knowledge of Agency
+In this chapter, I reviewed the large and rich literature on infants’ understanding
+of the object-directed actions of people and animals through the lens of the core
+knowledge hypothesis. Although the findings of research in this domain point
+in multiple directions, I believe they lend credence to the view that infants have
+a unitary, limited system for representing agents’ actions. At 3 months, infants
+reason about people’s actions by drawing on abstract, interconnected concepts
+of causal efficacy, efficiency, goal- directedness, and perceptual access. They expect
+minimally costly actions only from beings that cause their own movement. If an
+agent acts on one of two objects, infants infer that he chose that object over the
+other object only if both objects are perceptually accessible, regardless of whether
+the agent ever looked at the chosen object. Young infants also infer that agents
+296 What Babies Know
+have achieved their goals only when their efficient movements cause a change in
+the state of the goal object on contact. Although the infants in these studies have
+3 months of postnatal experience, they exhibit all these abilities before they can
+engage in the actions they see others perform, and—as far as we can tell—before
+they have developed any specific knowledge about the actions they observe, in-
+cluding the highly frequent pick-up actions performed by adults. Before infants
+manifest any understanding of the mechanics of object-directed reaching, they
+understand that reaching, like other actions, is costly, causal, goal-directed, and
+perceptually guided.
+Like other highly useful, early-emerging abstract concepts, the infant’s
+concepts persist in adults, where they operate automatically and unconsciously.
+As adults, we cannot help perceiving animate agents in classic animations, where
+balls and triangles with no faces or animal bodies move and interact by pursuing
+goals, constrained by environmental barriers to action and to vision (Heider &
+Simmel, 1944). We also cannot help activating representations of what is visible
+to another agent, even when those representations interfere with the task we are
+performing, and even when we do not believe the agent is real. Our core system
+of agent representation therefore appears to be encapsulated.
+Throughout the first year, infants’ representations of agents show limits like
+those that characterize other modular, core knowledge systems. Infants use
+some, but not all, of the information about people that they detect in representing
+people’s actions and inferring their mental states. In particular, young infants
+fail to take account of people’s emotional expressions or direction of gaze in
+predicting and interpreting their actions, even though they detect this infor-
+mation and use it, from birth, to identify people as social partners (chapter 8).
+Infants also fail to distinguish their own changing experiences of faces, when
+the faces are rotated, from the experiences of an agent who views the same faces
+at the opposite orientation. If a core agent system underlies infants’ reasoning
+about agents, these findings suggest that the system fails to capture the mental
+states of perception and emotion that we and others consciously experience. The
+best evidence for this conclusion comes from studies of adults, whose encapsu-
+lated system of agent representation shows just this limit (Surtees et al., 2012,
+figure 7.8).
+Where tested, the system of agent representation has been found to be ancient,
+though the evidence for this property is largely indirect. Although newborn
+infants are highly sensitive to the distinction between photographed faces with
+direct and averted gaze, and between upright and inverted patterns of biological
+motion, newborn infants show no preference for a human face over the face of
+a sheep, and no preference for a human walker over a walking hen. Moreover,
+controlled-reared chicks preferentially imprint to the patterns that human
+infants prefer. These findings suggest that perceptual mechanisms for identifying
+Agents 297
+agents evolved in ancestors that humans share with a wide range of other
+vertebrates. Nevertheless, many aspects of human infants’ action representations
+have been tested only in monkeys: Studies of these abilities in other mammals,
+birds, and fish are a task for the future.
+The evidence for the innateness of infants’ knowledge of agents also is lim-
+ited. Newly hatched chicks attribute causal powers to entities that initiate their
+motion spontaneously and cause changes in the motion of an object on contact.
+To my knowledge, however, no evidence suggests whether any controlled-reared
+animal expects agents to act efficiently or to direct their actions to distant but
+perceptually accessible goals: more tasks for future research.
+Finally, the core agent system supports learning. In one short labora-
+tory session, the 3-month-old infants in Brandon Woo and Shari Liu’s exper-
+iment learned that the goal of an agent’s action was an object with particular
+affordances, not a location in space, and the participants in the experiments
+by Amy Needham, Jessica Sommerville, and Amanda Woodward learned that
+Velcro mittens can entrain certain objects on contact. In chapters 9 and 10,
+I hypothesize that the core agent system also comes to support uniquely human
+cognitive achievements, including language learning and new ways of learning
+about the world by engaging with other people and sharing their experiences of
+objects. Such learning only occurs, however, at the end of the first year.
+Together, the properties of the agent system distinguish it both from percep-
+tual systems and from the belief systems that underlie our explicit reasoning.
+How might this system relate to the other core systems that occupy this middle
+ground? The research described in this chapter suggests that core knowledge
+of agents closely connects to core knowledge of objects. In support of such
+connections, functional neuroimaging of adults reveals that common cortical
+areas are activated when we reason about objects and plan actions (Schwettman,
+Tenenbaum, & Kanwisher, 2019). As early as 3 months of age, infants appreciate
+that agents’ actions are constrained by the objects that serve as obstacles to their
+goals. They also represent agents as intending to cause changes in objects on con-
+tact. These findings suggest that infants endow both agents and their goal objects
+with all the abstract properties of the core object system, and that infants use
+these properties in reasoning about the physical constraints on agents and their
+actions.
+Despite these relationships, the core object and agent systems function with
+a large degree of independence, and they compete for attention when they are
+applied to the same object or event. This competition is seen most clearly in the
+experiments in which infants infer that a secret agent has set an object in motion
+(Saxe et al., 2005). When an object flies through a scene, efficiently circumventing
+an obstacle, infants perceive it as an agent if it has animate features and has pre-
+viously engaged in spontaneous, apparently self-propelled motion. If those
+298 What Babies Know
+features are absent and no animate motion occurs, however, then infants repre-
+sent it as an inanimate object and attribute its motion to another, hidden agent.
+In these cases, the same entity in a scene may be represented either as an agent or
+as an inanimate object, but not both. The assignment of bodies to these catego-
+ries gives agents and objects distinct, complementary roles in accounting for the
+events infants see.
+If the form system, discussed in chapter 6, applies to all living beings, then the
+agent and form systems have overlapping domains. Like the agent and object
+systems, however, representations of plants and animals are distinct. The agent
+system focuses on animals’ actions, intentions, and plans, whereas the form
+system may initially focus on living bodies and the structures they generate as
+they grow. Like the object system, the agent system activates neural mechanisms
+in frontal and parietal cortex, not in areas that process information about object
+forms. If form representations serve as the basis for aspects of our intuitive bi-
+ology, ecology, and geometry, agent representations may serve as the basis for
+aspects of our intuitive psychology.
+The research described in this chapter raises further questions. First, how rich
+is the innate system of reasoning about agents and their actions? Adults, chil-
+dren, and 10- month-old infants interpret agents’ actions in accord with an in-
+tuitive utility calculus: We view agents as planning actions that maximize the
+rewards that they expect while minimizing the costs that they anticipate, given
+the objects and obstacles that are perceptually accessible to them (Baker et al.,
+2009; Jara-Ettinger, 2016; Liu et al., 2017). At 3 months of age, infants interpret
+agents’ actions as causal, costly, efficient, and directed to perceptually acces-
+sible objects. No research yet reveals, however, whether prereaching infants or
+controlled-reared animals infer the value of goal objects to an agent from the cost
+of the agent’s actions.
+Second, by what processes do infants make sense of the behavior of agents,
+and how do these processes arise? One theory of action understanding proposes
+that our reasoning about agents centers on a generative model of action planning
+(Baker et al., 2009, 2017; Ullman, 2015; see Ullman & Tenenbaum, 2020, for dis-
+cussion). When we see a person who engages in a specific series of actions in
+an environment that affords many other actions, we may infer both her action
+plans and her goals and knowledge states by imagining actions that she could
+have taken but didn’t, and by imagining how her actions would vary if her goal
+changed or she detected different objects. Such models can account for infants’
+reasoning about agents in diverse experiments (Ullman et al., 2013; Skerry
+et al., 2013; Liu et al., 2017; Ullman & Tenenbaum, 2020). To my knowledge,
+however, there is no direct evidence for these processes, parallel to the evidence
+that animals simulate patterns of optic flow that accompany their movements
+( chapter 1) or that animals and people simulate possible paths through the
+Agents 299
+navigable environment (chapter 3). The processes that produce core knowledge
+of agents, and that use this knowledge to infer the mental states that guide agents’
+actions, call for further study.
+A final question that this chapter has not addressed concerns infants’ rea-
+soning about events involving multiple agents. In all the studies reviewed in
+this chapter, infants were presented with a single agent whose actions caused
+changes in one or more inanimate objects. When agents direct their actions to
+other agents, their actions differ in striking ways from the actions described in
+this chapter. First, agents’ interactions with other agents are not limited to acts
+that bring the agents into contact, because people and animals can perceive and
+communicate with one another at a distance. Second, such social interactions are
+not as tightly constrained by physical obstacles as are actions on objects: People
+and animals can communicate through walls or other barriers. Third, social
+interactions often involve behaviors that have no direct causal effects on the
+world, such as vocalizing and gesturing. Finally, social interactions are strongly
+modulated by expressions of emotion and other experiences. In the next chapter,
+I ask whether infants are endowed with a sixth core system that represents the so-
+cial engagements, mental experiences, and relationships among people, and that
+guides infants’ learning to navigate their social world.

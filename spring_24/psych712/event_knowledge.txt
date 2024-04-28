@@ -1,0 +1,2946 @@
+A Model of Event Knowledge
+Jeffrey L. Elman
+University of California, San Diego
+Ken McRae
+University of Western Ontario
+Our knowledge of events and situations in the world plays a critical role in our ability to understand what
+is happening around us, to predict what might happen next, and to comprehend language. What has not
+been so clear is the form and structure of this knowledge, how it is learned, and how it is deployed in
+real time. Despite many important theoretical proposals, often using different terminology such as
+schemas, scripts, frames, and event knowledge, developing a model that addresses these three questions
+(the form, learning, and use of such knowledge) has remained an elusive challenge for decades. In this
+article, we present a connectionist model of event knowledge that attempts to fill this gap. From
+sequences of activities, the model learns both the internal structure of activities as well as the temporal
+structure that organizes activity sequences. The model simulates a wide range of human behaviors that
+have been argued to involve the use of event knowledge and the temporal structure of events.
+Furthermore, it makes testable predictions about behaviors not yet observed. Most importantly, the
+model’s ability to learn event structure from experience is a novel solution to the question, “What is the
+form and representation of event knowledge?”
+Keywords: events, connectionist models, prediction, schemas, scripts
+From birth, humans are driven by the urge to make sense of the
+world around us. We do this in many ways. We organize the things
+we see, experience, or imagine into meaningful categories that
+may help us understand the roles those things can play in our lives.
+We also look for recurring and meaningful patterns and sequences
+of behaviors. This type of knowledge is particularly important
+because it not only helps guide our own behavior and predict the
+behaviors of others, but it also helps us build and test theories of
+causation and ask whether there are causal connections between
+something that occurs at one moment in time and what occurs
+later.
+The term event cognition has been used in recent years to refer
+to this second kind of knowledge, but earlier theories have used
+terms such as schemas, frames, scripts, and stories (Bartlett, 1932;
+Mandler, 1984; Minsky, 1974; Rumelhart, 1980; Rumelhart, Smo-
+lensky, McClelland, & Hinton, 1986; Schank & Abelson, 1977). In
+this article, we use the term event knowledge, but we emphasize
+that these theoretical constructs share an important focus on the
+underlying knowledge people acquire about recurring patterns of
+activity in the world that cohere, and are important to us. Those
+patterns might reflect causal dynamics that connect activity se-
+quences (one must remove the flat tire before installing the spare)
+or they may reflect cultural conventions and habits (in some
+cultures, salad is served before the main course, whereas in other
+cultures, the salad follows the main). Regardless of the underlying
+force that binds sequential activities, humans highly attend to the
+temporal structure of sequences of activities around them.
+Beyond this observation, however, there are issues that remain
+poorly understood. On the one hand, there is abundant evidence for
+such knowledge, beginning at least with the work of Bartlett
+(1932) and continuing to the present time. Event knowledge has
+been argued to play a role in reconstructive memory (Bartlett,
+1932; Loftus & Palmer, 1996); false memory (Cann, McRae, &
+Katz, 2011; Roediger, McDermott, & Robinson, 1998); recall,
+This article was published Online First January 31, 2019.
+Jeffrey L. Elman, Department of Cognitive Science, University of Cal-
+ifornia, San Diego; Ken McRae, Department of Psychology and Brain and
+Mind Institute, University of Western Ontario.
+It is with great sadness that I report that Jeff Elman died on June 28,
+2018, a short time before this research was accepted for publication. Jeff’s
+contributions to the field have been enormous. They include the trace
+model of spoken word recognition, Rethinking Innateness, and the simple
+recurrent network. Jeff’s ideas and his work have had a major impact on
+multiple areas of Cognitive Science, as evidenced by the fact that he was
+the 2007 recipient of the David E. Rumelhart Prize for lifetime contribu-
+tions to Cognitive Science. In addition, and importantly, Jeff was a won-
+derful, kind person.
+The research reported in this article was presented at the Annual Meeting
+of the Cognitive Science Society (2017, 2018), the Annual Meeting of
+Psychonomic Society (2017, 2018), Architectures and Mechanisms of
+Language Processing (2017), and the Annual Meeting of the Canadian
+Society for Brain, Behavior, and Cognitive Science. A small portion of the
+research was presented in Elman, Jeffrey L., & McRae, K. (2017). A model
+of event knowledge. In Gunzelmann, G., Howes, A., Tenbrink, & T.,
+Davelaar, E. (Eds.), Proceedings of the Thirty-Ninth Annual Meeting of the
+Cognitive Science Society (pp. 337–342). Austin, TX: Cognitive Science
+Society. This research was funded by a Natural Sciences and Engineering
+Research Council of Canada Discovery Grant to Ken McRae.
+Correspondence concerning this article should be addressed to Ken
+McRae, Department of Psychology and Brain and Mind Institute, Univer-
+sity of Western Ontario, Western Interdisciplinary Research Building,
+London, Ontario, Canada N6A 3K7. E-mail: kenm@uwo.ca
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+recognition, and comprehension of stories (Bransford & Johnson,
+1972); inferencing (Graesser, Singer, & Trabasso, 1994; Sanford
+& Garrod, 1981; van Dijk & Kintsch, 1983); the perception of
+action by infants and adults (Gao & Scholl, 2011; Heider &
+Simmel, 1944; Johnson, Amso, Frank, & Shuwairi, 2008); and
+segmenting visual scenes (Zacks, 2000). For an extensive review,
+see Shipley and Zacks (2008).
+At the same time, there are difficult challenges in understanding
+the content and internal structure of event knowledge, how it is
+acquired, and how it is accessed and used. Four challenges in
+particular seem to be especially important. First, the event cogni-
+tion literature has not been free of empirical controversy, in the
+sense that divergent findings have been reported regarding both the
+form and use of event knowledge. One major controversy concerns
+whether the temporal structure of events is encoded in long-term
+memory. This might seem like an odd thing to question, given the
+recurring theme of events as sequentially structured activity se-
+quences. Indeed there is evidence for temporal representation of
+events in memory (e.g., Bower, Black, & Turner, 1979; Lancaster
+& Barsalou, 1997). However, this conclusion has been challenged
+by studies that fail to find evidence that the temporal structure of
+events is encoded in long-term memory (Galambos & Rips, 1982).
+Another area of controversy involves inferencing, which is often
+assumed to reflect the use of event knowledge to “fill in the gaps”
+in the description or experiencing of an event. Such inferences may
+be about a present activity (elaborative inferences) or about sub-
+sequent activities (predictive or forward inferences). Here again,
+some studies report evidence for such inferencing (Garrod,
+O’Brien, Morris, & Rayner, 1990; Graesser et al., 1994; Keefe &
+McDaniel, 1993; Metusalem et al., 2012), whereas others do not
+(Dosher & Corbett, 1982; Keenan, Potts, Golding, & Jennings,
+1990; McKoon & Ratcliff, 1986; Potts, Keenan, & Golding, 1988).
+A second challenge concerns ambiguity in the use of the term
+event knowledge. Sometimes it is used to refer to general knowl-
+edge of event types (going to a restaurant, changing a flat tire) and
+other times to the mental representations that are reconstructed in
+the moment in response to a specific instantiation of an event. In
+the first case, it refers to long-term representations in memory,
+whereas in the second case, event knowledge refers to represen-
+tations that are constructed as a situation is experienced. Some
+theories have focused on the first type of knowledge. These in-
+clude proposals regarding frames (Minsky, 1974), scripts (Schank
+& Abelson, 1977), schemas (Rumelhart, 1980), and stories (Man-
+dler, 1984). Other theories, such as mental models (Johnson-Laird,
+1983) and situation models (Zwaan & Radvansky, 1998), are more
+concerned with constructing event representations in the moment.
+There are important interactions between the two types of repre-
+sentations. The question is how these two types of representations
+are learned, activated, and impact behavior.
+The significance of this distinction and the interactions between
+both types of knowledge lead to the third challenge, which is
+developing computational models of event knowledge. From the
+early days of artificial intelligence, computational constructs such
+as Minsky’s (1974) frames and Schank and Abelson’s (1977)
+scripts grappled with the problem of how to capture both the
+recurring patterns that characterize multiple instantiations of an
+event type (such as going to a restaurant) while at the same time
+accounting for people’s ability to respond appropriately to the
+possibly unique characteristics of individual event occurrences
+(such as going to a specific restaurant on a specific day with
+specific people). The problem is nontrivial because any given type
+of event may be instantiated in a large number of ways, even if
+those variations are neither random nor unconstrained. Compound-
+ing the problem is the fact that specific events often involve
+elements from multiple event types, as in going to a restaurant for
+a business meeting. Event blends may interact synergistically in
+novel ways, or they may simply reflect coincident but noninter-
+acting events. We think it is fair to say that early computational
+models did not deal with these challenges in a satisfactory way. To
+our knowledge, there is at present no fully articulated computa-
+tional model that tackles these problems head on.
+The last challenge concerns the question of how event knowl-
+edge is learned. Bartlett (1932) argued that our memories for
+specific experiences must interact in long-term memory in some
+manner because this is what gives rise to reconstructive memory.
+His comments about this problem are prescient because they
+provide some insight into the stumbling blocks noted above, and
+are worth quoting at length. Bartlett wrote,
+[On the one hand] when any specific event occurs some trace, or some
+group of traces, is made and stored up in the organism or in the mind.
+Later, an immediate stimulus re-excites the trace, or group of traces,
+and, provided a further assumption is made to the effect that the trace
+somehow carries with it a temporal sign, the re-excitement appears to
+be equivalent to recall . . . Yet there are obvious difficulties. The
+traces are generally supposed to be of individual and specific events.
+Hence, every normal individual must carry about with him an incal-
+culable number of individual traces. Because these are all stored in a
+single organism, they are in fact bound to be related one to another,
+and this gives to recall its inevitably associative character; but all the
+time each trace retains its essential individuality, and remembering, in
+the ideal case, is simple re-excitation, or pure reproduction . . . the past
+operates as an organized mass rather than as a group of elements each
+of which retains its specific character. (p. 197)
+These four challenges form our historical context and motivate the
+present work.
+Our Focus and Specific Questions
+Event knowledge can be described along many dimensions, but
+here, we focus on two in particular. We chose these dimensions
+because they are particularly relevant to the behavioral literature
+involving event cognition and also because both have figured
+prominently in prior theoretical and computational proposals.
+The first dimension concerns the component pieces of activities
+that are part of an event. For example, the activity of removing the
+lug nuts from a flat tire involves someone who is the agent
+(typically a person), an instrument (typically, a tire iron), the
+patient (lug nuts), and a context (the side of the road, or perhaps a
+garage). People’s knowledge of these components includes know-
+ing not only what the typical components are, but also the range of
+possible components. This sort of knowledge concerns the co-
+occurrence of participants and actions within an activity.
+The second dimension concerns the temporal structure that
+connects the multiple activities that comprise an event. For some
+events, the temporal structure may involve constrained orderings.
+For instance, one takes off the lug nuts from a flat tire before the
+tire is removed. After removing the flat tire, a spare is put on, and
+so on. Sometimes the temporal structure reflects causal necessity,
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+253A MODEL OF EVENT KNOWLEDGE
+as in the flat tire example. In other cases, as in the order with which
+one eats the salad course relative to the main course, the ordering
+is a matter of cultural convention.
+Given this perspective on event knowledge, we ask the follow-
+ing specific questions:
+1. How might event knowledge support inferences of unob-
+served or unmentioned entities? Such inferences may
+involve filling in missing pieces of the current activity
+(elaborative inference) or inferring what will occur next
+(predictive inference). In the case of predictive inferenc-
+ing, is it limited only to what is immediately licensed by
+the context, or is a broader set of event-relevant entities
+also anticipated? We explore this question in Study 1.
+2. How might event knowledge be deployed when novel
+situations are encountered? These may include situations
+that combine elements of multiple event types (blending),
+or abrupt changes in a situation. Dealing with variation
+and novelty has been a classic challenge for implemented
+models of event knowledge. We explore this question in
+Study 2.
+3. How might the temporal structure of events be repre-
+sented? The variability in temporal structure that occurs
+in different instantiations of the same general type of
+event is of particular interest. Some events may display
+less variability whereas others may have few constraints
+on temporal structure. How can a network model deal
+with variability in different instantiations of the same type
+of event? Do events have a consistent underlying tempo-
+ral structure? Is that structure best described as hierarchi-
+cal (what has also been called the “comb model”), or does
+it reflect direct sequential links between activities (the
+“chain model”)? Does the model shed light on the long-
+standing question of how serial order in behavior is
+represented? We explore these questions in Study 3.
+What the Model Is (and What It Is Not)
+We present a model of knowledge about events. The model
+learns about the components and temporal properties of events. In
+much of the literature on how people use event knowledge, how-
+ever, linguistic stimuli have been used to probe people’s event
+knowledge and to test how it is deployed. Note that this is similar
+to the concepts literature, in which people’s conceptual knowledge
+often is tested using linguistic stimuli. Because language has been
+used so often to test aspects of people’s event knowledge, it ends
+up being central to our simulations. In Studies 1 and 2, our
+explorations of how event knowledge supports pattern completion
+in the moment and across time are based on language studies that
+were designed to tap into the influence of event knowledge during
+comprehension. Study 3 uses activity-based descriptions of events
+because language provides a convenient vehicle for eliciting this
+knowledge from people (Raisig, Welke, Hagendorf, & van der
+Meer, 2009).
+However, our model is not a language model. As will be
+described, stimuli are not tightly aligned with the temporal struc-
+ture of language input. For example, in training, activity compo-
+nents are presented to the model simultaneously, rather than in-
+crementally word-by-word as in a sentence. Activities are
+presented in an order that reflects real-world events. Training does
+not incorporate vehicles that are used in language to signal time or
+the relative importance of specific event components. Further-
+more, although we do test the model using language experiments,
+we do not simulate word-by-word processing within sentences or
+clauses or phrases. Consider, for example, that a language model
+would need to be able to differentiate between active and passive
+sentences. However, in our model, the identical activity corre-
+sponds to what might be glossed as “Mary cut the steak” and “The
+steak was cut by Mary.” As another example, there is no “before”
+node in the model. That is, it is never the case during training that,
+for example, an activity is paired with a “before” node, and then is
+followed by the previous activity. In summary, the study of event
+knowledge and language comprehension have been intertwined in
+multiple ways, but we wish to be clear that in this article, we
+present a model of event knowledge. We return in the General
+Discussion to the relationship between our model and a model of
+language processing.
+In the remainder of this article, we begin by describing the
+architecture of the model, how it is trained, and how it is tested.
+We then describe the studies we conducted to explore the model’s
+ability to simulate phenomena in the human behavioral literature
+for which event knowledge has been argued to play a role. In some
+cases, the model’s behavior surprised us. These unanticipated
+findings lead to predictions that might be tested experimentally.
+We also find examples in which the model’s behavior demon-
+strates sensitivity to task and stimulus characteristics. In these
+cases, we discuss how that sensitivity may provide an explanation
+for apparently discrepant experimental data that have been re-
+ported in the literature. Finally, in the General Discussion, we
+return to the challenges noted above and consider a broader set of
+theoretical issues concerning the form and use of event knowledge.
+A Model of Event Knowledge
+Design Considerations
+Although the domains and specific tasks for which event knowl-
+edge is used are varied and typically involve domain- and task-
+specific issues, there are a core set of phenomena that recur. These
+central phenomena provide a set of desiderata for the model’s
+architecture. First, the model should show how event knowledge
+can be both the target of cues provided from the environment (e.g.,
+experiential, linguistic), and at the same time can also guide
+expectancies regarding what is yet to be experienced or heard. This
+process should happen on an incremental basis and in real time.
+Second, the model should have the ability to perform pattern
+completion along two dimensions. The model should be able to
+infer activity components that are not explicitly mentioned or
+experienced but which are generally consistent with what the
+model has experienced. This is pattern completion in the moment.
+In addition, the model should generate expectancies about what
+has yet to come. This is pattern completion across time. Pattern
+completion should be flexible and accommodate potentially high-
+order interactions among the fillers of various event components
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+254 ELMAN AND MC RAE
+(e.g., the specific fillers of the agent, action,1 or instrument roles
+may condition an inferred patient). Such interactions were chal-
+lenges for classic computational models of event schemas. The
+model should deal appropriately with atypical and novel situations,
+as well as with situations that involve novel combinations of
+events that are blended together. These also have been challenges
+to earlier computational accounts.
+Finally, the model should learn. It should not be provided with
+templates or definitions of event types in advance. Instead, the
+model should learn on a case-by-case basis about activities and
+their components (participants, other entities, actions, contexts),
+and about how sequences may be ordered into what an observer
+might call an event, but which is not predefined as such. From
+specific activity sequences, the model should learn the regularities
+that are implicit across those exemplars, recognizing that regular-
+ities may differ in their generality of application, or what Plaut,
+McClelland, Seidenberg, and Patterson (1996) called quasi-
+regularity.
+What Computational Architecture Satisfies
+These Needs?
+The model was developed within the connectionist, or parallel
+distributed processing, framework (Rumelhart & McClelland,
+1986). In this framework, the architecture underlying human cog-
+nition involves networks of relatively simple processing units, and
+knowledge lies in the structure of the networks, the way units
+within networks are connected, and the learned strengths of those
+connections. Memory is instantiated in the same mechanisms that
+are involved in processing information in the moment. Key goals
+have been to understand how such knowledge can be learned, and
+how a multitude of individual experiences, encountered incremen-
+tally over time, may give rise to generalization and abstraction,
+while also permitting the emergence of graded categories, idiosyn-
+cratic behavior, and contextual influences. A variety of neural
+network architectures have been explored, and our model incor-
+porates components of two architectures, both of which rely on the
+use of recurrent connections.
+Recurrent connections are those in which the flow of activation
+among units includes the option of feedback loops. As a conse-
+quence, the network’s activation state is a joint function of both
+new input and the network’s state at prior points in time. We
+believe that two particular properties of recurrent networks enable
+important kinds of computations that are critical for event knowl-
+edge.
+First, recurrent architectures enable constraint satisfaction. In
+constraint satisfaction networks, patterns of co-occurrence experi-
+enced over time give rise to weights between units that reinforce
+those patterns. These interactions may be mutually supportive or
+may enable competitive inhibition. When a pattern is encountered
+subsequently that partially conforms to what was learned from
+prior experience, the network dynamics may lead to completion of
+missing elements. Alternatively, the dynamics may lead to sup-
+pression of inconsistent elements. These behaviors are analogous
+to reconstructive memory effects (Bartlett, 1932).
+One relevant example of how a connectionist network can
+represent stable and typical schemas, and also accommodate novel
+blends of schemas, is found in Rumelhart et al. (1986). In their
+model, nodes corresponded to objects that might be found in
+different rooms in a house (e.g., chair, sofa, stove, desk, lamp).
+Connections between units reflected the statistical co-occurrences
+between nodes across all rooms on which the network was trained.
+Even though a single, fixed set of weights had to embody knowl-
+edge of all room types, if a small set of object units was activated,
+activation spread across the remaining units in a way that was
+consistent with the room that best matched these objects. The
+constraint satisfaction process allowed for filling in the missing
+room features via pattern completion. Moreover, when probed
+with unusual combinations of room features (e.g., bed and sofa),
+the network activated related objects (drapes, fireplace, large easy
+chair) that collectively might be described as a “large, fancy
+bedroom.” This resulted from multiple interacting constraints giv-
+ing rise to a coherent outcome, although the model had not been
+trained on such a room. The ability of constraint satisfaction
+networks to perform pattern completion is important for modeling
+inferences. The ability of such networks to deal with new combi-
+nations of elements may enable modeling novel variants of events
+and the blending of multiple simultaneous events.
+A second property of recurrent networks is that they can learn
+and generate behaviors that unfold over time (Botvinick & Plaut,
+2004, 2006; Elman, 1990; Hochreiter & Schmidhuber, 1997; Jor-
+dan, 1986; St. John, 1992; St. John & McClelland, 1990). Because
+these networks possess a memory that is not a verbatim record of
+prior inputs, they create internal states representing prior informa-
+tion (in possibly abstract ways), but only when that prior informa-
+tion is relevant to current or future processing. One of the earliest
+tasks used in recurrent network learning was prediction (Elman,
+1990). The error signal for prediction learning is simply the dif-
+ference between the actual and anticipated next input. The predic-
+tion task is deceptively simple, but it is a powerful tool for learning
+and also for guiding comprehension (Altmann & Mirkovi´c, 2009).
+In cases in which there are complex but directly observable pro-
+cesses that underlie a time series, prediction drives the network to
+discover the underlying generators.
+Recurrent networks’ ability to generate expectancies about fu-
+ture inputs is important for two additional reasons. First, prediction
+encourages the network to produce what might be called predictive
+inferences. Second, prediction is central to learning the temporal
+structure that characterizes events, including structure that might
+not be easily apparent from isolated examples. Both of these
+behaviors figure prominently in our simulations.
+Architecture
+The model’s architecture is shown in Figure 1. Notably, there is no
+built-in definition or representation of an event type per se. Rather, the
+model encounters activity sequences that make up what might be
+thought of as events, but there is not a predefined representational
+structure or template that constrains what may be called an event. The
+network’s task was to learn both the internal structure of activities (the
+components of an activity that occur together), and the temporal
+structure of activity sequences, including their variability and option-
+1 The term action is used in multiple ways in various literatures. In this
+article (and in our model), we use action to refer to what essentially might
+be a verb in a sentence, in that it excludes components such as agents,
+patients, instruments, and locations. We use activity to refer to the collec-
+tion of the action and these other components.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+ality. If it discovers structure within and across activity sequences, we
+might call this event knowledge, but the concepts of event or event
+type are not primitives in the model.
+This approach allows considerable flexibility with respect to the
+temporal contours of (what we call) events. This is particularly
+relevant for Study 3 in which the model learns human data from an
+activity production experiment. Some events may have strong
+constraints on the temporal order of activities within an event,
+while others may have few or no such constraints. Thus, events’
+temporal structure is not predetermined and must be learned.
+We define an activity as something that is happening at a given
+point in time. An activity is a collection of processes (actions,
+states), participants and other entities (agent, patient, beneficiary,
+instrument), and contexts (location, time of day). Our distinction
+between activities and events is similar to what others have called
+events versus headers (Galambos & Rips, 1982), and events versus
+scripts (Schank & Abelson, 1977).
+The model’s input is not a literal representation of what is physi-
+cally observable, but is assumed to arise from other perceptual,
+cognitive, or linguistic mechanisms that identify the relevant basic
+information that is needed to learn about events. This assumption is
+made commonly by other models of high-level cognitive processes
+that do not operate directly on physical input from the world (Bot-
+vinick & Plaut, 2004; Mayberry, Crocker, & Knoeferle, 2009; Rogers
+& McClelland, 2004; St. John & McClelland, 1990). Our goal thus
+differs from modeling efforts that explicitly attempt to map linguistic
+input onto situation knowledge (e.g., Calvillo, Brouwer, & Crocker,
+2016). We stress this point because we use terminology such as agent,
+patient, and instrument in describing activities that is also used to
+describe linguistic constructs. We use these as conceptual constructs
+that may be cued through a variety of channels that include, but are
+not limited to, language.
+The model is a single network but has internal structure, shown by
+the labeled rectangles in Figure 1. These represent banks of nonlinear
+processing units that are connected as shown by the arrows (arrows
+indicate the directionality of activation flow). Each unit represents a
+concept. Localist representations are useful for expository purposes,
+although the learning algorithm can be used with distributed repre-
+sentations as well (Calvillo et al., 2016; Frank, Koppen, Noordman, &
+Vonk, 2003). The architecture in Figure 1 was used in all simulations
+reported herein, although simulations differ in their specific partici-
+pants, processes, and contexts. These changes sometimes require
+changes in the number of units, but they do not affect the dynamics of
+learning or behavior. Simulation-specific details are provided in the
+description of each simulation, with additional information presented
+in the appendices (all appendices can be found in the online supple-
+mental materials).
+At the macrolevel, the model is one integrated network, but can
+be understood functionally as two interacting components. These
+are indicated by the two rectangles labeled as current activity and
+next activity. The task of the current activity subnetwork is to learn
+the correlational structure within the currently experienced activ-
+ity. For example, the model should learn that cutting a steak
+involves using a knife, generally occurs in a restaurant and not a
+fast food outlet, and typically occurs at dinner. The next activity
+subnetwork learns to predict the next activity. Although training
+involves predicting only the next activity, because successful pre-
+diction often depends on information that was presented in activ-
+ities earlier in time, the network should learn the higher order
+temporal structure over multiple successive activities. A nonobvi-
+ous and untrained behavior is that the network also begins to
+anticipate what might occur beyond the immediate next activity.
+These two subnetworks are connected by hidden units. These
+units capture the higher order relationships within a given activity
+(because they feed back to the current activity units) and the higher
+order temporal structure across multiple activities (because they
+activate the next activity units). The current activity and hidden
+units together implement pattern completion in the moment. This
+allows for the model to fill in missing information as appropriate.
+The hidden and next activity units implement prediction (pattern
+completion forward in time).
+
+Processing Dynamics, Training, and Testing
+We used the version of backpropagation through time (Williams
+& Zipser, 1989) that was employed in the model of semantic
+cognition by Rogers and McClelland (2004). We used the rbp
+package from the PDPtool simulator (McClelland, 2016). In all
+simulations, unless indicated otherwise, the following training
+regime was used. At the start of training, weights were initialized
+to small random values drawn from a uniform distribution be-
+tween 0.1 and 0.1. A sequence of activities was chosen at
+random from the training set and each activity in that sequence was
+presented in succession. Prior to the beginning of each new se-
+quence, hidden units were reinitialized to 0.5. This marked the
+beginning of a new event (activity sequence) during model train-
+ing. Presentation of an activity involved the following steps:
+1. For the first activity of an event, hidden units were
+initialized to the midrange of their activation function
+(0.5). For the ensuing activities of an event, hidden unit
+activations were carried forward.
+2. For every concept involved in an activity, the corre-
+sponding node in the current activity bank was clamped
+to 1.0. Entities not involved were set to 0. The number of
+units in each bank varied across simulations, depending
+on the nature of the events being trained. Typically,
+simulations involved five to 10 agents, 10 to 15 patients,
+five to 10 actions, four to eight instruments, four to eight
+contexts, and 10 to 15 actions. Each entity corresponded
+to a node in the current activity bank, and also in the next
+activity bank. Across all simulations there were 20 to 25
+hidden units. In pilot work we determined that there was
+a range in the number of hidden units that yielded qual-
+itatively the same results with respect to generalization
+versus learning specific exemplars. Note that in the pres-
+ent case, the same hidden units were used for both pattern
+completion and prediction. Details are provided for each
+simulation.
+3. The clamped activations were maintained for two input
+cycles to allow activation to flow throughout the net-
+work. Each of these first two cycles involved a settling
+period of four “ticks” during which no learning oc-
+curred.2
+4. For the next two cycles, the input was removed and
+became the target for learning in the current activity
+units, such that the network was trained to sustain the
+input from the first two cycles. Learning involved adjust-
+ing weights to minimize cross-entropy error between a
+unit’s target and its actual activation. The backpropaga-
+tion through time variant of the backpropagation of error
+algorithm adapted for recurrent networks was used to
+adjust weights (Rumelhart, Hinton, & Williams, 1986).
+Learning rate was set to 0.01, momentum was set to 0,
+and weight decay was set to 0.0001.
+5. In addition, on those final two cycles, the input pattern
+for the activity that would be presented next was used as
+the target for the next activity units.
+The effects of this regime were (a) to train the network to
+sustain the input corresponding to the current activity, and (b)
+to predict the next activity. This process continued for the
+remaining activities until the sequence was completed. Then a new
+activity sequence was selected at random from the pool of se-
+quences and Steps 1–5 were repeated. All models were trained for
+1,000 epochs over their training sets. This number of training
+epochs was chosen after pilot experimentation to ensure that each
+model had learned a sufficient amount without being overtrained.
+Similar results were obtained with epoch values ranging from 300
+to 1,000; training to 1,000 epochs simply led to somewhat crisper
+differences in activation values. Testing was similar except that the
+network’s weights were frozen so that no learning occurred. Test-
+ing involved the same patterns used in training, or novel activities
+and/or sequences, as will be described.
+Simulations
+Study 1: Pattern Completion Within and
+Across Activities
+We investigated the model’s ability to learn both the internal
+structure of activities and the temporal structure of activity se-
+quences. We were interested particularly in evaluating how the
+model responds when given only a few cues regarding the current
+activity. Under what conditions and to what extent will the model
+fill in missing information when not all activity elements are
+described? Will a few cues to one activity be sufficient for the
+model to generate appropriate expectancies regarding subsequent
+activities? These questions may be thought of as addressing pattern
+completion in the moment and across time.
+In Simulation 1.1, we evaluated the model’s ability to learn the
+typical components of activity sequences and then use that knowl-
+edge to fill in gaps when an activity or activity sequence is
+described incompletely. This pattern completion resembles elabo-
+rative inferences (of unspecified information about a current ac-
+tivity) and predictive inferences (of anticipated activities and event
+components in the future) that have been studied in humans.
+Simulation 1.2 tested whether predicted event elements are limited
+to components that are narrowly licensed by the immediate con-
+text, or whether the network activates event components that are
+more generally relevant to the event being described, even if they
+are not necessarily relevant to the current or next activity. In
+Simulation 1.3, we investigated the robustness of the model’s
+predictions regarding upcoming event components. There has been
+considerable debate in the behavioral literature regarding whether
+predictive inferences occur. We show that the model’s predictions
+depend on the timing of a probe and they can be disrupted by
+inconsistent intervening information. This has implications for
+interpreting the discrepant behavioral data.
+Simulation 1.1: The restaurant scenario. One of the first
+attempts to encode knowledge of activities associated with com-
+mon events was the frame proposal by Minsky (1974). Frames are
+“data structures for representing a stereotyped situation” (p. 2) and
+specify situation components (loosely, roles) and potential fillers
+of those roles. Schank and Abelson (1977) extended the frame
+approach to deal with procedural knowledge. Scripts were partic-
+ularly useful for characterizing sequential activity that was char-
+2 A cycle is the basic unit over which learning occurs. Cycles are broken
+into four ticks. During a tick, units interact and settle into a final state, but
+no learning takes place until the end of a full cycle. Ticks allow for finer
+grained dynamics and settling, but only cycles are visible to the learning
+algorithm.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+257A MODEL OF EVENT KNOWLEDGE
+acteristic of an event. A limitation shared by these approaches is
+that they had a fairly inflexible template-like character that was
+prespecified. This limited their ability to deal with situations in
+which both the temporal structure and the fillers of participant
+roles were highly variable. This limitation was well recognized at
+the time and there were attempts to deal with it (Schank, 1980), but
+these also suffered from brittleness and lack of flexibility. In
+Simulation 1.1, we trained the model on a common scenario (going
+to a restaurant), but deliberately introduce variations into the
+training examples. We investigated how the network deals with
+such variability, and how it responds after learning when tested on
+underspecified inputs. People’s ability to infer missing compo-
+nents was one of the earliest indications that perception and recall
+are not entirely veridical but are influenced by event memory (e.g.,
+Bartlett, 1932; Bransford, Barclay, & Franks, 1972; Bransford &
+Franks, 1971; Bransford & Johnson, 1972).
+Model. There were eight agent, 11 action, 10 patient, three
+instrument, four location, and eight recipient units, as presented in
+Table 1 and Appendix I in the online supplemental materials.
+There were 20 hidden units.
+The sequence of activities in Table 2 correspond to a single
+event of “things that happen when you go to a fancy restaurant.”
+Precisely what the network learns and generalizes depends both on
+the specific exemplars (e.g., it must learn to be aware of idiosyn-
+crasies) as well as general patterns that are exhibited overall or in
+subsets of the exemplars. The network encountered sequences
+involving different people doing similar activities, but with many
+variations. Variations included meal preferences (some people
+order steak and other times order fish, but individuals may have
+different food preferences), the order of eating and paying (in a
+fancy restaurant, paying occurs after eating, whereas in fast food
+restaurants, one pays first), who is paid (waiter vs. cashier), the
+beverage (wine vs. coke), whether one eats in the establishment
+(fancy restaurant) or after leaving (fast food), and how many
+activities occur in each setting (a greater number of things occur in
+a fancy restaurant).
+Training. The training procedure followed the steps described
+earlier.
+Testing and results. After training, the weights were frozen
+and the network was tested. We examined the network’s response
+to input consisting of partial specification of an activity. The
+network had not encountered such partial descriptions during
+training. We present node activations in both the current activity
+and next activity units.
+In Simulation 1.1, the network was presented with the activ-
+ity johnA  cutV  steakP3 for two cycles. Instrument and
+context units were not specified. The input was then removed
+and the network continued processing for two cycles, during
+which there was no additional external input. During the first
+two cycles, current activity units were clamped to the input
+values, and hidden units and next activity units were free to
+assume values that were governed by input from current activ-
+ity units, the architecturally specified topology of connections
+between units, and the connection weights that were learned
+during training. During the final two cycles, the current activity
+units also were free to assume values determined by their
+recurrent interactions with the hidden units. Figures 2 and 3
+show the activations in the current activity and next activity
+units, respectively, over the four cycles allocated to the input.
+Figure 2 shows node activations for all units whose activations
+are greater than 0.1. The mean activation across all nondisplayed
+units in each bank (agents, verbs, patients, instruments, recipients,
+and contexts) is shown in the plot but not labeled.
+Not surprisingly, units representing johnA, cutV, and steakP
+are activated at the maximum value of 1.0 for the initial cycles.
+At Cycle 2, the unit for knifeI is rapidly activated. This activa-
+tion is an example of pattern completion (or elaborative infer-
+encing). Pattern completion occurs because the network’s
+weights implement the constraint that the instrument typically
+used to cut steak is a knife, such that when the cutV and steakP
+units are active, they active knifeI.
+A bit later, the node for fancy_restaurantC becomes active,
+for similar reasons. The network has learned that cutting steak
+occurs in fancy restaurants. Finally, toward the end of the
+processing this activity, the activation for johnA slowly de-
+creases. The decay is due to the network anticipating that the
+next activity may involve other agents such as a waiterA giving
+johnR some wineP. This leakage is the consequence of the
+recurrent top-down connections from hidden units. The same
+hidden units are involved both in learning correlations among
+current activity units, and in generating predictions about up-
+coming activities. Thus, the anticipation of future activities
+subtly preactivates (or predeactivates, as in this case) the units
+that represent the current activity. We are unaware of any
+evidence in the behavioral literature that this occurs in humans,
+but the effect leads to the testable prediction that probes (e.g.,
+through cross-modal priming) for the activation of event par-
+ticipants would decline as a function of the timing of the probe,
+but only in cases where that element’s role in the unfolding
+event is highly likely to decline in successive activities.
+Figure 3 displays next activity unit activations in response to
+the same input, johnA  cutV  steakP. These units represent
+the network’s predictions regarding possible components of
+successor activities. The network’s training data, by design,
+included variability in the activity sequences that were associ-
+ated with the restaurant event type. Because of this variability,
+deterministic predictions are not possible. This produces graded
+activations in the next activity units that correspond to the overall
+likelihood of possible components occurring in the following activi-
+ties. The network anticipates that fancy_restaurantC will continue to
+be the context, and that eatV and steakP are also highly expected.
+The activation of lauraA seems unexpected. This behavior is
+sensible insofar as it reflects the fact that lauraA was a highly
+frequent agent in the fancy restaurant event type, and that she
+always ate steak (note that other possible agents are activated
+much less strongly). Is there any evidence that “promiscuous
+inferencing,” as it has been called (Graesser et al., 1994), occurs in
+humans? We consider this question in Simulation 1.2.
+Simulation 1.2: Expectancy generation and predictive
+inferences. There is considerable evidence from online studies
+of sentence processing that comprehenders generate expectan-
+3 Node names are followed by labels that indicate the bank/category they
+belong to: A  agent; V  activity (V used to avoid confusion with agent);
+P  patient; I  instrument; R  recipient; C  context. Some event
+participants may play multiple roles. For example, John may appear as an
+agent, patient, or recipient. Labels thus distinguish the role that the network
+considers that participant to be playing in a given activity.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+258 ELMAN AND MC RAE
+cies regarding upcoming words, as revealed by anticipatory
+looks during eye tracking experiments, and by increases in the
+amplitude of the N400 when an expectancy is violated. Until
+recently, the data were consistent with the assumption that
+expectancies were based on the likelihood of a specific word
+occurring in a linguistic context, with the N400 being sensitive
+not only to degree of likelihood but also the degree of semantic
+overlap between expected and unexpected words (Federmeier &
+Kutas, 1999). This led to the view that prediction in language
+processing involves anticipation of only the next word in a
+given context.
+On the other hand, Simulation 1.1 shows that our model
+generates expectancies that appear to go beyond the next ele-
+ment in an activity sequence, and that a broader set of event-
+relevant elements may be anticipated even in cases in which
+they are not immediately congruent with the current activity.
+There is evidence that this behavior also occurs in people.
+Metusalem et al. (2012) investigated whether people’s expec-
+tancies are limited only to the set of words that might be
+linguistically appropriate in a given context, or whether com-
+prehenders activate a broader set of words/concepts that are
+relevant to the event under description, even before they might
+be linguistically appropriate. In the Metusalem et al. study,
+participants read brief three-sentence stories such as “Elizabeth
+was standing at the intersection waiting for the light to change.
+All of a sudden she saw a car barrel through the red light. A
+moment later, she heard a terrible crash come from down the
+street.” A norming study established that crash is highly pre-
+dicted in this context. Not surprisingly, crash elicited a rela-
+tively small N400, consistent with its high cloze probability
+(cloze probability is the proportion of participants that continue
+a sentence with a specific word). Metusalem et al. referred to
+stimuli with this type of target as the event-relevant/contextu-
+ally appropriate condition. Other participants read the same
+story, but with conductor replacing crash. Again, not surpris-
+ingly, because conductor had zero cloze probability in this
+context, a significantly larger N400 was generated. This was the
+event-irrelevant/contextually inappropriate condition.
+Table 1
+Training Stimuli
+Agents Actions Patients Instruments Locations Recipients
+John Go_to Menu Knife Fancy_restaurant John
+Mary Enter Steak Glass Fast_food_restaurant Mary
+Bill Be_at Fish Gun Outside Bill
+Tina Read Hamburger Inside Tina
+Marco Order Pizza Marco
+Laura Eat Wine Laura
+Waiter Drink Coke Waiter
+Cashier Cut Knife Cashier
+Give Tip
+Leave Cash
+Attack
+Note. Sixty-six activity sequences were created from these activity components, 48 of which might be
+thought of as going to a fancy restaurant. Eighteen sequences described getting food at a fast food restaurant
+(see Appendix I in the online supplemental materials). A representative sequence is shown in Table 2.
+Table 2
+Input to the Network for One of the Training Sequences
+Activity number Agent Action Patient Instrument Location Recipient
+1 John Be_at Outside
+2 John Go_to Fancy_restaurant
+3 John Enter Fancy_restaurant
+4 John Be_at Fancy_restaurant
+5 Waiter Give Menu Fancy_restaurant John
+6 John Read Menu Fancy_restaurant
+7 John Order Fish Fancy_restaurant Waiter
+8 John Order Wine Fancy_restaurant Waiter
+9 Waiter Give Fish Fancy_restaurant John
+10 John Cut Fish Knife Fancy_restaurant
+11 John Eat fish Fancy_restaurant
+12 Waiter Give Wine Fancy_restaurant John
+13 John Drink Wine Glass Fancy_restaurant
+14 John Give Tip Fancy_restaurant Waiter
+15 John Leave
+16 John Be_at Outside
+Note. Each of the 16 activities are presented one at a time. Activity 1 might be glossed as John is outside. Activity 5 might be glossed as the waiter gives
+John a menu in the fancy restaurant.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+Of particular interest was the third condition. In a separate
+norming study, participants read the complete story (ending in
+crash) and were asked to “paint a mental picture” of the event
+being described, and then to write down all the people and
+objects that they had visualized but that were not mentioned in
+the passage. Policeman was mentioned frequently, consistent
+with how a car accident might be expected to unfold. This target
+was then used in the online ERP experiment as the third
+Figure 2. Activation of current activity units in response to the input johnA  cutV  steakP. The suffixes A,
+V, I, P, and C after a node name indicates that the node is in the agent, verb, instrument, patient, or context bank,
+respectively. Only nodes with activations  0.1 are labelled. Nodes with activations  1.0 have been decreased
+by 0.01 to prevent overlap so that data are visible. The input was clamped for the first two processing cycles,
+although activations on units not receiving input were free to change in response to dynamic interactions with
+hidden unit inputs. After the first two cycles, units with prior inputs were also free to change. See the online
+article for the color version of this figure.
+Figure 3. Activation of next activity units in response to the input johnA  cutV  steakP. Given the large
+number of units that are activated, only units with activations  0.3 are labeled. Next activity units are not
+clamped by external input. Instead, their activations begin at the resting state of 0.5 and then immediately reflect
+input they receive from the hidden units, with the latter units’ activations reflecting inputs from their own prior
+state as well as current (and evolving) input from current activity units. C  context; V  verb; P  patient;
+A  agent. See the online article for the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+260 ELMAN AND MC RAE
+condition, which was called the event-relevant/contextually in-
+appropriate condition. When crash was replaced by policeman,
+the N400 was significantly greater in amplitude than the ex-
+pected word (crash), but was significantly smaller in amplitude
+than to conductor. This occurred despite the fact that both
+conductor and policeman had zero cloze probability. Metusa-
+lem et al. (2012) interpreted this finding as indicating that event
+knowledge not only drives expectancies for the most likely next
+word (hence, the increase in N400 for policeman relative to
+crash), but also activates broader event-relevant information
+that could be anticipated (hence the lower N400 for policeman
+relative to conductor).
+We tested whether our model would make similar event-
+relevant predictions by training it on variations of an event
+based on Metusalem et al.’s (2012) stimulus design, and then
+testing it with sequences that were underspecified and omitted
+key elements. The issue is not whether the model can learn the
+training data because this is a trivial task given a single exem-
+plar. The focus was rather on the network’s behavior in gener-
+ating expectancies for upcoming elements in later activities of
+the event, regardless of whether or not those elements are
+specified or whether their activation closely conforms to what is
+licensed by the immediate context.
+Model. The network architecture is shown in Figure 1, but
+with reduced numbers of units in the current and next activity
+banks. Each of these banks contained two agent units (skaterA,
+crowdA), four action units (go_toV, applaudV, receiveV,
+look_atV), one patient unit (medalP), and five context units
+(podiumC, crowdC, skaterC, standsC, bleachC). There were 10
+hidden units.
+Training stimuli and method. The network was trained using
+the procedure described earlier. Four variations of the following
+activity sequences were created, and the four variations were
+presented in random order 20 times (training data are presented in
+Appendix II in the online supplemental materials).
+podiumC  crowdC  skaterC  standsC
+skaterA  go_toV  podiumC  crowdC
+crowdA  applaudV  standsC
+skaterA  receiveV  medalP  podiumC
+Testing. After training, the network was presented with an
+input sequence that omitted some of the elements present in each
+activity during training:
+crowdA  standsC
+crowdA  look_atV
+skaterA  go_toV
+crowdA  applaudV
+skaterA  receiveV  medalP
+Figure 4 shows the activations of the next activity units. We
+focus here on activations of three entities: medal, podium, and
+bleach. Focusing on the first activity, podium is event-relevant
+and contextually appropriate, medal is event-relevant but con-
+textually inappropriate (during the initial activities in which the
+medal does not yet participate), and bleach is both event-
+inappropriate and contextually inappropriate throughout the
+entire event. These three items parallel those used in the three
+experimental conditions in Metusalem et al. (2012).
+In the first activity, there is early activation of two event-
+relevant entities, podium and medal. This occurs because this first
+activity is a strong cue for the event that will be described. The
+high level of activation of podium reflects its consistency both with
+the overall event and the likelihood of its role in the following
+activities, given the training data. It is both event-relevant and
+contextually appropriate. The activation of medal is higher than
+Figure 4. Activation in next activity units, given an input that might be glossed as The crowd was in the stands;
+the crowd looks around, the skater goes to [place unspecified]; the crowd applauds; the skater receives the
+medal. C  context; V  verb; P  patient; A  agent. See the online article for the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+261A MODEL OF EVENT KNOWLEDGE
+bleach because it is event-relevant and anticipates a role in a future
+activity, but is lower than podium because it is not consistent with
+the current activity. It is event-relevant but contextually inappro-
+priate during the first four activities. Bleach is a nonparticipant in
+this event, and its activation remains at a low level during the
+entire sequence. It is event-irrelevant and contextually inappropri-
+ate.
+The activations of the two event-relevant entities are nonmono-
+tonic. In three of the four training sequences, podium was an early
+participant. Medal was also present in three of the four training
+sequences, but occurred early in only one case. This led to the
+differences in the graded nature of their activations. But the rela-
+tive magnitude of their activations interacted with their contextual
+appropriateness, such that by the penultimate activity, medal was
+now more highly predicted than podium.
+Is the network simply learning first-order correlations, that is,
+activity x predicts activity y? The drop (to 0.0) in activations of
+medal and podium following Activity 3 (skaterA  go_toV) sug-
+gest this is not the case. In the training data (Appendix II in the
+online supplemental materials), this activity is followed 50% of the
+time by skaterA  receiveV  medalP  podiumC, and 50% by
+crowdA  applaudV. If predictions were based simply on first-
+order correlations, then all of these entities should have prediction
+activations of approximately 0.50. In fact, the network does not
+predict podium and medal at all, but instead predicts crowd and
+applaud (with activations 0.90, not shown in the figure). Our
+interpretation of this is that the network uses all the training data
+to learn the entire training sequence. The training data are most
+consistent with an activity sequence of 1, 2, 3, 4. The training input
+of 3, 6 (see Appendix II in the online supplemental materials) is
+treated as a degenerate case of this sequence. Thus, given Input 3,
+the appropriate prediction is that Activity 4 comes next. This is in
+fact what the network predicts. We shall see another example of
+this in Study 3, Simulation 3.1.
+In addition to providing a mechanist account of Metusalem et
+al.’s (2012) results, if we interpret the activations in the next
+activity bank as the network’s version of predictive inferences,
+then their graded nature and nonmonotonicity over time are rele-
+vant to a major controversy in the inferencing literature. This
+debate concerns whether predictive inferences occur at all, or
+under only certain conditions.
+According to the minimalist hypothesis, the types of inferences
+illustrated in Figure 4 are not found in humans (McKoon &
+Ratcliff, 1986; Potts et al., 1988). Other researchers have argued
+that these inferences are found only when the contextual con-
+straints are sufficiently strong to support them (e.g., Murray, Klin,
+& Myers, 1993; van den Broek, 1990). In other more nuanced
+views, predictive inferences are fragile and evidence for them
+disappear if they are not supported by subsequent discourse (e.g.,
+O’Brien, Cook, & Guéraud, 2010; Zwaan & Madden, 2004;
+Zwaan & Radvansky, 1998). Keefe and McDaniel (1993) tested
+this hypothesis by manipulating the timing of the probe. They
+found support for this hypothesis, which is also consistent with our
+model’s behavior. In the network, behavioral evidence for activa-
+tion of podium and medal would depend both on the timing of the
+probes and their sensitivity. Insufficiently sensitive probes might
+not detect low levels of concept activation.
+The nonmonotonicity in the activation pattern of podium, fol-
+lowing an interval during which it was deactivated, is reminiscent
+of a phenomenon reported in a different area of research. This
+research concerns the mental representation of sentences such as
+“The cyclist fixed the light1 that the motorist2 in a hurry had hit3
+with his van.”
+Nicol and Swinney (1989) presented data that they interpreted
+as evidence for the psychological presence, following hit, of an
+unexpressed element (a WH-trace) that is coreferential with the
+earlier appearing word light. This element thus helped compre-
+henders connect the apparently missing direct object of the verb
+with its correct referent. Nicol and Swinney demonstrated that in
+a cross-modal priming task, probes that were semantically related
+to light, presented at Positions 1, 2, and 3 facilitated lexical
+decision at Positions 1 and 3 but not Position 2 (indicated as
+subscripts in the previous example). Priming at Position 1 was
+expected due to the temporal proximity of the prime to the target.
+Priming at Position 2 did not occur because of the delay between
+prime and target. Critically, priming at Position 3 was taken as
+evidence that light had been reactivated by a WH-trace.
+Although this pattern of activation is consistent with the WH-
+trace hypothesis, it also fits the pattern observed in Simulation 1.2.
+The model demonstrates waxing and waning of event-relevant
+elements, but reactivation does not require a covert WH-trace.
+Instead, the fluctuations in activations follow the changes in event-
+relevance of the various elements.
+On the other hand, McKoon, Ratcliff, and Ward (1994) reported
+a failure to replicate Nicol and Swinney (1989). Their results
+challenge not only the WH-trace hypothesis but our alternative
+proposal for why reactivation might occur. What might explain
+this discrepancy? We note that McKoon et al. (1994) did not use
+the same sentences as Nicol and Swinney, but devised their own
+set that was syntactically similar. A typical sentence from their
+stimulus set was “The optometrist aided the victim1 that the
+barber2 in the airport hurt3 in the fight.”
+McKoon et al. (1994) failed to find evidence for reactivation of
+victim at Position 3, which corresponds to an assumed WH-trace.
+However, these two representative sentences differ strikingly. The
+words used in Nicol and Swinney’s (1989) sentences are consistent
+with a familiar event. These words serve as event cues that
+reinforce one another. McKoon et al.’s (1994) sentences however,
+do not have this character. Each nominal (optometrist, victim,
+barber, airport) cues different scenarios. Therefore, whatever
+event information is activated by optometrist might be disrupted
+by the subsequent incongruous cues. Simulation 1.3 tests this
+possibility.
+Simulation 1.3: Testing the robustness and time course of
+predicted event components. The network was trained on five
+event types. Two of them involve John cutting objects in different
+contexts (a restaurant and a forest). The specific instrument and
+patient are contextually appropriate (a knife and food in the res-
+taurant, an axe and wood in the forest). Two also involve John, but
+describe different event types. In one, John cuts himself with a
+knife and bleeds. In the second, John cuts himself with an axe and
+dies. No context is provided in either case. In the final event type,
+Mary is in the library and asks a question that is answered by
+Penny. Thus, four of the event types are related in that they involve
+partial overlap in participants, instruments, patients, and actions.
+However, the events are not presented to the network as otherwise
+connected. The fifth event type is unrelated, with no overlap in any
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+262 ELMAN AND MC RAE
+of the participants, actions, instruments, patients, or contexts. We
+focused on two questions.
+First, we asked if the network can integrate event types that
+contain shared components, such that generalizations learned from
+one event type can be used appropriately to activate information in
+the related event type. We tested this by presenting the network
+with an initial activity from one event type, in which that activity
+is described incompletely. We explored whether the network (a)
+activates missing information that is implied by that event and then
+(b) uses that information appropriately when responding to a
+second activity input that omits that information, but for which the
+missing information is critical for generating the correct prediction
+about a third activity. The first question involves an elaborative
+inference that is then used to fill in missing information later in an
+event description and which supports the generation of a second
+predictive inference.
+Second, we test the robustness of this response under conditions
+in which the expected final activity sequence is drawn from a
+different event type that shares nothing in common with the other
+events. We predicted that when the final activity sequence is event
+congruent, the “double inferencing” will persist and be reinforced,
+but when the final activity sequence is event incongruent, infer-
+ences will be sufficiently fragile and the incongruous sequence
+will quickly deactivate them.
+Model. The network architecture is presented in Figure 1.
+Current and next activity banks consisted of three agent (johnA,
+maryA, pennyA), five action (cutsV, bleedsV, diesV, asksV, an-
+swersV), two instrument (knifeI, axI), three context (restaurantC,
+forestC, libraryC), and four patient (foodP, woodP, johnP, ques-
+tionP). There were 10 hidden units.
+Training stimuli and method. The network was trained using
+the same protocol as in Simulations 1.1 and 1.2. There were 5
+event sequences, roughly glossed as following (training stimuli are
+presented in Appendix III in the online supplemental materials):
+John is in a restaurant with a knife and food. He cuts the food with the
+knife.
+John is in the forest with an ax and some wood. He cuts the wood with
+the ax.
+John cuts himself with a knife. He bleeds.
+John cuts himself with an ax. He dies.
+Mary is in the library. She asks a question. Penny answers the
+question.
+Testing. The model was tested on novel sequences designed to
+address the two questions posed. In the first test, we asked whether
+the network could integrate information across two event types
+that partially shared participants, actions, and instruments. The test
+stimuli involved three activity sequences. The first activity came
+from one event type and specified the agent (always John) and a
+context (restaurant, or forest) but omitted mention of an instru-
+ment (knife or ax, depending on the event type). The second
+activity came from a related event type (john cuts john) in which
+the agent, action, and patient were specified but not the instrument.
+The third activity specified only the agent (john) and effectively
+served as a probe to see what activity would be activated. The two
+testing sequences are presented in Appendix III in the online
+supplemental materials and roughly correspond to the gloss:
+John is in the forest. John cuts himself. John . . . ?
+John is in the restaurant. John cuts himself. John . . . ?
+Figures 5a and 5b show next activity activations in response to
+these two test sequences. In the first test sequence shown in Figure
+5a, the initial activity specifies an agent (john) and context (forest).
+This causes the network to activate ax. Note that because the
+network has always encountered john in conjunction with events
+that involve cutting with various instruments, this also leads to a
+smaller activation of the other instrument used with that verb,
+knife. Pattern completion, as we have seen in previous examples,
+may be graded. However, the contextual cue forest suggests that ax
+is the more probable inferred instrument. The second activity in
+this sequence specifies only an action, cut, and the agent and
+patient, john in both roles. No instrument is given, and because the
+network has experienced this activity equally often with both
+instruments—ax and knife—we might have expected them to be
+equally activated. However, because the context of the previous
+activity favored ax, that instrument remains more highly active
+than knife.
+Of particular interest is what the network predicts for the final
+activity. The activation of ax (an elaborative inference that occurs
+early on) now interacts with the action (cut) to generate the
+prediction that the final action will be die. This might be thought
+of as a predictive inference of an outcome that relies on the
+elaborative inference of an instrument. Figure 5b shows a quali-
+tatively similar dynamic for the second test sentence.
+Having determined the answer to our first question, we now
+consider the second question: How robust or fragile are these
+effects? We tested this by contrasting the effects shown in Figure
+5, when the final activity is congruent with the first two, with the
+network’s response when the final activity is incongruent. In terms
+of situation model theory, we might characterize this as an exam-
+ple of input that triggers a situation update (Zwaan & Madden,
+2004).
+The model was given input sequences in which the first two
+activities were identical to the ones used above, but concluded with
+a cue—mary—that signaled a shift in event type. Our prediction is
+that this incongruent event component would lead to a decrease in
+activations of the event elements from the first event type, disrupt-
+ing the predictive inference about the outcome of john having cut
+himself under different conditions. These two input sequences
+might be glossed as below (actual test data are shown in Appendix
+III in the online supplemental materials):
+John is in the forest. John cuts himself. John . . . ?
+John is in the forest. John cuts himself. Mary . . . ?
+Figure 6a repeats the activations shown in Figure 5a (the forest
+scenario) but only for the two predicted outcomes, bleed and
+die. The test inputs were the same. Figure 6b shows the result
+of introducing an event-incongruous final element (mary),
+which for the network (given its prior experience) signals a
+change of activity.
+The introduction of an incongruent event element leads to an
+abrupt decrease in the activation of the predicted last activity.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+263A MODEL OF EVENT KNOWLEDGE
+Note that in this simulation, there is no overlap between the
+participants or activities involved in the two events (those
+involving john and those involving mary). The change in agent
+thus signals a change to an entirely different event, analogous to
+situation model updating (Zwaan & Radvansky, 1998). We
+provide further evidence in Study 2 that the network responds
+differently to changes in a situation when there is a potential for
+interaction and integration between blended events.
+These results provide a possible explanation for the discrep-
+ant findings in both the reactivation controversy and the more
+general question about whether predictive inferences occur in
+humans. In the model, incongruous event information may
+disrupt the activation of predicted event components and the
+timing of the probe relative to the disruption is key to detecting
+them. This result is consistent with Keefe and McDaniel (1993)
+who demonstrated that if the probe for an inferable entity occurs
+sufficiently early, one may find evidence for an inference.
+However, if the probe is delayed and subsequent disruptive
+information occurs (as in Figure 6b), it is difficult to find
+evidence for a predictive inference.
+Study 2: Blending Multiple Events in Novel Ways
+In addition to the fact that events almost always exhibit vari-
+ability in how they are realized in specific cases, it is also common
+that specific instances may arise that involve multiple types of
+events that need to be blended together. These elements may be
+disruptive and signal a shift in the event, as we saw in Simulation
+1.3. But in other cases, the blends may result in integrating
+multiple events in novel ways. In either case, flexibility and agility
+in response is required. Going “off-script” should not always entail
+“going off the rails.”
+For example, imagine the scenario in which Mary and John
+went to a fancy restaurant for a nice dinner. They sat down and
+ordered steak and wine. Just as they began to cut their steaks,
+Mary’s husband Bill burst into the restaurant. What began as a
+romantic dinner is suddenly revealed to probably be an illicit
+rendezvous interrupted by an angry spouse. We thus have two
+event types that need to be integrated. Although people experience
+a moment of surprise when told that Mary’s husband is now a
+participant, they quickly adjust their interpretation of this event.
+Can the model flexibly adapt when this happens? We address this
+Figure 5. Activations in next activity units in response to two activity sequences, explained in text. C 
+context; V  verb; P  patient; A  agent. See the online article for the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+264 ELMAN AND MC RAE
+question in Simulation 2.1. In Simulations 2.2 2.4, we pursue
+this issue further and look more specifically at the model’s time
+course of activating information when it is given novel combina-
+tions of event cues in a priming paradigm.
+Simulation 2.1: Testing the model’s response to blended
+event types.
+Model. The network architecture is shown in Figure 1. Cur-
+rent and next activity banks consisted of five agent (johnA, maryA,
+billA, personA, cashierA), 11 action (go_toV, enterV, be_atV,
+readV, orderV, eatV, drinkV, cutV, giveV, leaveV, attackV), three
+instrument (knifeI, gunI, glassI), four context (fancy_restaurantC,
+fast_foodC, motelC, outsideC), and 14 patient units (johnP, maryP,
+billP, personP, menuP, steakP, fishP, hamburgerP, pizzaP, wineP,
+cakeP, knifeP, tipP, cashP). There were 20 hidden units.
+Training. The training data included the set of activity se-
+quences used in Simulation 1.1, describing what typically happens
+when one goes to a fancy restaurant. Four new sequences were
+added, consisting of examples of unnamed people attacking each
+other with either a gun or knife, of John attacking a person (not
+Bill) with a gun, or Bill attacking a person (not John) with a gun.
+Over all events, attacks with guns were four times more likely than
+knife attacks. A final sequence consisted of what might be glossed
+as Mary and John are at a motel. A gun is present. Bill enters the
+motel. Bill attacks John. Bill leaves. Training data are presented in
+Appendix IV in the online supplemental materials.
+These eight sequences provided the model with information
+about what is typically involved in going to a restaurant, how
+people in general might attack one another, as in with a gun or
+knife (with guns being four times more likely), and with the more
+specific background information that on a single occasion, Bill
+encountered Mary and John at a motel and attacked John with a
+gun. The model never encountered the “restaurant adultery” sce-
+nario described earlier.
+Testing and results. The model successfully learned the cor-
+relations between event participants and the sequential structure of
+various events, as well as the key test that described a novel
+combination of activities. This new activity sequence (see Appen-
+dix IV in the online supplemental materials for test data) might be
+glossed as follows:
+John and Mary are at a fancy restaurant.
+John and Mary cut steak with a knife (in the fancy restaurant).
+Bill enters the fancy restaurant.
+Bill attacks John (in the fancy restaurant).
+Figure 7a shows the activations of the 13 units with activation
+values .1 in the next activity units. This course-grained view of
+the network’s states (units are unlabeled) reveals rapid changes
+that involve activation of new units occurring soon after Bill enters
+the fancy restaurant is presented at Cycle 8.
+Of particular interest are the activations of attack, knife, gun,
+John (as patient), and Bill (as agent; see Figure 7b). First, knife
+quickly becomes activated, although it was not explicitly men-
+tioned in the activity. This reflects the network’s having learned
+that knives are present at fancy restaurants. The remaining activ-
+ities take place in the restaurant, so knife is activated even when it
+is not mentioned (e.g., during the first, third, and fourth activities).
+Second, when Bill enters the restaurant (Cycle 8), the network
+begins to activate attack, starting at Cycle 9. This reflects what the
+network has learned about Bill in other (nonrestaurant) contexts. In
+the network’s training data, gun is used as an instrument with the
+attack action more frequently than knife, and so the activation for
+gun increases soon after the action is predicted (approximately
+midway between Cycles 9 and 10) anticipating that this action will
+soon occur (as it does, when the fourth activity is input on Cycle
+12). Prior to the final activity, the network also begins to predict
+Bill in the agent role and John in the patient role. This prediction
+reflects the model having learned that Bill has attacked John,
+although this is a novel setting (a restaurant rather than the other
+contexts that were experienced in training).
+Although the network predicts gun as a possible instrument, the
+prior activation of knife, available because of the first event sce-
+Figure 6. In (a), we see activations in next activity units in response to activity sequences identical to Figure
+5a; (b) shows activations the final activity is replaced by mary. The unexpected introduction of mary as an agent
+signals a change of event type, causing the network to quickly deactivate the event elements that were previously
+active. C  context; V  verb; P  patient; A  agent. See the online article for the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+265A MODEL OF EVENT KNOWLEDGE
+nario, leads to a brief competitive interaction between the two
+instruments (peaking half-way between Cycles 11 and 12) that is
+resolved in favor of knife. The network learned that both guns and
+knives may be used during attacks involving other people, al-
+though none of the training examples involved cases of Bill
+attacking John with a knife, and guns are more frequently used in
+attacks.4 However, this particular scenario provides strong evi-
+dence that a knife is available, whereas a gun is inconsistent with
+this context. This supports the prediction that because the attack is
+happening in a restaurant (a novel attacking location for the
+network), and because a knife is inferred as being present whereas
+a gun is not, the knife will be used.
+This behavior contrasts with Simulation 1.3, in which a change
+in event appeared to cause a suppression of activations associated
+with the first event. In that case, the two events had no components
+in common. The present simulation also involved a shift from one
+event to another, and the network had never experienced these
+events combined. However, the overlap in the activity components
+associated with the different events that the network did know
+4 We point out that although we use glosses such as gun, knife, attacks,
+and so on, from the network’s perspective, these entities have no semantics
+that are grounded in the world.
+Figure 7. (a) Activation in the next activity units in response to the input sequence shown. Activations of all
+non-zero units are shown but not labeled. (b) Activations of specific units of interest, discussed in text. These
+data are a subset of those shown in (a). C  context; V  verb; P  patient; A  agent; I  instrument. See
+the online article for the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+266 ELMAN AND MC RAE
+about (what typically happens when one goes to a restaurant; Bill
+and John’s tendency to fight; the use of guns vs. knives in violent
+attacks) resulted in the network’s ability to integrate these com-
+ponents in an appropriate way that allowed it to respond to this
+novel combination of different events.
+Processing novel combinations of cues to an event type.
+Simulation 2.1 examined the model’s response when an initial
+activity sequence, typical of one event type, shifted unexpectedly
+to another event type. The partial overlap in event components
+supported both the transition to the second event type as well as the
+opportunistic component of elements from the first event to the
+second. To our knowledge, this ability to transition flexibly from
+one event type to another has not been demonstrated by any other
+computational model of event knowledge.
+In Simulations 2.2–2.4, we ask a related question: How does the
+model respond to novel combinations of event cues when the
+model has learned the elements are cues to different event types
+but they have never been encountered together? Here, the chal-
+lenge is not the blending of event sequences (moving from one
+sequence to another), but the blending in the moment of compo-
+nents of different events. We tested this using a paradigm similar
+to the priming task that has been widely used in psycholinguistics
+(Neely, 1991).
+Semantic priming, in which a word that is semantically related
+to another is presented first, and facilitates processing of the
+second, has been studied widely. In more recent years, attention
+has turned to specific semantic relationships that produce priming
+effects. Ferretti, McRae, and Hatherell (2001) demonstrated that
+verbs prime targets that are event-typical agents, patients, and
+instruments (e.g., cut primes surgeon, paper, and knife). McRae,
+Hare, Elman, and Ferretti (2005) found that agents, patients, and
+instruments serve as cues that activate the activities in which they
+typically play a specific role, leading to significant priming effects.
+Hare, Jones, Thomson, Kelly, and McRae (2009) showed that
+event-relevant nouns prime each other (e.g., hospital– doctor, key–
+door, barn– hay). Because these priming effects were in the ab-
+sence of normative word association, Hare et al. concluded that
+“the facilitation results from event knowledge relating primes and
+targets.”
+We have already observed behavior in the model that indicates
+that simulating such effects should be relatively straightforward.
+Indeed, it would be surprising not to find them because those
+effects would be the direct result of the model’s pattern completion
+architecture and the training data. Our real interest was in explor-
+ing the model’s response to novel combinations of cues in cases in
+which those cues had not been encountered during training in the
+context of the same event. This is not an issue for which there
+exists much behavioral data, but there are a few studies that
+indicate that humans do respond appropriately, if creatively, in
+analogous situations. Thus, the model’s responses provide us with
+testable predictions in an understudied area of human behavior.
+Model. The network architecture was as shown in Figure 1.
+Current and next activity banks consisted of four agent (girlA,
+lifeguardA, shopperA, surgeonA), six action (be_atV, cutV, eatV,
+saveV, takeV, wake_upV), four instrument (knifeI, sawI, scalpelI,
+scissorsI), 11 context (beachC, eveningC, forestC hospitalC, kitch-
+enC, morningC, restaurantC, saleC, schoolC, storeC, tsunamiqC),
+and nine patient units (cerealP, eggsP, fishP, moneyP, paperP,
+patientP, personP, steakP, woodP). There were 20 hidden units.
+Training. The training set included examples of two-activity
+sequences involving a range of event types. This enabled training
+the model on a variety of event types and then testing it on novel
+combinations of cues from different events. There were 14 unique
+activity sequences. Of these, 10 occurred once per epoch. The
+remaining four included two situations that were presented more
+frequently and two variants that were presented less frequently (by
+a 4:1 ratio). This was done to establish some variants as more
+likely than others. In addition, the second activity sequence was
+presented for eight cycles rather than four. This was done so that
+the model’s extended response could be studied. This would be
+analogous to a behavioral experiment in which participant re-
+sponses were collected at various delays, including extended de-
+lays not typically probed. Training data are presented in Appendix
+V in the online supplemental materials.
+Testing and results. We conducted three sets of simulations
+(Simulations 2.2–2.4). Simulation 2.2 involved presenting the net-
+work with single and multiword primes and then examining the
+degree to which the potential event-relevant targets were activated,
+using as a guide the experimental studies described earlier. This
+testing scenario assumes that the network’s activation of potential
+target words will correlate with the facilitation of processing that
+entity when it appears in target position during a behavioral task.
+These simulations are a straightforward demonstration of the net-
+work’s pattern completion ability because they simply involve
+making use of the elements of an event sequence as a cue to
+activate the other elements on which it was trained. Because this
+behavior has already been demonstrated in prior simulations, we
+report only a few examples to illustrate that the model is behaving
+sensibly before proceeding to more complex cases.
+Simulation 2.2. Figure 8 shows the activations of agent (Fig-
+ure 8a) and patient units (Figure 8b) in response to the input cutV.
+The fact that the network activates agents and patients it was
+trained on is not surprising. What are of interest, however, are the
+qualitative differences in the degree of activation of agents versus
+patients (agents  patients), and the differences in both the mag-
+nitude and timing of specific agents and patients that are activated.
+These results are a consequence of patterns in the training data,
+although the connection may not seem obvious. First, consider the
+greater activation of agents compared to patients. This arises
+because in the training data, there are twice as many potential
+patients involved in cutting events as there are agents. Given the
+cue cut, there are thus only two reasonable agents, which results in
+the network’s higher activations for those two agent candidates
+than for the larger set of possible patients. Second, we might ask
+why girl is activated earlier and to a greater extent than surgeon.
+Here too, the answer lies in the statistics of the training data. Girl
+benefits from being slightly more frequent in the training data than
+surgeon (3:2 ratio); this results in an early advantage. However,
+the activation of surgeon eventually increases although it never
+overtakes girl. The delayed activation is the result of secondary
+activations of other arguments of cut, including patient, that pro-
+vide additional support for surgeon. We should be clear that there
+is no reason to expect that specific patterns predict human priming
+results for the same stimuli because the statistics of the training
+data may not resemble real life experiences. The prediction the
+model makes is that a carefully normed priming experiment, in
+which the stimuli are chosen to reflect similar asymmetries in the
+statistical co-occurrence of event components, would result in
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+267A MODEL OF EVENT KNOWLEDGE
+patterns of priming in which the magnitude of the priming effect
+and facilitation for different potential primes (manipulated by the
+inter stimulus interval) resembles the effects demonstrated in Sim-
+ulation 2.2.
+Simulation 2.3. We explored the sensitivity of the priming
+behavior to the likelihood of the event that is cued by the prime
+(given the training data). This follows up on the results in Simu-
+lation 2.2. Again, the network is not being called on to respond to
+a novel combination of event cues but simply to demonstrate that
+the degree of priming reflects the probabilistic structure of the
+training data.
+Figure 9 presents the activations of patients in the next activity
+units when the network is given different two-word primes. Figure
+9a shows the activations of money, given the input lifeguard as
+agent with store as context, compared to lifeguard as agent and
+beach as context. Figure 9b shows the activations of person as
+patient with beach as context, compared to lifeguard as agent with
+store as context. The network had experienced all four scenarios,
+but the combination of lifeguard  beach was four times more
+frequent than lifeguard  store; the first combination predicted
+person as patient and the second predicted money. These frequen-
+cies were used because Bicknell, Elman, Hare, McRae, and Kutas
+(2010) found electrophysiological evidence that comprehenders
+generate such predictions, given the same prime/target pairs. This
+presumably occurs because of pragmatic reasons that also result in
+differences in frequency of experience, that is, that lifeguards more
+typically save people in beach contexts. Lifeguards do save money
+in stores but this is not as typical. The training data were thus
+designed to operationally define typicality in terms of frequency of
+exposure. As shown in Figure 9, the network has learned to
+generate the appropriate predictions for patient, contingent on the
+context. This contingent prediction was not tested by Bicknell et
+Figure 8. Simulation 2.2 tests activation of potential agents (top), and patients (bottom) in the next activity
+units in response to the input cutV. See the online article for the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+268 ELMAN AND MC RAE
+al., but there are some indications from a study by Race, Klein,
+Hare, and Tanenhaus (2008) that people also modulate their gen-
+eral expectations by specific context. However, to our knowledge,
+the network’s behavior has not yet been fully explored in humans
+and remains a testable prediction.
+Simulation 2.4. In Simulations 2.2 and 2.3, the network was
+sensitive to the graded nature of cues and modulates the activation
+of missing elements in a way that reflects sometimes subtle pat-
+terns that are present in the training data. These results are con-
+sistent with what has previously been observed in networks of this
+sort and are not novel findings. What we are most interested in is
+how the network responds to novel combinations of cues that are
+associated with different event types, and have not been encoun-
+tered together.
+Figure 10 shows the network’s responses to the input con-
+sisting of girl (agent), scalpel (instrument), and hospital (con-
+text). The training data did not contain any examples of girl
+either using scalpel or in the hospital context. This is thus an
+input that requires the network to extrapolate from the events it
+has experienced to a novel case. The pattern of responses is
+complex and there are some surprises. All four plots are in
+response to the same input, but different groups of units are
+portrayed to understand the dynamics.
+Figure 10a shows activations of the next activity action units.
+Only two actions are highly activated, cut is quickly activated and
+remains active through the first period of processing. This is not
+surprising, given the co-occurrence in training data of that verb
+with scalpel. What is unexpected is the subsequent decline in cut,
+apparently associated with the rise in activation of eat beginning
+midway between Cycles 4 and 5. There are no instances of
+scalpel being used as an instrument with that action. Why does it
+arise?
+Figure 9. Simulation 2.3 test activation of (a) moneyP, given the input lifeguardA and storeC or beachC,
+compared with activations of (b) personP, given the same two inputs. See the online article for the color version
+of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+269A MODEL OF EVENT KNOWLEDGE
+The answer is found by examining the dynamics of what other
+units become activated, and when. Figure 10b shows the activation
+of the instruments in response to the same input. Although scalpel
+remains somewhat active, once the verb cut has been activated (by
+this same instrument), the pattern completion process leads to
+activation of the more commonly used instrument for cutting,
+scissors. The activation of this instrument leads in turn to activa-
+tion of the prototypical patients of cutting with scissors, such as
+paper. With further time, the pattern completion process continues
+and components of other cutting events become activated, which
+includes the instrument knife (Figure 10b, beginning at Cycle 5).
+Finally, the combined activation of cut, together with the instru-
+ment knife, activates both the patients of those events (e.g., steak
+and other foods, Figure 10c, Cycle 5), as well as actions associated
+with them (eat). Figure 10d presents a composite view of the
+temporal dynamics of the cascading interactions, with the precise
+tick number (equal to the Cycle4) where the associated unit’s
+activations begin to increase.
+Thus, although the network’s initial response to the novel input
+appears to favor the appropriate action (cut) for the specified
+instrument, a cascading series of interactions over time leads to
+activation of what we might call second order pattern completion
+that reflects the activation of other event types that are in cases
+only indirectly related to the event cues provided by the input. To
+our knowledge, there have been no directly analogous tests of
+whether such event knowledge cross-talk occurs in humans. The
+most similar behavior of which we are aware arises in what has
+been called mediated priming (also called three-step priming;
+Balota & Lorch, 1986). This involves the facilitated processing of
+a target such as stripes following the prime lion, despite the fact
+that lion and stripes are not directly related. The explanation that
+is given for this effect is that lion covertly activates tiger, which
+Figure 10. Simulation 2.4. Activation of (a) actions, (b) instruments, and (c) patients in next activity units after
+presentation of girlA  scalpelI  hospital. (d) Presents some of the prior data with the tick number (Cycle 
+4) where activation for the indicated unit began to increase. See text for explanation. See the online article for
+the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+270 ELMAN AND MC RAE
+then activates stripes. There have been issues raised about the
+robustness of mediated priming because it appears to be fragile and
+not found in all tasks. The model’s behavior, insofar as it might be
+interpreted as an instance of mediated event-priming, suggests that
+the effects indeed may rely on multiple factors that need to be
+present to be observed. These include strong relationships between
+prime, mediator, and target, and precise timing of the probe (i.e.,
+the target) as well as the sensitivity of the measure.
+More specifically, given stimuli similar to those used in Simu-
+lation 2.4, we would predict that at short prime-target stimulus-
+onset asynchronies, activation of the expected event-relevant target
+will be found (girl  scalpel  hospital would prime cut). How-
+ever, with longer prime-target stimulus-onset asynchronies, the
+model predicts that priming will be observed for other entities that
+occur in different events that share some components in common
+with the event cued by the prime (e.g., eat, or a food). Given the
+relatively lower activation level of these indirectly primed entities,
+we would not be surprised to find that there might not be facili-
+tation in reaction times, but with a measure such as the N400, the
+subtler facilitation of the target might be observed (as in Borovsky,
+Kutas, & Elman, 2010).
+Study 3: Learning From Human-Generated
+Activity Sequences
+We turn now to the final set of questions that were posed at the
+outset. The simulations we have reported up to this point have
+involved hand-crafted examples of event types. Training data were
+designed to probe questions for which the use of experimenter-
+generated examples would facilitate analyses of the network’s behav-
+ior, as in the Study 2 simulations. This strategy is similar to human
+experiments in which stimuli are constructed to manipulate variables
+of interest while minimizing extraneous uncontrolled factors.
+Nonetheless, humans do not learn about events in the natural world
+from such stimuli. Our experiences of instances of what is putatively
+the same event type might be highly variable. We might encounter
+examples in which some components are present and others in which
+they are absent. We are particularly interested in the knowledge
+regarding the temporal structure of events that might be gleaned from
+such noisy examples. All of the models of event structure that we are
+aware of, starting with Minsky’s (1974) proposal involving frames
+and extending to the present, have assumed linear representations of
+the temporal structure of events, either across all activities, or across
+activities within a scene in hierarchical models. This seems reasonable
+because any given instantiation of an event involves a single sequence
+of activities. However, across multiple instantiations, there may be
+variations in observed sequences that reflect a more complex temporal
+structure than what might be revealed by any single instance. Can the
+model discover such temporal structure even when trained on highly
+variable examples of events in which ordering may differ across
+examples?
+It is thus important to investigate how the model behaves when
+it is trained on real world data that reflect such complexity, noise,
+and variability. Can the model capture the richness in temporal
+structure that is not well-described by script-like mechanisms that
+assume a predominantly invariant linear ordering of activities
+within an event?
+To address these questions, we used training data that contain
+such variability. We might call this “event knowledge in the wild.”
+Although a few prior studies have used norming methods to collect
+judgments from independent raters (Galambos, 1983; Galambos &
+Rips, 1982; Raisig et al., 2009; Rosen, Caplan, Sheesley, Rodri-
+guez, & Grafman, 2003), these were designed with the assumption
+that temporal order is linear and flat (i.e., there is no branching
+probabilistic structure to the sequence order). Nor have these
+norming studies taken into account the possibility that even within
+a single event type, there may be some activity sequences that have
+tight ordering constraints, and other sequences with much looser
+constraints. These assumptions have constrained the data that has
+been collected. Yet intuitively, if one considers an event such as
+changing a flat tire, there may be some activities within the event
+that are optional or may occur in various orders (e.g., put out
+flares, get the tire iron from the trunk) and other activities whose
+order is constrained by necessity (e.g., remove lug nuts before
+removing the wheel).
+These considerations led us to undertake a large-scale norming
+study in which participants were asked to list up to 12 activities for
+81 events (McRae & Elman, 2018).5 For some events, there was
+considerable consensus regarding the listed activities as well as
+their relative ordering. For other events, there was much greater
+variability in the component activities that were provided, as well
+as their order. It also turned out that in no cases were participants’
+protocols identical, reflecting the multiple ways of carrying out
+events, or of construing them. Here we present results involving
+two event sequences: changing a flat tire, and going to a picnic.
+Directed graphical analyses of all participants’ data for these
+two events (23 participants for the flat tire event, 24 for the picnic
+event) are shown in Figures 11 and 12. Each node, or vertex,
+represents an activity that was produced by at least one participant.
+The arrows between nodes indicate the ordering from one activity
+to another. Some activities and activity sequences appeared fre-
+quently in participants’ responses, whereas others were rare. The
+size of the nodes and the arrows indicate the degree of the node,
+where degree is a measure of how frequently that ordering ap-
+peared in participants’ responses.
+It is clear that the temporal structure of most events is substantially
+richer than is captured by an invariant, flat, linear representation. For
+changing a flat tire, there is a core set of activities with strong ordering
+constraints. This includes jack up the car  remove flat tire  put on
+new tire  tighten lug nuts. The underlying basis for the ordering in
+this case is causal necessity in that some activities cannot happen until
+others are executed. However, there are also sets of activities for
+which there is weaker consensus regarding ordering, reflecting their
+looser ordering constraints. These activities include placing the car in
+park, checking the brake, putting on the hazard lights, and so on. On
+the other hand, the temporal structure for going to a picnic exhibits
+considerably greater variability. There are hubs of activities that are
+closely associated (e.g., going to the store, driving home), but the
+associations seem to involve much less rigid temporal structure and a
+great deal of optionality. Changing a flat tire and going to a picnic are
+event types that appear to have quite different internal structure, both
+in terms of the range of activities, and their temporal structure.
+5 A few participants combined multiple activities into a single response.
+In these cases, activities were separated, resulting in event sequences with
+more than 12 activities.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+271A MODEL OF EVENT KNOWLEDGE
+In Study 3, we ask how the model learns from training data
+generated by people, using the above two data sets. The flat tire
+scenario includes both strictly ordered subsequences as well as the
+more loosely ordered sequences found in the picnic scenario. The
+picnic scenario is largely unstructured and the graphical analysis
+reveals few if any constraints on temporal structure. The two scenar-
+ios also differ in the numbers of entities and actions that are involved.
+Participants mentioned 53 event entities and actions in describing the
+flat tire scenario, compared to 78 for the picnic scenario. These
+differences coincide with much greater variation in the ways the
+picnic scenario can be realized, compared to the flat tire scenario.
+These differences also lead us to predict that the network will learn
+different things from the two data sets. In both cases, the network
+should learn the co-occurrence statistics of entities and actions within
+a given activity. The differences in the temporal structure are much
+greater, however, and these should lead to differences in the model’s
+ability to generate predictions that reflect the temporal structure of
+each event type.
+Simulation 3.1: Changing a flat tire.
+Model. The network architecture is as shown in Figure 1, with
+one exception. The instructions for the norming study took this
+form: “Describe what you do when you [change a flat tire, go on
+a picnic, etc.].” Thus, participants’ descriptions were always agent-
+less (the agent being the implied generic “you/I/one”). We there-
+fore omitted agent units in this instantiation of the model. Current
+and next activity banks consisted of 29 action, two instrument, 15
+patient, and seven context units, all of which were determined by
+the norming data. Current and next activity units are shown in
+Appendix VI in the online supplemental materials. There were 20
+hidden units.
+Training. The training stimuli were derived from the 23 par-
+ticipants’ responses in the norming study (the same data that are
+visualized in Figure 11). Responses were normalized by consoli-
+dating minor variants such as close synonyms or singulars and
+plurals. This resulted in a training set of 23 activity sequences.
+Training data are presented in Appendix VII in the online supple-
+mental materials.
+Testing and results. We presented the model with activity
+sequences that had been provided by five of the participants,
+selected at random. Although the model had encountered the
+sequences during its learning phase, the learning algorithm creates
+pressure on the network to learn generalizations that may be
+present across all training data. If the network predicts exactly
+what it had been trained on, this suggests a rote memorization
+strategy. If there are divergences between the training data and the
+network’s response to those data, the question then is what ex-
+plains these divergences. The data shown below are representative
+of the five tests.
+A global view of what the network has learned from the aggre-
+gated training data is shown in Figure 13 (next activity units).
+Because of the large number of units that are activated in the
+course of this activity sequence, labels are omitted. Following six
+Figure 11. Graphical analysis of 23 participants’ lists of ordered activities associated with changing a flat tire
+(see text for explanation of graph conventions). See the online article for the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+272 ELMAN AND MC RAE
+of the inputs, a small number of units (one to three) have activa-
+tions greater than 0.7, with remaining units at lower levels of
+activation. Following the other five inputs, there are a larger
+number of units that became active at lower levels. We interpret
+these graded activations as corresponding to the network’s prob-
+abilistic expectations about which activities will occur next.6 Some
+inputs appear to provide somewhat tight constraints on expecta-
+tions for successive activities, whereas other inputs allow for a
+broader range of possible successors at lower levels of expectation.
+To get a better idea of precisely what is being predicted, we focus
+in Figure 14 on the units that denote the actions associated with
+each activity.
+In Figure 14, the predicted actions largely correspond to what
+this participant provided in an upcoming activity. The network
+does not in many cases predict exactly what it encountered during
+training. As mentioned before, this occurs because the network is
+trying to optimize what it learns to take into account variations
+across the training set. This results in a more flexible set of
+predictions that is appropriate given the more general patterns
+encountered among the many instantiations of this event type. In
+some cases, the network appears to jump ahead and omit activities
+that this participant listed in favor of activities that were more
+commonly mentioned. For example, following the first input, the
+network predicts a more frequent successor. Most participants
+followed pull the car over with open the trunk, or raise the car, or
+loosen the wheel with the flat tire, rather than mentioning exit the
+car first. On the other hand, there are cases in which the participant
+omits activities that the network fills in. For example, following
+the fifth input, V  get P  jack C  trunk, Participant 1 provided
+V  remove P  spare_tire. The network predicts instead that the
+next activity will be V  raise P  car I  jack (these were
+concurrently activated, though not shown in Figure 14). This
+expectation arises because most other participants’ data provided
+evidence, in the aggregate, that after getting a jack out of the
+trunk and removing the spare tire from the trunk, the car must
+be raised with the jack before the spare can be installed. The
+network thus fills in the gap by predicting the unmentioned
+activity. Furthermore, although some other participants’ data
+contained examples of raising the car before removing the spare
+tire from the trunk, no single participant’s data contained the
+specific ordering of get [jack]  raise [car]  install [spare_
+tire]  tighten [lug_nuts]  lower [car]. This reinforces the
+conclusion that the network is not actually generalizing from
+6 Although this interpretation is a common one in the literature, it should
+be noted that although unit activations range from 0.0 to 1.0, the activation
+of a unit is a monotonic but nonlinear function of its inputs, viz.,
+axt  1
+1ex , where a t is the activation of a unit at time t, and x is the input
+to the unit at that time. Thus, differences in activation cannot be interpreted
+as exactly equivalent to differences in probabilities.
+Figure 12. Graphical analysis of 24 participants’ lists of ordered activities associated with going to a picnic.
+See the online article for the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+273A MODEL OF EVENT KNOWLEDGE
+any single example but rather abstracting a pattern that occurs
+only in the aggregate and in so doing, has detected a higher
+order temporal pattern underlying the data.
+We might be tempted to infer that the network has learned the
+causal structure of this event, but this would not be warranted. It is
+true that in this example, the tight ordering constraints reflect
+causal necessity. However, the network does not distinguish be-
+tween temporal structure that is tightly constrained by virtue of
+causal necessity, versus reflecting strong conventions. With that
+caveat, we suggest that the model’s ability to learn about such
+patterns could provide important evidence that other cognitive
+mechanisms might use to learn causal structure. We return to this
+point in the General Discussion.
+The fact that the model generalizes beyond the specifics of
+individual activity sequences raises the question of whether this
+knowledge could be used in a generative capacity. That is, does the
+network’s knowledge of the learned structure of this event allow it
+to produce an appropriate activity sequence in the absence of
+external input beyond perhaps an initial seed?
+Simulation 3.2: Using learned event knowledge in a gener-
+ative capacity—flat tire.
+Model and training. The architecture, training data, and
+weights were the same as in Simulation 3.1.
+Testing and results. The model was given a single external
+input as a seed to begin predicting subsequent activity elements.
+We chose as the initial seed an activity that had been provided
+Figure 13. Model response to activity sequence from Participant 1 for the changing a flat tire event, showing
+predicted subsequent entities and actions. Only units with activations 0.1 at any point during the event
+sequence are plotted. C  context; V  verb; P  patient; I  instrument. See the online article for the color
+version of this figure.
+Figure 14. Model response to the activity sequence from Participant 1 for the changing a flat tire event,
+showing predicted actions. Units with activations  0.2 at any point during the event sequence are labeled. C 
+context; V  verb; P  patient; I  instrument. See the online article for the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+274 ELMAN AND MC RAE
+by several participants: pull car over to side of road. The model
+processed this input for four cycles. The activations of the next
+activity units were monitored during this time, and the action,
+instrument, patient, and context units with the highest activation
+levels during the final two cycles (when external inputs had
+been removed) were identified. These became the inputs to the
+current activity units for the second activity. This yielded an
+input of V  get P  jack C  trunk (to use the English gloss,
+get the jack from the trunk). This process was repeated, each
+time concatenating the model’s predictions to the next iteration.
+The test concluded after 12 activities, which was the longest
+event the network had encountered during training.
+The activations of the next activity units that were generated in
+this manner are shown in Figure 15. Although only the actions are
+labeled, the most highly activated actions, patients, instruments,
+and contexts during one four-cycle period appear as the inputs for
+the next period. The ordered set of activities is a reasonable
+approximation of the ordering of core events that exist in the
+norming data, although it was not produced in this exact form by
+any participant. The ability to generate a sensible sequence on its
+own is additional evidence that the network has extracted from
+highly variable input a coherent set of generalizations regarding
+temporal structure latent in the training data.
+Note that the sequence shown in Figure 15 is not the only
+possible way to accomplish this event. This sequence was gener-
+ated using the model’s most highly activated components to create
+subsequent activities. If one interprets activations as correlating
+with probabilistic predictions, then choosing less highly activated
+components would result in activities that reflect alternative path-
+ways through the event.
+Simulation 3.3: Going to a picnic. The directed graphs
+shown in Figures 11 and 12 suggest that the temporal structure of
+going to a picnic is quite different than changing a flat tire. One
+quantitative statistic of graph structure that provides a more precise
+explanation of these apparent differences is betweenness centrality
+(Freeman, 1977). This is a node-specific statistic that reflects the
+number of shortest paths between any two nodes that passes
+through a specific node. Nodes with high betweenness centrality
+are well connected to many other nodes. The mean betweenness
+centrality over an entire graph in turn indicates the graph’s overall
+interconnectedness. In our case, the mean betweenness centrality
+for changing a flat tire is 2.23, compared to 229.43 for going to a
+picnic. Because these are directed graphs that encode sequential
+structure, this difference in betweenness centrality indicates what
+one might call a considerably more permissive temporal structure
+in the picnic event, compared to flat tire. But is there any latent
+temporal structure at all? Is it reasonable to expect that the network
+might learn anything from the highly variable sets of activities
+provided by people in the norming study? We address these
+questions using the same strategy as employed in Simulations 3.1
+and 3.2.
+Model and training. The network architecture is as shown in
+Figure 1. Because the norming data task implied the generic “you”
+(as in “make some sandwiches”) and no participant provided any
+other agents, current and next activity banks consisted of 42 action,
+1 instrument, 26 patient, and 9 context units. Again, there were 20
+hidden units. The model was trained using responses from the 24
+participants in the norming study. Unit assignments and training
+data are given in Appendixes VIII and IX in the online supple-
+mental materials.
+Figure 15. Activity sequence generated by the model following training on observed activity sequences for the
+changing a flat tire event. The first activity provided the seed for the sequence. The second and subsequent
+activities were determined by identifying predicted activity elements with the highest activation levels, which
+then served as the input for the next activity. C  context; V  verb; P  patient; I  instrument. See the online
+article for the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+275A MODEL OF EVENT KNOWLEDGE
+Testing. We tested the model as in Simulation 3.1, presenting
+it with activity sequences that had been provided by five of the
+participants, selected at random. The data shown in Figure 16 are
+representative of the five tests.
+Using the criterion of the unit with the highest total activation
+over the four-cycle period following an input, the network predicts
+the correct next action and correct patient in response to three
+activities (following V  make P  food, V  pack P  stuff C 
+car, V  drive P  car C  destination). It predicts the correct
+next action (but not patient) in response to three activities (follow-
+ing V  choose C  destination, V  make P  drinks, V  pack
+P  food). It predicts the correct next patient (but not action)
+following one activity (V  unload P  supplies). The network
+appears to have learned some sequential dependencies, although if
+one looks at the other units that are activated, it is also clear that
+its predictions are more diffuse than in the case of the flat tire
+scenario. There is considerable variability in the training data
+shown in Appendix VIII in the online supplemental materials, so
+this is not surprising. What is important is that the variability is not
+random and the network’s predictions do not indicate a “play it
+safe” strategy of activating everything. At the outset, following
+V  choose C  destination, the activations of activities make,
+pack, eat, cook, fill and patients food and basket are contextually
+appropriate because these elements do tend to occur early in the
+participants’ descriptions of what happens soon after choosing a
+destination. By the same token, once the food is put out (Cycle 24),
+the network’s predictions do not include activities that generally
+precede that, such as driving to the destination, making food, or
+packing a basket.
+Simulation 3.4: Using learned event knowledge in a gener-
+ative capacity— going to a picnic.
+Model and training. The network, training data, and weights
+were the same as in Simulation 3.3.
+Testing and results. The testing strategy was as in Simulation
+3.2. The initial seed was drive car to destination, which had been
+the first activity produced by several participants. The network
+processed this input for four cycles. The activations of the next
+activity units were monitored during this time, and the action,
+instrument, patient, and context units with the highest activation
+levels during the last two cycles (when external inputs had been
+removed) were identified. These became the input to the current
+activity units for the second activity. This yielded an input of V 
+put_out P  food C  destination. This process was repeated,
+each time concatenating the network’s predictions to the next
+iteration. The test was concluded after 21 cycles (five activities).
+This was a shorter sequence than was typical of the training data.
+Testing was halted because the network’s responses had stabilized
+and was no longer changing in response to the input. The results
+are presented in Figure 17.
+The pattern of activations shown in Figure 17 is strikingly
+different than in Simulation 3.2 when the network generated a
+sequence of activities for changing a flat tire. The initial seed
+produced a larger number of potential activities and patients than
+in Simulation 3.2, reflecting the much greater variation in
+the protocols provided by human participants, and seen also in the
+Figure 16. Model response to the activity sequence from Participant 7 for the picnic event, showing predicted
+event elements. Units with activations 0.2 at any point during the event are labeled. Only the first nine of the
+activities provided by this participant are shown here because of space limitations. Responses to the remaining
+activities are consistent with those shown. C  context; V  verb; P  patient; I  instrument. See the online
+article for the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+276 ELMAN AND MC RAE
+graphical analysis of the picnic event type (see Figure 12). At the
+same time, the predicted activity, patient, and context (V  put_
+out, P  food, C  destination) appear to capture the overall
+pattern found across all protocols, even though in the majority
+of protocols, these two activities are not immediately adjacent.
+Subsequent predictions may be characterized in a similar way.
+The protocols do not provide evidence of a great deal of
+sequential structure to this event type, but there are some
+constraints that the network learns, such as first going to the
+destination, then putting out food, then eating, then sitting and
+packing up. Other activities appear as well, many at lower
+levels of activation (e.g., serve, enjoy), but mostly at appropri-
+ate times in the sequence.
+Taken together, the model’s responses seem appropriate
+given these two contrasting event types. When there are strong
+temporal constraints and tight interrelationships between event
+entities, the network learns to anticipate likely successive ac-
+tivities as well as the predictable event elements associated with
+a given activity. When the temporal constraints are weak, the
+network does not memorize the large number of individual
+variations but instead extracts the overarching structure that
+best characterizes the event type. These results demonstrate that
+rather than attempting to impose a linear structure on mental
+representations of events, a model that features predictive learn-
+ing provides appropriate responses when probed regarding
+events’ temporal structure.
+Analyses of the model’s internal representations. These
+behaviors raise several important answers for which further
+analyses of the network are useful. Consider first the network’s
+ability to generate novel activity sequences (Figures 15, 17). As
+we noted above, the self-generated sequences reflect the tem-
+poral constraints implicit in the aggregated data on which it was
+trained, but do not simply reproduce any of those examples. The
+potential generative capacity is in fact considerable. The se-
+quences shown in Figures 15 and 17 resulted from taking the
+network’s most highly activated prediction regarding the next
+activity and providing it as the next input. However, at any
+given point in time a less highly activated prediction might be
+chosen as the next activity, giving rise to another path through
+the activity sequence. The vast majority of these will be activity
+sequences that the network never experienced in exactly the
+same form during training. However, the generated sequences
+will follow the constraints on temporal sequencing learned by
+the network from the training data. The number of paths
+through these events is, if not unbounded, extremely large and
+reflects the network’s ability to generalize far beyond the rel-
+atively small number of training examples. Generalization of
+static patterns in neural networks is not novel; what is to our
+knowledge novel here is the ability to generalize from observed
+sequences to novel sequences that reflect more generalized
+ordering constraints implicit in the training data.
+A second question that arises is how the network’s represen-
+tation of temporal structure might inform the long-standing
+question of how serial order is represented in human mind in
+general. Two major approaches have been proposed. One pro-
+posal is that serial order is encoded in terms of direct sequential
+links from one action to the next (sometimes called the “chain
+model”). The other proposal is that serial order is represented
+hierarchically (the “comb model”). We discuss this issue in
+greater depth in the General Discussion. First however, we
+analyze how the network encodes the temporal structure of
+activity sequences.
+Figure 17. Activity sequence generated by the model following training on the picnic activity sequences.
+The first activity provided the seed for the sequence. Subsequent activities were determined by identifying
+predicted activity elements with highest activation levels, which then served as the actual inputs for the next
+activity. C  context; V  verb; P  patient; I  instrument. See the online article for the color version
+of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+277A MODEL OF EVENT KNOWLEDGE
+Method
+The network learns the co-occurrence patterns of elements
+within an activity, and to predict the next activity. The hidden units
+(see Figure 1) play a role in both tasks. Thus, these two tasks
+together shape the way in which the network organizes the 20-
+dimensional state space of the hidden units. We use two methods
+to analyze the hidden unit space that emerges from learning.
+Although one cannot visualize a 20-dimensional space in its
+entirety, we can use principal component analysis (PCA) to iden-
+tify dimensions in that space along which variation occurs, and
+then focus on the dimensions that account for the greatest variance.
+This shows how the spatial organization of the hidden units has
+been structured in event-relevant ways, and it reveals the semantic
+structure of the hidden unit space.
+Results and Discussion
+We conducted a PCA of the hidden unit representations for both
+the picnic and changing a flat tire simulations. Here we report the
+results from the picnic simulation.
+The analysis involves freezing network weights after training,
+passing the training set through the network a final time, collecting
+hidden unit activations, and then analyzing those activations (as
+vectors) with PCA. Figure 18 shows the relative magnitude of the
+eigenvalues of the first 10 (of 20) principal components (PCs),
+with eigenvalues indicating how much variance is accounted for
+along each dimension). PCs 1 and 2 account for 51.8% of the total
+variance, with a large drop in variance accounted for by other PCs
+(PC 3 accounts for only 9.7% of the variance.
+Figure 19 presents the projections onto PCs 1 and 2 of hidden
+unit activations that are generated in response to all activities that
+appeared in event protocols from all 23 participants in our picnic
+norming study and simulation.
+We call attention to two things in Figure 19. First, a number of
+the regions have event-relevant interpretations. We identify some
+of these with dotted circles. These might be glossed as “getting
+food ready prior to the picnic” (A), “activities associated with
+selecting and going to the destination” (B), “packing up the car and
+going to the picnic” (C), “unloading things at the picnic” (D), and
+“relaxing at the picnic” (E). This interpretation must be qualified
+by recognizing that we are looking only at two dimensions of the
+20-dimensional space. Second, although the activations of the
+same activities (appearing in the protocols of different partici-
+pants) are generally close in space, they do not align exactly. Why
+are there differences in the hidden unit representations of the same
+activity?
+There are two reasons for these differences. Understanding what
+drives these differences is key to understanding the mechanisms
+that underlie the network’s performance. First, hidden unit repre-
+sentations at time t are a function of (a) the input regarding the
+current activity, and also of (b) their own state at time t – 1 (which
+in turn is a function of prior states at times t – 2 . . . t – n). This
+means that hidden unit representations inherently tend to be
+context-sensitive unless trained to be otherwise. This context-
+sensitivity is a powerful representational tool whose relevance we
+turn to next.
+Second, this context-sensitivity is then tuned and recruited for
+the task of predicting subsequent activities. This task requires the
+network to learn the constraints that underlie the temporal structure
+of the event. Here the network has to deal with a thorny challenge.
+On the one hand, activations of the next activity units are driven by
+the hidden units’ states at time t. On the other hand, the appropriate
+prediction may depend not only on the current activity but on what
+happened at prior points in time. The network must thus develop
+internal representations that, even for the same current activity,
+may differ depending on more distal context. Recurrent connec-
+tions allow the network to carry forward information from arbi-
+trary points in the past into the present (time t) when that infor-
+mation may be required to make a prediction about time t  1 (see
+Rodriguez, Wiles, & Elman, 1999; Siegelmann, 1993 for formal
+treatments). These subtle differences in hidden unit representations
+in response to identical current activity inputs thus have an im-
+portant functional role in prediction.
+The ability to preserve longer term contextual information to
+modulate hidden unit representations in the service of prediction
+can be illustrated by a concrete example. We tested the network’s
+response to two similar test sequences (A and B, as follows) that
+had not been encountered during training but which reflected
+patterns we observed in the training data.
+Sequence A:
+A  buyA P  foodP C  storeC
+A  makeA P  foodP
+A  driveA I  carI C  destinationCA  relaxA
+A  eatA P  foodP
+A  go_C  homeC
+Sequence B:
+A  buyA P  foodP C  storeC
+Figure 18. Relative magnitude of eigenvalues of principal component
+analysis (PCA) components.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+278 ELMAN AND MC RAE
+A  driveA I  carI C  destination
+A  relaxA
+A  makeA P  foodP
+A  eatA P  foodP
+A  go_C  homeC
+Both sequences involve the same six activities but with slightly
+different orders. In Sequence A, the food is made before going to
+the picnic. In Sequence B, the food is made after going to the
+picnic. These differences in the ordering of these two activities
+existed in the event human-generated protocols. However, because
+those protocols also involve other intervening activities in nonsys-
+tematic ways, the test sequences above were crafted to isolate the
+critical difference in whether food is made before or after driving
+to the destination. We could then ask whether (a) the hidden unit
+representation of the activity A  driveA I  carI C  destination
+differ as a function of prior context, and (b) whether such differ-
+ences influence predictions about ensuing activities.
+Figure 20 shows the hidden unit activation projections onto the
+PC 1 – PC 2 space that arise in response to the same activity, A 
+driveA I  carI C  destinationC, in two contexts (Sequence A
+and B). Point A is the vector representing the hidden unit activa-
+tions in state space after driving to destination has been input,
+given in Sequence A. Point B shows the hidden unit activation
+vector arising from the same input in Sequence B.
+The two vectors are close in hidden unit space but are not
+identical. The difference reflects the carrying forward of prior
+hidden unit states, via recurrent connections, to combine with the
+activations from the current input. The answer to the first question
+is thus that yes, the differences do appear to be contextually driven.
+Is there a functional consequence to these hidden unit differ-
+ences? To answer this second question, we tested the network’s
+prediction regarding the activity eat. In the human generated
+sequence protocols, this activity always occurred subsequent to
+driving to the destination. In those protocols, eating is also always
+preceded by preparing food, which may occur before or after
+driving to the destination. The test sequences A and B respect these
+ordering constraints. The activations of eat differed in the two
+sequences after the presentation of drive car to destination. After
+the food was prepared, eat was activated at .13, whereas its
+activation was 0 when the food had not yet been prepared.
+Although eat will eventually occur in both sequences, eat is
+predicted as a possible next activity only when drive to destination
+was preceded by preparing food. The small difference in the
+hidden unit representations for drive to destination is responsible
+for the difference in what is predicted. This illustrates the net-
+Figure 19. Projections of hidden unit activation vectors onto principal components 1 and 2, obtained by
+passing all training data through the network trained in the picnic event, after training and with all weights
+frozen. PCA  principal component analysis. See the online article for the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+279A MODEL OF EVENT KNOWLEDGE
+work’s ability to structure the hidden unit space both to encode
+commonalities across activities in terms of shared activity compo-
+nents, shown in Figure 19 by the spatial proximity of similar
+activities, as well as to use finer grained differences within that
+space to encode relevant prior context. The first characteristic is
+important for the constraint satisfaction tasks whereas the second
+is necessary for making predictions involving more distal temporal
+contingencies. We return to these findings in the General Discus-
+sion when we discuss how the model’s representation of temporal
+structure compares to that shown in the network graphs of the flat
+tire and picnic events. At that time, we also consider the broader
+implications for theories of temporal structure and the representa-
+tion of serial order.
+General Discussion
+Bartlett (1932) was one of the first in modern psychology to
+focus on the role of event knowledge in memory. Since that time,
+there have been many additional findings that point to the central
+role that knowledge of events and situations plays in human
+behavior. There now exists a large body of empirical data and
+theoretical proposals regarding event knowledge. Excellent re-
+views can be found in Shipley and Zacks (2008) and Radvansky
+and Zacks (2014). One specific proposal is that events reflect
+purposeful, goal-directed activity (Schank & Abelson, 1977; Zacks
+& Tversky, 2001). To the extent that the temporal structure of
+activities reflects causal constraints between them, events may
+serve as strong cues to causation.
+Despite relatively widespread agreement that event knowledge
+is important, there are challenging questions and controversies.
+The controversies have often revolved around the precise extent
+and timing of the use of event knowledge. However, there are a
+number of important theoretical issues. What is the form of event
+knowledge? Do all events share a common structure? How is time
+encoded in event representations? How is event knowledge ac-
+cessed and deployed to construct dynamic representations of
+events as they unfold incrementally in time? How can specific
+examples of events be used to learn the general patterns that are
+typical across the examples, and support sensitivity to the general
+patterns as well as to the context-specific variations?
+Computational models can play a useful role in addressing such
+questions because they provide mechanisms for generating hy-
+potheses regarding the precise conditions and time course under
+which event knowledge might in principle be accessed and used.
+Such models are also amenable to direct analysis, which may in
+turn lead to insights into the principles underlying the model’s
+behavior—and potentially, the principles that also drive human
+behavior.
+The strategy we have taken here is to develop a model that is
+motivated by findings in the empirical literature, with particular
+attention to discrepant findings, and which might also contribute to
+the broader theoretical questions about the nature of event knowl-
+edge. We focused our attention on two aspects of event knowl-
+edge: The first involves its use to elaborate our understanding of
+situations we encounter that may be incompletely specified or that
+may involve novel variations and combinations of event types. The
+second aspect concerns the use of knowledge of the temporal
+structure of an event to predict what may occur next. We focus on
+these two dimensions of event knowledge because they have
+figured prominently in the theoretical and empirical literatures.
+This focus shaped the model’s architecture. The elaborative role
+of event knowledge is carried out by the portion of the network
+(shown on the left, in Figure 1) that implements a constraint
+satisfaction network. Constraint satisfaction networks are able to
+learn the high-order probabilistic correlational structure that is
+latent in patterns (Rumelhart, Smolensky, et al., 1986). This allows
+them to adapt to cases in which there may be missing components.
+We saw evidence of this pattern completion ability in all of our
+reported simulations.
+The other important architectural component is the use of re-
+current connections. These recurrent connections, together with a
+prediction task, make it possible to learn abstract temporal struc-
+ture that underlies activity sequences (cf. Botvinick & Plaut, 2004;
+Elman, 1990; Reynolds, Zacks, & Braver, 2007; Rodriguez et al.,
+1999; Siegelmann, 1993). An important finding, as far as we know
+not previously reported, is that this architecture produces flexible
+adaptation to novel combinations and blends of event sequences,
+as well as responding appropriately to deviations from sequences
+it has experienced. This flexibility is constrained, however. As we
+discuss in greater detail below, the model offers a new perspective
+on the long-standing controversy about the role of chained versus
+hierarchical (or “comb”) mechanisms underlying serially ordered
+behaviors.
+When Inferencing Succeeds and When It Fails
+The first question we asked was “How might event knowledge
+support inferences of unobserved or unmentioned entities?” This
+question was first raised indirectly by Bartlett (1932, who viewed
+it through the lens of reconstructive memory rather than inference).
+Figure 20. Projection of hidden unit activations onto principal compo-
+nents 1 and 2 in response to the same input drive car to destination. The
+difference in the state reflects differences in prior context. (A) The prior
+context included the activity make food. (B) The prior context did not
+include this activity. PCA  principal component analysis. See the online
+article for the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+280 ELMAN AND MC RAE
+Although intuition tells us that event knowledge should play such
+a role, the empirical support for this intuition has been mixed and
+even contradictory (Dosher & Corbett, 1982; Garrod et al., 1990;
+Graesser et al., 1994; Keefe & McDaniel, 1993; Keenan et al.,
+1990; McKoon & Ratcliff, 1986; Metusalem et al., 2012; Potts et
+al., 1988).
+The model suggests two explanations for the empirical discrep-
+ancies. The first factor concerns the failure to take into account the
+effect of incremental input on what event information is activated
+as the situation model is updated (cf. Zwaan & Madden, 2004).
+The second factor has to do with the time course over which
+event-relevant information is activated, as well as differences in
+the graded nature of that information. Let us consider two exam-
+ples of discrepant findings for which these two factors may be at
+work.
+With regard to predictive inferencing, McKoon and Ratcliff
+(1986) argued that comprehenders make only minimal infer-
+ences regarding the likely consequences of activities in cases
+where such inferences are not required in order for discourse
+coherence. Potts et al. (1988) have taken an even stronger
+position, arguing that comprehenders do not make even mini-
+mal predictive inferences regarding the probable consequences
+of activities. Potts et al. presented participants with stimuli such
+as “No longer able to control his anger, the husband threw the
+delicate porcelain vase against the wall. He had been feeling
+angry for weeks but had refused to seek help.” Using a variety
+of controls and tasks, Potts et al. did not find consistent evi-
+dence that participants inferred the outcome (the vase broke).
+A related empirical debate appears in the sentence compre-
+hension literature. As we noted in Study 1, there have been
+discrepant findings regarding comprehenders’ processing of
+sentences such as “The cyclist fixed the light 1 that the motorist 2
+in a hurry had hit 3 with his van.” Nicol and Swinney (1989)
+reported that if semantic associates of light were presented at
+position 3 (hit), but not at position 2 (motorist) there was
+evidence of facilitation in processing, relative to unrelated
+targets. The issue in that debate was framed in terms of hypo-
+thetical “empty categories” (Bever & McElree, 1988), but our
+interpretation is that the priming at hit may also be seen as
+evidence that in this context, the verb hit leads to activation of
+the inferred patient (light). This activation is what produces the
+priming. On the other hand, McKoon et al. (1994) failed to find
+such evidence, given sentences such as was “The optometrist
+aided the victim 1 that the barber 2 in the airport hurt 3 in the
+fight” (i.e., there was no evidence that semantic correlates of
+victim were activated following either barber or hurt).
+There are two findings in our model that bear on these divergent
+results. First, an activity sequence that is presented to the model
+can activate knowledge about multiple events. In Simulation 2.1
+(Figures 7a,7b), the model was presented with the activity se-
+quence that may be glossed as follows:
+John and Mary are at a fancy restaurant.
+John and Mary cut steak with a knife (in the fancy restaurant).
+Bill enters the fancy restaurant.
+Bill attacks John (in the fancy restaurant).
+As the situation unfolds, the model draws on its knowledge of two
+events that, although different in many ways, have substantial overlap
+in participants (i.e., people and instruments). This overlap makes it
+possible for the model to integrate over both events and smoothly
+transition from one to the other. This also makes it possible for the
+model to activate activity elements—in this case, the action attack—
+that reflect this integrated situation. However, there are instances
+where an activity signals an abrupt change in the situation such that
+information from one event is no longer relevant. This occurs in the
+contrasting results in Simulation 1.3. In Figures 5a and 5b we see the
+model’s response when presented with the activity sequence:
+(a) John is in the forest.
+John cuts himself.
+John . . . ?
+(b) John is in the restaurant.
+John cuts himself.
+John . . . ?
+In (a), the network appropriately predicts die as the consequence.
+In (b), the network predicts bleed. This is because each activity is
+consistent with the event knowledge it has. (This includes the final
+sequence, which is simply the input John . . . , allowing the
+network to activate the contextually consistent activity compo-
+nents, viz., the action).
+We see different results when the model is presented with the
+following:
+(c) John is in the forest.
+John cuts himself.
+Mary . . . ?
+In Figure 6b, we see that although the action die is initially
+predicted, the final input (Mary) results in the rapid decrease in
+activation of the otherwise likely outcome. This is because Mary
+activates event knowledge that has no overlap with the initial
+event, leading to what we might call an abrupt updating of the
+situation model that the network is constructing.
+Returning to the divergent empirical data, the simulation results
+suggest that differences in both stimuli and task may contribute to
+the different results regarding whether or not predictive inferences
+are made. First, the sensitivity and the timing of the empirical
+probe for inferencing are critical. Second, failure to maintain
+discourse coherence can disrupt prediction. McKoon et al.’s
+(1994) stimuli (e.g., “The optometrist aided the victim1 that the
+barber2 in the airport hurt3 in the fight”) may have challenged
+comprehenders’ ability to construct a coherent situation model that
+plausibly integrates information across the very different events
+implied by the sentence. However, the timing and sensitivity of the
+probe may be critical. The network’s predictions are represented
+by graded activations that wax and wane over time. Even when the
+discourse is disrupted, one might see evidence of a predicted
+outcome if the probe is presented quickly and is sufficiently
+sensitive that it can detect intermediate activations. For example,
+in the sequence (c), prior to rather than after the probe Mary.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+281A MODEL OF EVENT KNOWLEDGE
+Timing and sensitivity may also explain the experimental con-
+ditions under which mediated priming may be found. Mediated
+priming, where a prime such as stripes facilitates process of the
+apparently unrelated target lion, has in the past been interpreted as
+involving a three-step process involving spreading activation. In
+the first step, stripes is activated by the prime; in the second step,
+stripes activates tiger; and in the third step, tiger activates lion
+(Balota & Lorch, 1986). The evidence for mediated priming has
+been equivocal and there has been a debate about the conditions
+under which it occurs or whether it exists at all (Bennett &
+McEvoy, 1999; Chwilla & Kolk, 2002; De Groot, 1983; Livesay &
+Burgess, 2003).
+Our model suggests an alternative explanation for mediated
+priming and also indicates factors that may determine the condi-
+tions under which evidence for priming will be found. In Simula-
+tion 2.4, a novel combination of activity elements girl  scalpel 
+hospital resulted in the initial activation of the action cut, followed
+unexpectedly by later activation of the action eat (Figure 10a). Our
+analysis for this outcome, shown in Figure 10, suggests that the
+activation is driven by overlap in components of different events.
+The activation patterns follow a time course that reflects the
+cascading consequences of elements of one event activating other
+events in which they participate, which in turn then activate other
+(nonoverlapping) elements of those events. A behavioral experi-
+ment designed to test for activation of eat, given the prime girl 
+scalpel  hospital, will yield different results depending on when
+the probe for eat is presented. Furthermore, because the activation
+of the final prime may be attenuated, compared to two-step prim-
+ing, evidence for its activation will depend on the sensitivity of the
+measure used to determine priming (Borovsky et al., 2010).
+Dealing With Variability
+Our second question was “How might event knowledge be
+deployed when novel situations are encountered?” Early compu-
+tational models of event knowledge tended to assume limited (or
+no) variability in events (Minsky, 1974; Schank & Abelson, 1977).
+The primary goal of these models was to capture recurring general
+patterns rather than variations in those patterns. Later attempts to
+expand these models’ ability to deal with variability (Schank,
+1980) led to combinatoric explosion and provided no insight into
+the underlying dynamics of context-event interactions (Agre,
+1988; Winograd & Flores, 1986). These inadequacies, and partic-
+ularly the failure to capture the role of context in behavior, played
+a significant role in the emergence of the anti-artificial-intelligence
+movement that occurred in cognitive science in the late 1970s and
+1980s (e.g., Dreyfus, 1979). This development was largely respon-
+sible for the decrease in attention to event knowledge, which has
+only rebounded in recent years.
+Events may be variable in several ways. First, there is variability
+in the components of the activities that collectively make up an
+event. Second, the temporal structure in which activities in an
+event occur are also subject to variability. The data used to train
+the model in our studies involved both types of variability, in the
+“toy world” training data (Studies 1 and 2) and in the “real world”
+training data (Study 3).
+The model’s ability to learn about the variability in the elements
+of any given activity is seen to varying degrees in all the simula-
+tions. This variability is demonstrated by the graded activation of
+event components in both its representation of the current activity
+or which activities it predicts to occur next. The latter is particu-
+larly striking in the Study 3 simulations that are based on
+participant-generated protocols.
+This result is not surprising, given what is already known about
+architectures that include constraint-satisfaction networks. But it is
+important to note that the model does not deal with variability
+simply by predicting all the possible variants it has encountered
+during learning. The network learns the contextual constraints on
+those variations. Thus, given John cuts steak, the network predicts
+knife and fancy_restaurant, rather than coke and fast_food_restau-
+rant (which are possible, but highly unlikely given the activity
+components that are specified). This example of the logical XOR
+function—in which there are multiple acceptable options but the
+presence of one precludes the presence of another—is important
+for learning that variability is not a matter of “anything goes,” but
+rather that variability is often highly constrained by context.
+A key insight in understanding how the network deals with these
+two types of variability is that it does not simply learn an enumer-
+ation of variants. Such an enumeration might be formalized using
+a finite state automaton (FSA), as in Figure 21.
+FSA representations are subject to combinatoric explosion in
+cases where the variants are large. A more significant limitation is
+their inability to deal with situations in which variants are un-
+bounded but reflect systematic generalizations. Here, the problem
+is that in an FSA, the state space has no intrinsic semantic struc-
+ture. This means that the states “in between” or “outside” the states
+that are explicitly part of the FSA are undefined because the state
+space has no meaning. In Figure 21 the state labeled “?” has no
+connection with the activity sequence. Its spatial position in the
+pictorial representation of the FSA provide no clue as to what role
+it might play, should it somehow be encountered as an unexpected
+variation in the sequence. Thus, there is no mechanism for gener-
+alization.
+In neural networks, in contrast, the state space that is defined by
+hidden unit activations may have a spatial structure that interacts
+with the function defined by the weights that operate on that space.
+The state space can be used to encode context as well as similarity
+Figure 21. Finite state automaton representation of a five-activity event
+sequence. Activities 1, 3, and 5 have invariant realizations. Activities 2 and
+4 may be realized probabilistically by any (but only one) of three possible
+variants. The role of the state marked “?” is undefined. See the online
+article for the color version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+282 ELMAN AND MC RAE
+of activity. As a result, although trained on a finite set of examples,
+a neural network is able to learn a contextually dependent function
+that operates over a semantically meaningfully space, which in
+turn allows it to generalize to novel situations in a manner con-
+sistent with the underlying generalizations implicit in the training
+data.
+This ability to generalize is also seen in the model’s ability to
+deal with a third type of variability, namely the novel blending of
+events that it has encountered in isolation but not previously
+combined. We saw this in Simulation 2.1 (in which a visit to a
+restaurant turns into a violent encounter, Figures 7a and 7b) and in
+Simulation 2.4 (girl  scalpel  hospital, Figure 10). Whether or
+not blended events can be integrated depends on whether there is
+sufficient overlap in event components, as there is in these two
+examples. Where there is not, the blend is interpreted as a switch
+from one type of event to a different one, as in Simulation 1.3
+(Figures 6a and 6b). The ability to generalize also is responsible
+for the model’s ability to self-generate novel activity sequences,
+seen in Study 3 (Figure 15 and Figure 17). But there is more to be
+said about the challenges that variability in temporal structure
+present. This leads us to the last of our three initial questions.
+Representation of Temporal Structure
+The third question we posed was “How might the temporal
+structure of events be represented?” This is perhaps one of the
+most challenging and complex of the problems that confront
+theories that focus on the structure of event knowledge. At the
+empirical level, the variation in temporal structure in events has, in
+our view, been seriously underappreciated. The magnitude of
+variability in the temporal structure of events is evident in the
+participant-generated protocols for the changing a flat tire and
+going to a picnic events. But although variability in temporal
+structure of events has not been extensively studied, the more basic
+question of how serial order in human behavior is represented has
+been a long-standing and deeply problematic issue in other areas.
+The answer to our question is thus best considered in the context
+of the broader theoretical discussion.
+Lashley (1951) was perhaps the first in the modern era of
+psychology to pose this issue. Lashley considered two approaches
+to serial order. The first approach is what he called the associative
+chain theory. Here, the temporal structure of activities is repre-
+sented by direct links between the successive activities (much like
+an FSA). Completion of one activity is required for initiation of the
+subsequent activity. The links in associative chain models explic-
+itly capture causal dependencies between activities. The script
+model of Schank and Abelson (1977) is an example of an associate
+chain model. This reflects their interest in the goal-directed nature
+of events (or scripts), and the causal connections between activities
+that are required to achieve that goal.
+However, Lashley and many others since his seminal work have
+pointed out numerous examples in which sequential order seems to
+also reflect a more abstract representation that may allow for
+execution of sequences without requiring sequential links (e.g.,
+Bernstein, 1967; Dell, 1984; Ohala, 1975). Speech production has
+been a fertile area for demonstrating the resilience of serially
+ordered behavior in the face of external perturbation or disruption.
+Speech errors (e.g., Heebert Hoover) also suggest that serial order
+may be represented at a level that permits exchanges of action
+elements in a way that would not be possible in an associative
+chain model. Ohala (1975) saw such examples of evidence for
+what he called a comb theory of serial order. Comb models are best
+thought of as shallow versions of more general hierarchical mod-
+els. Both theories have been invoked as accounts for behaviors that
+are relevant to event knowledge (Miller, Galanter, & Pribram,
+1960; Rumelhart, 1975; Schank & Abelson, 1977; Thorndyke,
+1977; Warren, Nicholas, & Trabasso, 1979).
+Choosing between these two approaches has posed a dilemma.
+There are empirical data that can be argued to support each
+account. For example, in the domain of speech production, trans-
+positions of phonemes or words suggest a hierarchical represen-
+tation (or comb model). But at the segmental level, the causal
+necessity of completing the closure of the vocal tract to increase
+intraoral pressure required for postrelease aspiration would also
+argue for an associative chain model.
+In the realm of event knowledge, aside from Schank and Abel-
+son (1977), the consensus seems to be that events (scripts, stories,
+schemas, etc.) have hierarchical structure. To some extent, this
+assumption initially appears to reflect the influence of linguistic
+theory (Chomsky, 1957) rather than any specific empirical data
+that required that interpretation (e.g., Mandler & Johnson, 1977;
+Miller et al., 1960; Rumelhart, 1975; Thorndyke, 1977). However,
+there are empirical results that have been argued to require hier-
+archical representations.
+These data arise in experiments in which participants are
+asked to make judgments about activities in events. In these
+studies, conditions are designed such that if sequential order
+figures prominently in the representation of event structure,
+performance should be facilitated. For example, Galambos and
+Rips (1982) compared predictions of a chain model versus a
+hierarchical model (their Figure 1) by asking participants to
+make various judgments for which, if serial order is strongly
+represented in event knowledge, that order should facilitate
+performance. Galambos and Rips found no reliable evidence
+that this was the case, and concluded that “serial position within
+a routine is not a reliable predictor of retrieval speed” (p. 273).
+On the other hand, Galambos and Rips found that centrality (a
+measure of importance) did facilitate retrieval of elements in a
+routine. Other studies have provided evidence consistent with
+the hierarchical encoding of event knowledge (e.g., Black &
+Bower, 1980; Bower et al., 1979).
+Our model suggests one reason why Galambos and Rips might
+have failed to find evidence for the encoding of temporal structure
+in event knowledge. One of the events used in their study was the
+same as ours, changing a flat tire. The first two activities they
+show for this event (their Table 2) are set the brake and take out
+spare. A later pair of adjacent activities is remove bad tire fol-
+lowed by put on spare. Their prediction was that if event knowl-
+edge encodes temporal order, then both types of pairs would be
+equally facilitative, relative to pairs of activities that are far apart
+in the sequence (e.g., set the brake and put on spare). No such
+facilitative effect was found.
+This failure may have arisen because of a failure to take into
+account large but uncontrolled differences in the magnitude of
+ordering constraints between nearby activity pairs. From Fig-
+ures 13 and 14 (our network’s predictions of successive activ-
+ities for changing a flat tire), we see that that in some parts of
+the sequence there are weakly activated predictions and many
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+283A MODEL OF EVENT KNOWLEDGE
+possible alternatives. In other parts of the sequence, there are
+clear and unambiguous predictions about what should occur
+next (only a few very highly activated activities). Another way
+to describe this is to say that the temporal structure within an
+event may vary over its time course. Some subsequences may
+be strongly constrained whereas the temporal structure of other
+subsequences is only very weakly constrained. These con-
+straints may (though need not) often reflect causal necessity. A
+flat tire cannot be removed without first taking off the lug nuts.
+But whether or not one removes the jack from the trunk before
+or after setting out flares may be a matter of preference or
+convenience and so will vary across event exemplars. This
+implies that evidence for the encoding of temporal structure in
+event knowledge should depend on the choice of specific ac-
+tivity pairs, the strength of their ordering relationship, including
+strength of ordering differences taken into account in the design
+and analyses, and the use of an experimental probe that is
+sensitive to graded differences between stimuli. These are all
+predictions that can be tested empirically, designing stimuli that
+are based on event protocols that are generated by human
+participants.
+Combs or Chains? Associative Sequence
+or Hierarchy?
+Does our model implement a chain (associative sequence)
+model, such as a FSA? Or does it implement a comb (or hierar-
+chical) model? The model seems to implement elements of both
+models, and to varying degrees that reflect the actual structure of
+different events. In the picnic event, the network visualization of
+the norming data (see Figure 12) shows hubs of activities. These
+resemble the higher order levels of abstraction that Bower et al.
+(1979) called “scenes.” Within the network, these scenes are
+reflected in the spatial organization of the hidden unit space,
+shown in Figure 19. Activities within scenes cluster closer to each
+other than to activities in other scenes. The hubs, or scenes, are
+themselves loosely ordered in a way that reflects the temporal
+structure of these larger units of activity, much as a comb (hier-
+archical) model would. At the same time, within a hub, and even
+across hubs, there may be strong temporal ordering that is also
+represented in the network. An example of this is in the ordering
+constraints between making food, driving to destination, and eat-
+ing food (each of which occurs within a different hub), as dis-
+cussed in Study 3 (see Figure 20). Similarly, strong temporal
+ordering constraints are found in the flat tire event. The network
+learns that a car must be raised before the flat tire is removed, and
+will even “correct” an individual participant by predicting the
+raising action in cases where the participant neglects mentioning
+that (see Figure 14). These are examples of the network’s ability to
+learn constraints on temporal structure in a way that is most
+consistent with chain models. The degree to which hierarchical or
+sequential relationships are encoded in the model, and where
+within an event, ultimately depends on the nature of the event
+itself. Prediction-based learning allows the model to produce be-
+havior that makes it appear that it has implemented both types of
+temporal structure.
+At this point, a reasonable question is how the model differs
+from the representation of the norming data as visualized in the
+networks depicted in Figures 11 and 12. The answer has already
+been implied in our discussion of FSAs versus neural networks,
+but is worth addressing more explicitly.
+First, we note that both the neural network and the network
+graphs of the aggregate data are Markov chains. In Markov chains,
+the probability of the subsequent state depends solely on the
+current state of the system. A critical difference in these two
+approaches lies in the nature of the state space and the information
+that can be implied by the current state. In the neural network, the
+state space has a semantic structure that allows regions of space to
+be interpreted even if they have not yet been visited or even
+encountered during training. This makes it possible for them to
+generalize beyond the training data, and also allows for interpre-
+tation of the new states. The graph-based network visualization
+does not do this.
+A concrete example of the consequences of this difference in
+modeling data that reflect variability is in the case in which one
+participant’s description involved preparing food prior to going to
+a picnic, driving to the picnic, and then eating food, whereas
+another participant described a different order, consisting of first
+driving to the picnic, then preparing food, and then eating (the
+example discussed earlier). Let us call these three activities A, B,
+and C. The alternative orderings offered by the two participants are
+A  B  C and B  A  C. A graphical visualization of these
+data is shown in Figure 22a.
+Figure 22. (a) Graph visualization of aggregated data, constructed from one sequence in which A  B  C
+and a second sequence is B  A  C. The result is a directed cyclic graph, in which either A or B might precede
+C, and A and B might cycle back indefinitely without ever moving to C. (b) Alternative graph, which preserves
+ordering constraints in data but does not capture the fact that the two variants of A and B are in fact the same
+activity.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+284 ELMAN AND MC RAE
+The graph that results from these two examples is one in which
+(a) there is a cycle between A and B, implying that these two
+events might alternative indefinitely, possibly without ever pro-
+ceeding to state C; and (b) either A or B can proceed directly to C
+without visiting the other state. Neither condition is actually pres-
+ent in the training data. In addition, as pointed out earlier, the
+spatial layout in the graph is a matter of visual convenience and not
+dictated by the information structure of the graph itself. The states
+might be positioned in any area of the diagram; all that matters is
+the arcs connecting them. An alternative graph that does capture
+the ordering constraints is shown in Figure 22b. However, the
+price paid for creating two variants of the A and B activities, done
+so that each variant can participate in a different ordering con-
+straint, is that we lose the information that two variants of A and
+of B are actually the same activity. One might be tempted to
+redraw the graph so that Ai and A2 are close in space. As we
+pointed out earlier, proximity relations in such graphs are mean-
+ingless, however, because there is no semantics underlying the
+spatial dimension of graphs (other than the node-edge connec-
+tions).
+Our model, on the other hand, deals with these alternative
+sequences by structuring the state space such that the Markov
+constraint is obeyed but the state space reflects not only the current
+state but the path taken to get there. We see this in the hidden unit
+state space in a simple recurrent network that has been trained on
+the same two sequences (details of this simulation are given in
+Appendix X in the online supplemental materials). The space is
+shown in Figure 23.
+In Figure 23, there is a spatial structure to the hidden unit
+space, though it might not be what one would have predicted.
+We might expect that inputs of the same type (i.e., all instances
+of A, or B, or C) would cluster together, as in an FSA or the
+network graph shown in Figure 22. Instead, the state space is
+structured such that the similarity (closeness in space) of inputs
+takes into account the sequential context in which they occur
+and which input should be predicted to occur next. Region 1
+clusters those inputs that are sequence final, in which case the
+next input will be the beginning of a new sequence. That could
+be either A or B. (Thus, the semantics of this space is “predict
+A or B.”) Region 2 is entered when the next input is predicted
+to be a B (as is appropriate when the initial input was an A).
+Region 3 is entered when the next input will be an A (because
+the first input was a B). Region 4 is entered when an A has been
+input and the A has itself been preceded by a B or when a B that
+has been preceded by an A has been input. In both cases the
+correct next input will be a C.
+In this simple example, the only task the network has to solve is
+to predict, and so the state space reflects only the prediction
+requirement. This differs from the full model, in which the corre-
+lational structure of elements in the current activity must also be
+learned, which imposes constraints that require the state space to
+also encode that structure as well. What is common in both cases
+is that the state space has meaning and is interpretable. This is what
+lies at the heart of the model’s ability to deal with novel variation
+in the activity components it encounters (e.g., Simulation 2.4),
+novel temporal sequences of activities (e.g., Simulations 1.3, 2.1),
+and to generate events that consist of novel activity sequences
+(e.g., Simulations 3.2, 3.4).
+The ability of neural networks to semantically structure their
+hidden unit state space is essential not only for learning the rich
+temporal structure of events, but also for developing abstractions
+that support generalization beyond experience. Such capacity is as
+necessary for people as it is for any model. The apparent failure of
+earlier models to be able to do this plagued earlier computational
+models (Agre, 1988; Dreyfus, 1979; Winograd & Flores, 1986).
+We believe the model described here offers a viable way forward
+past these challenges.
+Challenges and Open Questions
+This model has limitations. Some of the limitations are technical
+and reflect design choices made for practical reasons. Other lim-
+itations arise from uncertainty about theoretical issues for which
+we do not feel there exists sufficient compelling empirical data to
+guide our choices. We do not believe any of these limitations
+significantly lessen what we may learn from the model, but we also
+believe that they are important targets for future work. In addition
+to those limitations, there are more basic questions that the model
+was not designed to address but which remain on the table. We
+think the model provides a good foundation for considering how
+those questions might be answered, but we want to highlight them
+as important challenges for the study of event cognition. We
+consider the limitations of the current work, as well as some of the
+important open questions that remain to be addressed.
+Technical Challenges
+We note two representational limitations. The first is the use of
+localist representations for concepts such as agents, patients, ac-
+tivities, instruments, and contexts. Localist representations involve
+assigning one concept to one unit. The advantage is that local
+representations facilitate analyses of the network’s behavior be-
+cause graded activations can be interpreted as probabilistic confi-
+dence levels. We therefore used localist representations so that the
+model’s behavior was as transparent as possible. A limitation of
+this format is that it does not support generalization or scaling as
+readily as a distributed feature-based scheme. Unfortunately, dis-
+tributed representations are far more opaque to analysis and re-
+quire additional mechanisms to interpret (which themselves then
+introduce complications). Future work will need to address the
+tradeoffs between the advantages and shortcomings of these alter-
+native representations.
+A second representational issue concerns the commitment we
+have made to specific thematic roles, such as agent, patient, and
+instrument. The choice can be justified on the grounds that there is
+extensive theoretical and behavioral evidence that these roles cap-
+ture a great deal of human behavior. The difficulty is that there is
+also evidence for a much larger and highly nuanced set of thematic
+relations than are represented by the roles the model uses. Unfor-
+tunately, there is not a clear consensus on what a larger (or even
+enumerable) set of such relations might be. There are also data
+suggesting that many relations may arise from exigencies of spe-
+cific activities and events (e.g., Ferretti et al., 2001; McCawley,
+1968; McRae, Spivey-Knowlton, & Tanenhaus, 1998). An impor-
+tant goal will be to see whether the model can be extended so that,
+just as knowledge of temporal structure of events is grounded in
+experience, the thematic roles of event participants could them-
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+285A MODEL OF EVENT KNOWLEDGE
+selves be learned inductively. This might be done, for example, by
+using distributed representations based on features of the sort that
+seem to guide infants and young children in learning about agency
+and instrumental affordances (cf. Gao, Newman, & Scholl, 2009;
+Gergely, Nádasdy, Csibra, & Bíró, 1995; Rutherford & Kuhlmeier,
+2013; Scholl & Gao, 2013; Southgate & Csibra, 2009; Woodward,
+Sommerville, Gerson, Henderson, & Buresh, 2009; Woodward,
+Sommerville, & Guajardo, 2001).
+One issue the model needs to address is scalability. Simula-
+tions in the first two studies demonstrate that the model can
+learn generalizations even given variable training data, but this
+is at a small scale. Furthermore, the model’s knowledge is
+limited to the training data. This approach allows for controlled
+analyses of resulting behaviors. However, lacking the richer and
+extensive knowledge that people have accumulated over a life-
+time of experience, it will be difficult to conduct precisely
+matched quantitative tests of the model’s predictions by com-
+paring its performance with that of human participants, using
+exactly the same experimental stimuli. This does not preclude
+qualitative comparisons, and we have endeavored to identify
+opportunities for such tests.
+The use of naturalistic training data in Study 3 presented the
+model with a modest increase in scale, but obviously nowhere near
+the experience that even very young children encounter. Further-
+Figure 23. State space of two hidden units in a simple recurrent network that has been trained on the sequences
+A  B  C and B  C  A. The x and y axes are the activations of hidden units 1 and 2. Points in the space
+are the hidden unit vectors that result when an input is presented; upper case letters indicate the input, the lower
+case letters indicate the sequence in which the input occurred. Thus, “baC” represents the state resulting from
+the C, preceded by b and a, in that order. Details of the simulation are given in Appendix X in the online
+supplemental materials. See text for explanation of the numbered regions. See the online article for the color
+version of this figure.
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+286 ELMAN AND MC RAE
+more, although the model’s architecture was held constant (with
+minor changes in the number of input or output units, depending
+on the needs of the training data), each simulation involved train-
+ing a separate network. Again, this facilitates network analyses but
+raises the question of how the model would respond if a single
+network was trained with all the data used in all studies. We have
+not done this here because in our experience, perhaps counterin-
+tuitively, scaling in neural networks is not done as a half-measure.
+Combining a number of small data sets leads to uncontrolled
+overlaps that give rise to uninteresting and unrealistic learning
+outcomes. The best strategy is thus to truly train at scale. Fortu-
+nately, the norming study we describe in Study 3 (McRae &
+Elman, 2018), when complete, may provide us with an appropriate
+data set. This will allow us to address not only the question of
+whether the model can learn at a larger scale, but whether in doing
+so, learning will be facilitated by the model’s ability to learn
+analogous patterns that occur in multiple event types. Prior re-
+search with connectionist models suggests that the model may be
+able to use scaling to good advantage in exactly this way (Mc-
+Clelland, 2015; Plaut, McClelland, Seidenberg, & Patterson, 1996;
+Seidenberg & Plaut, 2014).
+Open Questions
+We have stressed several times that this is a model of event
+knowledge. It is not a language processing model even though
+many simulations are motivated by behaviors that have been
+elicited in language tasks. There is an important reason for making
+this distinction.
+Although language may be used to provide cues about an event
+under description (Elman, 2009; Elman, Hare, & McRae, 2005), it
+would be a grave error to confuse knowledge of language use with
+knowledge of events. One obvious difference has to do with
+temporal structure. The properties of events concern what actually
+happens in the world, which may in turn reflect causally necessary
+contingencies, or conventional but noncausal relations, or perhaps
+simply happenstance. The temporal structure of a sentence, in
+contrast, may provide cues to the temporal structure of an event,
+but by using linguistic cues that need not literally parallel event
+structure. An example is “Before the psychologist submitted the
+article, the journal changed its policy,” in which the order of the
+clauses reverses the order of the events, with the order being cued
+by the sentence-initial preposition (Münte, Schiltz, & Kutas,
+1998). Moreover, languages differ significantly in how word order
+is used and the available grammatical devices. This is not to say
+that there is no relationship between order of mention of an event
+participant and the role or importance of that participant (Gern-
+sbacher & Hargreaves, 1988; Kim, Lee, & Gernsbacher, 2004); it
+is simply to acknowledge that grammatical devices are not slav-
+ishly tied to the temporal dynamics of events. We imagine that a
+fuller picture of how event knowledge is learned and used would
+require modeling the various channels and domains that access this
+knowledge. These domains would include language, perceptual,
+and motor experience, among others. Each domain has its internal
+regularities and properties, but must be able to coordinate with
+each other. This is not a radical proposal. We see this as a
+reasonable extension of Jackendoff’s (2007) theory involving a
+parallel architecture for language, although we cannot claim that
+he would share that interpretation. Implementing the proposal will
+be ambitious and is beyond the scope of the current project,
+although we believe the current model could become a part of that
+larger scheme.
+The view that events are psychological construals rather than
+existing in the world remains an important issue but one that the
+model does not currently address. In fact, the event cognition
+literature in general appears (in practice, if not in principle) to
+be ambivalent about the role of construal. The extensive body
+of literature on the psychophysical cues for event boundaries,
+for example, emphasizes events as things that happen in the
+world. The similarly extensive body of literature on the use of
+linguistics cues (e.g., aspect) in describing events emphasizes
+events as mental entities. Of course, most people would prob-
+ably agree that both perspectives are important. That said, our
+own interest is on events as psychological constructs. Event
+knowledge makes reference to what happens in the world, but if
+our concern is about knowledge, our focus necessarily shifts to
+the mental world for understanding the acquisition, form, and
+use of event knowledge.
+Here we draw on common sense and conventional language
+regarding events. In 2015, the New York Stock Exchange
+experienced a 4-hr outage. Yet this was described as “a non-
+event for most equity traders.” This is a curious use of the word
+nonevent for something that might seem momentous. What this
+usage implies is that whether or not something is an event
+depends on what people thought about it. Did traders care, for
+example? In this case, the outage had little impact because most
+traders shifted to other exchanges (Pearson, 2015). Conversely,
+one might imagine describing the failure of something to hap-
+pen, perhaps not showing up for one’s own wedding, as a big
+event. We take such colloquial usage of the word event as
+informative. It suggests to us that whether or not something is
+“eventful,” or even considered to be an event, depends in part
+on our perspective and whether or not we care about it.
+That language plays a central role in guiding construal of
+events is apparent in the linguistic devices that affect the
+interpretation and focus on temporal structure in events, such as
+aspect. The devices used in language to shape the construal of
+temporal structure have important consequences for how we
+describe events to each other (Moens & Steedman, 1988), as
+well as for real-time processing (Ferretti, Kutas, & McRae,
+2007; Paczynski, Jackendoff, & Kuperberg, 2014; Todorova,
+Straub, Badecker, & Frank, 2000).
+A final open question is how the knowledge that is learned by
+our model might inform theories of causal inference. The connec-
+tion between event knowledge and causal structure has been noted
+by others. There is no doubt that temporal constraints on the serial
+ordering of activities often arises for causal reasons, whereas in
+other cases, temporal structure simply reflects convention. How
+might the model—and more importantly, people— distinguish be-
+tween these two cases?
+One answer is that often we do not. People are prone to look
+for explanations in the patterns we see around us. When we do
+this erroneously, we often call it superstition. The scientific
+verification of causality relies on multiple strategies. One is
+testing a prediction through perturbation. If the predicted out-
+come does not materialize, that might lend credence to the
+inference for causation (with caveats about factors that might
+lead to a Type I error). We see no way in which this model
+This document is copyrighted by the American Psychological Association or one of its allied publishers.
+This article is intended solely for the personal use of the individual user and is not to be disseminated broadly.
+287A MODEL OF EVENT KNOWLEDGE
+might do anything other than provide grist for the hypothesis
+testing mill. Other mechanisms will be needed to actively test
+those conjectures.
+Another approach is to look for cases where other patterns of
+temporal correlation might share an abstract similarity that then
+supports a common causal mechanism. Multiple examples
+of “action from afar” involving pressing buttons, flipping
+switches, turning keys, and so forth, along with physical models
+of circuits, might lead to conclusions that these activities are
+indeed causally connected even though these activities and their
+outcomes might differ superficially. Here is where we see
+possibilities for a model of this sort. These possibilities would
+require distributed representations that (as discussed earlier)
+support featural representations that could support deeper gen-
+eralization. Second, the model would need to be trained on
+examples of events for which there is indeed the potential to
+discover overlapping similarities in (putative) cause-effect re-
+lationships. It remains to be seen whether or not the model is
+able to discover such deeper connections between types of
+events; and of course, such discovery does not prove causality.
+It merely provides additional evidence that is consistent with
+the inference of causality.
+In our view, this search for causation is what makes under-
+standing and modeling event knowledge so interesting, impor-
+tant, and difficult. People care deeply about the causal structure
+of the world. The things we call events are simply the “causal
+packages” we create that reflect our construal and interpretation
+(possibly flawed) of such structure. Event knowledge is what
+helps us to move around in the world and to make sense of the
+activity we see around us.

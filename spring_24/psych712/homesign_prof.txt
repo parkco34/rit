@@ -1,0 +1,1725 @@
+A B S T R A C T
+Some concepts are more essential for human communication than others. In this paper, we investigate whether
+the concept of agent-backgrounding is sufficiently important for communication that linguistic structures for
+encoding this concept are present in young sign languages. Agent-backgrounding constructions serve to reduce
+the prominence of the agent – the English passive sentence a book was knocked over is an example. Although these
+constructions are widely attested cross-linguistically, there is little prior research on the emergence of such
+devices in new languages. Here we studied how agent-backgrounding constructions emerge in Nicaraguan Sign
+Language (NSL) and adult homesign systems. We found that NSL signers have innovated both lexical and
+morphological devices for expressing agent-backgrounding, indicating that conveying a flexible perspective on
+events has deep communicative value. At the same time, agent-backgrounding devices did not emerge at the
+same time as agentive devices. This result suggests that agent-backgrounding does not have the same core
+cognitive status as agency. The emergence of agent-backgrounding morphology appears to depend on receiving a
+linguistic system as input in which linguistic devices for expressing agency are already well-established.
+1. Introduction
+We can conceptualize a far greater range of thoughts than we have
+words or syntactic structures to express. When a linguistic structure
+does encode a concept, this provides insight into the importance of the
+concept: that it is relevant given a particular social or ecological en-
+vironment, cognitively prominent, or useful in facilitating commu-
+nication (see Gibson et al., 2017; Levinson & Majid, 2014; Majid et al.,
+2018; Regier, Carstensen, & Kemp, 2016 for review). Understanding
+which concepts have high priority for linguistic encoding across lan-
+guages and cultures is a central goal of cognitive science. A related goal
+is understanding how semantic structures (i.e., form/meaning map-
+pings) relate to each other within a language: whether linguistic en-
+coding of a particular concept depends on a related concept also having
+linguistic encoding. For example, dual number marking is only found in
+languages that also have plural number marking (see Greenberg, 1963,
+Universal 34).
+In this paper, we address these issues by studying the emergence of
+semantic structures in the community sign language Nicaraguan Sign
+Language (NSL) and in the gestural systems of individual adult home-
+signers, deaf individuals who have learned neither a signed nor a
+spoken language, but who nevertheless communicate via their own
+gesture systems, called “homesigns” (Coppola & Newport, 2005;
+Feldman, Goldin-Meadow, & Gleitman, 1978; Goldin-Meadow, 2003).
+Studying young sign languages allows us to observe which semantic
+structures emerge most readily in language, indicating that these con-
+cepts have high priority for linguistic encoding. For semantic structures
+that take longer to emerge, we can also observe in young sign languages
+https://doi.org/10.1016/j.cognition.2020.104332
+Received 3 July 2019; Received in revised form 11 May 2020; Accepted 18 May 2020
+⁎ Corresponding author at: Department of Psychology, University of Wisconsin – Madison, United States of America.
+E-mail addresses: lrissman@wisc.edu (L. Rissman), laurahorton@utexas.edu (L. Horton), mflaher1@swarthmore.edu (M. Flaherty),
+asenghas@barnard.edu (A. Senghas), marie.coppola@uconn.edu (M. Coppola), dbrentari@uchicago.edu (D. Brentari), sgm@uchicago.edu (S. Goldin-Meadow).
+Cognition 203 (2020) 104332
+Available online 16 June 2020
+0010-0277/ © 2020 Elsevier B.V. All rights reserved.
+T
+the conditions that are necessary for the emergence of these structures
+(see Goldin-Meadow, 2010; Goldin-Meadow, Brentari, Coppola,
+Horton, & Senghas, 2015; Sandler, 2017).
+The populations of signers that we studied constitute three stages of
+language emergence. First, homesigners create their homesigns in the
+absence of a linguistic community and without having received a lan-
+guage model as input. NSL signers constitute the second and third
+stages of emergence. In the late 1970s-early 1980s in Managua, a school
+for special education opened and served many deaf students who
+otherwise had not been exposed to a conventional sign language (Kegl
+& Iwata, 1989; Pölich, 2005; Senghas, 1995; Senghas, Senghas, & Pyers,
+2005). The school was conducted in Spanish, which was inaccessible to
+the deaf students. Nevertheless, time at school gave students the op-
+portunity to interact with other deaf individuals, and a new sign lan-
+guage, NSL, was born. Studies of NSL distinguish different “cohorts” of
+signers. The first cohort of NSL constitutes the group of previously
+homesigning children who began signing with other deaf peers for the
+first time when they entered the school. These individuals are part of a
+linguistic community but have not received a language model as input.
+Subsequent cohorts are delineated in roughly 10-year intervals, with
+each cohort entering the school as children and learning NSL from the
+previous cohort (Senghas, 2003; Senghas & Coppola, 2001). These
+subsequent cohorts have both a linguistic community and have received
+a language model from previous cohorts.
+We ask whether signers at these different stages of emergence have
+innovated linguistic structures for expressing agent-backgrounding. An
+“agent” is often understood to be an animate individual who causes an
+event to occur. In an event of a waiter folding a napkin, for example, the
+waiter is an agent. The napkin is often described as filling the “patient”
+role. Language users have a range of available linguistic options to
+describe the multiple facets of events. Suppose a waiter reports to a
+restaurant manager all the napkins have been folded. The waiter is using
+passive voice, conveying the importance of the napkins while placing
+little emphasis on who specifically folded them. Passive voice is a type
+of agent-backgrounding construction. Agent-backgrounding is the con-
+ceptual representation wherein an agentive event is construed from the
+perspective of the patient rather than the agent.
+Passive voice has received considerable attention in theories of
+syntax (Abraham & Leisiö, 2006; Baker, 1988; Kiparsky, 2013;
+Shibatani, 1985; Siewierska, 1984), and numerous studies have ad-
+dressed how children acquire passive voice (Armon-Lotem et al., 2016;
+Demuth, 1990; Fox & Grodzinsky, 1998; Maratsos, Fox, Becker, &
+Chalkley, 1985; Messenger & Fisher, 2018). Cross-linguistically, there
+are a range of agent-backgrounding constructions beyond passive voice
+(Barberà & Hofherr, 2018; Siewierska, 2013). Nonetheless, few studies
+have investigated the typological prevalence of agent-backgrounding
+constructions or the emergence of agent-backgrounding constructions
+in new languages.
+We compare the emergence of agent-backgrounding constructions
+in NSL and homesign against the emergence of agentive constructions
+in these sign systems. There is extensive evidence that humans have a
+core system representing agency (Carey, 2009). Almost without ex-
+ception, languages mark a distinction between agents and patients
+morphosyntactically (Rissman & Majid, 2019). Infants as young as six
+months represent agentive individuals in events as having goals and
+causal efficacy (see Carey, 2009 for review). Linguistic structures for
+encoding agency have also been found to emerge early in young sign
+languages, including homesign (Coppola & Newport, 2005; Ergin &
+Brentari, 2017; Ergin, Meir, Aran, Padden, & Jackendoff, 2018;
+Flaherty, 2014; Goldin-Meadow et al., 2015; Horton, Goldin-Meadow,
+Coppola, Senghas, & Brentari, 2015; Horton, Rissman, Goldin-Meadow,
+& Brentari, 2017; Rissman & Goldin-Meadow, 2017; Sandler, Meir,
+Padden, & Aronoff, 2005). If a homesigner is shown to innovate lin-
+guistic devices for encoding a particular concept, this is evidence that
+the concept has a core cognitive status. For example, Gleitman,
+Senghas, Flaherty, Coppola, and Goldin-Meadow (2019) argued that
+homesigners' ability to linguistically distinguish symmetrical and re-
+ciprocal construals of events suggests a “common core of conceptual
+distinctions” and that “unlearned conceptual forces are at work in the
+creation of universally shared language structure” (6).
+Whether agent-backgrounding has the same high priority for lin-
+guistic encoding as agency is far from clear. On the one hand, agent-
+backgrounding is conceptually dependent on agency: one cannot re-
+present the former without representing the latter. Agent-back-
+grounding also involves flexibility of event representation, which is
+intuitively less fundamental than representing the mere presence of an
+agent. Indeed, some prescriptivist grammarians have discouraged the
+use of English passive voice altogether (see Ferreira, 2020 for review).
+It may be that agent-backgrounding constructions only emerge after
+many generations of transmission or never emerge in a particular lan-
+guage. On the other hand, it is logically possible that agent-back-
+grounding constructions emerge at the same time as agentive con-
+structions. Gleitman et al. (2019) found that even homesigners
+distinguish symmetrical and reciprocal construals of events, a distinc-
+tion which also involves flexibility of event representation.
+We address three questions in this study. First, is agent-back-
+grounding communicatively important enough to arise in an emerging
+language? Second, if it is, does agent-backgrounding arise at the same
+moment as agency? Finally, at what point in the emergence of a lan-
+guage does agent-backgrounding arise – in the earliest stage when the
+language is used only with hearing individuals and thus is produced but
+not seen (i.e., in homesign), or when the language is shared among
+homesigners brought together for the first time (i.e., the first cohort of
+NSL), or only when the language is transmitted to a new set of learners
+(i.e., the second cohort of NSL and beyond)? Evidence from language
+emergence allows us to draw conclusions about the mapping from
+concepts to language beyond the particular signers studied here. First, if
+we observe agent-backgrounding constructions in early stages of lan-
+guage emergence, this finding would indicate that expressing agent-
+backgrounding is important in human communication. Unlike typical
+language learning where semantic structures are there to be learned, in
+language emergence, semantic structures must be created. Second, by
+studying these early sign systems, we can identify the conditions that
+are necessary for the emergence of agent-backgrounding constructions,
+suggesting more general dynamics of language creation and change.
+1.1. Agency: typology and emergence
+Like most human concepts, agent resists definition in terms of ne-
+cessary and sufficient conditions (Dowty, 1991; Grimm, 2011; Levin &
+Rappaport-Hovav, 2005; van Valin & Wilkins, 1996). Following Dowty
+(1991) and others, we adopt the perspective that agent is a cluster
+concept, and that the prototypical agent is animate, acts intentionally,
+and plays a direct causal role in acting on an object. Linguistic devices
+for encoding the presence of an agent are widespread cross-linguisti-
+cally. In English, for example, this function is achieved syntactically
+(e.g., the contrast between the girl broke the balloon and the balloon
+broke), as well as lexically (e.g., push requires an agent but fall is in-
+compatible with one). Morphological marking of agency is also
+common across languages. The Russian example in (1) demonstrates
+case marking, where the agent receives nominative case and the patient
+accusative case (Comrie, 1989, Chp. 3, ex. 69):(1) Tanja ubila Mašu.
+Tanya-NOM kill-PST Masha-ACC
+‘Tanya killed Masha’
+The tendency to morphosyntactically distinguish agents from pa-
+tients is a near typological universal (see Rissman & Majid, 2019 for
+review). For example, Hartmann, Haspelmath, and Cysouw (2014)
+L. Rissman, et al. Cognition 203 (2020) 104332
+2
+studied 25 genetically diverse languages using multidimensional
+scaling and found that agentive roles clustered distinctly from patient
+roles. For the remainder of this paper, we understand an “agent” to be a
+prototypical agent: sentient, volitional and a causer.
+Turning to the typology of agent-marking in sign languages, one
+common way of expressing agency is through handshape morphology
+in classifier predicates, sometimes called “spatial verbs” (Emmorey,
+2003; Supalla, 1986). Fig. 1 shows an NSL signer producing classifier
+predicates with two different types of handshape morphemes. 1 In the
+left-hand panel, the signer is describing someone tipping over a book
+and is producing a predicate with handling handshape: the shape of the
+hand iconically represents how someone would hold a book. In the
+right-hand panel, the signer is describing the same event, but is pro-
+ducing a predicate with object handshape: the shape of the hand re-
+presents the shape of the book itself.
+Example (2) shows an utterance from American Sign Language
+(ASL) in which the predicate MOVE uses a handling handshape, and the
+interpretation of the utterance is agentive, even though no sign is
+produced labeling the agent (Benedicto & Brentari, 2004, p. 752, ex.
+12a; in their notation, the subscript ‘hdlg’ denotes handling hand-
+shape).(2) [ø]_ BOOK C + MOVE
+pron:3sg book obj grab hdlg + move vert. > hor.
+‘S/he took the (standing) book and laid it down on its side’
+Conversely, example (3) shows an ASL utterance where the MOVE
+predicate has object handshape (the subscript ‘w/e,’ or ‘whole entity’)
+and the interpretation is that the event does not have an agent
+(Benedicto & Brentari, 2004, p. 752, ex. 12b):(3) BOOK B + MOVE
+book 2D flat objw/e + move vert. > hor.
+‘The (standing) book fell down on its side’
+This pair of mappings, in which handling handshape is associated
+with the agent and object handshape with the patient, has been docu-
+mented for a variety of established sign languages, including ASL
+(Benedicto & Brentari, 2004; Goldin-Meadow et al., 2015; Kegl, 1990),
+Catalan Sign Language (Benedicto, Cvejanov, & Quer, 2007),
+Argentinian Sign Language (Benedicto et al., 2007); Sign Language of
+the Netherlands (de Lint, 2018; Zwitserlood, 2003); Italian Sign Lan-
+guage (Brentari, DiRenzo, Keane, & Volterra, 2015; Mazzoni, 2008),
+British Sign Language (Brentari, DiRenzo, Keane, & Volterra, 2015),
+Russian Sign Language (Kimmelman et al., 2019; Kimmelman, Pfau, &
+Aboh, 2019), German Sign Language (Kimmelman, de Lint, et al., 2019)
+and Hong Kong Sign Language (Brentari et al., 2015).
+Linguistic typology provides one source of evidence about cross-
+cultural pressures to encode concepts in language. As described earlier,
+evidence from language emergence plays a complementary role. The
+majority of new languages that we are able to observe today are sign
+languages. Within emerging sign language communities, hearing loss
+typically prevents deaf individuals from having access to the spoken
+language(s) around them, particularly if they do not attend school
+(Coppola, in press). Moreover, the vast majority of deaf people are born
+into hearing families and do not have access to a sign language at home.
+Some deaf individuals never receive exposure to a natural sign lan-
+guage. Despite their lack of input from a language model, these in-
+dividuals communicate with the hearing individuals in their worlds and
+use gesture to do so. These gestures, called “homesign systems,” have
+been shown to have many, although not all, of the properties of natural
+language (Goldin-Meadow, 2003), including stable mappings between
+forms and meanings. Homesigners have been shown to encode a noun/
+verb distinction (Abner et al., 2019; Goldin-Meadow, Butcher,
+Mylander, & Dodge, 1994; Hunsicker & Goldin-Meadow, 2013), pro-
+position-level negation (Franklin, Giannakidou, & Goldin-Meadow,
+2011), motion event categories (Zheng & Goldin-Meadow, 2002), the
+grammatical relation of subject (Coppola & Newport, 2005), a singular/
+plural distinction (Coppola, Spaepen, & Goldin-Meadow, 2013) and
+causation (Rissman & Goldin-Meadow, 2017). Homesign thus re-
+presents an early stage of language emergence (Coppola & Senghas,
+2010). Homesign provides both evidence about what meanings are
+conveyed in early communication systems (e.g., a singular vs. plural
+distinction) and how these systems are structured in terms of their
+phonology, morphology and syntax (e.g., a grammatical subject rela-
+tion).
+As with homesign, NSL provides evidence about which concepts
+have high priority for linguistic encoding. As described earlier, the first
+cohort of NSL were previously homesigning children who joined a
+linguistic community in the context of their school. Subsequent cohorts
+of NSL learned the structures that the previous cohort had created and
+also introduced their own innovations. Interestingly, a variety of form/
+meaning mappings are present only among subsequent cohorts of NSL
+(i.e., the learners): some mental state verbs (Pyers & Senghas, 2009), a
+consistent marker of left-right spatial relations (Pyers, Shusterman,
+Fig. 1. NSL signer describing an event of someone tipping over a book. The predicate that encodes the motion of the event has either handling handshape (left panel)
+or object handshape (right panel).
+1 We use the label “morpheme” to refer to a formal component of a sign that
+corresponds to a specific meaning.
+L. Rissman, et al. Cognition 203 (2020) 104332
+3
+Senghas, Spelke, & Emmorey, 2010), and ordinal numbers used to
+convey the temporal sequence of an event (Kocab, Senghas, & Snedeker,
+2016). Spatial modulations are also more frequent among later cohorts
+(Senghas & Coppola, 2001). By comparing older generations of signers
+to younger generations, we can observe which semantic structures take
+longer to emerge and what conditions support the emergence of these
+structures.
+Signers of emerging sign languages have been shown to use hand-
+shape morphology to encode agency. The association between handling
+handshape and agency has been observed among child homesigners
+(Coppola & Brentari, 2014; Horton, 2018; Horton et al., 2017; Rissman
+& Goldin-Meadow, 2017), adult homesigners (Goldin-Meadow et al.,
+2015), first and second cohort signers of NSL (Goldin-Meadow et al.,
+2015), and first, second and third cohort signers of Central Taurus Sign
+Language (Ergin & Brentari, 2017). The observation that morphosyntax
+for encoding agency emerges early in new languages, taken together
+with the fact that agent-marking is typologically prevalent, provides
+strong evidence that encoding agency has high priority in linguistic
+systems.
+1.2. Agent-backgrounding: typology, emergence and evolution
+We ask in this paper whether agent-backgrounding has the same
+high priority for encoding in linguistic systems as agency. Describing
+the actions of agents is no doubt useful in communication. Agent-
+backgrounding constructions, for their part, allow language users to
+comment that an agentive event has happened, while remaining vague
+about the precise cause (e.g., when a shipping company informs you
+that your package has been misplaced). Across languages, there is a strong
+tendency for both events and sentences to have an agent-oriented
+construal by default (see Prat-Sala & Branigan, 2000; Riesberg,
+Malcher, & Himmelmann, 2019 for review). For example, in descrip-
+tions of agentive events, the agent is more likely than the patient to be
+mentioned in subject position in English (Gleitman, January, Nappa, &
+Trueswell, 2007; Prat-Sala & Branigan, 2000), Dutch (Vogels, Krahmer,
+& Maes, 2013) and German (van Nice & Dietrich, 2003). 2 However,
+viewing an agentive event from the perspective of the patient is also
+possible, as reflected in the passive sentence your package has been
+misplaced, where the patient “package” occupies subject position. We
+use the phrase “agent-backgrounding construction” to refer to any
+linguistic structure that orients an event of an agent acting on a patient
+away from the agent.
+Across languages, agent-backgrounding is expressed in a diverse
+range of syntactic forms. Passive morphosyntax is by far the best-stu-
+died agent-backgrounding construction and is common cross-linguisti-
+cally. Nonetheless, passive morphosyntax is much more circumscribed
+than agent-marking: of 373 languages sampled on the World Atlas of
+Linguistic Structures (WALS), only 44% feature a passive construction
+(Siewierska, 2013). Passives, however, are typically defined using
+syntactic criteria (Haspelmath, 1990; Kulikov, 2011; Siewierska, 2013)
+and, across languages, there are many types of agent-backgrounding
+constructions that achieve the backgrounding function but do not fit the
+syntactic criteria of a passive (Givón, 2009; Shibatani, 2006;
+Siewierska, 2013). These devices include middles, impersonals, serial
+verb constructions, and even simple agent omission, as in Awtuw
+(Feldman, 1986). The Mandarin example in (4) demonstrates use of a
+serial verb construction to convey agent-backgrounding. The verb bei
+‘suffer,’ was originally used in a passive construction to describe an
+adverse event, such as someone being fired, but is increasingly being
+used as a more generic passive for events that are not adverse (Givón,
+2009, p. 47, ex. 3b; Li & Thompson, 1981):(4) sheng-cheng bei jiefang-le
+province-capital suffer liberate.PF
+‘the provincial capital was liberated’
+(lit.: ‘the provincial capital suffered (when someone) liberated it’)
+In established sign languages, a range of linguistic devices express
+agent-backgrounding, including agent omission, role shift, use of a non-
+neutral or semantically empty spatial locus, topic verb constructions,
+and averted eyegaze (Barberà & Hofherr, 2017, 2018; Guitteny, 2006;
+Janzen, O'Dea, & Shaffer, 2001; Kegl, 1990; Rankin, 2013; Saeed &
+Leeson, 1999; Sze, 2010). Argument-drop is attested in sign languages
+(Bahan, Kegl, Lee, MacLaughlin, & Neidle, 2000; Lillo-Martin, 1986),
+and omitting the agent argument is another way of deemphasizing the
+agent. As in spoken languages, impersonal constructions are well-at-
+tested in sign languages (see Barberà & Hofherr, 2018 and other articles
+in the same issue). In Hong Kong Sign Language, for example, the non-
+specific indefinite determiner ONEDET-PATH and the Chinese character
+sign HUMAN/PERSON have a non-referential function and serve to
+background the agent (Sze & Tang, 2018). Thus across languages,
+agent-backgrounding constructions range from the relatively complex
+syntactically (e.g., passive voice) to the relatively simple (e.g., agent
+omission).
+The cross-linguistic literature provides a wealth of evidence about
+how different languages convey agent-backgrounding. This literature
+does not, however, provide a straightforward answer to the question of
+whether agent-backgrounding has high priority for encoding in lan-
+guage. We are not aware of any quantitative assessment of what per-
+centage of the world's languages contains agent-backgrounding con-
+structions, nor are we aware of any language that has been claimed to
+not have an agent-backgrounding construction. Given the current lit-
+erature, it may therefore be true that agent-backgrounding construc-
+tions are just as common as agentive constructions. At the same time,
+the current evidence is also compatible with the alternative, that
+marking agent-backgrounding is less common than marking agency.
+The studies cited in Section 1.1 on agent-marking in young sign
+languages provide a hint that these languages might use handshape
+morphology to encode agent-backgrounding. In these studies, handling
+handshapes are used exclusively in agentive contexts, whereas object
+handshapes are used in both agentive and non-agentive contexts
+(Brentari et al., 2015; Goldin-Meadow et al., 2015). One reason for this
+pattern might be that these studies used a set of stimuli in which the
+agent is visually backgrounded: only an arm or hand manipulating an
+object, rather than the whole agent's body being visible. If object
+handshapes for this set of stimuli were serving an agent-backgrounding
+function, this finding would indicate that agent-backgrounding has high
+priority for linguistic encoding.
+Alternatively, a reconstructed model of language evolution based on
+historical change in languages suggests that agent-backgrounding has
+lower priority for linguistic encoding than agency. Grammaticalization
+theorists propose general principles and pathways by which words take
+on new meanings and morphosyntactic behavior over time (Bybee,
+Perkins, & Pagliuca, 1994; Heine, Claudi, & Hünnemeyer, 1991; Heine
+& Kuteva, 2002; Janzen, 2012; Narrog & Heine, 2011; Pfau &
+Steinbach, 2011). Drawing on grammaticalization pathways for over
+500 languages, Heine and Kuteva (2007) propose a reconstruction of
+how language evolved. In this model, nouns emerged first, then verbs,
+then adjectives and adverbs, then a range of other grammatical cate-
+gories (see also Hurford, 2012). Crucially, case markers (which mark
+agents, among other roles) evolved before passive markers (a type of
+agent-backgrounding construction). Although a range of other mor-
+phosyntactic elements convey each of these meanings, this pattern of
+grammaticalization across languages raises the possibility that marking
+agency was evolutionarily prior to marking agent-backgrounding.2 Agents have been argued to be more conceptually accessible than patients
+(Bock & Warren, 1985; van Nice & Dietrich, 2003).
+L. Rissman, et al. Cognition 203 (2020) 104332
+4
+1.3. Research approach
+We compare the emergence of agentive constructions against the
+emergence of agent-backgrounding constructions for two groups of
+signers: adult signers of NSL and adult homesigners from Nicaragua. We
+elicited descriptions of short video clips from these groups of signers. To
+assess how signers encode the presence of an agent, we contrasted de-
+scriptions of events where a person is seen acting on an object (e.g., a
+woman tipping over a book onto a table) against events where an object
+undergoes a change on its own and no person is present (e.g., a book
+falling over onto a table). The agents in our videos all have the prop-
+erties of a prototypical agent, as defined in Section 1.1. In addition, the
+patients in our videos are all inanimate objects that undergo change of
+location/configuration.
+To assess signers' use of agent-backgrounding constructions, we used
+a perceptual manipulation: whether the face/torso of an animate agent
+was visible or not. A variety of factors influence whether an agentive
+event is viewed from an agent-oriented vs. patient-oriented perspective,
+including conceptual factors such as animacy, discourse and lexical
+factors, and perceptual factors such as the relative size of the event
+participants (see Bock & Ferreira, 2014; Prat-Sala & Branigan, 2000;
+Rissman, Woodward, & Goldin-Meadow, 2019 for review). Rissman
+et al. (2019) found that when English speakers describe events of an
+animate agent acting on an inanimate patient and they can see the face
+and torso of the agent, they almost always produce active descriptions,
+such as a woman tipped over a book. By contrast, when only the hand and
+forearm of the agent are visible on screen, English speakers are more
+likely to produce passive descriptions such as a book was tipped over.
+Rissman et al. (2019) argue that when the face/torso are occluded, the
+agent has lower conceptual accessibility and the event as a whole has a
+more agent-backgrounded construal. Another possibility is that English
+speakers produce more passive descriptions because they have in-
+sufficient information about whether the agent is a man or a woman.
+Studies on the discourse functions of passive have shown that the
+passive may be elicited in contexts where the exact identity of the agent
+is either unknown or unimportant (Jespersen, 1992 [1924]; Stein,
+1979; Thompson, 1987). Obscuring the gender of the agent may thus
+promote agent-backgrounding language.
+In the present study, signers described events where a person was
+seen manipulating an object. In Body-Agent events, the person's hands,
+face, and torso were visible during the vignette. In Hand-Agent events,
+only the person's hand and forearm were visible during the vignette and
+the manipulated object was larger in scale relative to the Body-Agent
+events. If signers describe the agent and patient in different ways across
+these two types of events (Body-Agent events vs. Hand-Agent events),
+we would have evidence for the emergence of agent-backgrounding
+language. We expect that signers will recognize the Hand-Agent events
+as agentive, as even 9-month-old infants interpret a hand as being
+connected to an agent (Saxe, Tzelnic, & Carey, 2007; Slaughter &
+Heron-Delaney, 2010; see also Wolff, 2003). In addition to these two
+types of agentive events, signers also described No Agent events. In
+these events, an object underwent a change seemingly on its own, such
+as a book falling over from an upright position. If signers distinguish No
+Agent events from Body-Agent events, we have evidence that signers
+linguistically encode the presence of an agent. No Agent events were
+matched with the agentive events in terms of the patient's change of
+state. For example, in one set of Body-Agent and Hand-Agent events, a
+person tips over a book, and in the corresponding No Agent event, the
+book falls over.
+We analyzed two types of linguistic devices: (1) a lexical/pronom-
+inal device – production of agent nominals and (2) a morphological
+device – distribution of handshape in classifier predicates.3 As noted
+earlier, omitting a lexical label for the agent has been demonstrated to
+be a feature of agent-backgrounding constructions in established signed
+languages (American Sign Language: Kegl, 1990; Janzen et al., 2001;
+Catalan Sign Language: Barberà & Hofherr, 2017). In prominent the-
+ories of language evolution, words (i.e., consistent mappings between a
+label and a referent) emerged before syntactic and morphological
+structures (Givón, 2009; Heine & Kuteva, 2007; Hurford, 2012). As a
+lexical strategy, agent omission may emerge early as a means of con-
+veying agent-backgrounding.
+To explore the second device, distribution of handshape in classifier
+predicates, we analyzed whether signers use handshape morphology in
+different ways across Body-Agent, Hand-Agent and No Agent events. As
+described in Section 1.1, an association between handling handshape
+and agency has been documented for multiple sign languages. Goldin-
+Meadow et al. (2015) found, however, that when adult homesigners
+and NSL signers described agentive events, they not only produced
+handling handshape predicates but they also produced a sizable pro-
+portion of object handshape predicates. One explanation for this finding
+is that signers used object handshape to emphasize the change of state
+of the patient, even for an agentive event. For example, in an event in
+which someone puts a pen down onto a table, producing a predicate
+with object handshape (i.e., an extended index finger) highlights the
+pen's change of location. Signers may therefore use a combination of
+handling and object handshape predicates productively to emphasize or
+deemphasize the agent as suggested by the context.
+In addition to Body-Agent, Hand-Agent and No Agent videos, we
+included a fourth condition, an Event Control video. If linguistic devices
+for expressing agent-backgrounding have not yet emerged for a parti-
+cular group of signers, then we expect that these signers will not use
+handshape to distinguish Body-Agent from Hand-Agent events, which
+would be a null effect (i.e., Body-Agent descriptions do not differ from
+Hand-Agent descriptions). However, a null effect might have little to do
+with agent-backgrounding, and might instead reflect general con-
+straints on signers' descriptions, such as a dispreference for producing
+multiple predicates or a dispreference for producing both handling and
+object handshape predicates in a single trial. To control for these fac-
+tors, we asked signers to describe agentive events that are strongly
+patient-oriented and we presented them in a Hand-Agent frame, thus
+further downplaying the agent. In these Event Control videos, the hand
+of an agent moves the patient into an unusual configuration, e.g., tip-
+ping a book onto its spine and then open. The complexity and oddity of
+the change undergone by the patient in these events makes the patient
+more conceptually prominent than the patient in the Hand-Agent
+events. We expected all signers to use handshape to emphasize the
+patient in these events. Note that Hand-Agent and Body-Agent videos
+display the same event from different perspectives. Event Control vi-
+deos provide an index of whether a signer can emphasize the patient in
+an agentive event but, because they do not portray the event shown in
+the Hand-Agent and Body-Agent conditions, they do not test agent-
+backgrounding per se.
+Turning to the signers themselves, we contrast three levels of lan-
+guage emergence, with adult homesigners constituting the first level –
+these individuals have each used their homesign system as a primary
+mode of communication for their entire lives with close hearing friends
+and family. Importantly, and in contrast to all signers of NSL, home-
+signers do not share their homesign system in the context of a linguistic
+community. Signers from the first cohort of NSL constitute the second
+level: these individuals share a sign system with deaf peers, but they
+had the task of reconciling multiple idiosyncratic homesign systems
+when this community was formed. Signers from the second and third
+3 As reviewed in Section 1.2, a variety of agent-backgrounding devices have
+been attested in sign languages (e.g., eye gaze, role shift). We analyzed agent
+(footnote continued)
+nominals and classifier handshape because these devices have been docu-
+mented as being used by NSL signers to encode agency (Coppola & Senghas,
+2010; Goldin-Meadow et al., 2015).
+L. Rissman, et al. Cognition 203 (2020) 104332
+5
+cohorts of NSL constitute the third level: these individuals are members
+of a signing community and also received a signed model from the
+previous generation of NSL. We report the results from the NSL signers
+in Experiment 1 and the homesigners in Experiment 2. In Experiment 3,
+we report how English speakers describe these stimuli when they can
+use only their hands to do so – this study explores how limitations on
+communicative modality constrain the range of concepts that language
+users can express.
+2. Experiment 1: NSL
+2.1. Participants
+We tested 18 signers in total. Eight participants were from the first
+cohort of NSL (NSL 1; F = 3; age: mean = 42 years,
+range = 37–48 years). These signers all entered school before age seven
+(mean = 4.4, range = 2.1–6.2 years). We also tested 10 participants
+from the second and third cohorts of NSL (NSL 2 & 3; F = 5; age:
+mean = 28, range = 21–33), who all entered school before age five
+(mean = 3.5, range = 2.1–4.7 years). Of these 10 signers, six were
+from the second cohort and four were from the third cohort. Since our
+question was whether exposure to a language model influences emer-
+gence of agent-backgrounding devices, we collapse the data from the
+second and third cohort signers in our analyses.
+2.2. Design and materials
+Participants described four types of videos: (1) In Body-Agent vi-
+deos, a person acted on an object (e.g., a woman tipped over a book),
+and the person's face, torso and hands were visible throughout the
+video. (2) In Hand-Agent videos, a person's hand entered the video
+frame from off screen, performed the same action as in the Body-Agent
+videos (e.g., tipping over a book), and then exited the frame. (3) In No
+Agent videos, the object moved on its own (e.g., a book fell over), with
+no person visible in the video. (4) In Event Control videos, a person's
+hand entered the frame from off screen but performed an unusual ac-
+tion on the object (e.g., opening the book while tipping it forward on its
+spine). In the Body-Agent videos, the patient is smaller relative to the
+video frame than the patient in the other three conditions. As discussed
+in Section 1.3, relative size of event participants is one influence on the
+use of agent-backgrounding constructions. The absence of the face/
+torso is another influence: Rissman et al. (2019) found that even when
+the size of the patient is held constant, occluding the body of the agent
+leads English-speakers to produce more passive descriptions. We con-
+structed stimuli that differ on both of these dimensions to increase the
+likelihood that NSL signers would produce agent-backgrounding con-
+structions. Fig. 2 shows still images from each of these four conditions.
+Previous work on emergence of agentive devices in sign languages used
+stimuli with only the hand/arm visible, and with the objects the same
+size in all of the vignettes (Coppola & Brentari, 2014; Brentari, DiRenzo,
+et al., 2015; Goldin-Meadow et al., 2015).
+Experiment 1 had a blocked within-subjects design in which parti-
+cipants viewed Hand-Agent videos, then Event Control videos, then
+Body-Agent videos, then No Agent videos. We chose this blocking to
+maximize the chance that participants would produce agent-back-
+grounding constructions. We reasoned that if participants saw Body-
+Agent videos first, they would receive information about the person-
+hood of the agents (e.g., male, balding), which could prime them to
+produce more agentive language in the Hand-Agent and Event Control
+conditions. Prior to the Hand-Agent block, participants saw a block
+containing static images of the opening frame of the Hand-Agent vi-
+deos. No people were present in these static images. The purpose of this
+block was to familiarize participants with the objects in the videos and
+to identify which labels participants used to describe the objects. The
+descriptions of these static images are not reported in the analysis.
+There were five different types of items (featuring three different
+agents) across the four video conditions: (1) a woman tipping over a
+book/a book falling/a woman opening a book while pushing it onto its
+spine, (2) a man spinning a tire on a string/a tire spinning on a string/a
+man lifting a tire on a string onto a hook, (3) a woman opening a
+dresser door/a dresser door swinging open/a woman pushing a dresser
+onto its side, (4) a woman pushing a tube down into water/a tube
+sinking in water/a woman pushing down and rotating a tube in water,
+and (5) a man pushing a marker down a ramp/a marker rolling down a
+ramp/a man pushing a marker down a ramp and standing it on its side.
+Fig. 2. Still images from videos in each of the four experimental conditions. The
+black box demarcates the three main conditions of interest. The Event Control
+condition, which displays a conceptually prominent patient in a Hand-Agent
+frame (which also highlights the patient), was included to ensure that partici-
+pants have devices that focus on the patient.
+L. Rissman, et al. Cognition 203 (2020) 104332
+6
+Several participants reported that they did not understand what was
+happening in the events where someone pushed a tube down into
+water. Given this ambiguity, we excluded all of the tube events from the
+analysis.
+In addition to the test items, each participant also described 18 filler
+videos. In half of the fillers, a person was performing a repeated ac-
+tivity, such as jumping or spinning in place (Activity fillers); in the
+other half, an inanimate object was undergoing an action with no ob-
+vious start or endpoint, such as a flag waving or water running in a
+faucet (Object fillers). The purpose of these fillers was to increase the
+variety in the stimuli and decrease the possibility that participants
+would become consciously aware of the structure of the task, which
+could prime them to linguistically distinguish the conditions. These
+fillers were also intended to encourage participants to produce both
+person-oriented sentences (for the Activity fillers) and object-oriented
+sentences (for the Object fillers). The fillers were presented randomly
+throughout the five blocks of the experiment (static block +4 video
+blocks). Summing across all stimuli, participants saw 43 images/videos.
+All participants saw the stimuli in the same order. 4 Each video was
+approximately 3–4 s long.
+2.3. Procedure
+Videos were displayed on a laptop computer positioned on a table to
+the side of the participant. After each video played, a gray screen ap-
+peared, and the participants described what they had seen to a signer of
+similar age. An experimenter was seated next to the computer and
+presented the next trial after the participants had completed their de-
+scriptions. Participants were free to provide a description of any length
+for each of the videos. Participants were filmed via a single video
+camera placed directly opposite them.
+2.4. Coding
+Videos of the participants' descriptions were coded using the an-
+notation software ELAN (Crasborn & Sloetjes, 2008). We annotated
+each sign that was produced, and we present here analyses for two
+categories of signs: agent nominals and event descriptions. We coded three
+types of agent nominals: first, agent labels, which included the following
+conventionalized NSL signs MAN, WOMAN, GLASSES and PERSON.5
+Second, points to the chest, which Coppola and Senghas (2010) ana-
+lyzed as a switch-reference device marking the subject. Third, the NSL
+person classifier sign, in which the index and middle finger are in the
+shape of an inverted V. Signs were considered event descriptions if they
+iconically represented the action displayed in the vignette and if they
+were produced in the signing plane which corresponded to the plane in
+which the event took place (see Brentari, Coppola, Mazzoni, & Goldin-
+Meadow, 2012). For reasons of convenience, we refer to event de-
+scription signs as “predicates.”
+Each event description predicate was coded for how the handshape
+of the dominant hand represented the patient in each video (i.e., the
+book, tire, dresser or marker; see Fig. 2). We coded the following
+handshape categories: handling, where the hand represented how the
+patient was manipulated in the video; object, where the hand re-
+presented the shape either of the entire patient (e.g., a flat palm re-
+presenting a book) or a subpart of the patient (e.g., a curved hand re-
+presenting the edge of a tire); and place-holder, where the hand traced
+the path of motion but represented none of the features of the agent/
+patient (e.g., an extended index finger resembling a pointing gesture).
+Since we were interested in how signers encode agency, we collapsed
+the categories object and place-holder into the overarching category non-
+handling in our analysis, as neither of these handshape types encodes
+features of the agent. In addition to these three handshape types, we
+also coded a sequential handling–non-handling category, where for a
+single sign, the hand transitioned mid-stroke from a handling to a non-
+handling shape; and an ambiguous category, where the handshape could
+be representing either a person manipulating an object or the object
+itself (e.g., two curved hands forming a circle, representing either lifting
+a tire or the shape of the tire itself). The stimuli were designed to
+minimize this type of ambiguity. Predicates with ambiguous handshape
+were excluded from analysis. Table 1 shows the rates at which parti-
+cipants produced each of these handshape types. Note that signers often
+produced more than one predicate in each trial.
+The data were coded by a research assistant, who met with the first
+and second authors to discuss any unclear responses. To assess relia-
+bility of the coding, a second research assistant who was familiar with
+the coding scheme but was not part of these discussions, and was un-
+familiar with our research questions, coded a random 10% of the NSL
+trials. There was 100% agreement between the two coders as to whe-
+ther the trial contained an agent nominal. For event descriptions, a sign
+was scored as a match if the two coders agreed both as to whether the
+sign was an event description and as to the handshape type of the sign.
+Across all signs produced, there was a 94% agreement rate with respect
+to these criteria.
+2.5. Results
+2.5.1. Agent omission analysis
+All 18 NSL signers produced at least one agent nominal during the
+experiment. Only one NSL 2 signer produced agent nominals in the No
+Agent condition (the sign PERSON immediately followed by the lexical
+sign NOTHING, negating the agent label). In contrast, agent nominals
+were produced for all three types of agentive events. This result makes
+it clear that NSL signers can and do use lexical devices to encode
+agency. The bars in Fig. 3 show the average proportion of trials where
+agent labels, points to chest and person classifiers were produced for
+each cohort and for each of the three agentive conditions (Body-Agent,
+Hand-Agent, Event Control). The circles in Fig. 3 show the average
+proportion of trials where signers produced at least one agent nominal.
+In Fig. 3, we see that NSL signers produced agent nominals on most,
+but not all, Body-Agent trials. For both cohorts, agent labels were by far
+the most common type of agent nominal. Across the four signs that we
+coded as agent labels, the signs MAN and WOMAN were most common
+(MAN: 62%, WOMAN: 35%, GLASSES: 2%, PERSON: 1%). We modeled
+the differences across the three agentive conditions using mixed effects
+logistic regression and the lme4 package for R (Bates & Maechler, 2009;
+R Core Team, 2017), modeling whether or not a signer produced at
+least one agent nominal per trial. Each model included random inter-
+cepts for Subject and Item. Possible fixed effects were Condition (Body-
+Agent vs. Hand-Agent vs. Event Control) and Cohort (NSL 1 vs. NSL 2 &
+3). Models were evaluated through nested model comparison. 6 We
+4 Rissman et al. (2019) found that English speakers produced more passive
+descriptions for Hand-Agent events than Body-Agent events with a different set
+of stimuli. To verify that the stimuli in the current study elicited a similar
+contrast in the particular blocked design we used, we asked 27 English speakers
+on Amazon Mechanical Turk to describe our stimuli. We observed the following
+rates of passive sentences in each of the video conditions: Body-Agent: 4%,
+Hand-Agent: 17%, No Agent: 1%, Event Control: 33%. These percentages are
+comparable to those reported by Rissman et al. and validate that both Hand-
+Agent and Event Control videos are more patient-oriented than Body-Agent
+videos.
+5 The agent in the Body-Agent videos that featured a dresser was wearing
+glasses. We included the sign GLASSES to maintain compatibility between the
+homesign and NSL analyses; however, GLASSES only appeared twice among the
+106 NSL agent labels.
+6 Starting with an intercept-only model, if the addition of a particular factor
+significantly increases the likelihood of the model according to the log-like-
+lihood ratio test, this indicates a main effect of this factor (Quené & van den
+Bergh, 2008). Given two models that differ by one independent variable, the
+L. Rissman, et al. Cognition 203 (2020) 104332
+7
+attempted to fit models including by-Subject and by-Item random
+slopes but these models did not converge, perhaps due to our small
+sample size.
+The best-fitting model of the NSL data included the Condition fixed
+effect but not the Cohort effect or the interaction between Condition
+and Cohort. NSL signers were more likely to produce at least one agent
+nominal in the Body-Agent condition than in the Hand-Agent condition
+(β = −3.9, SE = 0.6, p < .001) or the Event Control condition
+(β = −5.2, SE = 0.7, p < .001). At the individual level, seven out of
+eight NSL 1 signers were more likely to produce an agent nominal in the
+Body-Agent condition than in the Hand-Agent condition (the remaining
+NSL 1 signer always produced agent nominals in these two conditions).
+Similarly, nine out of ten NSL 2 & 3 signers were more likely to produce
+an agent nominal in the Body-Agent than in the Hand-Agent condition
+(the remaining signer produced agent nominals for all of these trials).
+NSL 1 and NSL 2 & 3 signers thus robustly use agent omission as a
+lexical strategy to encode agent-backgrounding.
+To assess whether there was a trade-off between signs for the agent
+and signs for the patient, we analyzed whether signers' production of
+patient nominals (e.g., BOOK, MARKER) differed across conditions and
+cohorts. We counted as patient nominals both conventionalized lexical
+signs and classifiers referring to the patient (e.g., signs tracing the tire
+hanging from the string). Rates of producing patient nominals were
+high across conditions and cohorts. Averaging across cohorts, the rate
+of producing at least one patient nominal per trial was 81% in the Body-
+Agent condition, 97% in the Hand-Agent condition, 89% in the No
+Agent condition and 81% in the Event Control condition. We analyzed
+these data using mixed effects logistic regression as above, with Body-
+Agent as the reference level for the Condition effect. We found a
+significant main effect of Condition but no effect of Cohort or interac-
+tion between Condition and Cohort. Signers were more likely to pro-
+duce a patient nominal in the Hand-Agent condition than in the Body-
+Agent condition (β = 2.6, SE = 1.1, p < .05). This may indicate a
+trade-off between production of agent and patient nominals.
+Nonetheless, it is difficult to interpret this finding as showing that NSL
+signers use patient production to mark the prominence of the patient, as
+there was no difference between the Body-Agent condition and either
+the No Agent or Event Control conditions. Recall that the Hand-Agent
+events were the first video block that signers saw. It may be that signers
+almost always produced patient nominals for these videos because it
+was the first time they were seeing each type of vignette.
+2.5.2. Predicate handshape analysis
+We next tested whether NSL signers use handshape morphology in
+their event descriptions to encode agentive and agent-backgrounding
+construals. Given the literature reviewed in Section 1.2, we predict that
+all cohorts of NSL will use handshape to distinguish agentive events
+from non-agentive events: handling handshapes for Body-Agent events,
+and non-handling handshapes for No Agent events. These results would
+support the core conceptual status of agency. If agent-backgrounding
+has the same priority for linguistic encoding as agency, we expect to
+find that agent-backgrounding constructions will be used by all groups
+of signers to distinguish Body-Agent from Hand-Agent events. In addi-
+tion, we expect that all groups will distinguish Body-Agent videos from
+Event Control videos because of the unusual change of state in the
+patient in the control videos (which makes the patient likely to be
+noticed and described).
+As a primary analysis, we analyzed the number of handling and non-
+handling predicates that signers produced for each trial, and whether
+the number varied across the four conditions. For this analysis, se-
+quential handling–non-handling signs, where the sign transitions mid-
+stroke from a handling to a non-handling handshape, were counted
+Table 1
+Mean number of predicates per trial and proportion of total predicates with each handshape type by signer group, averaged across all conditions.
+Participant group N # of predicates Predicates per Trial Handshape types
+Handling Non-handling Sequential handling– non-handling Ambig
+Object Place-holder
+NSL cohort 1 (Exp 1) 8 219 1.7 0.47 0.31 0.16 0.05 0.00
+NSL cohorts 2 & 3 (Exp 1) 10 275 1.7 0.39 0.44 0.13 0.04 0.00
+Homesigners (Exp 2) 4 94 1.5 0.26 0.49 0.24 0.00 0.01
+Silent gesturers
+(Exp 3)
+12 252 1.3 0.50 0.26 0.23 0.01 0.00
+Fig. 3. Proportion of trials on which NSL signers (Cohorts 1 and 2 & 3) produced each type of agent nominal across the three agentive conditions. Circles show the
+proportion of trials where signers produced at least one agent nominal. Error bars show binomial 95% confidence intervals calculated using the Wilson method.
+(footnote continued)
+difference between the log-likelihoods of these models multiplied by −2 is
+distributed as a chi-squared random variable with df = 1.
+L. Rissman, et al. Cognition 203 (2020) 104332
+8
+twice, once as a handling predicate and once as a non-handling pre-
+dicate.7 Fig. 4 presents the average number of handling and non-
+handling predicates produced per trial by each cohort of NSL signers.
+We analyzed the predicate frequency data using mixed effects models
+and the lme4 package for R, assuming an underlying Poisson distribu-
+tion (Coxe, West, & Aiken, 2009; Gardner, Mulvey, & Shaw, 1995). We
+fit separate models for the handling and non-handling predicate data.
+For this first analysis, we treated these two handshape types as distinct
+dependent variables, as signers have the option of producing either type
+of handshape, or both types. The possible fixed effects for each model
+were Cohort (NSL 1 vs. NSL 2 & 3) and Condition (Body-Agent vs.
+Hand-Agent vs. No Agent vs. Event Control). We chose Body-Agent as
+the reference level, as this is the most unambiguously agentive condi-
+tion. We included random intercepts for Subject and Item. 8 We at-
+tempted to fit models including by-Subject and by-Item random slopes
+but these models did not converge, perhaps due to our small sample
+size.
+We first modeled production of non-handling handshapes. The
+Condition effect contributed significantly to the model (χ 2
+(3) = 35.1,
+p < .001) but the Cohort effect did not (χ 2
+(1) = 1.6, p = .2). NSL
+signers produced more non-handling predicates in each of the three
+non-Body-Agent conditions than in the Body-Agent condition (Hand-
+Agent: β = 0.47, SE = 0.21, p = .02; Event Control: β = 0.89,
+SE = 0.19, p < .001; No Agent: β = 0.96, SE = 0.19, p < .001). We
+did not find evidence that one cohort produced more non-handling
+handshapes than the other.
+Our principal question in this study was whether NSL 1 and NSL 2 &
+3 signers differ in how they distinguish the Body-Agent vs. Hand-Agent
+events. To test whether an interaction between Cohort and Condition
+(particularly Body-Agent vs. Hand-Agent) modulated production of
+non-handling handshapes, we added the interaction term (Cohort x
+Condition) to the model with the Condition fixed effect. In this model,
+the significant main difference between the Body-Agent and Hand-
+Agent conditions disappears and a marginally significant interaction
+between the Hand-Agent level and Cohort emerges (β = 0.52,
+SE = 0.28, p = .06). This result suggests that NSL 2 & 3 signers are
+more inclined to produce non-handling handshapes when the face of
+the agent is occluded than NSL 1 signers are. NSL 2 & 3 signers may
+thus be using non-handling handshapes to convey agent-back-
+grounding. None of the interaction terms for the three other levels of
+the Condition factor (Body-Agent, No Agent and Event Control) were
+significant.
+Turning to NSL signers' production of handling predicates, the
+Condition effect contributed significantly to the model (χ 2
+(3) = 62.5,
+p < .001) but the Cohort effect did not (χ2
+(1) = 2.2, p = .14). NSL
+signers produced fewer handling predicates in the No Agent and Event
+Control conditions than in the Body-Agent condition (No Agent:
+β = −1.79, SE = 0.29, p < .001; Event Control: β = −0.39,
+SE = 0.17, p = .02). Rates of handling handshape did not differ,
+however, between the Body-Agent and Hand-Agent conditions. We did
+not find evidence that one cohort produced more handling handshapes
+than the other.
+As with the analysis of non-handling handshapes, we then modeled
+whether production of handling handshape in any of the four event
+conditions interacted with Cohort. We added the interaction term to the
+model with the Condition main effect and found that in the Event
+Control condition, NSL 2 & 3 signers were less likely than NSL 1 signers
+to produce handling handshapes (β = −0.54, SE = 0.27, p = .04). In
+this model with the interaction term, there is no significant main dif-
+ference between the Body-Agent and Event Control conditions. None of
+the interaction terms for the three other levels of the Condition factor
+(Body-Agent, Hand-Agent and No Agent) were significant.
+These results show that NSL signers use both handling and non-
+handling handshape to encode agency. For Body-Agent events, signers
+used an average of 1.2 handling and 0.5 non-handling predicates per
+trial. For No-Agent events, signers used 0.2 handling and 1.4 non-
+handling predicates per trial on average. The cohorts were not statis-
+tically different in how they used handshape to distinguish Body-Agent
+vs. No Agent events.
+The cohorts did differ, however, in how they used handshape to
+convey agent-backgrounding. We found a marginal interaction such
+that the difference in production of non-handling handshapes between
+the Body-Agent and Hand-Agent conditions was greater for NSL 2 & 3
+signers than for NSL 1 signers. This facility with agent-backgrounding
+language among NSL 2 & 3 signers extends to Event Control videos as
+well: here they primarily used non-handling handshapes, highlighting
+the prominence of patient in these events. Although NSL 2 & 3 signers
+produced numerically fewer handling handshapes in the Hand-Agent
+condition than in the Body-Agent condition, we did not find a sig-
+nificant main difference between these two conditions for handling
+handshapes or a significant interaction with Cohort.
+For NSL 1 signers, the numerical difference in the use of non-
+handling handshapes between the Body-Agent and Hand-Agent condi-
+tions was small: 0.5 vs. 0.6 non-handling handshapes per trial in each
+respective condition. In a model of NSL 1 signers' production of non-
+handling predicates, this difference was not statistically significant
+(β = 0.17, SE = 0.34, p > .1). This null effect is not likely to reflect a
+general dispreference for producing a non-handling handshape for an
+agentive event, as NSL 1 signers readily did so in the Event Control
+condition. These results therefore suggest that NSL 1 signers do not use
+handshape in classifier predicates to convey agent-backgrounding.
+In this first analysis, we computed average rates of predicate pro-
+duction, treating use of handling and non-handling handshapes as
+distinct dependent variables. In a second analysis, we analyze hand-
+shape use across an entire trial, providing a complementary perspective
+on the differences across the conditions. We classified each trial ac-
+cording to which handshapes it contained: only handling-handshape
+predicates; only non-handling-handshape predicates; or both handling
+and non-handling-handshape predicates. This analysis provides a view
+of the strategy used across an entire utterance, normalizing predicate
+frequency in favor of utterance type. For this analysis, a trial with a
+sequential handling–non-handling sign counted as a trial with both
+handling and non-handling-handshape predicates. Note that the vast
+majority of “both” trials contained two or more distinct handling and
+non-handling signs. Fig. 5 presents the average proportion of trials
+containing only handling, only non-handling, or both handling and
+non-handling predicates produced by each cohort of signers.
+Both NSL 1 signers and NSL 2 & 3 signers tended to produce trials
+containing only non-handling handshapes in the No Agent condition,
+and only handling handshapes in the Body-Agent condition. However,
+the groups differed with respect to the Hand-Agent condition. NSL 1
+signers displayed the same distribution of handshapes in the Hand-
+Agent condition as in the Body-Agent condition. In contrast, NSL 2 & 3
+signers showed different distributions: they produced predominantly
+both handling and non-handling responses in the Hand-Agent condition,
+but predominantly produced handling only responses in the Body-Agent
+condition.
+We evaluated these data using the Friedman rank sum test, a non-
+parametric statistic used for repeated measures designs with a
+7 Across all cohorts of NSL, 23 sequential handling–non-handling signs were
+produced: 5 in the Body-Agent condition, 2 in the Hand-Agent condition, 4 in
+the No Agent condition and 12 in the Event Control condition.
+8 We included both Subject and Item random intercepts following the practice
+of using the most maximal random effects structure that the data/design sup-
+port (Barr, Levy, Scheepers, & Tily, 2013). Adding the Item intercept did not,
+however, significantly increase the likelihood of the model. Averaging across all
+conditions, NSL signers produced roughly the same number of handling and
+non-handling handshape predicates for each of the four items: the mean
+number of handling handshapes per trial ranged between 0.7 (book) and 0.9
+(tire), whereas the mean number of non-handling handshapes ranged between
+0.8 (dresser) and 1.2 (tire).
+L. Rissman, et al. Cognition 203 (2020) 104332
+9
+multinomial outcome variable (Friedman, 1937; Siegel, 1956). We
+computed ranks by representing the three levels of the outcome vari-
+able as an ordinal scale from most-agentive to least-agentive (i.e.,
+handling-only, both handling & non-handling, non-handling-only). We
+tested the two groups of signers separately. For both NSL 1 and NSL 2 &
+3 signers, ranks were different across the four conditions, indicating
+main effects of condition on signers' response type (NSL 1:
+χ 2
+(3) = 46.8, p < .001; NSL 2 & 3: χ 2
+(3) = 58.2, p < .001). For both
+groups of signers, planned pairwise comparisons showed that ranks
+were significantly higher in the Body-Agent condition than in the No
+Agent condition (NSL 1: χ 2
+(1) = 26.3, p < .001; NSL 2 & 3:
+χ 2
+(1) = 38.0, p < .001). Ranks were also significantly different in the
+Body-Agent condition than in the Event Control condition (NSL 1:
+χ 2
+(1) = 5.3, p < .025; NSL 2 & 3: χ2 (1) = 18.2, p < .001). The two
+groups of signers differed, however, in the comparison between Body-
+Agent and Hand-Agent: For NSL 1, ranks were not significantly different
+between these two conditions (χ 2
+(1) = 0.5, p > .1). For NSL 2 & 3, by
+contrast, the ranks were significantly higher in the Body-Agent than in
+the Hand-Agent condition (χ 2
+(1) = 12.1, p < .001).
+We examined the robustness of the difference between Body-Agent
+and Hand-Agent conditions (i.e., the robustness of the agent-back-
+grounding effect) in NSL 2 & 3 signers across individuals and across
+items. In terms of individuals, 8 of the 10 signers in this group produced
+more trials with only handling handshapes in the Body-Agent condition
+than in the Hand-Agent condition. The remaining two signers produced
+more trials with only non-handling handshapes in the Hand-Agent
+condition than in the Body-Agent condition. The agent-backgrounding
+effect was also robust across items in NSL 2 & 3 signers, as for all four of
+the items, there were more trials with only handling handshapes in the
+Body-Agent condition than in the Hand-Agent condition.
+2.5.3. Word order and agent nominal/handshape interaction
+We next analyzed whether NSL signers favor particular word orders
+for descriptions that contained both handling and non-handling pre-
+dicates. As discussed in Section 1.3, serial verb constructions are one
+type of syntactic structure that can serve an agent-backgrounding
+function. It is possible that in NSL signers' “both” trials, the handling
+and non-handling handshapes are represented as a unit. Serial verb
+constructions involve multiple verbs that function as a single syntactic
+unit. Across languages, they have a range of characteristics: they can
+Fig. 4. Average number of non-handling and handling predicates produced per trial in each condition by each group of NSL signers. Error bars show Poisson 95%
+confidence intervals.
+Fig. 5. Average proportion of trials containing only handling handshapes, only non-handling handshapes, or both handling and non-handling handshapes in each
+condition by each group of NSL signers. Error bars show binomial 95% confidence intervals calculated using the Wilson method.
+L. Rissman, et al. Cognition 203 (2020) 104332
+10
+involve two or more verbs, the verbs can be adjacent or not, and the
+range of possible semantic relationships between the verbs is diverse
+(see Aikhenvald, 2006; Bisang, 2009; Haspelmath, 2016 for review).
+We are not yet able to determine whether NSL has serial verb con-
+structions, as the prosodic and constituency diagnostics that indicate
+whether two verbs are part of the same clause, without any dependency
+relationship between them, are not yet available for NSL. Nonetheless,
+to gauge the existence of syntactic patterns in the “both” trials, we
+analyzed how often handling and non-handling predicates were signed
+consecutively. In the 70 “both” trials produced by NSL signers, 73%
+included a 2-predicate consecutive sequence, and an additional 17%
+included a 3-predicate consecutive sequence. Thus only 10% of “both”
+trials featured non-consecutive predicates, a syntactic regularity com-
+patible with the interpretation that handling and non-handling pre-
+dicates are part of a single syntactic unit. The non-consecutive-se-
+quences were distributed evenly across NSL 1 and NSL 2 & 3 signers.
+The existence of a syntactic pattern in “both” trials is further supported
+by the order of predicates within the consecutive sequences. For 94% of
+2-predicate sequences, the word order was [handling — non-hand-
+ling]. 9 This order is reminiscent of the “iconic” constituent order that
+has been proposed for serial verb constructions, where the verb en-
+coding causation precedes the verb encoding result (see Aikhenvald,
+2006). For 3-predicate sequences, the word order pattern is less clear:
+six different orders were produced, and the most frequent single word
+order was [handling — non-handling — handling].10 We return to these
+results in Section 5.3 when we discuss how agent-backgrounding in NSL
+may continue to evolve.
+We have thus far described in separate analyses how NSL signers use
+agent nominals and classifier handshape to convey agent-back-
+grounding. In a final analysis of the NSL data, we tested whether these
+two linguistic devices interact with each other. For example, do they
+play complementary roles, such that signers are more likely to produce
+an agent nominal for trials with only non-handling handshapes? We
+focused on the Hand-Agent condition for this analysis, as signers pro-
+duced agent nominals on almost all Body-Agent trials (NSL 1: 91%; NSL
+2 & 3: 85%). Table 2 is a 2 × 3 contingency table showing the number
+of trials with and without agent nominals for each of these three
+handshape response types (handling only, non-handling only, both
+handling and non-handling). Italicized values show what is expected by
+chance given the marginal distributions of agent nominal production
+and handshape type, whereas the bolded values show what was actually
+observed.
+Using a 2 × 3 Freeman–Halton extension of the Fisher's exact
+probability test (Freeman & Halton, 1951), we did not find that cell
+values differed significantly from a chance distribution for either cohort
+(P A = 0.79 for NSL 1; PA = 0.67 for NSL 2 & 3). These data therefore
+suggest that for descriptions of Hand-Agent videos, production of agent
+nominals does not interact with handshape choice. NSL signers may
+instead be using these two devices as independent markers of agency/
+agent-backgrounding.
+2.6. Discussion
+Both groups of NSL signers robustly distinguish agentive from non-
+agentive events, using both lexical (nominals) and morphological
+(handshapes) strategies. They produce agent nominals in agentive
+events and omit them in non-agentive events; and they produce hand-
+ling handshapes in agentive events and non-handling handshapes in
+non-agentive events. This result supports previous findings on NSL
+(e.g., Goldin-Meadow et al., 2015).
+In terms of agent-backgrounding, both groups of NSL signers used the
+lexical agent omission strategy to encode agent-backgrounding (i.e.,
+they produced many more agent nominals in the Body-Agent condition
+than in the Hand-Agent condition). However, only the second and third
+cohorts used handshape morphology to encode agent-backgrounding.
+The first cohort displayed the same distribution of handling and non-
+handling handshapes in the Body-Agent and Hand-Agent videos: more
+handling than non-handling handshapes in both Body-Agent and Hand-
+Agent videos. In contrast, the second and third cohorts used different
+distributions for these two conditions: more handling than non-hand-
+ling handshapes in Body-Agent videos, but equal numbers (and more
+trials containing both handshapes) in Hand-Agent videos. The lack of
+agent-backgrounding in NSL 1 was not due to a dispreference for using
+non-handling handshapes to describe patient-oriented events, as NSL 1
+used predominantly non-handling handshapes to describe the Event
+Control videos, which were patient-oriented.
+We thus observed different types of semantic distinctions made in
+the lexicon versus in morphosyntactic structure. With respect to the
+lexicon, we do not observe an asymmetry in language emergence be-
+tween encoding agency and encoding agent-backgrounding: signers
+with a language community but without a language model (NSL 1) used
+agent nominals to encode both semantic functions. We do observe an
+asymmetry, however, with respect to handshape morphology: only
+signers who learned from a language model (NSL 2 & 3) used handshape
+to encode agent-backgrounding.
+We next investigate expression of agency and agent-backgrounding
+in adult homesigners. Testing these individuals will reveal whether
+strategies for encoding agency and agent-backgrounding emerge even
+among signers with neither a linguistic community nor a language
+model. To the extent that homesign constitutes an earlier stage of
+language emergence than cohort 1 NSL, we predict that homesigners
+will use handshape morphology to convey agentivity (Goldin-Meadow
+et al., 2015) but not use handshape morphology to convey agent-
+backgrounding. This finding cannot be taken for granted, however, as
+individual homesigners are able to innovate a range of linguistic
+structures (Coppola, 2002; Goldin-Meadow, 2003; Horton et al., 2017)
+and they display variability at the individual level (Abner et al., 2019;
+Table 2
+Contingency table for the Hand-Agent condition showing the distribution of
+trials with or without agent nominals across the three handshape response
+types. Italicized values are what is expected by chance; bolded values are ob-
+served data.
+Handling Non-handling Both
+NSL 1
+Agent nominal present 6 0 4 10
+5 0 5
+Agent nominal absent 12 1 9 22
+13 1 8
+18 1 13
+NSL 2 & 3
+Agent nominal present 1 2 5 8
+1 1 6
+Agent nominal absent 6 8 18 32
+6 9 17
+7 10 23
+9 For this analysis, we excluded three trials in which one of the predicates in
+the 2-predicate sequence involved a sequential change from one handshape to
+another. These sequential predicates are difficult to interpret with respect to
+word order patterns.
+10 These multiple handling handshapes are morphosyntactically equivalent
+but not necessarily phonologically identical.
+L. Rissman, et al. Cognition 203 (2020) 104332
+11
+Coppola, 2002; Coppola & So, 2006; Gleitman et al., 2019). In NSL,
+agent-backgrounding appears to have emerged first through a lexical
+device and only later through a morphological device. If this asymmetry
+indicates a broader constraint on language emergence, then we predict
+that there may be homesigners who encode agent-backgrounding lexi-
+cally but not morphologically, but not homesigners who show the re-
+verse pattern.
+3. Experiment 2: Homesign
+3.1. Participants
+We tested four adult Nicaraguan homesigners (F = 1; age:
+mean = 34, range = 29–38). These individuals are integrated into the
+social life of their local communities and families and displayed no
+apparent congenital conditions, aside from being deaf. These in-
+dividuals have received limited or no formal education. The home-
+signers are not in contact with each other and have minimal exposure to
+deaf signers of NSL (Gagne, 2015).
+3.2. Design, materials, procedure and coding
+The design, stimuli and testing procedure were the same as in
+Experiment 1. The signs GLASSES, WOMAN, BEARD and HAIR were
+coded as agent labels since these signs referred iconically to the agent
+when they were produced by individual homesigners. We also con-
+sidered variations of the NSL sign MAN as labels. Although none of the
+homesigners had regular or extended contact with NSL signers, the two
+homesigners who produced the MAN sign likely borrowed it from NSL
+through occasional contact. As in Experiment 1, we also included points
+to the chest as agent nominals. No homesigner produced a sign that
+appeared to be functioning as a person classifier.
+The coding procedure for event descriptions was the same as in
+Experiment 1, as was the procedure for establishing reliability of event
+description coding. One-third of the homesign trials were coded for
+reliability, and we found a 93% agreement rate with respect to the
+predicate matching criteria described in Section 2.4. We did not cal-
+culate reliability across homesigners' agent nominals, as agent nominals
+were identified on an individual basis for each homesigner.
+3.3. Results
+3.3.1. Agent omission analysis
+We first analyzed whether use of agent nominals differed across the
+four conditions. Two of the four homesigners never produced agent
+nominals. The other two who did produce agent nominals produced
+them systematically with respect to condition. Regarding the expression
+of agency, we found that neither of these two homesigners produced an
+agent nominal in the No Agent condition (nor did they produce them in
+the Event Control condition). Homesigners can thus use the lexicon to
+encode agency.
+Turning next to agent nominals and agent-backgrounding, we found
+that Homesigner 2 produced at least one agent nominal on every Body-
+Agent trial, but on none of the Hand-Agent trials. Homesigner 3 showed
+the same pattern, albeit attenuated: he produced at least one agent
+nominal on 50% of the Body-Agent trials but on only 25% of the Hand-
+Agent trials. These results show that, for homesigners who produced
+agent nominals, these signs were more frequent when the face and torso
+of the agent were visible (i.e., Body-Agent trials) than when only the
+hand of the agent was visible (i.e., Hand-Agent trials). Thus, even at the
+earliest stages of language emergence, signers can use the lexical agent-
+omission strategy to convey agent-backgrounding. However, the
+strategy was used categorically by only one homesigner (Homesigner
+2). Neither Homesigner 1 or 4 produced any agent nominals.
+For the two homesigners who produced agent nominals, we ana-
+lyzed whether there was a trade-off between agent and patient nom-
+inals across the four conditions. Patient nominals were coded based on
+iconicity (e.g., two flat hands joined on the long axis in a V-shape was
+coded as BOOK). Homesigner 2 showed uniform behavior across the
+four conditions, producing patient nominals on 3 out of 4 trials.
+Homesigner 3, however, produced patient nominals on only 1 Body-
+Agent trial but on 3 out of 4 trials for the other three conditions. For
+Homesigner 3, there may be a trade off between agent and patient
+nominals.
+3.3.2. Predicate handshape analysis
+We next analyzed whether homesigners distinguished the four event
+types (Body-Agent, Hand-Agent, No Agent and Event Control) through
+handshape in their predicates. Fig. 6 shows the average number of
+handling and non-handling predicates that the homesigners produced
+in each of the four conditions.
+We analyzed predicate production using the Friedman rank sum
+test. 11 The number of handling predicates produced in each trial dif-
+fered across the four conditions (χ2 (3) = 49.4, p < .001). Comparing
+the Body-Agent condition to the other three conditions, signers pro-
+duced more handling predicates in the Body-Agent condition than in
+the No Agent condition (χ2
+(1) = 5.1, p < .05). Production of handling
+handshapes did not differ, however, between the Body-Agent and
+Hand-Agent conditions (χ2 (1) = 0.06, p > .10) or between the Body-
+Agent and Event Control conditions (χ 2
+(1) = 2.3, p > .10). This result
+Fig. 6. Average number of handling and non-handling predicates produced by homesigners per trial in each condition. Error bars show Poisson 95% confidence
+intervals.
+11 Although the dependent variable, number of predicates produced, is an
+interval variable, we used a non-parametric statistic given our small sample
+size.
+L. Rissman, et al. Cognition 203 (2020) 104332
+12
+suggests that the homesigners used handling predicates to encode
+agency (the distribution of their handshapes differed between No Agent
+and Body-Agent), but not agent-backgrounding (the distribution of
+their handshapes did not differ between Body-Agent and Hand-Agent).
+Turning to production of non-handling predicates, we found that the
+number of non-handling predicates also differed across the four con-
+ditions (χ 2
+(3) = 17.0, p < .001). Homesigners produced more non-
+handling predicates in the Event Control condition than the Body-Agent
+condition (χ2
+(1) = 4, p < .05), and marginally more non-handling
+predicates in the No Agent condition than in the Body-Agent condition
+(χ 2
+(1) = 3.1, p = .08). Non-handling predicates did not differ between
+the Body-Agent and Hand-Agent conditions (χ2 (1) = 0.06, p > .10).
+This result suggests that homesigners used non-handling predicates to
+encode agency, but not to encode agent-backgrounding; that is, they
+displayed the same patterns in their lexical and morphological devices.
+Analyzing the data at the level of the trial (Fig. 7), we found that,
+like NSL signers, homesigners primarily produced trials containing only
+non-handling handshapes in the No Agent condition, and only handling
+handshapes in the Body-Agent condition. With respect to the Hand-
+Agent condition, they resembled NSL 1 signers (and not the NSL 2 & 3
+signers): they displayed the same distribution of handshapes in the
+Hand-Agent condition as in the Body-Agent condition. We evaluated
+the contrasts between the Body-Agent condition and each of the three
+other conditions using the Friedman rank sum test. The ranks were
+different across the four conditions (χ 2
+(3) = 50.1, p < .001) and
+planned pairwise comparisons showed that ranks were significantly
+higher in the Body-Agent condition than in the No Agent condition
+(χ 2
+(1) = 5.1, p < .05). Ranks did not differ, however, between the
+Body-Agent and Hand-Agent conditions (χ2 (1) = 0.06, p > .10), and
+ranks were only marginally higher in the Body-Agent condition than the
+Event Control condition (χ2
+(1) = 3.1, p = .08). Thus, at the level of an
+entire utterance, homesigners encode agency but not agent-back-
+grounding (despite the fact that homesigners can use handshape to
+communicate about particularly patient-oriented events, i.e., the Event
+Control videos).
+Averaging across the four homesigners provides a view into how
+likely an adult Nicaraguan homesigner is to distinguish the four event
+conditions. It is important to keep in mind, however, that homesigners
+do not share a linguistic system with each other (they do not know one
+another), nor even with their main communication partners (Carrigan &
+Coppola, 2017). As mentioned, homesigners sometimes show con-
+siderable variability in the types of linguistic structures present in their
+systems (Coppola, 2002; Coppola & So, 2006; Horton, 2018; Horton
+et al., 2017). Although the homesigners we studied showed no evidence
+of distinguishing the Body-Agent and Hand-Agent events in the ag-
+gregate, there may be evidence that individual homesigners do so.
+Figs. 8–9 show individual homesigner data: the average number of
+handling and non-handling predicates produced in each condition
+(Fig. 8) and the proportion of trials falling under each by-trial strategy
+type in each condition (Fig. 9).
+Fig. 7. Average proportion of homesign trials containing only handling handshapes, only non-handling handshapes, or both handling and non-handling handshapes
+in each condition. Error bars show binomial 95% confidence intervals calculated using the Wilson method.
+Fig. 8. Average number of handling and non-handling predicates produced per trial in each condition by each homesigner.
+L. Rissman, et al. Cognition 203 (2020) 104332
+13
+Figs. 8–9 show that individual signers encode a distinction between
+agentive and non-agentive events: all four homesigners produce more
+handling predicates in the Body-Agent condition than the No Agent
+condition. In addition, three homesigners produce more non-handling
+predicates in the No Agent condition than the Body-Agent condition. All
+four homesigners produce a greater proportion of non-handling-only
+trials in the No Agent condition than the Body-Agent condition. Inter-
+estingly, the two homesigners who distinguish Body-Agent and No
+Agent videos most clearly through handshape (Homesigners 1 & 4) are
+the two homesigners who never produced agent nominals.
+In contrast to encoding agency, encoding agent-backgrounding at
+the individual level is less clear. Each homesigner displayed similar
+patterns in Body-Agent and Hand-Agent videos (although the pattern
+was not the same across the four homesigners). Fig. 9 shows that
+Homesigners 2 and 3 used identical response strategies across the Body-
+Agent and Hand-Agent conditions. Homesigner 1 produced both
+handling and non-handling predicates in the Body-Agent condition but
+not in the Hand-Agent condition. This distinction is the reverse of the
+NSL 2 & 3 pattern shown in Fig. 5. In summary, none of the four
+homesigners showed a clear morphological distinction between Body-
+Agent and Hand-Agent.
+3.4. Discussion
+The results of Study 2 show, in line with previous research, that
+homesigners robustly use a morphological strategy (handshape in event
+descriptions) to encode a distinction between agentive events and non-
+agentive events. We find minimal evidence, however, for morphological
+encoding of agent-backgrounding among homesigners. At the group
+level, homesigners did not use handshape to distinguish Body-Agent
+events from Hand-Agent events, and there was no strong evidence that
+individual homesigners do so (despite the fact that homesigners were
+able to use non-handling handshapes to encode a conceptually promi-
+nent patient in the Event Control videos). Recall from Section 2.5.2 that
+all ten NSL 2 & 3 signers showed at least one of the following patterns:
+producing more handling-only responses in Body-Agent than in Hand-
+Agent, or producing more non-handling-only responses in Hand-Agent
+than in Body-Agent. By contrast, only one homesigner (Homesigner 1)
+showed one of these patterns (and this homesigner showed a mixed
+response not clearly indicating agent-backgrounding; see Fig. 9). In
+total, these results are consistent with the model of language evolution
+proposed in Heine and Kuteva (2007), that language that encodes
+agent-backgrounding emerges after language that distinguishes agents
+from non-agents.
+The agent nominal data for homesigners also supports this
+conclusion, but more tentatively, as only two out of four homesigners
+produced any agent nominals. Nonetheless, both of these homesigners
+used agent nominals to distinguish agentive events from non-agentive
+events, whereas only one homesigner (Homesigner 2) made a sharp
+distinction between Body-Agent and Hand-Agent events using agent
+nominals. The pattern shown by Homesigner 2 suggests that agent-
+backgrounding emerges through lexical devices before morphological
+devices.
+One explanation for the results in Experiments 1 and 2 is that
+homesigners and NSL 1 signers are more limited in the range of se-
+mantic distinctions they can encode than NSL 2 & 3 signers are. This
+explanation may seem counterintuitive––if a group of signers is able to
+use distribution of handling and non-handling predicates to distinguish
+agentive from non-agentive videos, why would they not be able to
+contrastively distribute the same predicates to encode agent-back-
+grounding? In Experiment 3, we ask whether a limitation in the avail-
+able communication system can, in principle, prevent participants from
+distinguishing Body-Agent from Hand-Agent videos. In this experiment,
+English-speaking adults described the stimuli using only their hands (a
+“silent gesture” study, Goldin-Meadow, McNeill, & Singleton, 1996;
+Goldin-Meadow, So, Özyürek, & Mylander, 2008). We know from pre-
+vious work that English speakers conceptually distinguish Body-Agent
+and Hand-Agent scenes and encode this distinction in their language in
+an experimental setting (Rissman et al., 2019; footnote 4). But the silent
+gesture paradigm imposes significant restrictions on the mode of Eng-
+lish speakers' communication. That is, since English speakers are un-
+accustomed to having the manual modality be their sole channel of
+communication, they are limited in their ability to utilize this com-
+municative channel. If silent gesturers encode agency but not agent-
+backgrounding, we would have in-principle evidence that limitations in
+the linguistic system could account for homesigners and NSL 1 signers
+not encoding agent-backgrounding via handshape morphology.
+4. Experiment 3: Silent gesture
+4.1. Participants
+12 adult native English speakers participated in Experiment 3
+(F = 6, mean age = 26, range = 18–77). These speakers did not have
+experience with a signed language. An additional two participants were
+tested but were excluded for having studied American Sign Language.
+Participants were tested on the University of Chicago campus and re-
+ceived either course credit or $5 as compensation.
+Fig. 9. Proportion of homesign trials containing only handling handshapes, only non-handling handshapes, or both handling and non-handling handshapes in each
+condition by each homesigner.
+L. Rissman, et al. Cognition 203 (2020) 104332
+14
+4.2. Design, materials, procedure and coding
+The design and stimuli were the same as in Experiments 1–2.
+Participants were instructed to describe the videos without using their
+voice, using only their hands, arms, face or body; i.e., “silent gesture”.
+Participants were also instructed not to stand up from their chair or use
+physical props in their descriptions. Participants completed two prac-
+tice videos so that the experimenter could verify that they were com-
+fortable producing descriptions without their voice.
+Gesturers did not routinely produce labels for the agent (e.g., MAN,
+WOMAN), possibly because these meanings are non-trivial to convey
+iconically and gesturers do not share a conventionalized lexicon. Some
+gesturers produced a 2-legged stick figure with their middle and index
+fingers in an inverted V-shape, which were coded as agent nominals.
+Deictic gestures referencing either the signer's body or the stick figure
+gesture itself were also coded as agent nominals. As with the homesign
+data, we did not calculate reliability across the gesturers' agent nom-
+inals, as these were identified on an individual basis.
+The coding procedure for event descriptions was the same as in
+Experiments 1–2. In general, the handshapes of the silent gesturers
+were looser and more difficult to categorize than the handshapes of the
+signers and the homesigners. For this reason, two coders coded hand-
+shape for all of the silent gesture descriptions, and the second coder
+reported her confidence about the handshape coding (1 = not at all
+confident, 2 = moderately confident, 3 = completely confident). We
+calculated agreement between the two handshape codings (handling vs.
+non-handling handshape) across all predicates. Agreement was 57% for
+confidence level 1, 88% for confidence level 2, and 100% for con-
+fidence level 3. We excluded predicates with confidence level 1 from
+further analysis (N = 7). For the remaining predicates, overall agree-
+ment between the two codings was 91%.
+4.3. Results
+4.3.1. Agent omission analysis
+Only four of the 12 gesturers produced agent nominals. One of these
+gesturers produced agent nominals on 100% of Body-Agent trials and
+50% of Hand-Agent trials (nine agent nominals in total). The other
+three gesturers produced agent nominals only in the Body-Agent con-
+dition, producing five, two and one agent nominals, respectively. Agent
+omission does not thus appear to be a robust strategy for encoding ei-
+ther agency or agent-backgrounding in silent gesture, although a few
+gesturers may be using agent nominals systematically. The two ges-
+turers who produced a sizeable number of agent nominals patterned
+like Homesigners 2–3, with more agent labels in the Body-Agent con-
+dition than in the Hand-Agent condition.
+4.3.2. Predicate handshape analysis
+The gesturers failed to produce a predicate on only 2% of trials;
+these trials were excluded from analysis. Fig. 10 shows the average
+number of handling and non-handling predicates that gesturers pro-
+duced in each of the four conditions.
+We analyzed production of handling and non-handling predicates
+using mixed effects models and the lme4 package for R, assuming an
+underlying Poisson distribution. The best-fitting model of handling
+handshape production included the Condition effect. Gesturers pro-
+duced fewer handling predicates in the No Agent condition than in the
+Body-Agent condition (β = −1.47, SE = 0.34, p < .001). Handling
+handshape production did not differ, however, between Body-Agent
+and Hand-Agent (β = −0.13, SE = 0.22, p > .1), or between Body-
+Agent and Event Control (β = −0.24, SE = 0.22, p > .1). The best-
+fitting model of non-handling predicate production also included the
+Condition effect. Gesturers produced more non-handling predicates in
+the No Agent condition than in the Body-Agent condition (β = 1.08,
+SE = 0.27, p < .001). Production of non-handling predicates did not
+differ, however, between the Hand-Agent and Body-Agent (β = 0.38,
+SE = 0.30, p > .1) or between Event Control and Body-Agent
+(β = 0.45, SE = 0.30, p < .01).
+Analyzing handshape strategy at the level of the trial (Fig. 11), we
+find that gesturers clearly distinguished the Body-Agent and No Agent
+conditions: ‘only handling’ was the predominant response for Body-
+Agent trials, whereas ‘only non-handling’ was the predominant re-
+sponse for No Agent trials. However, Hand-Agent trials were similar to
+Body-Agent trials––‘only handling’ was the predominant response in
+both types of trials, as it was in Event Control trials; silent gesturers thus
+do not distinguish Body-Agent from Event Control trials to the same
+degree that NSL signers and homesigners do.
+We evaluated the contrasts between the Body-Agent condition and
+each of the three other conditions using the Friedman rank sum test. For
+silent gesture, the ranks were different across the four conditions
+(χ 2
+(3) = 22.3, p < .01) and planned pairwise comparisons showed that
+ranks were significantly higher in the Body-Agent condition than in the
+No Agent condition (χ2 (1) = 18.7, p < .01). Ranks did not differ,
+however, between the Body-Agent and Hand-Agent conditions
+(χ 2
+(1) = 1.1, p > .10), or between the Body-Agent and Event Control
+conditions (χ 2
+(1) = 1.4, p > .1).
+4.4. Discussion
+Like the NSL signers and homesigners, silent gesturers used hand-
+shape robustly to encode agency (handling handshape in Body-Agent
+vs. non-handling handshape in No Agent events). This finding under-
+scores the prominence of the iconic mapping between agency and
+handling handshape, as even hearing speakers with minimal experience
+communicating solely in the manual modality were able to draw on this
+iconicity.
+Beyond agency, however, silent gesturers' linguistic expression was
+limited. Like NSL 1 signers and homesigners, they did not use hand-
+shape to encode agent-backgrounding. In contrast to these two types of
+signers, however, silent gesturers also failed to distinguish Body-Agent
+videos from Event Control videos. As English speakers make both dis-
+tinctions when using English (see footnote 4), this result suggests that
+forcing English speakers to use an unfamiliar mode of communication
+dramatically reduces the range of meanings they are able to convey.
+We know from previous studies that, when speaking, English
+speakers encode the agent in Hand-Agent videos as less conceptually
+prominent than the agent in Body-Agent videos (Rissman et al., 2019).
+We also know that English speakers are pragmatically motivated to
+linguistically encode this distinction in an experimental setting, which
+they do by increasing their use of passive voice in the Hand-Agent
+condition. Experiment 3 therefore provides a “proof of concept” that
+restrictions on the communication system can prevent a participant
+from encoding agent-backgrounding. The conceptual and pragmatic
+foundations for expressing a meaning can be present even if this
+meaning is not expressed linguistically.
+5. General discussion
+At the outset of this paper, we raised three questions: first, is agent-
+backgrounding communicatively important enough to arise in an
+emerging language? Second, if it is, does agent-backgrounding arise at
+the same moment as agency? Third, at what point in the development
+of a language does it emerge – in homesign, in the context of a linguistic
+community, or in the context of both a linguistic community and a
+linguistic model? We draw three conclusions from the results reported
+here, corresponding to these three questions: first, agent-backgrounding
+has high communicative importance. We found that agent-back-
+grounding was expressed through agent omission in NSL 1 (the first
+generation to have had a linguistic community) and through handshape
+morphology in NSL 2 & 3 (the first generation to have had a linguistic
+model). Second, agent-backgrounding does not have the same core
+cognitive status as agency. Across the three levels of emergence,
+L. Rissman, et al. Cognition 203 (2020) 104332
+15
+linguistic devices for expressing agent-backgrounding did not emerge at
+the same time as linguistic devices for expressing agency. This pattern
+held for both a lexical device (omission of an agent nominal) and a
+morphological device (distribution of handshape in classifier pre-
+dicates). Third, receiving a linguistic system where agentive devices
+were firmly established was necessary for the emergence of agent-
+backgrounding morphology in NSL. In the sections that follow, we
+discuss each of these conclusions and then consider how the linguistic
+structures that we observed relate to broader typological patterns in
+encoding of agent-backgrounding.
+5.1. Communicative importance and core knowledge
+Our results suggest that being able to deemphasize the role of the
+agent in an event has deep communicative value. This result is perhaps
+surprising, as English-speakers are often taught in school that passive
+voice is communicatively inferior to active voice (see Ferreira, 2020).
+On the contrary, our findings underscore the importance of cognitive
+flexibility in shaping the range of linguistic structures that humans have
+innovated. As language users we want to convey not only who did what
+to whom – a representation which is strongly grounded in external
+reality – but also our particular perspective on events and individuals in
+the world. The finding that agent-backgrounding devices emerged so
+rapidly in NSL predicts that agent-backgrounding constructions are
+universal or nearly-universal across the established languages of the
+world.
+At the same time, agent-backgrounding does not appear to have the
+same level of communicative importance as agency. This finding, in
+turn, suggests that agent-backgrounding is not part of the core system of
+agency proposed by Carey (2009). This result helps delimit the scope of
+core cognition: as described earlier in Section 1, Gleitman et al. (2019)
+argue that distinguishing symmetrical versus reciprocal construals of
+events (a type of flexibility in event representation) does have a core,
+foundational status.
+Exploring the relatively slower emergence of agent-backgrounding
+in more detail, we offer three explanations for why homesigners and
+NSL 1 signers did not use handshape morphology to encode agent-
+backgrounding. First, they may be less pragmatically motivated to
+distinguish these events linguistically than NSL 2 & 3 signers. Second,
+they may not represent the conceptual distinction between Body-Agent
+and Hand-Agent scenes to the same degree that NSL 2 & 3 signers do.
+Third, their morphosyntactic systems may not provide a means to dis-
+tinguish these events. These explanations are not mutually exclusive.
+The first possibility is that NSL 1 signers were less pragmatically
+motivated to distinguish Body-Agent vs. Hand-Agent videos through
+language than NSL 2 & 3 signers. These two types of videos have many
+similarities and distinguishing between them may involve high-level
+reasoning about the desires and expectations of the experimenters,
+Fig. 10. Average number of handling and non-handling predicates produced by silent gesturers per trial in each condition. Error bars show Poisson 95% confidence
+intervals.
+Fig. 11. Average proportion of silent gesture trials containing only handling handshapes, only non-handling handshapes, or both handling and non-handling
+handshapes in each condition. Error bars show binomial 95% confidence intervals calculated using the Wilson method.
+L. Rissman, et al. Cognition 203 (2020) 104332
+16
+reasoning that may have been easier for NSL 2 & 3 signers than NSL 1
+signers. This explanation is undercut, however, by the fact that NSL 1
+signers did use agent nominals to distinguish Body-Agent from Hand-
+Agent videos. The agent nominals finding shows that NSL 1 signers not
+only attended to differences between the videos but were also moti-
+vated to use language to encode these differences. In fact, one of the
+homesigners (Homesigner 2) robustly used agent nominals to distin-
+guish Body-Agent from Hand-Agent videos.
+Considering the second, conceptual explanation, we note that some
+conceptual differences between cohorts of NSL have been documented.
+Relative to NSL 2 signers, NSL 1 signers show poorer theory of mind
+performance (e.g., predicting a person's behavior when that person has
+a false belief, Pyers & Senghas, 2009), as well as poorer spatial cogni-
+tion (e.g., searching for a hidden object after disorientation, Pyers et al.,
+2010). It is possible that construing an agentive scene from a patient-
+oriented perspective requires cognitive flexibility, and that NSL 2 & 3
+signers are more cognitively flexible than NSL 1 signers. In Section
+3.3.1, we showed that NSL 1 signers were able to use agent nominals to
+distinguish Body-Agent scenes from Hand-Agent scenes. This finding
+shows that NSL 1 signers attended to and conceptualized differences
+between these scenes, although we cannot be sure that NSL 1 signers
+construed the Hand-Agent scenes from a patient-oriented perspective to
+the same degree that NSL 2 & 3 signers did.
+The third possibility is that homesigners and NSL 1 signers did not
+use handshape morphology to distinguish Body-Agent from Hand-Agent
+scenes because of limitations on the structure of their language. This
+hypothesis is a reasonable explanation for the fact that the silent ges-
+turers in Experiment 3 did not use handshape morphology to distin-
+guish between Body-Agent and Hand-Agent videos. These English
+speakers clearly have the conceptual and pragmatic tools to make this
+distinction, and they use handshape to make a related distinction be-
+tween agentive and non-agentive events. But their ability to encode
+agent-backgrounding seems to be thwarted by their undeveloped
+communication systems.
+The dominant strategy for NSL 2 & 3 signers in the Body-Agent
+condition was to produce only handling predicates, whereas their
+dominant strategy in the Hand-Agent condition was to produce both
+handling and non-handling predicates. Importantly, NSL 1 signers did
+produce both handling and non-handling predicates in combination in
+the Event Control condition, making it clear that they were able to
+produce this type of response for events with a highly prominent pa-
+tient. Thus, what seems to be missing for NSL 1 signers is a mapping
+from handshape form to the agent-backgrounding function.
+A similar point can be made for homesigners. As a group, they used
+handling predicates on their own, as well as handling and non-handling
+predicates in combination, to distinguish Body-Agent from No Agent
+videos. They also used non-handling handshapes to distinguish Body-
+Agent from Event Control videos, a strategy which they could have
+extended to the Hand-Agent videos. Comparable to the NSL 1 signers,
+the homesigners' linguistic systems appear to lack a mapping from
+handshape form to the agent-backgrounding function.
+Before we continue, one note of caution is warranted: the manip-
+ulation we used, excluding the face/torso of the agent, is only one way
+of eliciting agent-backgrounded event construals and agent-back-
+grounding constructions. It is possible that a different manipulation
+could have led the homesigners and NSL 1 signers to use handshape
+morphology to encode agent-backgrounding. It is also possible that
+homesigners and NSL 1 signers distinguished these types of events in
+our data through a linguistic device that we were not sensitive to and
+did not code. Nonetheless, the differences we see in the types of se-
+mantic distinctions made by signers in the different cohorts provide
+compelling evidence for an asymmetry between agency and agent-
+backgrounding.
+5.2. Precursors to the emergence of agent-backgrounding
+In situations of language emergence, language users draw on the
+existing structures in their language to innovate new form/meaning
+mappings. A primary goal of our study was to understand the linguistic
+building blocks and communicative dynamics that would enable the
+innovation of agent-backgrounding constructions. Toward creating
+agent-backgrounding morphology, our results point to the likely im-
+portance of receiving a linguistic system in which agentive devices were
+already well-established, as NSL 2 & 3 signers received.
+Neither homesigners nor NSL 1 signers distinguished Body-Agent
+from Hand-Agent events using handshape, but this does not mean that
+these two groups used handshape morphology in identical ways. For the
+first cohort of NSL, the contrast between Body-Agent events and No
+Agent events is sharper than it is for homesigners. In the No Agent
+condition, both groups of signers overwhelmingly produced trials with
+only non-handling predicates. Homesigners also produced only non-
+handling responses on 38% of Body-Agent trials. By contrast, NSL 1
+signers never produced a trial that included only non-handling pre-
+dicates in the Body-Agent condition.
+Across cohorts of NSL signers, a handling predicate was produced at
+least once on every trial that had an unambiguous agent (i.e., Body-
+Agent trials). The clarity of the mapping between agency and handling
+handshape may have paved the way for agent-backgrounding to
+emerge. In Body-Agent and Hand-Agent trials, NSL 1 signers produced a
+non-handling predicate on roughly 50% of trials. This behavior may
+reflect a desire to represent the changed state of the patient as a se-
+parate event component, a desire that could arise even for un-
+ambiguously agentive events (see Loos, 2017). The system used by NSL
+1 signers served as input to NSL 2 signers. It is therefore possible that
+NSL 2 signers received these non-obligatory, non-handling predicates
+and grammaticalized them to serve a semantic purpose: encoding
+agent-backgrounding.
+This hypothesis, that receiving a linguistic system with clear agen-
+tive morphology enables the emergence of agent-backgrounding mor-
+phology, may be tested using artificial language learning paradigms
+(see Kirby, Cornish, & Smith, 2008, inter alia). Recall from Experiment
+3 that silent gesturers used handshape morphology to distinguish Body-
+Agent events from No Agent events, but less sharply than NSL 1 signers
+did. We predict that silent gesturers who receive this probabilistic
+system as input will not innovate agent-backgrounding handshape
+morphology, but silent gesturers receiving a categorical agent-marking
+morphological system will.
+One prior study that we are aware of has investigated agent-back-
+grounding constructions in emerging signed languages: Horton et al.
+(2017) found that one out of four child homesigners showed a pattern
+of results similar to the NSL 2 & 3 signers, using handshape morphology
+to express both agency and agent-backgrounding. At first glance, this
+result appears incompatible with our conclusion that agent-back-
+grounding does not have the same priority for linguistic encoding as
+agency. A more in-depth look reveals, however, that this child home-
+signer has a deaf homesigning parent. It may therefore be the case that
+this child received a homesign system from her parent in which mor-
+phological marking of agency was already clear-cut, compatible with
+the dynamics of agent-backgrounding emergence that we observed in
+NSL.
+5.3. Typology and the future of NSL
+In this final section, we consider the trajectory of change from
+homesigners to NSL 1 to NSL 2 & 3 and how the NSL findings fit into a
+broader typological perspective. We found an asymmetry between the
+lexical strategy and the morphological strategy for encoding agent-
+backgrounding, with the former emerging before the latter in NSL. This
+observation raises the question of how agent-backgrounding will con-
+tinue to grammaticalize in NSL. We observed that the predominant
+L. Rissman, et al. Cognition 203 (2020) 104332
+17
+strategy for NSL 2 & 3 signers in the Hand-Agent condition was to
+produce handling and non-handling predicates in combination. To the
+extent that these groupings of signs are represented as a unit, we might
+be observing the emergence of a serial verb structure (see the Mandarin
+serial verb passive in example 4). As described in Section 2.5.3, the
+majority of the “Both” trials featured the consecutive sequence [hand-
+ling – non-handling]. As NSL continues to evolve, this dominant pattern
+may become even more prevalent.
+Regarding the interaction between agent nominals and handshape,
+Table 2 shows that NSL 2 & 3 signers sometimes described Hand-Agent
+videos with utterances where there were no agent nominals and only
+non-handling predicates. It is unclear whether such utterances would be
+interpreted as depicting agentive events if they were produced outside
+the context of the experiment (keeping in mind the standard caveat that
+we do not know whether we coded all of the agentive devices that NSL
+signers have at their disposal). If such utterances are ambiguous be-
+tween agent-backgrounded and non-agentive interpretations, then we
+would expect them to be disfavored among future generations of NSL.
+Turning to how NSL is positioned within linguistic typology, we
+found that all cohorts of NSL and one homesigner used an agent
+omission strategy to convey agent-backgrounding. As discussed in
+Section 1.2, this device is attested for other sign languages. We did not
+find evidence, however, that NSL uses impersonal constructions for
+agent-backgrounding (e.g., using signs such as ONE or PERSON to
+convey non-specific reference), which are also well-documented across
+sign languages (Barberà & Hofherr, 2018). We are not aware of studies
+investigating directly whether signers of more established sign lan-
+guages use handshape in classifier predicates to convey agent-back-
+grounding. Nonetheless, signers across a range of languages have been
+shown to use object handshape classifiers when describing agentive
+events (Goldin-Meadow et al., 2015; Kimmelman, de Lint, et al., 2019).
+Future research can address whether these classifiers are serving an
+agent-backgrounding function.
+6. Conclusion
+Ours is one of the first studies investigating the emergence of agent-
+backgrounding constructions in young languages. We found that users
+of an emerging language innovated agent-backgrounding constructions,
+indicating the communicative importance of downplaying the role of an
+agent in an event. At the same time, we found that agent-back-
+grounding language did not emerge at the same time as agentive lan-
+guage in NSL, homesign, and silent gesture, suggesting that agent-
+backgrounding does not have the same core status as agency. We also
+observed different trajectories of emergence for different types of lin-
+guistic devices––agent-backgrounding emerged first through a lexical
+strategy (omission of an agent nominal) and then through handshape
+morphology in classifier predicates. For signers to innovate agent-
+backgrounding morphology, having a linguistic model to build from
+appears to be a necessary precondition.
+CRediT authorship contribution statement
+Lilia Rissman:Conceptualization, Methodology, Software,
+Formal analysis, Investigation, Data curation, Writing - original
+draft, Writing - review & editing, Visualization, Supervision,
+Funding acquisition.Laura Horton:Conceptualization, -
+Methodology, Data curation, Writing - original draft.Molly
+Flaherty:Methodology, Investigation, Writing - original draft.Ann
+Senghas:Investigation, Writing - original draft, Writing - review &
+editing.Marie Coppola:Investigation, Writing - original draft,
+Writing - review & editing, Funding acquisition.Diane Brentari:
+Conceptualization, Methodology, Writing - original draft, Writing -
+review & editing, Funding acquisition. Susan Goldin-
+Meadow:Conceptualization, Methodology, Writing - original draft,
+Writing - review & editing, Funding acquisition.
+Acknowledgments
+This research was supported by NIH RO1 DC000491 awarded to
+SGM, as well as a postdoctoral diversity supplement to LR through this
+parent grant. This research was also supported by a Radboud University
+Excellence Initiative fellowship awarded to LR, NSF CAREER 1553589
+awarded to MC, NSF BCS-1227908 awarded to DB and MC and NSF
+BCS-1918545 awarded to DB, MC and SGM. Also, NIH R01 DC005407
+awarded to AS. Thank you to Deanna Gagne and Kurt Gagne for data
+collection in Nicaragua. We also appreciate Chiara Pandolfi and
+Madeline Quam for their hard work collecting data and coding. Thank
+you to all study participants and their families.

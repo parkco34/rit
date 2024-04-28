@@ -1,0 +1,128 @@
+Voyne Ray Cox, 33, just “Ray” to his family and numerous friends, winced a little as the bare skin of
+his stomach and chest pressed down on the icy tabletop positioned beneath the massive Therac-25 cancer
+radiation therapy machine. The table top wasn’t really all that cold, it just seemed that way due to the unsea-
+sonably warm weather and the constant air conditioning inside the East Texas Cancer Center here in Tyler.
+It was Ray’s ninth radiation treatment since the surgery for the removal of the tumor on his left shoulder, and
+he expected the session to be just an uneventful as the previous eight. He should be out there in no time at all.
+1Mary Beth, the radiotherapy technician, was being every bit as pleasant as she had been during his other vis-
+its. She commenced with the customary greetings and banter and helped him get positioned on the perfect
+spot on the table. The surgery and radiation treatments had proved to be better than he had feared, and he
+was looking forward to getting it all behind him and returning to work in the oil fields east of town. Not one
+to be fazed by adversity, Ray knew what he had to do, and he was determined to get on with the treatment
+and get this cancer thing well into the past.
+Ray, lying chest-down with the side of his face resting on the table, listened to the familiar instructions
+about remaining still. He watched Mary Beth from his prone position as she operated the hand-held control
+console that rotated the table and him to the proper position underneath the machine gantry. She told him to
+stay still and then walked out the exit of the treatment room to the small control room outside down the hall.
+Ray raised his head a little and looked up at the imposing device poised overhead. To Ray, the radiotherapy
+machine was just a big and attractive-looking piece of gear, all packaged-up nicely in clean and seamless
+sheets of plastic and metal. But, as it had been explained to him by the physicians and technicians at the
+center, the million dollar Therac-25 was the state-of-the-art in cancer treatment equipment. Beneath the
+sleek skin was a complex and downright ominous-looking machine, capable of delivering a beam of high-
+energy radiation to any point on or in a person’s body. There were two keys to treatment success: hitting
+the cancer cells with pinpoint accuracy and having many separate treatments of relatively lower doses rather
+than a single treatment of one large dose. Ray Cox knew that he would be back in the treatment room many
+times over the next few weeks, and any remaining cancer cells from the small tumor that had been removed
+from his back would eventually be killed. By now, Mary Beth was in the control room, so he put his head
+back down after deciding it best to just mind his own business and take the opportunity to relax and be still.
+Inside the small control room, Mary Beth began to enter the commands into the computer keyboard to
+initiate the treatment. She was working with a common Digital Equipment Corporation VT 100 terminal
+which in turn was connected to PDP-11 computer that controlled the radiotherapy accelerator. The control
+system would aim the accelerator with pinpoint accuracy and, when ready, briefly fire a radiation beam of
+prescribed intensity. Ray Cox should not feel a thing.
+There was a video camera inside the treatment room, but there was no picture on Mary Beth‘s television
+screen in the control room (the video monitor was not plugged in). The voice intercom between the two
+rooms was also inoperative. Neither of these things were viewed as being particularly significant, as Ray
+Cox had gone through this before and was now lying on the table right where he should.
+The Therac-25 had two modes of operation, something that made it unique in the radiotherapy market-
+place. One mode was a high-power “x-ray” mode utilizing the full 25 million electron volt capacity of the
+machine. It was selected by typing an “x” on the keyboard. This put the machine on maximum power
+and automatically inserted a thick metal plate just beneath the beam. When passed through the metal plate,
+the beam was transformed into an x-ray which was used to radiate tumors inside the body. The plate also
+lowered the intensity of the beam.
+The other setting was a relatively low-power “electron beam” mode and was selected by pressing the “e”
+key. Ray Cox was scheduled to be treated with the “electron beam” mode. He would receive a painless burst
+of about 200 rads to the spot on his shoulder.
+Mary Beth pressed the “x” key, moved on to the next entry on the keyboard, and realized suddenly that
+she had entered the wrong letter. She meant to enter an “e” to set the machine for “electron beam” mode
+but had mistakenly entered an “x” and set the machine on “x-ray” mode. It was a simple enough slip, and
+2one that certainly had no consequence since the treatment had not yet begun. Not one to waste time, Mary
+Beth quickly pressed the “up” arrow key to select the “edit” functions from the computer display. This
+enabled her to change the incorrect “x-ray” setting to the correct “electron beam” setting, which she did
+by pressing the “e” key. The screen now indicated to her that she was in the “electron beam” mode. The
+error corrected, she quickly pressed the return key on the keyboard to move the cursor to the bottom of
+the screen to wait for the “beam ready” display indicating that the machine was fully prepared to fire the
+narrow beam of radiation down onto Ray Cox’s back. All of this took place within the span of eight seconds.
+She had no idea that no one had ever entered this unusual but not at all unexpected sequence of commands
+in the thousands of times this particular Therac-25 had been operated. And the engineers for the Canadian
+manufacturer of the Therac-25, Atomic Energy of Canada, Ltd. (AECL), had not considered it possible for
+a technician to enter this sequence of commands in less than eight seconds. Accordingly, AECL did not test
+this unique sequence of inputs during the machine development a few years before.
+Mary Beth thought nothing of her small error or the quick steps she had taken to correct it. But unknown to
+her, AECL, and Ray Cox, the stage was set for disaster. Her rapid and unique series of inputs had tripped-up
+the computer. It retracted the thick metal plate used during x-ray modeut left the power setting on max-
+imum. Her computer screen showed that the machine was in the necessary “electron beam” mode, but it
+was actually now in a debased operating setting and poised to deliver a blast of 25,000 rads down onto Ray
+Cox’s back—in a proton beam powered by 25 million electron volts!
+She looked back down at the computer screen just as the “beam ready” command appeared telling her
+that the machine was primed and ready to fire. Well-trained in the procedures, she then pressed the “b” key
+to turn the beam on...
+Ray Cox saw a flash of blue light, heard a frying sound, and felt the invisible lightning bolt of high-energy
+radiation shoot down from the Therac-25 into his back. It was as if a red-hot fireplace poker had been
+jammed through to his chest. He jolted reflexively. The pain was excruciating, nothing remotely like the
+other treatments.
+Inside the isolated control room, Mary Beth’s computer screen simultaneously displayed “Malfunction 54”,
+indicating that something was not working and that the treatment had not been initiated. Having received no
+feedback that the machine had fired, she quickly reset the Therac-25 so that she could try it again...
+Out on the table, Ray was rolling onto his side, his shoulder feeling on fire. The blue light flashed again,
+there was a sizzling sound, and Ray, now conditioned and forewarned, began to scream out for it to stop.
+But, before he could expel the complete force of his terrified shout, the proton beam shot down from above,
+this time into his neck. His chest muscles constricted, squeezing the air out of his lungs. The pain was as
+intense as anything he had ever felt, and for a moment he thought he might pass out. He slowly caught his
+breath and held it in his chest while trying to maintain some level of control.
+A few moments later he took a deep cleansing breath, joggled his head once, and called out to Mary Beth.
+“Hey, are you pushing the wrong button?”
+At nearly the same moment, Mary Beth’s computer screen in the control room showed that the Therac-
+25 was primed and ready once again, and she entered the “b” to fire the high-energy beam. Inexplicably,
+the machine responded by displaying “Malfunction 54”. She had never had any problems with the machine
+3before, and certainly had no idea what was meant by the error code...
+Outside on the treatment table, Ray Cox was hit for a third time with another deadly and invisible shot
+to his shoulders and neck. He might just as well have been standing at the wrong end of a firing range.
+Fearing for his life and writhing in pain, he jumped from the table and ran to the door, where he bumped
+into technicians walking down the hall.
+Mary Beth eventually came out of the control room and met Ray at the nurses’ station, where he explained
+to her that he had received repeated and painful “electric shocks” while lying on the table, She responded
+by saving how strange that was and that nothing like that had ever occurred before. She had no idea what
+might have happened, but that there was no need to he concerned because the machine had malfunctioned
+and shut down automatically. According to the display, Ray had received only one tenth of his prescribed
+treatment dose.
+Faced with an inoperative machine and a disrupted schedule, Mary Beth called Fritz Hager, the radiological
+physicist in charge of the Therac-25 at the center, and asked him to come down to examine the equipment.
+Lee Schlichtemeier, Ray’s radiological oncologist, eventually made his way to the treatment room as well.
+They found nothing physically wrong with Ray or the machine, but decided to call AECL and discuss the
+event. After conducting some recommended tests of the equipment and finding nothing that suggested any-
+thing remotely abnormal, they continued use of the machine that same afternoon. There were, after all, other
+patients in the queue.
+Just three weeks later it happened again with another patient, a 66-year old man by the name of Verdon
+Kidd, undergoing treatment for a growth on his ear. Mary Beth inadvertently typed an “x” instead of an
+“e” and then corrected her error by entering the “edit” routine and changing the mode to “e”. The man was
+severely “shocked” about eight seconds later. Mary Beth watched in amazement from the control booth as
+the Therac-25 shut down, apparently without administering the planned treatment. The computer screen
+registered a “Malfunction 54”.
+With the second occurrence it became apparent to Fritz Hager that there were serious problems with the
+control system, problems that occurred when the “edit” function was used to quickly change the setting
+from “x-ray” mode to “electron beam” mode. Although the machine told the operator it was operating in
+the “electron beam” mode, it was actually operating in a hybrid proton beam mode and delivering blasts of
+25,000 rads with 25 million electron volts—more than 125 times the prescribed dose. And to make matters
+worse, Mary Beth had delivered multiple “treatments” to Ray Cox because of the lack of feedback and her
+conclusion that no treatment had been administered. The blue flash Ray saw before each blast was from
+Cherenkov radiation, a rare phenomenon seen only when a stream of electrons is accelerated to an extreme
+velocity.
+Hager immediately called AECL, as well as other U.S. users of the Therac-25, and alerted them to the
+problem. Subsequent investigations lead to the discovery of similar overdoses in clinics in Marietta, Geor-
+gia; Ontario, Canada; and Yakima, Washington.
+Around the same time, Ray Cox’s doctors began to suspect that he had been subjected to a massive ra-
+diation overdose. He was starting to spit up blood, and terrible radiation burns were appearing on his back,
+shoulder, and neck. Over the next few months the tissues hit by the beams died and sloughed off, leaving
+massive, gaping lesions in his upper body. Before his death four months later, Ray Cox maintained his good
+nature and humor, often joking in his east Texas drawl that “Captain Kirk forgot to put the machine on stun”.

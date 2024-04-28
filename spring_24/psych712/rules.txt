@@ -1,0 +1,251 @@
+Rules
+Terence Horgan and John Tienson
+Contemporary cognitive science has two principal branches: the classical computational approach (sometimes called classicism) and connectionism. Rules are
+fundamental to theorizing about the basic units of processing in both classicism and connectionism. But we will be concerned primarily with rules that apply to
+representations and that determine transitions from one cognitive/representational state to the next. Such rules are fundamental to classicism, since, according to
+classicism, cognitive processes simply are rule governed cognitive state transitions. Rules that apply to representations are not a built in feature of connectionist
+architecture, so the role of such rule in connectionism is less clear. We will argue that they are neither necessary nor (in general) desirable in connectionism. We discuss
+the status of rules first in classicism, then in connectionism.
+Classical Cognitive Science
+The interdisciplinary field known as cognitive science grew up with the development of the modern digital computer. Researchers from such diverse fields as computer
+science, neurophysiology, psychology, linguistics, and philosophy were brought together, not just by the understanding that the computer is a powerful tool for studying
+cognition, but, more importantly, by the conviction that the digital computer is the best model of cognition in general, and consequently of human cognition in particular.
+The picture of the mind as a computer dominated both theory and methodology in cognitive science and artificial intelligence for over a quarter of a century and is
+deservedly called the classical view in cognitive science.
+The distinctive feature of the modern digital computer is that its processes are determined by a program – a system of rules that determine transitions from one state to
+the next. Computers process information represented in data structures or symbols, and it is these symbols to which the rules refer (see Article 26, ARTIFICIAL
+INTELLIGENCE). Thus, the classical approach gives a central and fundamental role to rules – specifically, rules for the manipulation and transformation of symbol
+structures. In the case of cognition, the symbol structures are the cognitive system's representations; their representational contents are the contents of thought. Thus,
+classicism is often called the rules and representations conception of mentality.
+It is clear that there are at least two levels at which the processes of a computer or of a brain can be described: the physical, or neurobiological, level and the level of
+informational or mental content. (It is typical to refer to the level of content as a higher level; similarly, biology is a higher level of description than chemistry, chemistry
+higher than physics.) According to classicism, in order to tie these two levels together, and thus to understand how mental or informational processes can be realized in
+a physicalCopyright 1999. John Wiley and Sons, Inc.
+All rights reserved. May not be reproduced in any form without permission from the publisher, except fair uses permitted under U.S. or applicable copyright
+law. Page 661
+medium, it is necessary to consider a third level of description between the top, cognitive level and the bottom, physical level. (In describing these three levels, we
+follow an influential account provided by David Marr (1982).)
+At the top level one specifies a function or mapping from input to output, corresponding to the cognitive capacity being modeled. In modeling human vision, for
+example, the system takes representations of retinal stimuli as input and yields representations of objects in three dimensional space as output. At this level one also
+justifies this input–output function in terms of the modeling task. One desideratum in modeling human vision, for example, would be for the system to be subject to the
+same visual illusions that human subjects experience, rather than producing correct representations of objects in three dimensional space in all cases.
+At the middle level one specifies a system of representations for the input, a system of representations for the output, and a system of rules – that is, a program or
+algorithm – for computing the output from the input. At the lowest level, the actual physical processes by which the computation is carried out are determined. (In
+practice, there are often several intervening levels between the top and middle levels and between the middle and bottom levels. A flow chart, for instance, amounts to
+a level of description below the top which specifies the steps by which the cognitive function is computed. Flow charts are elaborated by adding additional boxes
+between or within boxes (yielding a lower level), eventually bottoming out at the middle level. Impressive cognitive functions are thus seen as ultimately composed of
+numerous cognitive baby steps.)
+Any variety of cognitive science must specify what cognitive transitions take place in performing the cognitive tasks it aims to model. Also, all varieties agree that
+cognitive systems are physically realized. And it is very natural (although perhaps not necessary for any possible flavor of cognitive science) to hold that there is a
+middle level of description between the cognitive and physical levels, and that this middle level is essentially a level of mathematical design. What is distinctive of
+classicism is the idea that the middle level involves computation: that is, rule governed symbol manipulation. Thus, a basic contention of classicism is that the
+appropriate mathematical framework for cognition is the theory of computation. As we will see, the classical picture has significant (and possibly limiting) implications
+for the top level.
+We can better understand the role of the middle level in showing how cognitive processes can be physically realized by considering the relationship between the top
+and middle levels of description as understood by classical cognitive science. When information processing is accomplished by computation, the rules executed by the
+computational system can be viewed in two different ways. From one perspective the rules refer explicitly to the task domain. For instance, one can formulate a set of
+rules for assigning classes to classrooms on a university campus, taking into account such constraints as the location of each classroom, the number of seats in each
+classroom, the number of seats requested for each class, and the time of day each class will be offered. These rules can be made precise, completely explicit, and
+exceptionless, so that a human being who had no understanding of the task domain could still determine room assignments by following the rules. To do this, one
+would need only the ability to follow simple instructions and perform elementary logical and mathematical operations. Terms for classes, rooms, etc. could be replaced
+by nonsense syllables or schematic letters. When rules about the task domain have been made precise, explicit, and exceptionless in this way, they can be viewed from
+another perspective, not as having representational content, but as purely formal symbol manipulating rules that determine processing by reference to nothing other than the syntactic form of the
+representations. The elementary operations specified in such rules can then be mirrored by simple physical devices. Hence, such rules can be put in the form of a
+program that will run on a conventional computer. Both the rules constituting the program and the representations to which they apply thus have two guises,
+corresponding to the middle and top levels of description. The rules are purely formal, applying to representations solely on the basis of their structural syntactic
+features; but the representations, and hence the rules, are also appropriately interpretable as being about objects and facts in the problem domain – classes,
+classrooms, class times, and so on.
+We call such rules programmable, representation level rules, although the designation may not be entirely happy because of the dual nature of the rules. In a
+conventional computer, and perhaps also in natural cognizers as classical cognitive science would understand them, the mirroring of representation level processes in
+the physical device is quite complex. Thus representation level rules are quite different from the rules that determine the basic physical processes of the device.
+Classicism maintains that the rules that determine cognitive processes in (natural and artificial) cognitive systems also have these two guises. On the one hand, they
+must be purely formal, referring solely to symbolic states and processes that can be mirrored in the causal states and processes of a physical system. On the other
+hand, since the symbolic states are supposed to be implementations of cognitive states, the rules must also be interpretable as cognitive level laws governing
+transitions among mental states – that is, as psychological laws. The two guises of these representation level rules are the reason why rule governed processing of
+formal/syntactic states directly implements cognitive state transitions; psychological laws at the cognitive level of description are directly mirrored by corresponding
+formal/syntactic rules at the mathematical level of description. And these, because of their formal nature, can be physically realized.
+Cognitive processes are thus understood as the result of the system's conformity to physically implemented representation level rules. A program that is intended to
+model a human cognitive capacity – say, visual perception or parsing sentences or getting about in crowded shopping areas – is a hypothesis about the states and
+processes that occur when a person exercises that capacity. The explanation of the capacity itself, according to classicism, is that a person has the capacity to perform
+that cognitive task by virtue of having a (possibly hard wired) system of representation level rules for doing so.
+Many domains are not amenable to rules that will yield a correct result in every instance. In some cases, no such rules are possible; in other cases, rules of this kind are
+not known, or they are too complex and unwieldy to be of any use (or both). Computers have been usefully employed for information processing in such domains,
+because computers can be provided with programs for searching for a solution in an efficient manner – that is, heuristic programs, programs that do not guarantee a
+correct or optimal outcome in every case, but that employ reasonable strategies that will yield solutions in a large range of cases. Chess playing programs, for instance,
+have heuristic rules to eliminate most possible moves and consider only the most plausible ones. The best move will sometimes be missed, but a good program will
+make a good move in almost every situation. One thing that can make one chess playing program better than another is better heuristics (see Article 44,
+HEURISTICS AND SATISFICING).Much research in classicism has been on heuristic programs, and for the most part, the representation level rules posited by classicism are heuristic rules. It is a
+reasonable contention, within the classical paradigm, that most of human cognition is determined by heuristic programs.
+The classical contention that cognition is mathematically realized by an algorithm involving symbolic representations – that is, by rule governed symbol manipulation –
+involves three basic assumptions:
+(1) Intelligent cognition employs structurally complex mental representations.
+(2) Cognitive processing is sensitive to the structure of these representations (and thereby
+to their content).
+(3) Cognitive processing conforms to precise, exceptionless rules, statable over the
+representations themselves and articulable in the format of a computer program.
+Classicists also maintain that the systematic semantic coherence of human thought rests largely and essentially on the manipulation of representations that encode
+propositional content via language like syntactic structure. So classicism makes an additional foundational assumption that is more specific than (1):
+(4) Many mental representations have syntactic structure.
+(Classicists can, and often do, allow that some of the computational processes of human cognition operate on representations without language like syntactic structure
+(e.g., imagistic representations).)
+Assumptions (1)–(4) pertain to the middle, mathematical level of description as conceived by classicism. But to maintain, as classicism does, that cognitive transitions
+are implemented by an algorithm that computes those transitions is to presuppose something about the top level too, something so basic that its status as an assumption
+is often not even noticed. For cognitive transitions can be computed by a physical system only if
+(5) Human cognitive transitions conform to a tractably computable cognitive transition
+function.
+A function is computable in the mathematical sense if there is (in principle) a means of computing, for any given input, the output of the function in a finite number of
+elementary operations. To say that a function is tractably computable adds that it is possible for these operations to be carried out by an appropriate kind of physical
+device. It is clear that classical cognitive science is committed to tractable computability, not just computability in the mathematical sense, since cognitive science is
+concerned with how human cognitive systems work. But even computability in the mathematical sense is a limitation that one would probably not think of imposing on
+cognitive processes unless one already thought that they were determined by cognitive level rules.
+We close this section by mentioning two things to which classicism is sometimes taken to be committed, but to which it is not in fact committed. Classicism is not
+committed to cognitive transitions that are deterministic. Classicists can, and often do,provide for nondeterministic cognitive transitions, by building some kind of randomizing element into the underlying algorithms – such as making the act performed
+depend upon the results of some entry in a random number table.
+Also, classicism does not assert that the rules of cognitive processing must be represented by (or within) the cognitive system itself. Although programs are explicitly
+represented as stored data structures in the ubiquitous general purpose computer, stored programs are not an essential feature of the classical point of view; a
+classical system can conform to representation level rules simply because it is hard wired to do so. It is plausible from the classical point of view, for example, to
+regard some innate processes as hard wired. (Thus we have characterized the rules of classical cognitive science as programmable.)
+Connectionist Cognitive Science
+By the early 1980s, certain kinds of difficulties were arising quite persistently and quite systematically within classicism. Examination of these difficulties makes it seem
+likely that they are not mere temporary setbacks, but difficulties in principle, stemming from fundamental assumptions of the classical framework. The difficulties
+centered largely around what has come to be called the frame problem. In its original form, the frame problem was concerned with the task of updating one's system
+of beliefs in light of newly acquired information. If you learn that Mary has left the room, you will stop believing that Mary is in the room, and also stop believing, for
+example, that someone is sitting on the sofa and that there are four people in the room. You will also make some obvious inferences from the new information: for
+example, that the clothes Mary was wearing and the package she was carrying are no longer in the room. But most of your beliefs will not be affected by the new
+information. Human beings adjust their beliefs in response to new information so naturally that it is surprising to find that it is a problem. But it has proved quite difficult
+for classical cognitive science.
+For a belief system of any size, obviously, it is not possible to examine each of the system's beliefs to see if it needs to be changed. Thus, Jerry Fodor (1983)
+characterizes the frame problem as ''the problem of putting a frame around the set of beliefs that may need to be revised in light of specified newly available
+information" (pp. 112–13, emphasis added). Seen this way, the problem is fundamentally one of relevance: to provide an effective, general procedure that will
+determine the beliefs to which any particular new belief is at all relevant. Those are the beliefs that get framed. Which of these relevant old beliefs actually need to be
+revised in a given case is then a further question.
+There are several other cognitive activities that pose similar problems of relevance: belief fixation (arriving at a new belief on the basis of diverse and perhaps
+conflicting evidence), retrieving from memory information that is relevant to solving a current problem or carrying out a current task, and forward looking tasks such as
+deciding what to do next, deciding what is morally permissible or obligatory, and making plans.
+Apparently, the classical approach in all these areas must be, as Fodor suggests, to attempt to put a frame around what is relevant: that is, to try to introduce rules
+which determine, for any given item of information, what is relevant to that item of information and what is not. Call such solutions to problems of relevance "frame
+solutions."Frame solutions appear to be doomed to failure. Human cognitive systems are open ended. There is no limit to the things a human being can represent. And anything
+one can represent is potentially relevant to anything else one can represent. Relevance depends upon the question, topic, or problem at hand – in a word, upon
+context. For virtually any pair of items of information you pick, there will be some context in which one is relevant to the other. (It has been suggested that the price of
+tea in India is not relevant to the question of whether Fred has had breakfast by 8:30. The obvious reply is that it is relevant "if Fred happens to be heavily invested in
+Indian tea and the market has just fallen savagely" (Copeland, 1993, p. 115).)
+Our suggestion, then, is that there are no such relevance frames in human cognition. But what other kind of solution is possible within the classical framework?
+Cognitive science lacks the slightest clue as to how representation level rules could update memory appropriately or find relevant information efficiently for open
+ended belief systems of the kind possessed by humans. Indeed, it seems entirely likely that it can't be done by systems of rules at all. As Fodor (one of the staunchest
+defenders of classicism) has written:
+The problem . . . is to get the structure of the entire belief system to bear on individual occasions of belief fixation. We have, to put it bluntly, no computational formalisms that
+show us how to do this, and we have no idea how such formalisms might be developed . . . In this respect, cognitive science hasn't even started; we are literally no farther
+advanced than we were in the darkest days of behaviorism. (Fodor, 1983, pp. 128–9)
+The reemergence of connectionism in the 1980s was in large part a response to the problems in classical cognitive science. As problems persisted, many researchers
+looked elsewhere for a better prospect of positive results, and the only other game in town was parallel distributed processing – connectionism. But this raises a
+foundational question that has received surprisingly little discussion: Does connectionism have features (fundamentally different from those of classicism) that suggest
+that it can make progress, not just on other problems, but on the very problems that slowed progress in classical cognitive science?
+Classical systems, by their very nature, involve both representation level rule execution and representations with language like syntactic structure. Neither of these
+features is required by the inherent nature of connectionist systems. Thus, syntactic structure and cognitive level rules are two places to look for fundamental
+differences between connectionism and classicism.
+Certain kinds of rules are very prominent in connectionist theory, but they are not representation level rules. Activation updating within individual nodes and local
+activation passing from one node to another occur in accordance with rules. (In current connectionist modeling, these are programmable rules. This is why
+connectionist networks can be simulated with standard computers, as they are in virtually all connectionist modeling. But it is not part of connectionist theory that node
+level rules must be programmable.) However, the processing that takes place locally between nodes and within individual nodes is not in general representational. Not
+all local node activations in a network model have representational content, and in some models the activation of a single node never has representational content – all
+representations, even the most basic or atomic, consist of activation patterns over a whole set of nodes.Thus, the fact that individual nodes are rule governed leaves open the question of whether the processes that representations undergo in connectionist models must
+conform to rules.
+There is an important sense in which even node governing rules are absent from connectionist systems: networks do not contain explicitly represented rules of any
+kind. It is sometimes thought that the absence of explicit rules constitutes a watershed difference between connectionism and classicism. But this is a mistake. As
+explained earlier, the rules posited by classicism can be hard wired into a computational system rather than being encoded as representations. (Indeed, at least some
+rules executed by a classical computational system must be hard wired. The node governing activation update rules of a connectionist network are analogous to basic
+hard wired rules of classical systems.)
+It is more common to focus on lack of syntactic structure as an alleged difference between connectionism and classicism (see, e.g., Churchland 1989, 1995, who sees
+this as a virtue, and Fodor and Pylyshyn, 1988, who see it as a deficiency). Such authors claim that the activation vectors that constitute representations in
+connectionist systems lack syntactic structure. (A vector is essentially an ordered n tuple of items; an activation vector is an ordered n tuple of activation values of
+specific nodes in a neural network.) This means that the processing of representations in connectionist systems is fundamentally different from the largely syntax driven
+processing of representations in classical systems. These writers do not raise the question of whether connectionist processing conforms to programmable rules;
+implicitly, at least, they evidently suppose that it does, but they would suppose that the rules at work in connectionist systems apply to some kind of nonsyntactic
+formal/mathematical structures. Churchland describes processing as effecting vector to vector transformations, and he suggests that such transformations conform
+to rules that are sensitive to the vectorial structure of the representations. This approach, which we call nonsentential computationalism, repudiates assumption (4)
+of the five foundational assumptions of classicism mentioned earlier, while retaining the other four.
+Nonsentential computationalism is not obviously a correct interpretation of all extant connectionist models. On the contrary, there are certain models that are naturally
+interpreted as involving both (1) representations that have syntactic structure and (2) processing that is sensitive to this structure. (Two important kinds of such models,
+due respectively to Jordan Pollack (1990) and Paul Smolensky (1990), are discussed in Horgan and Tienson, 1996, chs 4 and 5). Nor is nonsentential
+computationalism obviously the most natural or most attractive foundational framework for connectionist cognitive science. One serious reason for doubt is that
+nonsentential computationalism in effect offers just a seriously limited variant of classicism. It is a variant because it continues to hold that cognition is implemented by
+processes that conform to programmable rules (so it can be no more powerful than classical cognitive science). It is limited because it eschews an extremely powerful
+way of introducing semantic coherence into the computational manipulation of representations: the syntactic encoding of propositional information.
+A fan of nonsentential computationalism might be expected to reply that connectionist models get by without any explicit stored memories, with lots of information in
+the weights, and that networks are not programmed. However, to the extent that connectionist processing conforms to representation level rules, we could get thesesame features in a classical system in which (1) all the rules are hard wired rather than explicitly represented, and (2) lots of information is implicitly accommodated in
+the (hard wired) rules rather than being explicitly stored in memory.
+We remarked earlier that the inherent nature of connectionist systems does not guarantee either of two features that are intrinsic to classicism: representation level rule
+execution and representations with syntactic structure. So another approach to cognition that might be joined to connectionism is to deny that human cognitive
+processes conform to representation level rules. (Such an approach need not repudiate syntactic structure.)
+But is it possible for a connectionist system that employs representations to fail to conform to rules that refer to these representations? Indeed it is. In the first place, it
+is not necessary for the temporal evolution of a connectionist network to be tractably computable. The natural mathematical framework for describing networks is the
+theory of dynamical systems (Horgan and Tienson, 1996, ch. 4), and the temporal evolution of a dynamical system need not be tractably computable. And if the
+temporal evolution of a network is not tractably computable, there is no reason to believe that the cognitive evolution of the cognitive system which the network
+realizes will be tractably computable via representation level rules.
+But in the second place, it is important to understand that a connectionist model may not conform to representation–manipulation rules even if it does conform to sub
+representational programmable rules that govern individual nodes and local inter node transactions. (As noted already, most current connectionist models conform to
+programmable node governing rules; the networks are simulated on standard computers.) As a prelude to explaining why not, we begin with a preliminary point that is
+important and not widely recognized. It is possible for a connectionist system to be nondeterministic at the representational level of description, even if the system is
+fully deterministic at the sub representational level of node activation updating and local inter node activation passing. This is because the same connectionist
+representation can be realized by many different sub representational states of the system, and the representation level outcome of processing can depend upon the
+specific way that a representational state is realized sub representationally.
+One source of multiple realizability of representations is different degrees of activation of nodes. The realization of a particular cognitive state, say A, might consist in
+each of a given set of nodes being active to at least a certain degree, say 0.8. Then some realizations of this cognitive state will have node N more highly activated than
+node M; others will have node M more highly activated. It can then happen that from some activation states that realize A the system goes into activation states that
+realize cognitive state B, while from others it goes into activation states that realize a different cognitive state C; so there will be no way of knowing the cognitive level
+outcome just from knowing its initial total cognitive state. Being nondeterministic at the cognitive level can be a valuable asset in many kinds of competitive activities,
+such as playing poker and fleeing for one's life. (Note that no randomizing dice throw rules are involved at any level of description, either representational or sub
+representational, as would be required to make a classical system nondeterministic.)
+This preliminary point establishes an important moral: namely, that key features of a connectionist system at the sub representational level of description need not
+transmit upward to higher levels of description, because inter level realization relations can work in ways that block such transmission. As we next explain, tractable computability of state transitions can also fail to transmit upward in connectionist systems, so
+that a system can fail to conform to programmable, representation level rules, even though it conforms to programmable sub representational rules.
+Given that the transitions of the underlying network are tractably computable, one might think that the cognitive transitions realized in that network could be computed
+like this. Starting from a cognitive state, (1) select an activation state that realizes this cognitive state; (2) compute the network's transitions from this activation state
+through subsequent activation states; and (3) for each subsequent activation state, compute the cognitive state (if any) realized by that state.
+Although the assumption that the transitions of the network are tractably computable guarantees (2), there is no guarantee that step (3) – or even step (1) – will be
+possible. The function from activation states to cognitive states need not be tractably computable. It is possible, for example, that the simplest, most compact way to
+specify that function might be via an enormous (possibly infinite) list that pairs specific total activation states with specific total cognitive states – a list far too long to be
+written using all the matter in the universe, let alone to constitute a set of programmable rules.
+If the cognitive transitions implemented by a network are not computable in the way just suggested, they need not be tractably computable in any other way either.
+Thus, one should not infer from the fact that a network's activation state transitions are tractably computable that it implements a cognitive transition function that is
+tractably computable. Nor should one suppose that an algorithm for computing the network's behavior over time automatically determines an algorithm for computing
+its cognitive transitions.
+The possibility that the realizing function may not be tractably computable is not a mere abstract possibility. Certain connectionist learning algorithms allow models to
+select their own representations (Pollack, 1990; Berg, 1992; discussed in Horgan and Tienson, 1996, ch. 4). Representations are modified, along with weights, as
+learning progresses; this allows for more efficient schemes of representation, with weights and representations ending up made for each other. It is easy to suppose
+that complex cognitive systems that worked in this way (as natural cognitive systems apparently do) would have very complex, rich, subtle realization relations that are
+not tractably computable.
+Given that it is possible for a connectionist cognitive system to fail to conform to programmable, representation level rules, several questions arise. First, if cognitive
+transitions are not effected by executing such rules, how are they brought about? Second, are there reasons to think that it is desirable for a system not to be rule
+describable? Third, if a system does not conform to rules at the cognitive level, can it be coherent enough and systematic enough to be called a cognitive system at all?
+A very natural way to think about cognitive transitions in connectionist systems is in terms of content appropriate cognitive forces. Beliefs and desires work together
+to generate certain forces that tend to push the cognitive system toward output states that would result in particular actions. But those forces can be overcome by
+stronger forces pushing in different, incompatible directions. A single clue in a mystery might point to the guilt of some suspects and at the same time tend to clear
+certain other suspects to varying degrees. Thinking of the clue produces forces that tend to activate some possible beliefs about whodunit and inhibit others. The
+interaction of cognitive forces in a cognitive system can be very complex. Forces can compete, in that they tend toward incompatible cognitive states, or they can cooperate, tending toward
+the same or similar outcomes. There can be a large number of competing and cooperating factors at work in a system at once. Connectionist models that perform
+multiple, simultaneous, soft constraint satisfaction provide suggestive simple models of the interaction of cognitive forces.
+In a connectionist network the interaction of cognitive forces is physically implemented by spreading activation. But when a representation is realized by activation of a
+large number of nodes, the cognitive forces generated by the overall representation are distinct from the local physical forces produced by the individual nodes
+implementing the representation. (The individual nodes need not be similar to one another in the kinds of weighted connections they have to other nodes or
+representations, so they might have different causal roles from one another.)
+The possible value of such a picture for dealing with relevance phenomena – phenomena associated with the frame problem in classicism – should be evident. Any two
+cognitive states that put out forces tending to activate other cognitive states will be capable of interacting causally when co present in a cognitive system. And any two
+or more states that are relevant to the same problem will interact with respect to that problem – at least to the extent of tending to move the system in the direction of
+conflicting or compatible solutions. Thus, certain kinds of content relevant interaction are automatic for systems that have states with content relevant cognitive
+forces. Potential interactions do not have to be anticipated in advance in terms of form or content – a key difference from classicist systems, in which the operative
+representation level rules must determine all such outcomes. Furthermore, forces interact with one another in a manner appropriate not only to the contents of all the
+cognitive states currently activated in the system, but also to much nonactivated information that is implicit in the system's structure – in the weights, as connectionists
+like to say.
+In natural cognizers, there are many systematic patterns by which cognitive forces are generated (many of which correspond to the generalizations of commonsense
+psychology). Appropriately related beliefs and desires conspire to produce forces that tend toward certain choices. (It is arguable that this pattern depends upon
+syntactic or syntax like structure of the belief and desire states.) Repeated observation of a pattern of events results in cognitive forces that tend to produce
+expectations of similar patterns. In such cases there is a causal tendency to make such choices, have such expectations, etc. But these are defeasible causal
+tendencies: that is, it is always possible that the tendency will be overridden by a stronger force or combination of forces. Thus, although there are generalizations
+about the cognitive transitions that correspond to these patterns of cognitive forces, there are no programmable rules corresponding to these generalizations, because
+they have exceptions.
+Furthermore, these generalizations cannot be refined into programmable rules by specifying the possible exceptions. Because of the potential relevance of anything to
+anything, it is not possible to spell out all of the exceptions in a machine determinable way (Horgan and Tienson, 1996, ch. 6). The defeasibility of causal tendencies
+poses a deep problem for classical cognitive science, since all potential exceptions need to be specified in just such a way: they need to be explicitly covered, for
+instance, by unless clauses within representation level rules. In the cognitive forces picture, nothing has to be done to deal with exceptions. They arise naturally as a
+feature of the architecture.

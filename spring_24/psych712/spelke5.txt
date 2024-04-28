@@ -1,0 +1,443 @@
+What Babies Know. Elizabeth S. Spelke, Oxford University Press. © Elizabeth S. Spelke 2022.
+
+Core Knowledge
+Table 5.1 lists the properties of the three core knowledge systems discussed in
+the previous chapters, together with the systems that were found to exhibit them.
+The core systems for representing objects, places, and number center on inter-
+connected abstract concepts, they operate on a limited domain of entities, and
+they capture only a limited subset of the properties that our perceptual systems
+deliver. These systems also are encapsulated, automatically activated, and un-
+conscious, yet they are active only when we attend to entities in their domain.
+Where tested, these core knowledge systems emerge early in ontogeny and func-
+tion throughout life, and they are present in people of all ages and in all cultures.
+Both during and after infancy, they guide our thinking and learning. Moreover,
+the same abilities and limits are found in a wide range of animals and depend on
+homologous brain systems and processes across those animals, providing evi-
+dence that core systems emerged deep in our evolutionary past. At least one of
+these systems— the place system—is innate and functions, in part, by generating
+unconscious, rapid mental simulations of past and potential future events. Some
+evidence suggests that the object system also is innate, and it may function in the
+same manner.
+In this table, I have attached particular core systems to these properties con-
+servatively. I do not attribute deep phylogenetic origins to the object system, de-
+spite extensive evidence that controlled-reared chicks have object representations
+with all the properties found in older human infants. The experiments with
+chicks show that abilities to track objects over occlusion and to anticipate the
+effects of their collisions with other objects can emerge in animals who have
+never seen these events. They do not show convincingly, however, that the
+representations recruited by chicks are fully homologous to the representations
+of inanimate, manipulable objects studied in human infants. I also do not in-
+clude innateness as a property of the number system, despite the evidence for
+amodal representations of numerical magnitudes in newborn human infants.
+The innateness of the core number system is difficult to determine, because it
+applies to sets of diverse entities, likely including the sounds and movements by
+the mother that fetuses experience in the womb.
+I now will argue, however, that the properties in table 5.1 go together: They
+are different facets of a single kind of cognitive system. First, ancient systems
+of knowledge, that emerged in ancestors common to humans and many other
+Table 5.1 Properties of the core object, place, and number systems
+1. Content: Interconnected, abstract concepts
+Objects: cohesion, continuity, solidity, action on contact
+Places: distances and directions on the ground
+Number: relative magnitudes, set composition
+2. Domain: A subset of the entities that are perceived
+Objects: bodies, not nonsolid substances or 2D forms
+Places: the ground and its borders, not other surfaces or objects
+Number: arrays or sequences of entities or events, not trackable objects
+3. Inputs: A subset of the properties that are perceived
+Objects: surface positions and motions, not textures, colors, or shapes
+Places: the geometry of the ground surface, not its texture or markings
+Number: discrete, not continuous, quantity
+4. Architecture: Encapsulated
+Objects: infants fail to track objects by their forms and functions
+Places: children fail to reorient by objects that they use as landmarks
+Number: infants fail to enumerate objects that they track as individuals
+5. Operation: Automatic and unconscious
+Objects: adults spontaneously track attended objects without awareness
+Places: adults unconsciously update their position as they navigate
+Number: adults compare and combine sets with no awareness of number
+6. Activation: Dependent on attention
+Objects: attentive tracking of each individual object
+Places: attentive action planning for navigation
+Number: attention to groups of objects or events
+7. Ontogeny: Early-emerging and developmentally invariant
+Objects: common abilities and limitations in infants and adults
+Places: navigation by layout geometry in infant animals, children, and adults
+Number: representations of approximate number at all ages
+8. Phylogeny: Ancient
+Places: common behavioral and neural properties in humans and rodents
+Number: common behavioral and neural properties in humans and monkeys
+9. Scope: Widespread across human cultures
+Places: shared intuitions of geometry in diverse cultures
+Number: a sense of numerical magnitude in all tested cultures
+10. Function: First and foremost, core systems support learning
+Objects: learning about object kinds and intuitive physics
+Places: learning the layout of the local environment
+Number: statistical learning of diverse properties of objects and events
+11. Origins: Innate
+Objects: partly innate in human newborns; innate in chicks
+Places: innate in rodents and chicks
+12. Operation: In part, by mental simulation
+Places: simulations of movement over the ground
+192 What Babies Know
+animals, will strongly tend to focus on abstract properties and relations. To see
+why, let’s go back some 400 million years and consider the last common an-
+cestor of humans and zebrafish, who navigated by the distances and directions
+of perturbations, drop-offs, and borders on the ocean floor. This ancestor may
+have lived in a part of the ocean where other environmental features also served
+as landmarks or directional beacons: Perhaps a chemical gradient in the water,
+produced by a moderately distant sulfur spring, served to indicate the direction
+of a significant food source. If the creature’s species and environment persisted
+long enough, then our ancestor likely was endowed, by prior processes of natural
+selection, with capacities to navigate both by the contours of the ocean floor and
+by the sulfur gradient. But now consider its descendants. As they colonized other
+regions of the ocean or moved to land, sulfur gradients ceased to abound, but the
+contours of the ground over which fish swam, frogs leaped, and birds flew still
+obeyed the laws of geometry, which remained a reliable guide to where things
+are. These geometric properties apply to all habitable environments.
+The same principle holds for the abstract properties that are captured by
+other systems of core knowledge, including the spatiotemporal continuity of
+object motion and the laws of arithmetic. These aspects of our intuitive physics
+and mathematics apply to all the environments inhabited by insects, fish, and
+vertebrates like us. When a system for representing such properties emerges in
+a distant ancestor of contemporary animals, it will continue to be selected for,
+however the animals and their environments change. Mutations that impair the
+functioning of such a system will be selected against, because the unfortunate
+animals who possess mutations to the object, place, or number system will fail to
+anticipate and avoid the oncoming rock, to return home after their first outward
+journey, or to learn where they are likely to find more food and fewer predators.
+The abstract concepts at the center of our oldest cognitive systems constitute
+a primordial “blessing of abstraction,”1 counter to long-standing intuitions con-
+cerning what is learned or innate, and what is unique to our species or shared
+by other animals. For millennia, thinkers have supposed that knowledge begins
+with modality-specific sensations and culminates in abstract concepts only late
+in ontogeny and phylogeny. Multidisciplinary research in the developmental
+cognitive sciences turns this assumption on its head. Although we do not rou-
+tinely articulate our abstract concepts, they are foundations for learning about
+things, places, and events at all ages and in a wide range of species. Ancient cog-
+nitive systems capture properties of the world that apply to all the diverse envir-
+onments in which these creatures live.
+1 I borrow this compelling expression from Goodman, Ullman, & Tenenbaum (2011), who pro-
+posed that abstract concepts are favored by learning systems for similar reasons. Their thinking pre-
+ceded and greatly influenced the arguments in this chapter.
+Core Knowledge 193
+The long evolutionary history of core knowledge systems also may explain
+why these systems are encapsulated. Since the ancestors in which core know-
+ledge first arose lacked our highly plastic neocortex, this knowledge likely
+depended on mechanisms that are homologous either to older cortical structures
+such as the hippocampus or to subcortical structures. With the emergence of the
+neocortex, these lower brain regions would have been vulnerable to top-down
+activity that could have impaired their functioning, because neocortical regions
+communicate widely with one another, through both short- and long-distance
+connections, and throughout life, cortical connections are shaped by this ac-
+tivity. To allow our more ancient neural systems to function without interfer-
+ence, and thereby to structure and guide learning by the cortical systems, the
+evolution of the brain would have favored their encapsulation.
+As a consequence, core systems operate unconsciously in human adults and
+children, and likely in infants and animals as well. Dehaene and Changeux
+(2005) hypothesized that brain processes reach consciousness when activity in
+one neocortical region passes a threshold and activates a unitary, massive pattern
+of reverberating activity across a widespread network that they call the “global
+workspace.” (For review, see Dehaene, 2014.) In animals with a neocortex like
+ours, activity in the global workspace likely underlies our conscious experience
+of places, numbers, and objects, as that experience has been enriched by a life-
+time of learning. If core knowledge systems reside in encapsulated, subcortical
+structures that are impervious to the activity in the cortical, global workspace,
+then the representations and processes they generate will be inaccessible to con-
+scious reflection. To activate each core system, however, adults, infants, and ani-
+mals must attend to the individual objects they track, the acts of navigation they
+plan, or the sets of objects or events they compare and combine. Limits on at-
+tentional resources likely ensure that each system is activated when needed and
+suppressed when other systems are needed more.
+Because the core knowledge systems focus on abstract properties of objects,
+places, and groups of entities, these systems will continue to function in children
+and adults in all cultures, for at least three reasons. First, the primordial blessing
+of abstraction has produced systems that can function in any environment that
+supports life for humans and for the animals who share these systems with us. It
+follows that we will never outgrow their usefulness: People at all ages, living in all
+environments that humans inhabit and all the cultures that we collectively create,
+will continue to draw on these systems when we track objects, plan trips, or esti-
+mate the shortest checkout lane at the supermarket.
+Second, because the systems are encapsulated, they continue to function re-
+gardless of our explicit beliefs and desires. Science fiction enthusiasts may de-
+light in games and movies allowing time travel or teleportation, and physicists
+teach us that spatiotemporal continuity, solidity, and action on contact do not
+194 What Babies Know
+apply at scales that are very large or small. Nevertheless, their core object system
+will continue to simulate continuous motions and forward causal interactions,
+because core knowledge systems are not affected by these beliefs.
+Third, children’s core systems support their learning. Equipped with the ab-
+stract properties captured by core knowledge, babies can single out entities in
+each core domain and learn about their further properties and behavior. By
+using object continuity and solidity to track objects over time and occlusion, for
+example, babies may learn that objects also tend to be uniform and persisting
+in substance and texture, and that objects with similar forms tend to have sim-
+ilar functions. Joshua Tenenbaum and his collaborators (Goodman, Ullman, &
+Tenenbaum, 2011; Tenenbaum et al., 2011) noted that such learning will benefit
+from another blessing of abstraction: It will privilege more abstract and general
+properties of these entities, such as those just mentioned, over more concrete and
+specific properties of the entities, because evidence for abstract properties comes
+from a broader array of experiences. Only experiences with goldfish provide ev-
+idence that goldfish are orange, but experiences with any fish provide evidence
+that goldfish have fins and swim in water, and experiences with any animal pro-
+vide evidence that goldfish grow, eat, and move themselves from place to place.
+With these insights, the computational and developmental cognitive sciences
+are overturning the traditional view that human knowledge begins with specific
+sensory-motor experiences and arrives at abstract concepts only at its pinnacle.
+By combining the two blessings of abstraction, children’s learning is likely to pro-
+duce hierarchies of concepts and beliefs that grow around a constant core, be-
+ginning with the most abstract concepts and favoring, at every point in learning,
+more abstract properties and relations over more concrete ones (Ullman &
+Tenenbaum, 2020). Because core knowledge is unconscious, however, it captures
+the abstract concepts and relations that we take for granted and need not think
+about directly.
+Finally, the ancient core knowledge systems are likely to be innate, for two
+reasons. First, abstract properties are hard to learn. Consider, for example, the
+spatiotemporal continuity of object motion. Spatiotemporal continuity is true
+of the movements of the middle-sized objects that animals act on and track, but
+it is not true of the sensory information that animals receive from those objects
+as they move through cluttered environments. Without innate mechanisms that
+extrapolate continuous paths of motion from our discontinuous encounters with
+objects, it is not clear how the continuity of object motion would ever be learned.
+Fortunately, adults and infants are built to perceive continuously moving objects,
+as are chicks (Wood & Wood, 2018).
+Second, some animals need these ancient systems to function from the be-
+ginning. Although human infants are dependent on others for their survival
+throughout the first year, many other animals, who share our core knowledge
+Core Knowledge 195
+systems, must fend for themselves. They must move on their own, avoid drop-
+offs and obstacles, find food, steer clear of predators, and find their way home
+the first time they leave the nest to forage. To accomplish these feats, these an-
+imals need core systems that function at birth and guide their earliest actions.
+Consistent with this requirement, research on young rats provides evidence
+that the basic neural processes found in experienced navigators are present and
+functional when rats first begin to navigate, and research on controlled-reared
+chicks, whose navigation performance is highly similar to that of human chil-
+dren, provides evidence that some behavioral capacities for navigating in accord
+with the geometric structure of the environment are present and functional on
+the chick’s first encounters with a geometrically structured layout.
+How might this ability arise in infant brains? Drawing on research in neuro-
+science on visual development, natural selection may have favored the evolution
+of processes, within the subcortical or older cortical regions found in diverse an-
+imals, that generate activity that propagates to the plastic neocortical regions to
+which they are connected. This activity could prepare the neocortex for a world
+of objects, places, and numerical magnitudes, just as activity in the retinal gan-
+glion cells or the superior colliculus prepares the cortex for the optic flow that
+accompanies and guides their movements (chapter 1).
+This hypothesis draws inspiration from research that relates patterns of spon-
+taneous activity in the hippocampus to acts of navigation. When animals who
+are learning to navigate through novel environments sleep, rest, or pause during
+their travels, rapid sequences of neural activity simulate not only paths within
+the environment that the animals have taken but also paths that were blocked
+and therefore never traveled. This hippocampal activity occurs in human adults
+as well, both in spatial and nonspatial tasks, and fosters subsequent performance
+of the tasks whose actions it simulates. Processes of mental simulation may sup-
+port learning in diverse domains. In baby rats, these rapid sequences of activity
+in hippocampal neurons emerge a few days after eye opening, independently of
+navigation experience, even before they explore their first novel environment
+( chapter 3). These findings hint at how core knowledge might arise in infant
+brains. Before infant animals begin to navigate through novel territory, they may
+dream of such travels, generating activity that propagates through the neocortex
+and prepares them for their first journeys.
+It is possible that fetal dreaming helps to shape the highly plastic neocortex of
+human infants, preparing newborn brains to learn from core knowledge. To date,
+no evidence supports this possibility, but experiments on infants, using fNIRS,
+lend it some plausibility. Lauren Emberson, John Richards, and Richard Aslin
+(2015) imaged activity in the visual and auditory cortex of full-term 6-month-
+old infants, and they found that their sensory processing benefited from a useful
+top-down effect: When a sound signaled the imminent arrival of a visual display,
+196 What Babies Know
+the infants anticipated the display’s arrival, and their visual cortex responded on
+trials when it was unexpectedly absent. In contrast, prematurely born infants,
+tested at the same maturational age of 6 months, did not show the cortical re-
+sponse to the absence of the expected visual display (Emberson et al., 2017).
+Further studies have localized the deficit to descending signals from frontal
+cortex, because the frontal cortex of the premature infants was responsive to the
+unexpected trials, but the visual cortex to which it projects was not (Jaffe-Dax
+et al., 2019).
+The studies do not reveal why these signals are compromised by prema-
+turity, but Emberson and her colleagues suggest that the premature infants’
+experiences outside the womb, during what would otherwise be the last tri-
+mester of pregnancy, could be the source of the problem (Emberson et al., 2017).
+These experiences may interfere with the endogenous activity that would oth-
+erwise propagate from frontal regions downward to the occipital regions that
+prepare to receive expected sensory signals. Might prenatal endogenous activity
+also propagate downward from frontal cortex to the cortical regions that prepare
+fetal brains for the tasks of representing objects, places, and number? If so, then
+studies of the emergence of core knowledge may reveal important lessons both
+for basic science and for hospital practices in neonatal intensive care.
+My next questions point in a different direction: Why is core knowledge so lim-
+ited? For example, why do infants represent objects, but not nonsolid substances,
+as persisting over occlusion? Nonsolid substances also persist, occupy space, and
+move continuously, and some of them, like milk, are critical for an infant’s survival.
+Further, why do toddlers navigate by the distances and directions of the walls of a
+room but not by wall lengths and heights or by room sizes, shapes, and corners?
+Shouldn’t cognitive evolution have endowed infants with mechanisms to encode
+those other features as well? Still further, why are human infants endowed with
+abilities to represent approximate numerical magnitudes but not exact numbers?
+As Gallistel (1990) has argued, the natural number system is exceedingly simple—
+if navigating animals can excel at path integration, why don’t they count? Above
+all, why don’t children and other animals combine concepts from different core
+knowledge systems to generate infinite families of new concepts? Simple recursive
+rules, applied to the concepts of core knowledge, would give children an infinitely
+rich language of thought. Indeed, some philosophers propose that humans and an-
+imals are endowed with such a language (Fodor, 1975). The evidence from research
+on infant humans and animals suggests, however, that infants’ knowledge is highly
+limited. If evolution can produce creatures that fly and walk as well as swim, why
+didn’t it endow newborn minds with more concepts ?
+Historically, thinkers on both sides of the nativist-empiricist controversy have
+assumed that the more one knows innately, the less one needs to learn. Recent
+research in computational cognitive science suggests, however, that the re-
+verse is true: A creature who possessed a rich array of innate concepts would
+Core Knowledge 197
+face a massive learning challenge if it lived, as all animals do, in an uncertain
+and changeable environment. For such a creature, possession of the infinitely
+many concepts that are expressible in an innate language of thought would be a
+curse: the curse of a compositional mind.
+For example, suppose that infants were endowed with all the concepts captured
+by Euclidean geometry and, as toddlers, used these concepts to create a compre-
+hensive geometric map of all the detectable features of the layouts through which
+they move. Now imagine such a toddler in a bedroom that is replete with objects.
+Like the great green room in the children’s book Goodnight Moon, by Margaret
+Wise Brown, let us suppose that it has pictures on the walls, a big window, an
+easy chair, a dollhouse, kittens, a mouse, and so forth. Before jumping into bed,
+let us suppose that the toddler tucks her slippers under the night table. By which
+relations in her comprehensive cognitive map should she look for her slippers in
+the morning? By their distance and direction from the leftmost corner of the pic-
+ture of the cow? By the center of the moon outside the window? By the shape of
+the triangle formed by the toe of the left slipper, the dollhouse chimney, and the
+mouse’s tail? By the path leading to the slippers from the knob she turned to enter
+the room? Some of these properties will be reasonable guides in the very short
+term, but some, like the mouse and the moon, will not, and none will be reliable
+in the long term, because all depend on the locations of moveable objects. Only
+through extensive experiences in diverse environments would the toddler learn
+which of these properties to rely on.
+Real children do not face this problem. Because core knowledge of places
+captures only the distances and directions of the borders of the surface on which
+they move, they will be neither overwhelmed nor misled by the changeable
+positions of objects as they record where things are. Their abstract but limited
+systems of core knowledge spare them the task of sifting through a vast array of
+candidate landmarks when they look for an object. As a toddler moves to the bed
+to remove her slippers, her place system automatically tracks her position on the
+ground surface and its borders, and nothing more.
+The curse of compositionality arises in every domain in which infants or an-
+imals are born with core knowledge and face the task of learning about the dis-
+tinctive properties of their local environment. Suppose, with Fodor (1975), that
+animals and human infants were endowed with an innate, productively combina-
+torial language of thought that is at least as rich as any human language. Suppose,
+further, that this language takes as input all the representations from core know-
+ledge, and combines those representations productively to generate an infinite
+body of concepts. For example, it might generate the innate concept doorknob by
+combining core representations of particular objects, places, forms (chapter 6),
+and actions (chapter 7).2
+2 Pace Fodor et al. (1980), who argued that lexical concepts cannot be decomposed into parts.
+198 What Babies Know
+In How Children Learn, I will propose that children learn this concept through
+just this sort of combination, but here I am supposing that the concept is innate,
+along with every other concept that is generated from core knowledge by the
+combinatorial rules of the language of thought. What will infants and animals
+do with this immense array of innate concepts, from doorknobs to tesseracts?
+How will they know when to call on one of these concepts and when to call on
+another? Each concept cannot be associated with a fixed set of conditions for its
+application, because the world changes: Crossbows play a different role today
+(in museums and movies) than in the Middle Ages. A capacity for generating a
+prodigious stock of innate concepts would need to be accompanied by an equally
+prodigious capacity for learning and access to a lot of data to learn from.
+In summary, I suggest that the properties in table 5.1 go together, even though
+experiments, to date, do not fully show this. Any ancient, abstract conceptual
+system that has some of these properties is likely to have all of them. If that’s true,
+then the core object and number systems indeed will prove, with further testing,
+to be innate in humans; to be shared by a wide array of animals, giving them deep
+evolutionary roots in the history of life on earth; and to function, in part, by gen-
+erating mental simulations of events that fall within their domains.
+Beyond the three systems discussed in the last chapters, what other systems
+have the interconnected properties listed in table 5.1? Perceptual systems have
+some but not all of these properties. They are ancient and encapsulated, but they
+serve to recover, from information on our 2D retinas and tactile receptors and
+our 1D cochleas, information about the detectable surfaces that surround us,
+not the entities that those surfaces belong to. In contrast, the core object, place,
+and number systems begin where perceptual systems end. They begin with 3D
+objects, navigable layouts, and sets or sequences with approximate cardinal
+values, and they bring us understanding of how objects interact, how places are
+arranged and can be reached, and how sets of objects and events compare or
+change in number as they merge or divide. Moreover, perceptual systems re-
+cover information about the here and now, whereas the three core systems have
+a broader reach. They allow us track objects that are hidden, to orient ourselves
+with respect to places beyond those we can see, and to imagine sequences of
+events and arrays of objects that we’ve never encountered.
+Belief systems and theories also have some but not all of the properties in table
+5.1. Beliefs vary across human development and human cultures, whereas the
+object, place and form systems are universal and unchanging. Beliefs are ac-
+quired through experience: Adults know far more than infants do, but our core
+representations of objects and places may be no richer than those of infants
+(though we likely use them with greater efficiency and acuity). Beliefs usually
+are conscious and communicable: We express them to ourselves and others,
+whereas the core object, place, and number systems are more apt to guide our
+Core Knowledge 199
+tacit assumptions. Finally, as Quine (1960) argued, beliefs are malleable and
+form a seamless web: When we alter one belief, that alteration typically will
+have impacts on other beliefs. Core knowledge systems, in contrast, are encap-
+sulated: Their operation is unaffected by our current thinking. The core object,
+place, and number systems combine some of the properties of perceptual sys-
+tems and belief systems. Their inputs are the representations of immediately ac-
+cessible surfaces that our perceptual systems deliver, and their outputs give rise
+to the concepts and beliefs that populate our thoughts. These systems occupy a
+middle ground between perception and thought.
+In the next three chapters, I ask whether there are more cognitive systems in
+this middle ground, with the properties listed in table 5.1. Research suggests that
+infants gain knowledge rapidly and extensively in three domains I have not yet
+considered. First, today’s infants learn about the forms and functions of artifact
+objects—that cars, trucks, and bikes have wheels and can be driven from place to
+place; that sippy cups and bottles have characteristic shapes and deliver milk and
+other drinks—as well as the forms and functions of natural objects like rocks,
+fruits, and trees. Second, infants learn about the actions and intentions of people
+and animals: that dogs run to catch frisbees; that people pick up perceptually ac-
+cessible things in order to act on them. Third, infants learn about the individual
+members of their social world: who engages with whom and how people commu-
+nicate by their expressions of emotion, their speech, and their gestures. Research
+in developmental cognitive science provides a wealth of information about what
+human infants know, and what young children learn, in these domains. Indeed,
+considerably more research in developmental psychology has been devoted to
+these domains than to the domains discussed in the previous three chapters.
+Nevertheless, research on infants’ knowledge of object forms and functions, of
+the actions, perceptions, and intentions of people and animals, and of the social
+relations and engagements of people with one another, has generated no deep
+understanding of the origins and nature of human knowledge in these domains.
+On the contrary, these fields are full of controversies and open questions. Do
+core representations of object shapes have an invariant geometric structure, or
+do toddlers and young children learn to capture object structures and functions
+as they manipulate, categorize, and learn names for things (e.g., Smith, 2009)?
+Do infants appreciate that agents’ actions depend on their beliefs about the world
+and not directly on the state of the world itself, or does this understanding de-
+velop only later in childhood (e.g., Wellman, 2014)? Did humans evolve innate,
+species-unique predispositions to cooperate and share experiences (Tomasello,
+2009) and engage in moral evaluation (Hamlin et al., 2007), or do these unique
+achievements depend on constructed concepts (e.g., Barragan & Dweck, 2014),
+built on innate talents in the social domain that are as ancient and limited as
+our innate talents for representing objects, places, and numbers (Spelke, 2016)?
+200 What Babies Know
+Research has not answered these questions decisively, I believe, because object
+forms and functions, human and animal actions, and social engagements and
+relationships are far more complex than bodies, places, and numbers.
+Accordingly, the rest of this book will proceed as follows. I will review the lit-
+erature on human infants’ representation of the forms and functions of objects
+( chapter 6), interpretation of the actions of people and other agents in accord
+with their intentions, perceptions, and values (chapter 7), and understanding
+and evaluation of people and other social beings who share their experiences in
+states of social engagement (chapter 8). In each case, I ask whether one or more
+core cognitive systems with the properties in table 5.1 might be present and func-
+tional in early infancy, guiding infants’ learning in these domains. This exercise
+leads me to posit three more systems of core knowledge.
+In chapter 9, I turn to a different, uniquely human capacity that emerges in
+infancy: our talent for language. I review research on the first steps of infants’
+learning of their native language over the course of the first year, and consider
+how infants’ language learning may both build on and complement core know-
+ledge. Then, in chapter 10, I introduce two new systems of knowledge that
+emerge, I believe, at the end of the first year: a system for representing people’s
+actions as both social and causal, and a system for representing people’s mental
+states as both phenomenal experiences and intentional relations to objects and
+events. I ask whether and how infants might harness their core knowledge sys-
+tems, together with their growing knowledge of language, to construct these new,
+highly flexible, and uniquely human systems of concepts. Has human evolution
+given infants, alone among the animals, a way to build on the two blessings of ab-
+straction, while reversing the curse of a compositional mind?
